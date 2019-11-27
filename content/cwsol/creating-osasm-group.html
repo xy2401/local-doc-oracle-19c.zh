@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="You must designate a group as the OSASM group (asmadmin) during installation. Members of this group are granted the SYSASM system privileges to administer storage.">
       <meta name="description" content="You must designate a group as the OSASM group (asmadmin) during installation. Members of this group are granted the SYSASM system privileges to administer storage.">
-      <title>Creating the OSASM Group</title>
+      <title>创建OSASM组</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Grid Infrastructure Installation and Upgrade Guide">
       <meta property="og:description" content="You must designate a group as the OSASM group (asmadmin) during installation. Members of this group are granted the SYSASM system privileges to administer storage.">
@@ -47,50 +45,38 @@
     <meta name="dcterms.isVersionOf" content="CWSOL">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="creating-operating-system-privileges-groups.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="creating-the-osdba-for-asm-group.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="creating-operating-system-privileges-groups.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="creating-the-osdba-for-asm-group.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure Installation and Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="configuring-users-groups-and-environments-for-oracle-grid-infrastructure-and-oracle-database.html" property="item" typeof="WebPage"><span property="name">Configuring Users, Groups and Environments for Oracle Grid Infrastructure and Oracle Database</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="creating-operating-system-privileges-groups.html" property="item" typeof="WebPage"><span property="name">Creating Operating
-System Privileges Groups</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Creating the
-OSASM Group</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure安装和升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="configuring-users-groups-and-environments-for-oracle-grid-infrastructure-and-oracle-database.html" property="item" typeof="WebPage"><span property="name">为Oracle Grid Infrastructure和Oracle数据库配置用户，组和环境</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="creating-operating-system-privileges-groups.html" property="item" typeof="WebPage"><span property="name">创建操作系统权限组</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">创建OSASM组</li>
             </ol>
             <a id="GUID-B13FBFB6-0714-4696-B52D-6DAEFF54AC38" name="GUID-B13FBFB6-0714-4696-B52D-6DAEFF54AC38"></a>
             
-            <h2 id="CWSOL-GUID-B13FBFB6-0714-4696-B52D-6DAEFF54AC38" class="sect2">Creating the
-OSASM Group</h2>
+            <h2 id="CWSOL-GUID-B13FBFB6-0714-4696-B52D-6DAEFF54AC38" class="sect2">创建OSASM组</h2>
          </header>
          <div class="ind">
             <div>
-               <p>You must designate a group as the OSASM group
-(<code class="codeph">asmadmin</code>) during installation. Members of this group
-are granted the SYSASM system privileges to administer storage.
+               <p>您必须在安装期间将组指定为OSASM组（ <code class="codeph">asmadmin</code> ）。该组的成员被授予SYSASM系统权限以管理存储。
                </p>
-               <div class="section">Create an OSASM group using the group name <code class="codeph">asmadmin</code> unless a group with that name already exists:
-               </div>
+               <div class="section">除非已存在具有该名称的组，否则使用组名<code class="codeph">asmadmin</code>创建OSASM组：</div>
                <!-- class="section" -->
                <div class="example" id="GUID-B13FBFB6-0714-4696-B52D-6DAEFF54AC38__GUID-2A7264C7-50C7-4963-A1F5-66398A5057B0"><pre class="pre codeblock"><code># groupadd -g 54323 asmadmin</code></pre></div>
                <!-- class="example" -->
                <div class="section">
-                  <p>The Oracle ASM instance is managed by
-a privileged role called SYSASM, which grants full access to Oracle
-ASM disk groups. Members of OSASM are granted the SYSASM role.</p>
+                  <p>Oracle ASM实例由名为SYSASM的特权角色管理，该角色授予对Oracle ASM磁盘组的完全访问权限。OSASM的成员被授予SYSASM角色。</p>
                </div>
                <!-- class="section" -->
             </div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="creating-operating-system-privileges-groups.html#GUID-164A7218-166D-4B58-9A86-88149E8FCB83" title="The following sections describe how to create operating system groups for Oracle Grid Infrastructure and Oracle Database:">Creating Operating System Privileges Groups</a></p>
+                     <p><strong>父主题：</strong> <a href="creating-operating-system-privileges-groups.html#GUID-164A7218-166D-4B58-9A86-88149E8FCB83" title="以下部分介绍如何为Oracle Grid Infrastructure和Oracle数据库创建操作系统组：">创建操作系统权限组</a></p>
                   </div>
                </div>
             </div>

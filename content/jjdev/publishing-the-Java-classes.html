@@ -1,17 +1,15 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Publishing the Java Classes</title>
+      <title>发布Java类</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="Java Developer's Guide ">
-      <meta property="og:description" content>
+      <meta property="og:title" content="Java Developer&#39;s Guide ">
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="Java Developer's Guide">
+      <meta name="application-name" content="Java Developer&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="java-developers-guide.pdf" title="PDF File" type="application/pdf">
@@ -41,35 +39,29 @@
         </script>
       <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"oracle-database","element_name":"Oracle Database","display_in_url":true},"release":{"short_name":"19","element_name":"Release 19","display_in_url":true}}}</script>
       
-    <meta name="dcterms.title" content="Java Developer's Guide">
+    <meta name="dcterms.title" content="Java Developer&#39;s Guide">
     <meta name="dcterms.isVersionOf" content="JJDEV">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="loading-the-Java-classes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="calling-Java-stored-procedures.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="loading-the-Java-classes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="calling-Java-stored-procedures.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Java Developer's Guide </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="Java-stored-procedure-application-example.html" property="item" typeof="WebPage"><span property="name"> Java Stored Procedures Application Example </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Publishing the Java Classes</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Java开发人员指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="Java-stored-procedure-application-example.html" property="item" typeof="WebPage"><span property="name">Java存储过程应用程序示例</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">发布Java类</li>
             </ol>
             <a id="GUID-13BA8CF7-3F2C-4329-9B98-A76972F5E06C" name="GUID-13BA8CF7-3F2C-4329-9B98-A76972F5E06C"></a><a id="JJDEV13304"></a>
             
-            <h2 id="JJDEV-GUID-13BA8CF7-3F2C-4329-9B98-A76972F5E06C" class="sect2"><span class="enumeration_section">9.5 </span>Publishing the Java Classes
-            </h2>
+            <h2 id="JJDEV-GUID-13BA8CF7-3F2C-4329-9B98-A76972F5E06C" class="sect2"><span class="enumeration_section">9.5</span>发布Java类</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p>After loading the Java classes, publish your Java stored procedures in the Oracle data dictionary. To do this, you must write call specifications that map Java method names, parameter types, and return types to their SQL counterparts.</p>
-                  <p>The methods in the <code class="codeph">POManager</code> Java class are logically related. You can group their call specifications in a PL/SQL package. To do this, first, create the package specification, as follows:
-                  </p><pre class="oac_no_warn" dir="ltr">CREATE OR REPLACE PACKAGE po_mgr AS
+                  <p>加载Java类后，在Oracle数据字典中发布Java存储过程。为此，您必须编写将Java方法名称，参数类型和返回类型映射到SQL对应项的调用规范。</p>
+                  <p><code class="codeph">POManager</code> Java类中的方法在逻辑上是相关的。您可以将其调用规范分组到PL / SQL包中。为此，首先，创建包规范，如下所示：</p><pre class="oac_no_warn" dir="ltr">CREATE OR REPLACE PACKAGE po_mgr AS
 PROCEDURE add_customer (cust_no NUMBER, cust_name VARCHAR2,
 street VARCHAR2, city VARCHAR2, state CHAR, zip_code VARCHAR2,
 phone_no VARCHAR2);
@@ -86,7 +78,7 @@ PROCEDURE change_quantity (new_qty NUMBER, order_no NUMBER,
 stock_no NUMBER);
 PROCEDURE delete_order (order_no NUMBER);
 END po_mgr;
-</pre><p>Then, create the package body by writing call specifications for the Java methods, as follows:</p><pre class="oac_no_warn" dir="ltr">CREATE OR REPLACE PACKAGE BODY po_mgr AS
+</pre><p>然后，通过编写Java方法的调用规范来创建包体，如下所示：</p><pre class="oac_no_warn" dir="ltr">CREATE OR REPLACE PACKAGE BODY po_mgr AS
 PROCEDURE add_customer (cust_no NUMBER, cust_name VARCHAR2,
 street VARCHAR2, city VARCHAR2, state CHAR, zip_code VARCHAR2,
 phone_no VARCHAR2) AS LANGUAGE JAVA

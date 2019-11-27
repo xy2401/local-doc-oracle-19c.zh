@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="A zone cluster consists of several Oracle Solaris Zones, each of which resides on its own separate server; the zones that comprise the cluster are linked together into a single virtual cluster.">
       <meta name="description" content="A zone cluster consists of several Oracle Solaris Zones, each of which resides on its own separate server; the zones that comprise the cluster are linked together into a single virtual cluster.">
-      <title>About Oracle RAC Deployment in Oracle Solaris Cluster Zone Clusters</title>
+      <title>关于Oracle Solaris Cluster区域群集中的Oracle RAC部署</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Grid Infrastructure Installation and Upgrade Guide">
       <meta property="og:description" content="A zone cluster consists of several Oracle Solaris Zones, each of which resides on its own separate server; the zones that comprise the cluster are linked together into a single virtual cluster.">
@@ -47,47 +45,42 @@
     <meta name="dcterms.isVersionOf" content="CWSOL">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="deploying-oracle-rac-on-oracle-solaris-cluster-zone-clusters.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="prerequisites-for-oracle-rac-deployment-in-oracle-solaris-cluster-zone-clusters.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="deploying-oracle-rac-on-oracle-solaris-cluster-zone-clusters.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="prerequisites-for-oracle-rac-deployment-in-oracle-solaris-cluster-zone-clusters.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure Installation and Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="deploying-oracle-rac-on-oracle-solaris-cluster-zone-clusters.html" property="item" typeof="WebPage"><span property="name">Deploying Oracle RAC on Oracle Solaris Cluster Zone Clusters</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">About Oracle RAC Deployment in Oracle Solaris Cluster Zone Clusters</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure安装和升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="deploying-oracle-rac-on-oracle-solaris-cluster-zone-clusters.html" property="item" typeof="WebPage"><span property="name">在Oracle Solaris Cluster区域群集上部署Oracle RAC</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">关于Oracle Solaris Cluster区域群集中的Oracle RAC部署</li>
             </ol>
             <a id="GUID-F8CBE464-AF01-40BE-B090-E0AF02C69107" name="GUID-F8CBE464-AF01-40BE-B090-E0AF02C69107"></a>
             
-            <h2 id="CWSOL-GUID-F8CBE464-AF01-40BE-B090-E0AF02C69107" class="sect2">About Oracle RAC Deployment in Oracle Solaris Cluster Zone Clusters</h2>
+            <h2 id="CWSOL-GUID-F8CBE464-AF01-40BE-B090-E0AF02C69107" class="sect2">关于Oracle Solaris Cluster区域群集中的Oracle RAC部署</h2>
          </header>
          <div class="ind">
             <div>
-               <p>A zone cluster consists of several Oracle Solaris Zones, each of which resides on its own separate server; the zones that comprise the cluster are linked together into a single virtual cluster. </p>
-               <p>Multiple zone clusters can exist on single global cluster, providing a means to consolidate multicluster applications on a global cluster. A node of a global cluster can be configured on either a physical machine or a virtual machine such as Oracle VM Server for SPARC logical domain. A global cluster can also have a combination of physical and virtual nodes.</p>
-               <p>Installing Oracle Real Application Clusters (Oracle RAC) in a zone cluster allows you to have separate database versions or separate deployments of the same database (for example, one for production and one for development). Using this architecture, you can also deploy different parts of your multitier solution into different virtual zone clusters. For example, you could deploy Oracle RAC and an application server in different zone clusters of the same global cluster. This approach allows you to isolate tiers and administrative domains from each other, while taking advantage of the simplified administration provided by Oracle Solaris Cluster.</p>
+               <p>区域群集由多个Oracle Solaris区域组成，每个区域位于各自独立的服务器上;组成群集的区域链接在一起成为一个虚拟群集。</p>
+               <p>多个区域群集可以存在于单个全局群集上，从而提供了在全局群集上整合多群集应用程序的方法。可以在物理计算机或虚拟机（如Oracle VM Server for SPARC逻辑域）上配置全局群集的节点。全局集群还可以具有物理节点和虚拟节点的组合。</p>
+               <p>在区域群集中安装Oracle Real Application Clusters（Oracle RAC）允许您拥有单独的数据库版本或同一数据库的单独部署（例如，一个用于生产，一个用于开发）。使用此体系结构，您还可以将多层解决方案的不同部分部署到不同的虚拟区域群集中。例如，您可以在同一全局集群的不同区域集群中部署Oracle RAC和应用程序服务器。此方法允许您将层和管理域相互隔离，同时利用Oracle Solaris Cluster提供的简化管理。</p>
             </div>
             <div>
                <div class="infoboxnotealso" id="GUID-F8CBE464-AF01-40BE-B090-E0AF02C69107__GUID-604AD483-930A-49AB-9723-135A277CBB60">
-                  <p class="notep1">See Also:</p>
-                  <ul style="list-style-type: disc;">
+                  <p class="notep1">也可以看看：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p>Supported virtualization technologies for Oracle Database and Oracle RAC at the following link:</p>
+                        <p>通过以下链接支持Oracle数据库和Oracle RAC的虚拟化技术：</p>
                         <p><a href="http://www.oracle.com/technetwork/database/virtualizationmatrix-172995.html#NoteSolarisx64ZONERAC" target="_blank"><span class="italic">http://www.oracle.com/technetwork/database/virtualizationmatrix-172995.html#NoteSolarisx64ZONERAC</span></a></p>
                      </li>
                      <li>
-                        <p><a href="http://docs.oracle.com/cd/E56676_01/html/E56678/babccjcd.html#CLISTghbof" target="_blank"><span class="italic">Oracle Solaris Cluster Software Installation Guide</span></a> for information about Oracle Solaris zone clusters
-                        </p>
+                        <p><a href="http://docs.oracle.com/cd/E56676_01/html/E56678/babccjcd.html#CLISTghbof" target="_blank"><span class="italic">“Oracle Solaris Cluster软件安装指南”，</span></a>以获取有关Oracle Solaris区域群集的信息</p>
                      </li>
                   </ul>
                </div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="deploying-oracle-rac-on-oracle-solaris-cluster-zone-clusters.html#GUID-CF60318C-7FAC-43F7-A8E8-FF4050BD729E" title="Oracle Solaris Cluster provides the capability to create high-availability zone clusters. Installing Oracle Real Application Clusters (Oracle RAC) in a zone cluster allows you to have separate database versions or separate deployments of the same database (for example, one for production and one for development).">Deploying Oracle RAC on Oracle Solaris Cluster Zone Clusters</a></p>
+                     <p><strong>父主题：</strong> <a href="deploying-oracle-rac-on-oracle-solaris-cluster-zone-clusters.html#GUID-CF60318C-7FAC-43F7-A8E8-FF4050BD729E" title="Oracle Solaris Cluster提供了创建高可用性区域群集的功能。在区域群集中安装Oracle Real Application Clusters（Oracle RAC）允许您拥有单独的数据库版本或同一数据库的单独部署（例如，一个用于生产，一个用于开发）。">在Oracle Solaris Cluster区域群集上部署Oracle RAC</a></p>
                   </div>
                </div>
             </div>

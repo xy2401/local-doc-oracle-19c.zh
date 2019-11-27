@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="You must choose a location for Oracle home for the new release of Oracle Database that is separate from the Oracle home of your current release.">
       <meta name="description" content="You must choose a location for Oracle home for the new release of Oracle Database that is separate from the Oracle home of your current release.">
-      <title>Choose a New Location for Oracle Home when Upgrading</title>
+      <title>升级时为Oracle Home选择新位置</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database Upgrade Guide">
       <meta property="og:description" content="You must choose a location for Oracle home for the new release of Oracle Database that is separate from the Oracle home of your current release.">
@@ -46,36 +44,32 @@
     <meta name="dcterms.isVersionOf" content="UPGRD">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="choose-an-upgrade-method-for-oracle-database.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="develop-a-test-plan-for-upgrading-database.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="choose-an-upgrade-method-for-oracle-database.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="develop-a-test-plan-for-upgrading-database.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="tasks-prepare-upgrade-oracle-database.html" property="item" typeof="WebPage"><span property="name"> Preparing to Upgrade Oracle Database </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="tasks-to-prepare-for-oracle-database-upgrades.html" property="item" typeof="WebPage"><span property="name">Tasks to Prepare for Oracle Database Upgrades</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Choose a New Location for Oracle Home when Upgrading</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="tasks-prepare-upgrade-oracle-database.html" property="item" typeof="WebPage"><span property="name">准备升级Oracle数据库</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="tasks-to-prepare-for-oracle-database-upgrades.html" property="item" typeof="WebPage"><span property="name">准备Oracle数据库升级的任务</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">升级时为Oracle Home选择新位置</li>
             </ol>
             <a id="GUID-AFA0564D-F5B5-40CA-988C-011AFCE2084B" name="GUID-AFA0564D-F5B5-40CA-988C-011AFCE2084B"></a><a id="UPGRD12370"></a>
             
-            <h2 id="UPGRD-GUID-AFA0564D-F5B5-40CA-988C-011AFCE2084B" class="sect2">Choose a New Location for Oracle Home when Upgrading</h2>
+            <h2 id="UPGRD-GUID-AFA0564D-F5B5-40CA-988C-011AFCE2084B" class="sect2">升级时为Oracle Home选择新位置</h2>
          </header>
          <div class="ind">
             <div>
-               <p>You must choose a location for Oracle home for the new release of Oracle Database that is separate from the Oracle home of your current release.</p>
-               <p>Using separate installation locations enables you to keep your existing Oracle software installed along with the new Oracle software. By using separate installation locations, you can test the upgrade process on a test database before replacing your production environment entirely.</p>
-               <p>When you upgrade a database, whether the database is a non-CDB or a CDB, a new location is needed to install the new Oracle home.</p>
-               <p>If you are upgrading a PDB by using an unplug/plug upgrade, then the target CDB into which you plug the PDB is the location for the PDB. There is no need to choose a new location for installing the target Oracle homes, because the target CDB already has its Oracle home. </p>
+               <p>您必须为Oracle数据库的新版本选择Oracle主目录的位置，该版本与当前版本的Oracle主目录分开。</p>
+               <p>使用单独的安装位置可以使您的现有Oracle软件与新的Oracle软件一起安装。通过使用单独的安装位置，您可以在完全替换生产环境之前测试测试数据库上的升级过程。</p>
+               <p>升级数据库时，无论数据库是非CDB还是CDB，都需要新位置来安装新的Oracle主目录。</p>
+               <p>如果要使用拔出/插头升级来升级PDB，则插入PDB的目标CDB是PDB的位置。无需选择新位置来安装目标Oracle主目录，因为目标CDB已经拥有其Oracle主目录。</p>
             </div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="tasks-to-prepare-for-oracle-database-upgrades.html#GUID-3C319260-B5CD-4C50-B606-36D060FDF0BE" title="Carry out these tasks to prepare your upgrade.">Tasks to Prepare for Oracle Database Upgrades</a></p>
+                     <p><strong>父主题：</strong> <a href="tasks-to-prepare-for-oracle-database-upgrades.html#GUID-3C319260-B5CD-4C50-B606-36D060FDF0BE" title="执行这些任务以准备升级。">准备Oracle数据库升级的任务</a></p>
                   </div>
                </div>
             </div>

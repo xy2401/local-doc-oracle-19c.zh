@@ -1,14 +1,12 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>About the Data Mining Sample Programs</title>
+      <title>关于数据挖掘示例程序</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="API Guide">
-      <meta property="og:description" content>
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
       <meta name="application-name" content="API Guide">
@@ -45,37 +43,32 @@
     <meta name="dcterms.isVersionOf" content="DMAPI">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="the-data-mining-sample-programs.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="installing-data-mining-sample-programs.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="the-data-mining-sample-programs.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="installing-data-mining-sample-programs.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">API Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="using-data-mining-API.html" property="item" typeof="WebPage"><span property="name">Using the Data Mining API</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="the-data-mining-sample-programs.html" property="item" typeof="WebPage"><span property="name">The Data Mining Sample Programs</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">About the Data Mining Sample Programs</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">API指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-data-mining-API.html" property="item" typeof="WebPage"><span property="name">使用Data Mining API</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="the-data-mining-sample-programs.html" property="item" typeof="WebPage"><span property="name">数据挖掘示例程序</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">关于数据挖掘示例程序</li>
             </ol>
             <a id="GUID-1F15B394-549B-4CE0-B658-2A9E15DFFBC8" name="GUID-1F15B394-549B-4CE0-B658-2A9E15DFFBC8"></a><a id="DMPRG807"></a><a id="DMPRG808"></a><a id="DMPRG715"></a>
             
-            <h2 id="DMAPI-GUID-1F15B394-549B-4CE0-B658-2A9E15DFFBC8" class="sect2"><span class="enumeration_section">35.1 </span>About the Data Mining Sample Programs
-            </h2>
+            <h2 id="DMAPI-GUID-1F15B394-549B-4CE0-B658-2A9E15DFFBC8" class="sect2"><span class="enumeration_section">35.1</span>关于数据挖掘示例程序</h2>
          </header>
          <div class="ind">
             <div>
-               <p>You can learn a great deal about the Oracle<a id="d74581e34" class="indexterm-anchor"></a> Data Mining application programming interface (API) from the data mining sample programs. The programs illustrate typical approaches to data preparation, algorithm selection, algorithm tuning, testing, and scoring. 
+               <p>您可以了解有关Oracle的大量信息<a id="d74581e34" class="indexterm-anchor"></a>数据挖掘应用程序编程接口（API）来自数据挖掘示例程序。该程序说明了数据准备，算法选择，算法调整，测试和评分的典型方法。
                </p>
-               <p>The programs are easy to use. They include extensive inline comments to help you understand the code. They delete all temporary objects on exit; you can run the programs repeatedly without setup or cleanup.</p>
-               <p>The data mining sample programs are installed with Oracle Database Examples in the demo directory under Oracle Home. The demo directory contains sample programs that illustrate many features of Oracle Database. You can locate the data mining files by doing a directory listing of <code class="codeph">dm*.sql</code>. The following example shows this <a id="d74581e44" class="indexterm-anchor"></a>directory listing on a Linux system. 
+               <p>这些程序易于使用。它们包含大量内联注释，可帮助您理解代码。他们在退出时删除所有临时对象;您可以重复运行程序而无需设置或清理。</p>
+               <p>数据挖掘示例程序随Oracle数据库示例一起安装在Oracle Home下的演示目录中。演示目录包含演示Oracle数据库许多功能的示例程序。您可以通过执行<code class="codeph">dm*.sql</code>的目录列表来查找数据挖掘文件。以下示例显示了这一点<a id="d74581e44" class="indexterm-anchor"></a> Linux系统上的目录列表。
                </p>
-               <p>Note that the directory listing in the following example includes one file, <code class="codeph">dmhpdemo.sql</code>, that is <span class="italic">not</span> a data mining program.
+               <p>请注意，以下示例中的目录列表包含一个<span class="italic">不是</span>数据挖掘程序的文件<code class="codeph">dmhpdemo.sql</code> 。
                </p>
                <div class="example" id="GUID-1F15B394-549B-4CE0-B658-2A9E15DFFBC8__CHDBAEBH">
-                  <p class="titleinexample">Example 35-1 Directory Listing of the Data Mining Sample Programs</p><pre class="oac_no_warn" dir="ltr">&gt; cd $ORACLE_HOME/rdbms/demo
+                  <p class="titleinexample">示例35-1数据挖掘示例程序的目录列表</p><pre class="oac_no_warn" dir="ltr">&gt; cd $ORACLE_HOME/rdbms/demo
 &gt; ls dm*.sql
 dmaidemo.sql      dmkmdemo.sql    dmsvddemo.sql              
 dmardemo.sql      dmnbdemo.sql    dmsvodem.sql    
@@ -88,11 +81,11 @@ dmhpdemo.sql      dmsvcdem.sql
 </pre></div>
                <!-- class="example" -->
                <div class="section">
-                  <p>The data mining sample programs create a set of mining models in the user's schema. After executing the programs, you can list the models with a query like the one in the following example.</p>
+                  <p>数据挖掘示例程序在用户的模式中创建一组挖掘模型。执行程序后，您可以使用以下示例中的查询列出模型。</p>
                </div>
                <!-- class="section" -->
                <div class="example" id="GUID-1F15B394-549B-4CE0-B658-2A9E15DFFBC8__CHDJJADJ">
-                  <p class="titleinexample">Example 35-2 Models Created by the Sample Programs</p><pre class="oac_no_warn" dir="ltr">SELECT mining_function, algorithm, model_name FROM user_mining_models
+                  <p class="titleinexample">示例35-2由示例程序创建的模型</p><pre class="oac_no_warn" dir="ltr">SELECT mining_function, algorithm, model_name FROM user_mining_models
     ORDER BY mining_function;
  
 MINING_FUNCTION                ALGORITHM                      MODEL_NAME

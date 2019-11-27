@@ -1,6 +1,4 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,43 +44,37 @@
     <meta name="dcterms.isVersionOf" content="REFRN">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="DBA_HIST_MEMORY_TARGET_ADVICE.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="DBA_HIST_MTTR_TARGET_ADVICE.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="DBA_HIST_MEMORY_TARGET_ADVICE.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="DBA_HIST_MTTR_TARGET_ADVICE.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Reference</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="static-data-dictionary-views.html" property="item" typeof="WebPage"><span property="name">   Static Data Dictionary Views </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="static-data-dictionary-views-4.html" property="item" typeof="WebPage"><span property="name"> Static Data Dictionary Views: DBA_HIST_LATCH to DBA_STORED_SETTINGS</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库参考</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="static-data-dictionary-views.html" property="item" typeof="WebPage"><span property="name">静态数据字典视图</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="static-data-dictionary-views-4.html" property="item" typeof="WebPage"><span property="name">静态数据字典视图：DBA_HIST_LATCH到DBA_STORED_SETTINGS</span></a></li>
                <li class="active" property="itemListElement" typeof="ListItem">DBA_HIST_METRIC_NAME</li>
             </ol>
             <a id="GUID-45703794-7662-4957-A1C8-7225E99E3A3E" name="GUID-45703794-7662-4957-A1C8-7225E99E3A3E"></a><a id="REFRN23422"></a>
             
-            <h2 id="REFRN-GUID-45703794-7662-4957-A1C8-7225E99E3A3E" class="sect2"><span class="enumeration_section">5.11 </span>DBA_HIST_METRIC_NAME
-            </h2>
+            <h2 id="REFRN-GUID-45703794-7662-4957-A1C8-7225E99E3A3E" class="sect2"><span class="enumeration_section">5.11</span> DBA_HIST_METRIC_NAME</h2>
          </header>
          <div class="ind">
             <div>
-               <p><code class="codeph">DBA_HIST_METRIC_NAME</code> describes attributes of the set of RDBMS metrics.
+               <p><code class="codeph">DBA_HIST_METRIC_NAME</code>描述了一组RDBMS指标的属性。
                </p>
                <div class="section">
-                  <p>This view contains a snapshot of <code class="codeph">V$METRICNAME</code>.
-                  </p>
+                  <p>该视图包含<code class="codeph">V$METRICNAME</code>的快照。</p>
                </div>
                <!-- class="section" -->
                <div class="tblformalwide" id="GUID-45703794-7662-4957-A1C8-7225E99E3A3E__GUID-EC1AD002-2E19-497F-8458-0D2DF0F74412">
-                  <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="This table describes the columns for this database view" width="100%" frame="hsides" border="1" rules="rows">
+                  <table cellpadding="4" cellspacing="0" class="FormalWide" title="" width="100%" border="1" summary="This table describes the columns for this database view" frame="hsides" rules="rows">
                      <thead>
                         <tr align="left" valign="top">
-                           <th align="left" valign="bottom" width="24%" id="d997942e176">Column</th>
-                           <th align="left" valign="bottom" width="18%" id="d997942e179">Datatype</th>
-                           <th align="left" valign="bottom" width="14%" id="d997942e182">NULL</th>
-                           <th align="left" valign="bottom" width="45%" id="d997942e185">Description</th>
+                           <th align="left" valign="bottom" width="24%" id="d997942e176">柱</th>
+                           <th align="left" valign="bottom" width="18%" id="d997942e179">数据类型</th>
+                           <th align="left" valign="bottom" width="14%" id="d997942e182">空值</th>
+                           <th align="left" valign="bottom" width="45%" id="d997942e185">描述</th>
                         </tr>
                      </thead>
                      <tbody>
@@ -91,13 +83,13 @@
                               <p><code class="codeph">DBID</code></p>
                            </td>
                            <td align="left" valign="top" width="18%" headers="d997942e190 d997942e179 ">
-                              <p><code class="codeph">NUMBER</code></p>
+                              <p><code class="codeph">数</code></p>
                            </td>
                            <td align="left" valign="top" width="14%" headers="d997942e190 d997942e182 ">
-                              <p><code class="codeph">NOT NULL</code></p>
+                              <p><code class="codeph">不是NULL</code></p>
                            </td>
                            <td align="left" valign="top" width="45%" headers="d997942e190 d997942e185 ">
-                              <p>Database ID</p>
+                              <p>数据库ID</p>
                            </td>
                         </tr>
                         <tr align="left" valign="top">
@@ -105,27 +97,27 @@
                               <p><code class="codeph">GROUP_ID</code></p>
                            </td>
                            <td align="left" valign="top" width="18%" headers="d997942e206 d997942e179 ">
-                              <p><code class="codeph">NUMBER</code></p>
+                              <p><code class="codeph">数</code></p>
                            </td>
                            <td align="left" valign="top" width="14%" headers="d997942e206 d997942e182 ">
-                              <p><code class="codeph">NOT NULL</code></p>
+                              <p><code class="codeph">不是NULL</code></p>
                            </td>
                            <td align="left" valign="top" width="45%" headers="d997942e206 d997942e185 ">
-                              <p>Metric Group ID</p>
+                              <p>度量标准组ID</p>
                            </td>
                         </tr>
                         <tr align="left" valign="top">
                            <td align="left" valign="top" width="24%" id="d997942e222" headers="d997942e176 ">
-                              <p><code class="codeph">GROUP_NAME</code></p>
+                              <p><code class="codeph">团队名字</code></p>
                            </td>
                            <td align="left" valign="top" width="18%" headers="d997942e222 d997942e179 ">
-                              <p><code class="codeph">VARCHAR2(64)</code></p>
+                              <p><code class="codeph">VARCHAR2（64）</code></p>
                            </td>
                            <td align="left" valign="top" width="14%" headers="d997942e222 d997942e182 ">
                               <p> </p>
                            </td>
                            <td align="left" valign="top" width="45%" headers="d997942e222 d997942e185 ">
-                              <p>Metric group name</p>
+                              <p>度量标准组名称</p>
                            </td>
                         </tr>
                         <tr align="left" valign="top">
@@ -133,13 +125,13 @@
                               <p><code class="codeph">METRIC_ID</code></p>
                            </td>
                            <td align="left" valign="top" width="18%" headers="d997942e237 d997942e179 ">
-                              <p><code class="codeph">NUMBER</code></p>
+                              <p><code class="codeph">数</code></p>
                            </td>
                            <td align="left" valign="top" width="14%" headers="d997942e237 d997942e182 ">
-                              <p><code class="codeph">NOT NULL</code></p>
+                              <p><code class="codeph">不是NULL</code></p>
                            </td>
                            <td align="left" valign="top" width="45%" headers="d997942e237 d997942e185 ">
-                              <p>Metric ID</p>
+                              <p>指标ID</p>
                            </td>
                         </tr>
                         <tr align="left" valign="top">
@@ -147,13 +139,13 @@
                               <p><code class="codeph">METRIC_NAME</code></p>
                            </td>
                            <td align="left" valign="top" width="18%" headers="d997942e253 d997942e179 ">
-                              <p><code class="codeph">VARCHAR2(64)</code></p>
+                              <p><code class="codeph">VARCHAR2（64）</code></p>
                            </td>
                            <td align="left" valign="top" width="14%" headers="d997942e253 d997942e182 ">
-                              <p><code class="codeph">NOT NULL</code></p>
+                              <p><code class="codeph">不是NULL</code></p>
                            </td>
                            <td align="left" valign="top" width="45%" headers="d997942e253 d997942e185 ">
-                              <p>Metric name</p>
+                              <p>指标名称</p>
                            </td>
                         </tr>
                         <tr align="left" valign="top">
@@ -161,13 +153,13 @@
                               <p><code class="codeph">METRIC_UNIT</code></p>
                            </td>
                            <td align="left" valign="top" width="18%" headers="d997942e269 d997942e179 ">
-                              <p><code class="codeph">VARCHAR2(64)</code></p>
+                              <p><code class="codeph">VARCHAR2（64）</code></p>
                            </td>
                            <td align="left" valign="top" width="14%" headers="d997942e269 d997942e182 ">
-                              <p><code class="codeph">NOT NULL</code></p>
+                              <p><code class="codeph">不是NULL</code></p>
                            </td>
                            <td align="left" valign="top" width="45%" headers="d997942e269 d997942e185 ">
-                              <p>Unit of measurement</p>
+                              <p>测量单位</p>
                            </td>
                         </tr>
                         <tr align="left" valign="top">
@@ -175,13 +167,13 @@
                               <p><code class="codeph">CON_DBID</code></p>
                            </td>
                            <td align="left" valign="top" width="18%" headers="d997942e285 d997942e179 ">
-                              <p><code class="codeph">NUMBER</code></p>
+                              <p><code class="codeph">数</code></p>
                            </td>
                            <td align="left" valign="top" width="14%" headers="d997942e285 d997942e182 ">
                               <p> </p>
                            </td>
                            <td align="left" valign="top" width="45%" headers="d997942e285 d997942e185 ">
-                              <p>The database ID of the PDB for the sampled session</p>
+                              <p>采样会话的PDB的数据库ID</p>
                            </td>
                         </tr>
                         <tr align="left" valign="top">
@@ -189,26 +181,23 @@
                               <p><code class="codeph">CON_ID</code></p>
                            </td>
                            <td align="left" valign="top" width="18%" headers="d997942e300 d997942e179 ">
-                              <p><code class="codeph">NUMBER</code></p>
+                              <p><code class="codeph">数</code></p>
                            </td>
                            <td align="left" valign="top" width="14%" headers="d997942e300 d997942e182 ">
                               <p> </p>
                            </td>
                            <td align="left" valign="top" width="45%" headers="d997942e300 d997942e185 ">
-                              <p>The ID of the container that <code class="codeph">CON_DBID</code> identifies. Possible values include:
-                              </p>
-                              <ul style="list-style-type: disc;">
+                              <p><code class="codeph">CON_DBID</code>标识的容器的ID。可能的值包括：</p>
+                              <ul style="list-style-type:disc">
                                  <li>
-                                    <p><code class="codeph">0</code>: This value is used for rows containing data that pertain to the entire CDB. This value is also used for rows in non-CDBs.
+                                    <p><code class="codeph">0</code> ：此值用于包含与整个CDB相关的数据的行。此值还用于非CDB中的行。
                                     </p>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">1</code>: This value is used for rows containing data that pertain to only the root
-                                    </p>
+                                    <p><code class="codeph">1</code> ：此值用于包含仅与根有关的数据的行</p>
                                  </li>
                                  <li>
-                                    <p><span class="italic">n</span>: Where <span class="italic">n</span> is the applicable container ID for the rows containing data
-                                    </p>
+                                    <p><span class="italic">n</span> ：其中<span class="italic">n</span>是包含数据的行的适用容器ID</p>
                                  </li>
                               </ul>
                            </td>
@@ -219,8 +208,8 @@
                <!-- class="inftblhruleinformal" -->
                <div class="section">
                   <div class="infoboxnotealso" id="GUID-45703794-7662-4957-A1C8-7225E99E3A3E__GUID-342CCB70-49B5-408F-9C62-0948BB636E09">
-                     <p class="notep1">See Also:</p>
-                     <p><span class="q">"<a href="V-METRICNAME.html#GUID-B04F765A-4A56-4C04-92F0-20E5463D46A1" title="V$METRICNAME displays the mapping of the name of metrics to their metric ID.">V$METRICNAME</a>"</span></p>
+                     <p class="notep1">也可以看看：</p>
+                     <p><span class="q">“ <a href="V-METRICNAME.html#GUID-B04F765A-4A56-4C04-92F0-20E5463D46A1" title="V $ METRICNAME显示指标名称与其指标ID的映射。">V $ METRICNAME</a> ”</span></p>
                   </div>
                </div>
                <!-- class="section" -->

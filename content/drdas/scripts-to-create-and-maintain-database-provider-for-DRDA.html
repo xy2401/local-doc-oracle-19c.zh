@@ -1,17 +1,15 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Scripts for Creating and Maintaining Oracle Database Provider for DRDA</title>
+      <title>用于为DRDA创建和维护Oracle数据库提供程序的脚本</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="User's Guide">
-      <meta property="og:description" content>
+      <meta property="og:title" content="User&#39;s Guide">
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="User's Guide">
+      <meta name="application-name" content="User&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="provider-drda-users-guide.pdf" title="PDF File" type="application/pdf">
@@ -41,38 +39,33 @@
         </script>
       <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"oracle-database","element_name":"Oracle Database","display_in_url":true},"release":{"short_name":"19","element_name":"Release 19","display_in_url":true}}}</script>
       
-    <meta name="dcterms.title" content="Provider for DRDA User's Guide">
+    <meta name="dcterms.title" content="Provider for DRDA User&#39;s Guide">
     <meta name="dcterms.isVersionOf" content="DRDAS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="SQL-statement-support.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="package-binding-options.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="SQL-statement-support.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="package-binding-options.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">User's Guide</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Scripts for Creating and Maintaining Oracle Database Provider for DRDA</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">用户指导</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">用于为DRDA创建和维护Oracle数据库提供程序的脚本</li>
             </ol>
             <a id="GUID-9AAED23B-CC61-40DD-A050-D5EAF771B20C" name="GUID-9AAED23B-CC61-40DD-A050-D5EAF771B20C"></a><a id="DRDAS601"></a>
             
-            <h2 id="DRDAS-GUID-9AAED23B-CC61-40DD-A050-D5EAF771B20C" class="sect2"><span class="enumeration_appendix">A </span>Scripts for Creating and Maintaining Oracle Database Provider for DRDA
-            </h2>
+            <h2 id="DRDAS-GUID-9AAED23B-CC61-40DD-A050-D5EAF771B20C" class="sect2"><span class="enumeration_appendix">一种</span>用于创建和维护Oracle数据库提供的DRDA脚本</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p>Oracle Database Provider for DRDA needs several scripts to establish a proper environment.</p>
+                  <p>用于DRDA的Oracle数据库提供程序需要多个脚本来建立适当的环境。</p>
                </div>
                <!-- class="section" -->
             </div><a id="DRDAS602"></a><div class="props_rev_3"><a id="GUID-C13A2414-D056-44C6-AD61-15044DDD4EFE" name="GUID-C13A2414-D056-44C6-AD61-15044DDD4EFE"></a><h3 id="DRDAS-GUID-C13A2414-D056-44C6-AD61-15044DDD4EFE" class="sect3">catdrdaas.sql</h3>
                <div>
                   <div class="section">
-                     <p>The script <code class="codeph">catdrdaas.sql</code> creates Oracle Database Provider for DRDA catalog objects.
+                     <p>脚本<code class="codeph">catdrdaas.sql</code>为DRDA目录对象创建Oracle数据库提供程序。
                      </p><pre class="oac_no_warn" dir="ltr">Rem catdrdaas.sql
 Rem
 Rem Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved. 
@@ -106,8 +99,7 @@ Eg:
             </div><a id="DRDAS603"></a><div class="props_rev_3"><a id="GUID-F4644CB7-61B9-413D-B480-D725B39B901D" name="GUID-F4644CB7-61B9-413D-B480-D725B39B901D"></a><h3 id="DRDAS-GUID-F4644CB7-61B9-413D-B480-D725B39B901D" class="sect3">catnodrdaas.sql</h3>
                <div>
                   <div class="section">
-                     <p>The script <code class="codeph">catnodrdaas.sql</code> removes Oracle Database Provider for DRDA catalog objects
-                     </p><pre class="oac_no_warn" dir="ltr">Rem catnodrdaas.sql
+                     <p>脚本<code class="codeph">catnodrdaas.sql</code>删除DRDA目录对象的Oracle数据库提供程序</p><pre class="oac_no_warn" dir="ltr">Rem catnodrdaas.sql
 Rem
 Rem Copyright (c) 2011, 2013, Oracle and/or its affiliates. 
 Rem All rights reserved. 

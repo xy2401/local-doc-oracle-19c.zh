@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="You can change a nonpartitioned table into a partitioned table.">
       <meta name="description" content="You can change a nonpartitioned table into a partitioned table.">
-      <title>Changing a Nonpartitioned Table into a Partitioned Table</title>
+      <title>将非分区表更改为分区表</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="VLDB and Partitioning Guide">
       <meta property="og:description" content="You can change a nonpartitioned table into a partitioned table.">
@@ -46,51 +44,46 @@
     <meta name="dcterms.isVersionOf" content="VLDBG">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="drop-partition-table.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="manage_hypt.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="drop-partition-table.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="manage_hypt.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">VLDB and Partitioning Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="partition-admin.html" property="item" typeof="WebPage"><span property="name">Partition Administration</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Changing a Nonpartitioned Table into a Partitioned Table</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">VLDB和分区指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="partition-admin.html" property="item" typeof="WebPage"><span property="name">分区管理</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">将非分区表更改为分区表</li>
             </ol>
             <a id="GUID-6054142E-207A-4DF0-A62A-4C1A94DD36C4" name="GUID-6054142E-207A-4DF0-A62A-4C1A94DD36C4"></a><a id="VLDBG00302"></a>
             
-            <h2 id="VLDBG-GUID-6054142E-207A-4DF0-A62A-4C1A94DD36C4" class="sect2">Changing a Nonpartitioned Table into a Partitioned Table</h2>
+            <h2 id="VLDBG-GUID-6054142E-207A-4DF0-A62A-4C1A94DD36C4" class="sect2">将非分区表更改为分区表</h2>
          </header>
          <div class="ind">
             <div>
-               <p>You can change a nonpartitioned table into a partitioned table.</p>
-               <p>The following topics are discussed:</p>
-               <ul style="list-style-type: disc;">
+               <p>您可以将非分区表更改为分区表。</p>
+               <p>讨论了以下主题：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p><a href="evolve-nopartition-table.html#GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC" title="Oracle Database provides a mechanism to move one or more partitions or to make other changes to the partitions' physical structures without significantly affecting the availability of the partitions for DML. This mechanism is called online table redefinition.">Using Online Redefinition to Partition Collection Tables</a></p>
+                     <p><a href="evolve-nopartition-table.html#GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC" title="Oracle数据库提供了一种机制来移动一个或多个分区或对分区的物理结构进行其他更改，而不会显着影响DML分区的可用性。此机制称为联机表重定义。">使用联机重定义来分区收集表</a></p>
                   </li>
                   <li>
-                     <p><a href="evolve-nopartition-table.html#GUID-5FDB7D59-DD05-40E4-8AB4-AF82EA0D0FE5" title="A non-partitioned table can be converted to a partitioned table with a MODIFY clause added to the ALTER TABLE SQL statement.">Converting a Non-Partitioned Table to a Partitioned Table</a></p>
+                     <p><a href="evolve-nopartition-table.html#GUID-5FDB7D59-DD05-40E4-8AB4-AF82EA0D0FE5" title="可以将非分区表转换为分区表，并在ALTER TABLE SQL语句中添加MODIFY子句。">将非分区表转换为分区表</a></p>
                   </li>
                </ul>
                <div class="infoboxnotealso" id="GUID-6054142E-207A-4DF0-A62A-4C1A94DD36C4__GUID-0B6B57EA-7AED-4E05-A271-505D84D227BF">
-                  <p class="notep1">See Also:</p>
-                  <p><a href="../admin/managing-tables.html#ADMIN11675" target="_blank"><span><cite>Oracle Database Administrator’s Guide</cite></span></a> for information about redefining partitions of a table
-                  </p>
+                  <p class="notep1">也可以看看：</p>
+                  <p>有关重新定义表分区的信息，请参见<a href="../admin/managing-tables.html#ADMIN11675" target="_blank"><span><cite>“Oracle数据库管理员指南”</cite></span></a></p>
                </div>
-            </div><a id="VLDBG14075"></a><a id="VLDBG1197"></a><div class="props_rev_3"><a id="GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC" name="GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC"></a><h3 id="VLDBG-GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC" class="sect3">Using Online Redefinition to Partition Collection Tables</h3>
+            </div><a id="VLDBG14075"></a><a id="VLDBG1197"></a><div class="props_rev_3"><a id="GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC" name="GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC"></a><h3 id="VLDBG-GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC" class="sect3">使用联机重定义来分区收集表</h3>
                <div>
-                  <p>Oracle Database provides a mechanism to move one or more partitions or to make other changes to the partitions' physical structures without significantly affecting the availability of the partitions for DML. This mechanism is called online table redefinition.</p>
+                  <p>Oracle数据库提供了一种机制来移动一个或多个分区或对分区的物理结构进行其他更改，而不会显着影响DML分区的可用性。此机制称为联机表重定义。</p>
                   <div class="section">
-                     <p>You can use online redefinition to copy nonpartitioned Collection Tables to partitioned Collection Tables and Oracle Database inserts rows into the appropriate partitions in the Collection Table. <a href="evolve-nopartition-table.html#GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC__CHDHIDJJ">Example 4-40</a> illustrates how this is done for nested tables inside an Objects column; a similar example works for Ordered Collection Type Tables inside an <code class="codeph">XMLType</code> table or column. During the <code class="codeph">copy_table_dependents</code> operation, you specify <code class="codeph">0</code> or <code class="codeph">false</code> for copying the indexes and constraints, because you want to keep the indexes and constraints of the newly defined collection table. However, the Collection Tables and its partitions have the same names as that of the interim table (<code class="codeph">print_media2</code> in <a href="evolve-nopartition-table.html#GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC__CHDHIDJJ">Example 4-40</a>). You must take explicit steps to preserve the Collection Table names.
+                     <p>您可以使用联机重定义将未分区的集合表复制到分区的集合表，Oracle数据库将行插入到集合表中的相应分区中。<a href="evolve-nopartition-table.html#GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC__CHDHIDJJ">例4-40</a>说明了如何对Objects列中的嵌套表进行此操作;类似的示例适用于<code class="codeph">XMLType</code>表或列中的有序集合类型表。在<code class="codeph">copy_table_dependents</code>操作期间，为复制索引和约束指定<code class="codeph">0</code>或<code class="codeph">false</code> ，因为您要保留新定义的集合表的索引和约束。但是，Collection Tables及其分区的名称与临时表的名称相同（ <a href="evolve-nopartition-table.html#GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC__CHDHIDJJ">例4-40中的</a> <code class="codeph">print_media2</code> ）。您必须采取明确的步骤来保留收集表名称。
                      </p>
                   </div>
                   <!-- class="section" -->
                   <div class="example" id="GUID-5C0F8D12-DDDF-42AB-B644-1880156832BC__CHDHIDJJ">
-                     <p class="titleinexample">Example 4-40 Redefining partitions with collection tables</p><pre class="oac_no_warn" dir="ltr">CONNECT / AS SYSDBA
+                     <p class="titleinexample">示例4-40使用集合表重新定义分区</p><pre class="oac_no_warn" dir="ltr">CONNECT / AS SYSDBA
 DROP USER eqnt CASCADE;
 CREATE USER eqnt IDENTIFIED BY eqnt;
 GRANT CONNECT, RESOURCE TO eqnt;
@@ -192,16 +185,16 @@ PRODUCT_ID   AD_TEXTDOCS_NTAB(DOCUMENT_TYP)
                   <!-- class="example" -->
                </div>
             </div>
-            <div class="sect2"><a id="GUID-5FDB7D59-DD05-40E4-8AB4-AF82EA0D0FE5" name="GUID-5FDB7D59-DD05-40E4-8AB4-AF82EA0D0FE5"></a><h3 id="VLDBG-GUID-5FDB7D59-DD05-40E4-8AB4-AF82EA0D0FE5" class="sect3">Converting a Non-Partitioned Table to a Partitioned Table</h3>
+            <div class="sect2"><a id="GUID-5FDB7D59-DD05-40E4-8AB4-AF82EA0D0FE5" name="GUID-5FDB7D59-DD05-40E4-8AB4-AF82EA0D0FE5"></a><h3 id="VLDBG-GUID-5FDB7D59-DD05-40E4-8AB4-AF82EA0D0FE5" class="sect3">将非分区表转换为分区表</h3>
                <div>
-                  <p>A non-partitioned table can be converted to a partitioned table with a <code class="codeph">MODIFY</code> clause added to the <code class="codeph">ALTER</code> <code class="codeph">TABLE</code> SQL statement.
+                  <p>可以将非分区表转换为分区表，并在<code class="codeph">ALTER</code> <code class="codeph">TABLE</code> SQL语句中添加<code class="codeph">MODIFY</code>子句。
                   </p>
-                  <p> In addition, the keyword <code class="codeph">ONLINE</code> can be specified, enabling concurrent DML operations while the conversion is ongoing.
+                  <p>此外，可以指定关键字<code class="codeph">ONLINE</code> ，在转换过程中启用并发DML操作。
                   </p>
-                  <p>The following is an example of the <code class="codeph">ALTER TABLE</code> statement using the <code class="codeph">ONLINE</code> keyword for an online conversion to a partitioned table.
+                  <p>以下是使用<code class="codeph">ONLINE</code>关键字进行在线转换为分区表的<code class="codeph">ALTER TABLE</code>语句的示例。
                   </p>
                   <div class="example" id="GUID-5FDB7D59-DD05-40E4-8AB4-AF82EA0D0FE5__GUID-7E992DD2-5B56-4FC6-BCA9-B517DF0353C9">
-                     <p class="titleinexample">Example 4-41 Using the MODIFY clause of ALTER TABLE to convert online to a partitioned table</p><pre class="oac_no_warn" dir="ltr">ALTER TABLE employees_convert MODIFY
+                     <p class="titleinexample">示例4-41使用ALTER TABLE的MODIFY子句将联机转换为分区表</p><pre class="oac_no_warn" dir="ltr">ALTER TABLE employees_convert MODIFY
   PARTITION BY RANGE (employee_id) INTERVAL (100)
   ( PARTITION P1 VALUES LESS THAN (100),
     PARTITION P2 VALUES LESS THAN (500)
@@ -213,57 +206,57 @@ PRODUCT_ID   AD_TEXTDOCS_NTAB(DOCUMENT_TYP)
  );</pre></div>
                   <!-- class="example" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-5FDB7D59-DD05-40E4-8AB4-AF82EA0D0FE5__GUID-FDDDBB01-038E-4FCF-BBF9-90D00DF3A794">Considerations When Using the UPDATE INDEXES Clause</p>
-                     <p>When using the <code class="codeph">UPDATE</code> <code class="codeph">INDEXES</code> clause, note the following.
+                     <p class="subhead2" id="GUID-5FDB7D59-DD05-40E4-8AB4-AF82EA0D0FE5__GUID-FDDDBB01-038E-4FCF-BBF9-90D00DF3A794">使用UPDATE INDEXES子句时的注意事项</p>
+                     <p>使用<code class="codeph">UPDATE</code> <code class="codeph">INDEXES</code>子句时，请注意以下内容。
                      </p>
-                     <ul style="list-style-type: disc;">
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p>This clause can be used to change the partitioning state of indexes and storage properties of the indexes being converted. </p>
+                           <p>此子句可用于更改索引的分区状态和要转换的索引的存储属性。</p>
                         </li>
                         <li>
-                           <p>The specification of the <code class="codeph">UPDATE</code> <code class="codeph">INDEXES</code> clause is optional. 
+                           <p><code class="codeph">UPDATE</code> <code class="codeph">INDEXES</code>子句的规范是可选的。
                            </p>
-                           <p>Indexes are maintained both for the online and offline conversion to a partitioned table.</p>
+                           <p>保留索引以进行分区表的联机和脱机转换。</p>
                         </li>
                         <li>
-                           <p>This clause cannot change the columns on which the original list of indexes are defined. </p>
+                           <p>此子句不能更改定义原始索引列表的列。</p>
                         </li>
                         <li>
-                           <p>This clause cannot change the uniqueness property of the index or any other index property.</p>
+                           <p>此子句不能更改索引或任何其他索引属性的唯一性属性。</p>
                         </li>
                         <li>
-                           <p>If you do not specify the tablespace for any of the indexes, then the following tablespace defaults apply. </p>
-                           <ul style="list-style-type: disc;">
+                           <p>如果未为任何索引指定表空间，则应用以下表空间默认值。</p>
+                           <ul style="list-style-type:disc">
                               <li>
-                                 <p>Local indexes after the conversion collocate with the table partition.</p>
+                                 <p>转换后的本地索引与表分区并置。</p>
                               </li>
                               <li>
-                                 <p>Global indexes after the conversion reside in the same tablespace of the original global index on the non-partitioned table.</p>
+                                 <p>转换后的全局索引驻留在非分区表上的原始全局索引的同一表空间中。</p>
                               </li>
                            </ul>
                         </li>
                         <li>
-                           <p>If you do not specify the <code class="codeph">INDEXES</code> clause or the <code class="codeph">INDEXES</code> clause does not specify all the indexes on the original non-partitioned table, then the following default behavior applies for all unspecified indexes.
+                           <p>如果未指定<code class="codeph">INDEXES</code>子句或<code class="codeph">INDEXES</code>子句未指定原始非分区表上的所有索引，则以下默认行为适用于所有未指定的索引。
                            </p>
-                           <ul style="list-style-type: disc;">
+                           <ul style="list-style-type:disc">
                               <li>
-                                 <p>Global partitioned indexes remain the same and retain the original partitioning shape.</p>
+                                 <p>全局分区索引保持不变并保留原始分区形状。</p>
                               </li>
                               <li>
-                                 <p>Non-prefixed indexes become global nonpartitioned indexes.</p>
+                                 <p>非前缀索引成为全局非分区索引。</p>
                               </li>
                               <li>
-                                 <p>Prefixed indexes are converted to local partitioned indexes. </p>
-                                 <p>Prefixed means that the partition key columns are included in the index definition, but the index definition is not limited to including the partitioning keys only.</p>
+                                 <p>带前缀的索引将转换为本地分区索引。</p>
+                                 <p>前缀表示分区键列包含在索引定义中，但索引定义不限于仅包括分区键。</p>
                               </li>
                               <li>
-                                 <p>Bitmap indexes become local partitioned indexes, regardless whether they are prefixed or not. </p>
-                                 <p>Bitmap indexes must always be local partitioned indexes.</p>
+                                 <p>无论它们是否带有前缀，位图索引都会成为本地分区索引。</p>
+                                 <p>位图索引必须始终是本地分区索引。</p>
                               </li>
                            </ul>
                         </li>
                         <li>
-                           <p>The conversion operation cannot be performed if there are domain indexes.</p>
+                           <p>如果存在域索引，则无法执行转换操作。</p>
                         </li>
                      </ul>
                   </div>

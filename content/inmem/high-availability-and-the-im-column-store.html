@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="This part explains how to use the IM column store with high availability features such as In-Memory FastStart (IM FastStart), Oracle Data Guard, and Oracle Real Application Clusters (Oracle RAC).">
       <meta name="description" content="This part explains how to use the IM column store with high availability features such as In-Memory FastStart (IM FastStart), Oracle Data Guard, and Oracle Real Application Clusters (Oracle RAC).">
-      <title>High Availability and the IM Column Store</title>
+      <title>高可用性和IM列存储</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database In-Memory Guide">
       <meta property="og:description" content="This part explains how to use the IM column store with high availability features such as In-Memory FastStart (IM FastStart), Oracle Data Guard, and Oracle Real Application Clusters (Oracle RAC).">
@@ -46,41 +44,36 @@
     <meta name="dcterms.isVersionOf" content="INMEM">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="repopulation-and-dml.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="managing-im-faststart-for-im-column-store.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="repopulation-and-dml.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="managing-im-faststart-for-im-column-store.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database In-Memory Guide</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">High Availability and the IM Column Store</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库内存指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">高可用性和IM列存储</li>
             </ol>
             <a id="GUID-744E10A1-D345-4F73-82BD-6690CFF333D4" name="GUID-744E10A1-D345-4F73-82BD-6690CFF333D4"></a>
             
-            <h2 id="INMEM-GUID-744E10A1-D345-4F73-82BD-6690CFF333D4" class="sect2"><span class="enumeration_part">Part IV </span>High Availability and the IM Column Store
-            </h2>
+            <h2 id="INMEM-GUID-744E10A1-D345-4F73-82BD-6690CFF333D4" class="sect2"><span class="enumeration_part">第IV部分</span>高可用性和IM列存储</h2>
          </header>
          <div class="ind">
             <div>
-               <p>This part explains how to use the IM column store with high availability features such as In-Memory FastStart (IM FastStart), Oracle Data Guard, and Oracle Real Application Clusters (Oracle RAC).</p>
-               <p>This section contains the following topics:</p>
+               <p>本部分介绍如何使用具有高可用性功能的IM列存储，例如内存中快速启动（IM FastStart），Oracle Data Guard和Oracle Real Application Clusters（Oracle RAC）。</p>
+               <p>本节包含以下主题：</p>
             </div>
             <div>
                <ul class="ullinks">
-                  <li class="ulchildlink"><a href="managing-im-faststart-for-im-column-store.html#GUID-CAA790EA-0CF6-44A8-A332-3CE23EC0FE79">Managing IM FastStart for the IM Column Store</a><br>When the IM column store is enabled, In-Memory FastStart (IM FastStart) enables the database to open faster by storing columnar data on disk.
+                  <li class="ulchildlink"><a href="managing-im-faststart-for-im-column-store.html#GUID-CAA790EA-0CF6-44A8-A332-3CE23EC0FE79">管理IM列存储的IM FastStart</a><br>启用IM列存储后，内存中快速启动（IM FastStart）可通过在磁盘上存储柱状数据来更快地打开数据库。
                   </li>
-                  <li class="ulchildlink"><a href="deploying-in-memory-in-oracle-rac.html#GUID-E897E3E9-1163-4FAE-9C74-B8B83B515E31">Deploying IM Column Stores in Oracle RAC</a><br>This chapter explains how to enable IM column stores in an Oracle Real Application Clusters (Oracle RAC) environment, and configure objects for population.
+                  <li class="ulchildlink"><a href="deploying-in-memory-in-oracle-rac.html#GUID-E897E3E9-1163-4FAE-9C74-B8B83B515E31">在Oracle RAC中部署IM列存储</a><br>本章介绍如何在Oracle Real Application Clusters（Oracle RAC）环境中启用IM列存储，以及如何为填充配置对象。
                   </li>
-                  <li class="ulchildlink"><a href="deploying-im-column-store-with-adg.html#GUID-D7307BB7-2C8D-4A2C-98F6-B3F6000EFC20">Deploying an IM Column Store with Oracle Active Data Guard</a><br>This chapter explains how Database In-Memory feature works in an <span>Oracle Active Data Guard</span> environment.
+                  <li class="ulchildlink"><a href="deploying-im-column-store-with-adg.html#GUID-D7307BB7-2C8D-4A2C-98F6-B3F6000EFC20">使用Oracle Active Data Guard部署IM列存储</a><br>本章介绍Database In-Memory功能如何在<span>Oracle Active Data Guard</span>环境中工作。
                   </li>
                </ul>
                <div class="infoboxnotealso" id="GUID-744E10A1-D345-4F73-82BD-6690CFF333D4__GUID-2FD54F8A-C68D-4C8B-9347-6B2C71FA6F9B">
-                  <p class="notep1">See Also:</p>
-                  <p>The MAA white paper <a href="http://www.oracle.com/technetwork/database/availability/dbim-maa-2658757.pdf" target="_blank">Oracle Database In-Memory High Availability Best Practices</a></p>
+                  <p class="notep1">也可以看看：</p>
+                  <p>MAA白皮书<a href="http://www.oracle.com/technetwork/database/availability/dbim-maa-2658757.pdf" target="_blank">Oracle数据库内存高可用性最佳实践</a></p>
                </div>
             </div>
             

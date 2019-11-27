@@ -1,17 +1,15 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Loading the Java Classes</title>
+      <title>加载Java类</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="Java Developer's Guide ">
-      <meta property="og:description" content>
+      <meta property="og:title" content="Java Developer&#39;s Guide ">
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="Java Developer's Guide">
+      <meta name="application-name" content="Java Developer&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="java-developers-guide.pdf" title="PDF File" type="application/pdf">
@@ -41,41 +39,35 @@
         </script>
       <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"oracle-database","element_name":"Oracle Database","display_in_url":true},"release":{"short_name":"19","element_name":"Release 19","display_in_url":true}}}</script>
       
-    <meta name="dcterms.title" content="Java Developer's Guide">
+    <meta name="dcterms.title" content="Java Developer&#39;s Guide">
     <meta name="dcterms.isVersionOf" content="JJDEV">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="writing-the-Java-classes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="publishing-the-Java-classes.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="writing-the-Java-classes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="publishing-the-Java-classes.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Java Developer's Guide </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="Java-stored-procedure-application-example.html" property="item" typeof="WebPage"><span property="name"> Java Stored Procedures Application Example </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Loading the Java Classes</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Java开发人员指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="Java-stored-procedure-application-example.html" property="item" typeof="WebPage"><span property="name">Java存储过程应用程序示例</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">加载Java类</li>
             </ol>
             <a id="GUID-B58157CC-4BE4-421D-834B-B6B786A8597E" name="GUID-B58157CC-4BE4-421D-834B-B6B786A8597E"></a><a id="JJDEV13303"></a>
             
-            <h2 id="JJDEV-GUID-B58157CC-4BE4-421D-834B-B6B786A8597E" class="sect2"><span class="enumeration_section">9.4 </span>Loading the Java Classes
-            </h2>
+            <h2 id="JJDEV-GUID-B58157CC-4BE4-421D-834B-B6B786A8597E" class="sect2"><span class="enumeration_section">9.4</span>加载Java类</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p>After writing the Java classes, use the <code class="codeph">loadjava</code> tool to upload your Java stored procedures into Oracle Database, as follows:
-                  </p><pre class="oac_no_warn" dir="ltr">&gt; loadjava -u HR@myPC:1521:orcl -v -r -t POManager.java
+                  <p>编写Java类之后，使用<code class="codeph">loadjava</code>工具将Java存储过程上载到Oracle数据库，如下所示：</p><pre class="oac_no_warn" dir="ltr">&gt; loadjava -u HR@myPC:1521:orcl -v -r -t POManager.java
 Password: <span class="italic">password</span>
 initialization complete
 loading : POManager
 creating : POManager
 resolver : resolver ( ("*" HR) ("*" public) ("*" -) )
 resolving: POManager
-</pre><p>The <code class="codeph">-v</code> option enables the verbose mode, the <code class="codeph">-r</code> option compiles uploaded Java source files and resolves external references in the classes, and the <code class="codeph">-t</code> option tells the <code class="codeph">loadjava</code> tool to connect to the database using the client-side JDBC Thin driver.
+</pre><p><code class="codeph">-v</code>选项启用详细模式， <code class="codeph">-r</code>选项编译上载的Java源文件并解析类中的外部引用， <code class="codeph">-t</code>选项告诉<code class="codeph">loadjava</code>工具使用客户端JDBC Thin驱动程序连接到数据库。
                   </p>
                </div>
                <!-- class="section" -->

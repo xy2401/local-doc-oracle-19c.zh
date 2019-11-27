@@ -1,14 +1,12 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>SQL Statements: CREATE LIBRARY to CREATE SCHEMA</title>
+      <title>SQL语句：CREATE LIBRARY以创建SCHEMA</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="SQL Language Reference ">
-      <meta property="og:description" content>
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
       <meta name="application-name" content="SQL Language Reference">
@@ -45,78 +43,73 @@
     <meta name="dcterms.isVersionOf" content="SQLRF">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="CREATE-JAVA.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="CREATE-LIBRARY.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="CREATE-JAVA.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="CREATE-LIBRARY.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Language Reference </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem"> SQL Statements: CREATE LIBRARY to CREATE SCHEMA</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL语言参考</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">SQL语句：CREATE LIBRARY以创建SCHEMA</li>
             </ol>
             <a id="GUID-B0517B99-DDA2-4F47-8866-46AD944FABF8" name="GUID-B0517B99-DDA2-4F47-8866-46AD944FABF8"></a><a id="SQLRF012"></a>
             
-            <h2 id="SQLRF-GUID-B0517B99-DDA2-4F47-8866-46AD944FABF8" class="sect2"><span class="enumeration_chapter">14 </span> SQL Statements: CREATE LIBRARY to CREATE SCHEMA
-            </h2>
+            <h2 id="SQLRF-GUID-B0517B99-DDA2-4F47-8866-46AD944FABF8" class="sect2"><span class="enumeration_chapter">14</span> SQL语句：CREATE LIBRARY以创建SCHEMA</h2>
          </header>
          <div class="ind">
             <div>
-               <p>This chapter contains the following SQL statements:</p>
-               <ul style="list-style-type: disc;">
+               <p>本章包含以下SQL语句：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p><a href="CREATE-LIBRARY.html#GUID-F042ABC9-2BF5-4E65-9D52-216D6228B288">CREATE LIBRARY</a></p>
+                     <p><a href="CREATE-LIBRARY.html#GUID-F042ABC9-2BF5-4E65-9D52-216D6228B288">创建图书馆</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-LOCKDOWN-PROFILE.html#GUID-1CDEC3A3-F3F1-4279-9370-36AACF416E0A">CREATE LOCKDOWN PROFILE</a></p>
+                     <p><a href="CREATE-LOCKDOWN-PROFILE.html#GUID-1CDEC3A3-F3F1-4279-9370-36AACF416E0A">创建锁定概况</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-MATERIALIZED-VIEW.html#GUID-EE262CA4-01E5-4618-B659-6165D993CA1B">CREATE MATERIALIZED VIEW</a></p>
+                     <p><a href="CREATE-MATERIALIZED-VIEW.html#GUID-EE262CA4-01E5-4618-B659-6165D993CA1B">创建物质化视图</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-MATERIALIZED-VIEW-LOG.html#GUID-13902019-D044-4B79-9EB4-1F60652D037B">CREATE MATERIALIZED VIEW LOG</a></p>
+                     <p><a href="CREATE-MATERIALIZED-VIEW-LOG.html#GUID-13902019-D044-4B79-9EB4-1F60652D037B">创建物化视图日志</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-MATERIALIZED-ZONEMAP.html#GUID-1E5048FC-3D28-49BC-80FE-7871568B4702">CREATE MATERIALIZED ZONEMAP</a></p>
+                     <p><a href="CREATE-MATERIALIZED-ZONEMAP.html#GUID-1E5048FC-3D28-49BC-80FE-7871568B4702">创建物质化的ZONEMAP</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-OPERATOR.html#GUID-62676C58-6F57-4572-8C09-7984A8E3EE9F">CREATE OPERATOR</a></p>
+                     <p><a href="CREATE-OPERATOR.html#GUID-62676C58-6F57-4572-8C09-7984A8E3EE9F">创建运营商</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-OUTLINE.html#GUID-7CC033AF-DB19-4616-87D9-8173939FD627">CREATE OUTLINE</a></p>
+                     <p><a href="CREATE-OUTLINE.html#GUID-7CC033AF-DB19-4616-87D9-8173939FD627">创建大纲</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-PACKAGE.html#GUID-40636655-899F-47D0-95CA-D58A71C94A56">CREATE PACKAGE</a></p>
+                     <p><a href="CREATE-PACKAGE.html#GUID-40636655-899F-47D0-95CA-D58A71C94A56">创建包</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-PACKAGE-BODY.html#GUID-E571E5A3-1C4B-4246-BF26-0E4348BEB6D6">CREATE PACKAGE BODY</a></p>
+                     <p><a href="CREATE-PACKAGE-BODY.html#GUID-E571E5A3-1C4B-4246-BF26-0E4348BEB6D6">创造包装身体</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-PFILE.html#GUID-C01CBA1C-F477-49BE-AD58-F2FED046D561">CREATE PFILE</a></p>
+                     <p><a href="CREATE-PFILE.html#GUID-C01CBA1C-F477-49BE-AD58-F2FED046D561">创建PFILE</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-PLUGGABLE-DATABASE.html#GUID-F2DBA8DD-EEA8-4BB7-A07F-78DC04DB1FFC">CREATE PLUGGABLE DATABASE</a></p>
+                     <p><a href="CREATE-PLUGGABLE-DATABASE.html#GUID-F2DBA8DD-EEA8-4BB7-A07F-78DC04DB1FFC">创建可插入的数据库</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-PROCEDURE.html#GUID-771879D8-BBFD-4D87-8A6C-290102142DA3">CREATE PROCEDURE</a></p>
+                     <p><a href="CREATE-PROCEDURE.html#GUID-771879D8-BBFD-4D87-8A6C-290102142DA3">创建程序</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-PROFILE.html#GUID-ABC7AE4D-64A8-4EA9-857D-BEF7300B64C3">CREATE PROFILE</a></p>
+                     <p><a href="CREATE-PROFILE.html#GUID-ABC7AE4D-64A8-4EA9-857D-BEF7300B64C3">创建个人资料</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-RESTORE-POINT.html#GUID-AD0FB693-7C28-4908-A870-BA884B320575">CREATE RESTORE POINT</a></p>
+                     <p><a href="CREATE-RESTORE-POINT.html#GUID-AD0FB693-7C28-4908-A870-BA884B320575">创建恢复点</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-ROLE.html#GUID-B2252DC5-5AE7-49B7-9048-98062993E450">CREATE ROLE</a></p>
+                     <p><a href="CREATE-ROLE.html#GUID-B2252DC5-5AE7-49B7-9048-98062993E450">创造角色</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-ROLLBACK-SEGMENT.html#GUID-14AE3104-5B33-4E53-8E6F-6B2F037B52E9">CREATE ROLLBACK SEGMENT</a></p>
+                     <p><a href="CREATE-ROLLBACK-SEGMENT.html#GUID-14AE3104-5B33-4E53-8E6F-6B2F037B52E9">创建ROLLBACK SEGMENT</a></p>
                   </li>
                   <li>
-                     <p><a href="CREATE-SCHEMA.html#GUID-2D154F9C-9E2B-4A09-B658-2EA5B99AC838">CREATE SCHEMA</a></p>
+                     <p><a href="CREATE-SCHEMA.html#GUID-2D154F9C-9E2B-4A09-B658-2EA5B99AC838">创建模式</a></p>
                   </li>
                </ul>
             </div>

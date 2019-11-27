@@ -1,6 +1,4 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +6,7 @@
       <title>NLS_COLLATION_ID</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="SQL Language Reference ">
-      <meta property="og:description" content>
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
       <meta name="application-name" content="SQL Language Reference">
@@ -45,55 +43,49 @@
     <meta name="dcterms.isVersionOf" content="SQLRF">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="NLS_CHARSET_NAME.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="NLS_COLLATION_NAME.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="NLS_CHARSET_NAME.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="NLS_COLLATION_NAME.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Language Reference </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">Functions</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">NLS_COLLATION_ID </li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL语言参考</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">功能</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">NLS_COLLATION_ID</li>
             </ol>
             <a id="GUID-69EA3869-28E3-4CF8-9678-CD4F9878EE99" name="GUID-69EA3869-28E3-4CF8-9678-CD4F9878EE99"></a>
             
-            <h2 id="SQLRF-GUID-69EA3869-28E3-4CF8-9678-CD4F9878EE99" class="sect2">NLS_COLLATION_ID </h2>
+            <h2 id="SQLRF-GUID-69EA3869-28E3-4CF8-9678-CD4F9878EE99" class="sect2">NLS_COLLATION_ID</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p class="subhead1" id="GUID-69EA3869-28E3-4CF8-9678-CD4F9878EE99__GUID-48BFF35E-617D-4659-AB67-D10CF8D83B0E">Syntax</p>
+                  <p class="subhead1" id="GUID-69EA3869-28E3-4CF8-9678-CD4F9878EE99__GUID-48BFF35E-617D-4659-AB67-D10CF8D83B0E">句法</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <div class="figure" id="GUID-69EA3869-28E3-4CF8-9678-CD4F9878EE99__GUID-B4F458D7-CC8F-46A6-9E1C-DE1B31A5F6CF"><img src="img/nls_collation_id.gif" alt="Description of nls_collation_id.eps follows" title="Description of nls_collation_id.eps follows" longdesc="img_text/nls_collation_id.html"><br><a href="img_text/nls_collation_id.html">Description of the illustration nls_collation_id.eps</a></div>
+                  <div class="figure" id="GUID-69EA3869-28E3-4CF8-9678-CD4F9878EE99__GUID-B4F458D7-CC8F-46A6-9E1C-DE1B31A5F6CF"><img src="img/nls_collation_id.gif" alt="下面是nls_collation_id.eps的描述" title="下面是nls_collation_id.eps的描述" longdesc="img_text/nls_collation_id.html"><br><a href="img_text/nls_collation_id.html">插图说明nls_collation_id.eps</a></div>
                   <!-- class="figure" -->
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-69EA3869-28E3-4CF8-9678-CD4F9878EE99__GUID-6433D175-6FCC-4524-8247-FB040F4052F7">Purpose</p>
+                  <p class="subhead1" id="GUID-69EA3869-28E3-4CF8-9678-CD4F9878EE99__GUID-6433D175-6FCC-4524-8247-FB040F4052F7">目的</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p><code class="codeph">NLS_COLLATION_ID</code> takes as its argument a collation name and returns the corresponding collation ID number. Collation IDs are used in the data dictionary tables and in Oracle Call Interface (OCI). Collation names are used in SQL statements and data dictionary views
+                  <p><code class="codeph">NLS_COLLATION_ID</code>将其作为参数作为归类名称，并返回相应的归类ID号。归类ID用于数据字典表和Oracle调用接口（OCI）中。排序规则名称用于SQL语句和数据字典视图中</p>
+                  <p>对于<span class="italic"><code class="codeph">expr</code></span> ，将排序规则名称指定为<code class="codeph">VARCHAR2</code>值。您可以使用大写和小写字母的任意组合指定有效的命名排序规则或伪排序规则。
                   </p>
-                  <p>For <span class="italic"><code class="codeph">expr</code></span>, specify the collation name as a <code class="codeph">VARCHAR2</code> value. You can specify a valid named collation or a pseudo-collation, in any combination of uppercase and lowercase letters.
-                  </p>
-                  <p>This function returns a <code class="codeph">NUMBER</code> value. If you specify an invalid collation name, then this function returns null.
+                  <p>此函数返回<code class="codeph">NUMBER</code>值。如果指定了无效的排序规则名称，则此函数返回null。
                   </p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-69EA3869-28E3-4CF8-9678-CD4F9878EE99__GUID-A951DE8E-AAE6-4259-BB30-B0944D085050">Examples</p>
+                  <p class="subhead1" id="GUID-69EA3869-28E3-4CF8-9678-CD4F9878EE99__GUID-A951DE8E-AAE6-4259-BB30-B0944D085050">例子</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p>The following example returns the collation ID of collation <code class="codeph">BINARY_CI</code>:
-                  </p><pre class="oac_no_warn" dir="ltr">SELECT NLS_COLLATION_ID('BINARY_CI') 
+                  <p>以下示例返回排序<code class="codeph">BINARY_CI</code>的排序<code class="codeph">BINARY_CI</code> ID：</p><pre class="oac_no_warn" dir="ltr">SELECT NLS_COLLATION_ID('BINARY_CI') 
   FROM DUAL; 
 
 NLS_COLLATION_ID('BINARY_CI')

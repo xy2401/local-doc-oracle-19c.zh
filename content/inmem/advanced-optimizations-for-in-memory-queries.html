@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="This Part explains how to optimize queries using In-Memory Expressions, join groups, and In-Memory aggregation. It also explains how the IM column store repopulates modified data.">
       <meta name="description" content="This Part explains how to optimize queries using In-Memory Expressions, join groups, and In-Memory aggregation. It also explains how the IM column store repopulates modified data.">
-      <title>Optimizing In-Memory Queries</title>
+      <title>优化内存中查询</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database In-Memory Guide">
       <meta property="og:description" content="This Part explains how to optimize queries using In-Memory Expressions, join groups, and In-Memory aggregation. It also explains how the IM column store repopulates modified data.">
@@ -46,38 +44,33 @@
     <meta name="dcterms.isVersionOf" content="INMEM">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="configuring-memory-management.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="optimizing-in-memory-expressions.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="configuring-memory-management.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="optimizing-in-memory-expressions.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database In-Memory Guide</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Optimizing In-Memory Queries</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库内存指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">优化内存中查询</li>
             </ol>
             <a id="GUID-33034151-7BD7-4186-B336-C693FBB27634" name="GUID-33034151-7BD7-4186-B336-C693FBB27634"></a>
             
-            <h2 id="INMEM-GUID-33034151-7BD7-4186-B336-C693FBB27634" class="sect2"><span class="enumeration_part">Part III </span>Optimizing In-Memory Queries
-            </h2>
+            <h2 id="INMEM-GUID-33034151-7BD7-4186-B336-C693FBB27634" class="sect2"><span class="enumeration_part">第三部分</span>优化内存中查询</h2>
          </header>
          <div class="ind">
             <div>
-               <p>This Part explains how to optimize queries using In-Memory Expressions, join groups, and In-Memory aggregation. It also explains how the IM column store repopulates modified data.</p>
-               <p>This Part contains the following chapters:</p>
+               <p>本部分介绍如何使用内存表达式，连接组和内存中聚合来优化查询。它还解释了IM列存储如何重新填充已修改的数据。</p>
+               <p>本部分包含以下章节：</p>
             </div>
             <div>
                <ul class="ullinks">
-                  <li class="ulchildlink"><a href="optimizing-in-memory-expressions.html#GUID-5F82168D-A024-4F96-B3AF-7DA4C52908B8">Optimizing Queries with In-Memory Expressions</a><br>In the context of the IM column store, an <span class="bold">expression</span> is a combination of one or more values, operators, and SQL or PL/SQL functions (<code class="codeph">DETERMINISTIC</code> only) that resolve to a value.
+                  <li class="ulchildlink"><a href="optimizing-in-memory-expressions.html#GUID-5F82168D-A024-4F96-B3AF-7DA4C52908B8">使用内存表达式优化查询</a><br>在IM列存储的上下文中， <span class="bold">表达式</span>是一个或多个值，运算符以及解析为值的SQL或PL / SQL函数（仅限<code class="codeph">DETERMINISTIC</code> ）的组合。
                   </li>
-                  <li class="ulchildlink"><a href="optimizing-queries-with-join-groups.html#GUID-3E5491C4-B345-4A8E-8B1B-8DC150C8A797">Optimizing Joins with Join Groups</a><br>A <strong class="term">join group</strong> is a user-created dictionary object that lists one or more columns that can be meaningfully joined. 
+                  <li class="ulchildlink"><a href="optimizing-queries-with-join-groups.html#GUID-3E5491C4-B345-4A8E-8B1B-8DC150C8A797">使用连接组优化连接</a><br><strong class="term">连接组</strong>是用户创建的字典对象，它列出了一个或多个可以有意义连接的列。
                   </li>
-                  <li class="ulchildlink"><a href="optimizing-in-memory-aggregation.html#GUID-A9E6044E-DC81-44C7-8D0C-E77502722388">Optimizing Aggregation</a><br>Database In-Memory provides optimizations to speed up aggregation and arithmetic.
+                  <li class="ulchildlink"><a href="optimizing-in-memory-aggregation.html#GUID-A9E6044E-DC81-44C7-8D0C-E77502722388">优化聚合</a><br>Database In-Memory提供优化以加速聚合和算术。
                   </li>
-                  <li class="ulchildlink"><a href="repopulation-and-dml.html#GUID-85AB84D5-1308-430A-BED2-281F3E9515B2">Optimizing Repopulation of the IM Column Store</a><br>The IM column store periodically refreshes objects that have been modified. You can control this behavior using initialization parameters and the <code class="codeph">DBMS_INMEMORY</code> package.
+                  <li class="ulchildlink"><a href="repopulation-and-dml.html#GUID-85AB84D5-1308-430A-BED2-281F3E9515B2">优化IM列存储的重新填充</a><br>IM列存储定期刷新已修改的对象。您可以使用初始化参数和<code class="codeph">DBMS_INMEMORY</code>包来控制此行为。
                   </li>
                </ul>
             </div>

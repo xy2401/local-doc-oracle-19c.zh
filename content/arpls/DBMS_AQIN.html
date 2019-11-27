@@ -1,6 +1,4 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,51 +45,43 @@
     <meta name="dcterms.isVersionOf" content="ARPLS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="DBMS_AQELM.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="DBMS_ASSERT.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="DBMS_AQELM.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="DBMS_ASSERT.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">PL/SQL Packages and Types Reference</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem"> DBMS_AQIN</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">PL / SQL包和类型参考</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">DBMS_AQIN</li>
             </ol>
             <a id="GUID-CBBBF84A-1A7E-469F-BBA7-D3D7971A3DF9" name="GUID-CBBBF84A-1A7E-469F-BBA7-D3D7971A3DF9"></a><a id="ARPLS402"></a><a id="ARPLS402"></a>
             
-            <h2 id="ARPLS-GUID-CBBBF84A-1A7E-469F-BBA7-D3D7971A3DF9" class="sect2"><span class="enumeration_chapter">24 </span> DBMS_AQIN
-            </h2>
+            <h2 id="ARPLS-GUID-CBBBF84A-1A7E-469F-BBA7-D3D7971A3DF9" class="sect2"><span class="enumeration_chapter">24</span> DBMS_AQIN</h2>
          </header>
          <div class="ind">
             <div>
-               <p>The <code class="codeph">DBMS_AQIN</code> package plays a part in providing secure access to the Oracle JMS interfaces. 
+               <p><code class="codeph">DBMS_AQIN</code>程序包在提供对Oracle JMS接口的安全访问方面起着重要作用。
                </p>
                <div class="infoboxnotealso" id="GUID-CBBBF84A-1A7E-469F-BBA7-D3D7971A3DF9__GUID-C1B14B5A-06EA-4F48-A516-D11D24F9465B">
-                  <p class="notep1">See Also:</p>
-                  <p><a href="../adque/managing-aq.html#ADQUE0400" target="_blank"><span class="italic">Oracle Database Advanced Queuing User's Guide </span></a>for detailed information about <code class="codeph">DBMS_AQIN</code></p>
+                  <p class="notep1">也可以看看：</p>
+                  <p>有关<code class="codeph">DBMS_AQIN</code>详细信息，请<code class="codeph">DBMS_AQIN</code> <a href="../adque/managing-aq.html#ADQUE0400" target="_blank"><span class="italic">“Oracle数据库高级队列用户指南”</span></a></p>
                </div>
-               <p>This chapter contains the following topic:<a id="d139438e98" class="indexterm-anchor"></a></p>
-               <ul style="list-style-type: disc;">
+               <p>本章包含以下主题：<a id="d139438e98" class="indexterm-anchor"></a></p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p><a href="DBMS_AQIN.html#GUID-4DBA97E2-601E-47CE-8D21-776243782CFA" title="While you should not call any subprograms in the DBMS_AQIN package directly, you must have the EXECUTE privilege on the DBMS_AQIN and DBMS_AQJMS packages to use the Oracle JMS interfaces.">Security Model</a></p>
+                     <p><a href="DBMS_AQIN.html#GUID-4DBA97E2-601E-47CE-8D21-776243782CFA" title="虽然不应直接调用DBMS_AQIN程序包中的任何子程序，但必须具有DBMS_AQIN和DBMS_AQJMS程序包的EXECUTE特权才能使用Oracle JMS接口。">安全模型</a></p>
                   </li>
                </ul>
-            </div><a id="ARPLS74811"></a><a id="ARPLS74811"></a><div class="props_rev_3"><a id="GUID-4DBA97E2-601E-47CE-8D21-776243782CFA" name="GUID-4DBA97E2-601E-47CE-8D21-776243782CFA"></a><h3 id="ARPLS-GUID-4DBA97E2-601E-47CE-8D21-776243782CFA" class="sect3"><span class="enumeration_section">24.1 </span>DBMS_AQIN Security Model
-               </h3>
+            </div><a id="ARPLS74811"></a><a id="ARPLS74811"></a><div class="props_rev_3"><a id="GUID-4DBA97E2-601E-47CE-8D21-776243782CFA" name="GUID-4DBA97E2-601E-47CE-8D21-776243782CFA"></a><h3 id="ARPLS-GUID-4DBA97E2-601E-47CE-8D21-776243782CFA" class="sect3"><span class="enumeration_section">24.1</span> DBMS_AQIN安全模型</h3>
                <div>
-                  <p>While you should not call any subprograms in the <code class="codeph">DBMS_AQIN</code> package directly, you must have the <code class="codeph">EXECUTE</code> privilege on the <code class="codeph">DBMS_AQIN</code> and <code class="codeph">DBMS_AQJMS</code> packages to use the Oracle JMS interfaces.
+                  <p>虽然不应直接调用<code class="codeph">DBMS_AQIN</code>程序包中的任何子程序，但必须具有<code class="codeph">DBMS_AQIN</code>和<code class="codeph">DBMS_AQJMS</code>程序包的<code class="codeph">EXECUTE</code>特权才能使用Oracle JMS接口。
                   </p>
                   <div class="section">
-                     <p>Use the following syntax to accomplish this with regard to the <code class="codeph">DBMS_AQIN</code> package:
-                     </p><pre class="oac_no_warn" dir="ltr">GRANT EXECUTE ON DBMS_AQIN to <span class="italic">user</span>;
-</pre><p>You must have <code class="codeph">EXECUTE</code> privilege on the <code class="codeph">DBMS_AQIN</code> and <code class="codeph">DBMS_AQJMS</code> packages to use the Oracle JMS interfaces. You can also acquire these rights through the <code class="codeph">AQ_USER_ROLE</code> or the <code class="codeph">AQ_ADMINSTRATOR_ROLE</code>.
-                     </p>
+                     <p>使用以下语法完成与<code class="codeph">DBMS_AQIN</code>包相关的操作：</p><pre class="oac_no_warn" dir="ltr">GRANT EXECUTE ON DBMS_AQIN to <span class="italic">user</span>;
+</pre><p>您必须具有<code class="codeph">DBMS_AQIN</code>和<code class="codeph">DBMS_AQJMS</code>包的<code class="codeph">EXECUTE</code>特权才能使用Oracle JMS接口。您还可以通过<code class="codeph">AQ_USER_ROLE</code>或<code class="codeph">AQ_ADMINSTRATOR_ROLE</code>获取这些权限。</p>
                      <div class="infoboxnotealso" id="GUID-4DBA97E2-601E-47CE-8D21-776243782CFA__GUID-02BCFC04-EA14-4D42-B9DF-7B0208E332A7">
-                        <p class="notep1">See Also:</p>
-                        <p><a href="../adque/index.html" target="_blank"><span class="italic">Oracle Database Advanced Queuing User's Guide</span></a> for more information on accessing standard and Oracle JMS applications.
+                        <p class="notep1">也可以看看：</p>
+                        <p>有关访问标准和Oracle JMS应用程序的更多信息，请参见<a href="../adque/index.html" target="_blank"><span class="italic">“Oracle数据库高级队列用户指南”</span></a> 。
                         </p>
                      </div>
                   </div>

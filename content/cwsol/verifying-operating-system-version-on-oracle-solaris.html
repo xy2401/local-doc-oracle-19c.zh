@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="To check your software to see if they meet minimum version requirements for installation, perform the following steps:">
       <meta name="description" content="To check your software to see if they meet minimum version requirements for installation, perform the following steps:">
-      <title>Verifying Operating System Version on Oracle Solaris</title>
+      <title>在Oracle Solaris上验证操作系统版本</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Grid Infrastructure Installation and Upgrade Guide">
       <meta property="og:description" content="To check your software to see if they meet minimum version requirements for installation, perform the following steps:">
@@ -47,40 +45,36 @@
     <meta name="dcterms.isVersionOf" content="CWSOL">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="checking-the-software-requirements-for-oracle-solaris.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="verifying-operating-system-packages-on-oracle-solaris.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="checking-the-software-requirements-for-oracle-solaris.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="verifying-operating-system-packages-on-oracle-solaris.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure Installation and Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="configuring-operating-systems-for-oracle-grid-infrastructure-on-oracle-solaris.html" property="item" typeof="WebPage"><span property="name">Configuring Oracle Solaris Operating Systems for Oracle Grid Infrastructure</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="checking-the-software-requirements-for-oracle-solaris.html" property="item" typeof="WebPage"><span property="name">Checking the Software Requirements for Oracle Solaris</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Verifying Operating System Version on Oracle Solaris</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure安装和升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="configuring-operating-systems-for-oracle-grid-infrastructure-on-oracle-solaris.html" property="item" typeof="WebPage"><span property="name">为Oracle Grid Infrastructure配置Oracle Solaris操作系统</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="checking-the-software-requirements-for-oracle-solaris.html" property="item" typeof="WebPage"><span property="name">检查Oracle Solaris的软件要求</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">在Oracle Solaris上验证操作系统版本</li>
             </ol>
             <a id="GUID-DCEE5C3B-B26B-450E-9DD1-846476D2A2CF" name="GUID-DCEE5C3B-B26B-450E-9DD1-846476D2A2CF"></a>
             
-            <h2 id="CWSOL-GUID-DCEE5C3B-B26B-450E-9DD1-846476D2A2CF" class="sect2">Verifying Operating System Version on Oracle Solaris</h2>
+            <h2 id="CWSOL-GUID-DCEE5C3B-B26B-450E-9DD1-846476D2A2CF" class="sect2">在Oracle Solaris上验证操作系统版本</h2>
          </header>
          <div class="ind">
             <div>
-               <p>To check your software to see if they meet minimum version requirements for installation, perform the following steps:</p>
+               <p>要检查软件以确定它们是否满足安装的最低版本要求，请执行以下步骤：</p>
                <ol id="GUID-DCEE5C3B-B26B-450E-9DD1-846476D2A2CF__GUID-FF906CFD-11A8-4E36-8735-EC50121239AB">
-                  <li class="stepexpand"><span>To determine which version of Oracle Solaris is installed: </span><div><pre class="pre codeblock"><code>$ uname -r
+                  <li class="stepexpand"><span>要确定安装了哪个版本的Oracle Solaris：</span><div><pre class="pre codeblock"><code>$ uname -r
 </code></pre></div>
-                     <div><pre class="pre codeblock"><code>5.11</code></pre><p>In this example, the version shown is Oracle Solaris 11 (5.11). If necessary, refer to your operating system documentation for information about upgrading the operating system.</p>
+                     <div><pre class="pre codeblock"><code>5.11</code></pre><p>在此示例中，显示的版本是Oracle Solaris 11（5.11）。如有必要，请参阅操作系统文档以获取有关升级操作系统的信息。</p>
                      </div>
                   </li>
-                  <li class="stepexpand"><span>  To determine the release level:</span><div><pre class="pre codeblock"><code>$ cat /etc/release</code></pre></div>
-                     <div><pre class="pre codeblock"><code>Oracle Solaris 11.4 SPARC</code></pre><p>In this example, the release level shown is Oracle Solaris 11.4 SPARC.</p>
+                  <li class="stepexpand"><span>要确定发布级别：</span><div><pre class="pre codeblock"><code>$ cat /etc/release</code></pre></div>
+                     <div><pre class="pre codeblock"><code>Oracle Solaris 11.4 SPARC</code></pre><p>在此示例中，显示的发行版级别为Oracle Solaris 11.4 SPARC。</p>
                      </div>
                   </li>
-                  <li class="stepexpand"><span>To determine detailed information about the operating system version such as update level, SRU, and build:</span><ol type="a">
-                        <li class="substepexpand"><span>On Oracle Solaris 11</span><div><pre class="pre codeblock"><code>$ pkg list entire</code></pre></div>
+                  <li class="stepexpand"><span>要确定有关操作系统版本的详细信息，例如更新级别，SRU和构建：</span><ol type="a">
+                        <li class="substepexpand"><span>在Oracle Solaris 11上</span><div><pre class="pre codeblock"><code>$ pkg list entire</code></pre></div>
                            <div><pre class="pre codeblock"><code>NAME (PUBLISHER) VERSION IFO
 entire (solaris) 0.5.11-0.175.3.1.0.5.0 i--</code></pre></div>
                         </li>
@@ -91,7 +85,7 @@ entire (solaris) 0.5.11-0.175.3.1.0.5.0 i--</code></pre></div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="checking-the-software-requirements-for-oracle-solaris.html#GUID-C96D6819-24C8-4298-BB4F-EF5CFE4538AA" title="Check the software requirements of your Oracle Solaris operating system to see if they meet minimum requirements for installation.">Checking the Software Requirements for Oracle Solaris</a></p>
+                     <p><strong>父主题：</strong> <a href="checking-the-software-requirements-for-oracle-solaris.html#GUID-C96D6819-24C8-4298-BB4F-EF5CFE4538AA" title="检查Oracle Solaris操作系统的软件要求，以确定它们是否满足最低安装要求。">检查Oracle Solaris的软件要求</a></p>
                   </div>
                </div>
             </div>

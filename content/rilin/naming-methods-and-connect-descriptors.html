@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Each net service name is associated with a connect descriptor. A connect descriptor provides the location of the database and the name of the database service.">
       <meta name="description" content="Each net service name is associated with a connect descriptor. A connect descriptor provides the location of the database and the name of the database service.">
-      <title>Naming Methods and Connect Descriptors</title>
+      <title>命名方法和连接描述符</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Real Application Clusters Installation Guide">
       <meta property="og:description" content="Each net service name is associated with a connect descriptor. A connect descriptor provides the location of the database and the name of the database service.">
@@ -47,31 +45,27 @@
     <meta name="dcterms.isVersionOf" content="RILIN">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="database-services-for-an-oracle-rac-database.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="easy-connect-naming-method.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="database-services-for-an-oracle-rac-database.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="easy-connect-naming-method.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="understanding-the-oracle-rac-installed-configuration.html" property="item" typeof="WebPage"><span property="name"> Understanding the Oracle RAC Installed Configuration </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="oracle-net-services-configuration-for-oracle-rac-databases.html" property="item" typeof="WebPage"><span property="name">Oracle Net Services Configuration for Oracle RAC Databases</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Naming Methods and Connect Descriptors</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="understanding-the-oracle-rac-installed-configuration.html" property="item" typeof="WebPage"><span property="name">了解Oracle RAC安装配置</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="oracle-net-services-configuration-for-oracle-rac-databases.html" property="item" typeof="WebPage"><span property="name">Oracle RAC数据库的Oracle Net Services配置</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">命名方法和连接描述符</li>
             </ol>
             <a id="GUID-0EAF25A3-51A1-4837-97FA-094DA0FE2D98" name="GUID-0EAF25A3-51A1-4837-97FA-094DA0FE2D98"></a><a id="RILIN1259"></a>
             
-            <h2 id="RILIN-GUID-0EAF25A3-51A1-4837-97FA-094DA0FE2D98" class="sect2">Naming Methods and Connect Descriptors</h2>
+            <h2 id="RILIN-GUID-0EAF25A3-51A1-4837-97FA-094DA0FE2D98" class="sect2">命名方法和连接描述符</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Each net service name is associated with a connect descriptor. A <span class="bold">connect descriptor</span> provides the location of the database and the name of the database service. 
+               <p>每个网络服务名称都与连接描述符相关联。<span class="bold">连接描述符</span>提供数据库的位置和数据库服务的名称。
                </p>
                <div class="section">
-                  <p>A connect descriptor is comprised of one or more protocol addresses of the listener and the connect information for the destination service.The information needed to use a service name to create a database connection can be stored in a repository, which is represented by one or more naming methods. A <span class="bold">naming method</span> is a resolution method used by a client application to resolve a service name to a connect descriptor. Oracle Net Services offers several types of naming methods that support localized configuration on each client, or centralized configuration that can be accessed by all clients in the network.
+                  <p>连接描述符由监听器的一个或多个协议地址和目标服务的连接信息组成。使用服务名称创建数据库连接所需的信息可以存储在存储库中，该存储库由一个或多个命名方法表示。<span class="bold">命名方法</span>是客户端应用程序用于将服务名称解析为连接描述符的解析方法。Oracle Net Services提供了几种类型的命名方法，支持每个客户端上的本地化配置，或者可以由网络中的所有客户端访问的集中配置。
                   </p>
                </div>
                <!-- class="section" -->
@@ -79,7 +73,7 @@
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="oracle-net-services-configuration-for-oracle-rac-databases.html#GUID-18B023D5-92A9-4252-840B-C33730BBBECA" title="Users can access an Oracle RAC database using a client and server configuration or through one or more middle tiers, with or without connection pooling.">Oracle Net Services Configuration for Oracle RAC Databases</a></p>
+                     <p><strong>父主题：</strong> <a href="oracle-net-services-configuration-for-oracle-rac-databases.html#GUID-18B023D5-92A9-4252-840B-C33730BBBECA" title="用户可以使用客户端和服务器配置访问Oracle RAC数据库，也可以通过一个或多个中间层访问Oracle RAC数据库，无论是否有连接池。">Oracle RAC数据库的Oracle Net Services配置</a></p>
                   </div>
                </div>
             </div>

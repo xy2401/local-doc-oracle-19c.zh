@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Memory Guard is an Oracle Real Application Clusters (Oracle RAC) environment feature to monitor the cluster nodes to prevent node stress caused by the lack of memory.">
       <meta name="description" content="Memory Guard is an Oracle Real Application Clusters (Oracle RAC) environment feature to monitor the cluster nodes to prevent node stress caused by the lack of memory.">
-      <title>Introduction to Memory Guard</title>
+      <title>记忆保护简介</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="User’s Guide">
       <meta property="og:description" content="Memory Guard is an Oracle Real Application Clusters (Oracle RAC) environment feature to monitor the cluster nodes to prevent node stress caused by the lack of memory.">
@@ -47,60 +45,55 @@
     <meta name="dcterms.isVersionOf" content="ATNMS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="cluster-health-advisor.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="hang-manager.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="cluster-health-advisor.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="hang-manager.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">User’s Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="autonomous-health-framework.html" property="item" typeof="WebPage"><span property="name">Introduction to Oracle Autonomous Health Framework</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="components-ahf.html" property="item" typeof="WebPage"><span property="name">Components of Autonomous Health Framework</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Introduction to Memory Guard</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">用户指导</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="autonomous-health-framework.html" property="item" typeof="WebPage"><span property="name">Oracle自治健康框架简介</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="components-ahf.html" property="item" typeof="WebPage"><span property="name">自治健康框架的组成部分</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">记忆保护简介</li>
             </ol>
             <a id="GUID-9B5CB7F7-6608-4E6C-A5F6-50E758BE1F0E" name="GUID-9B5CB7F7-6608-4E6C-A5F6-50E758BE1F0E"></a>
             
-            <h2 id="ATNMS-GUID-9B5CB7F7-6608-4E6C-A5F6-50E758BE1F0E" class="sect2"><span class="enumeration_section">1.2.5 </span>Introduction to Memory Guard
-            </h2>
+            <h2 id="ATNMS-GUID-9B5CB7F7-6608-4E6C-A5F6-50E758BE1F0E" class="sect2"><span class="enumeration_section">1.2.5</span> Memory Guard简介</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Memory Guard is an Oracle Real Application Clusters (Oracle RAC) environment feature to monitor the cluster nodes to prevent node stress caused by the lack of memory.</p>
-               <p>Enabled by default, Memory Guard:</p>
-               <ul style="list-style-type: disc;">
+               <p>Memory Guard是一个Oracle Real Application Clusters（Oracle RAC）环境功能，用于监控集群节点，以防止由于内存不足而导致的节点压力。</p>
+               <p>默认启用，Memory Guard：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p>Analyzes over-committed memory conditions once in every minute</p>
+                     <p>每分钟一次分析过度提交的内存条件</p>
                   </li>
                   <li>
-                     <p>Issues alert if any server is at risk</p>
+                     <p>如果任何服务器存在风险，则会发出警报</p>
                   </li>
                   <li>
-                     <p>Protects applications by automatically closing the server to new connections</p>
+                     <p>通过自动关闭服务器到新连接来保护应用程序</p>
                   </li>
                   <li>
-                     <p>Stops all CRS-managed services transactionally on the server</p>
+                     <p>在服务器上以事务方式停止所有CRS管理的服务</p>
                   </li>
                   <li>
-                     <p>Re-opens server to connections once the memory pressure has subsided</p>
+                     <p>一旦内存压力消退，重新打开服务器连接</p>
                   </li>
                </ul>
-               <p>Enterprise database servers can use all available memory due to too many open sessions or runaway workloads. Running out of memory can result in failed transactions or, in extreme cases, a restart of the node and the loss of availability of resources for your applications.</p>
-               <p>Memory Guard autonomously collects metrics on memory of every node from Cluster Health Monitor to determine if the nodes have insufficient memory. If the memory is insufficient, then Memory Guard prevents new database sessions from being created allowing the existing workload to complete and free their memory. New sessions are started automatically when the memory stress is relieved.</p>
+               <p>由于过多的打开会话或失控的工作负载，企业数据库服务器可以使用所有可用内存。内存不足可能导致事务失败，或者在极端情况下，导致节点重新启动并导致应用程序资源可用性降低。</p>
+               <p>Memory Guard自动从Cluster Health Monitor收集每个节点内存的度量标准，以确定节点是否内存不足。如果内存不足，则Memory Guard会阻止创建新的数据库会话，从而允许现有工作负载完成并释放内存。当缓解内存压力时，会自动启动新会话。</p>
             </div>
             <div>
                <div class="relinfo">
-                  <p><strong>Related Topics</strong></p>
+                  <p><strong>相关话题</strong></p>
                   <ul>
-                     <li><a href="purpose-memory-guard.html#GUID-5EBC917F-2810-469D-9DAE-EA6EB2F123D8" title="Memory Guard continuously monitors and ensures the availability of cluster nodes by preventing the nodes from being evicted when the nodes are stressed due to lack of memory.">Resolving Memory Stress</a></li>
+                     <li><a href="purpose-memory-guard.html#GUID-5EBC917F-2810-469D-9DAE-EA6EB2F123D8" title="Memory Guard通过在节点因内存不足而受到压力时阻止节点被驱逐，持续监视并确保集群节点的可用性。">解决记忆压力</a></li>
                   </ul>
                </div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="components-ahf.html#GUID-9EB9BE42-7DEF-4BDD-A59C-01BD6CE285EE" title="This section describes the diagnostic components that are part of Oracle Autonomous Health Framework.">Components of Autonomous Health Framework</a></p>
+                     <p><strong>父主题：</strong> <a href="components-ahf.html#GUID-9EB9BE42-7DEF-4BDD-A59C-01BD6CE285EE" title="本节介绍作为Oracle Autonomous Health Framework一部分的诊断组件。">自治健康框架的组件</a></p>
                   </div>
                </div>
             </div>

@@ -1,17 +1,15 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Creating Your Own DBFS Store</title>
+      <title>创建自己的DBFS存储</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="Database SecureFiles and Large Objects Developer's Guide">
+      <meta property="og:title" content="Database SecureFiles and Large Objects Developer&#39;s Guide">
       <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="Database SecureFiles and Large Objects Developer's Guide">
+      <meta name="application-name" content="Database SecureFiles and Large Objects Developer&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="securefiles-and-large-objects-developers-guide.pdf" title="PDF File" type="application/pdf">
@@ -41,200 +39,189 @@
         </script>
       <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"oracle-database","element_name":"Oracle Database","display_in_url":true},"release":{"short_name":"19","element_name":"Release 19","display_in_url":true}}}</script>
       
-    <meta name="dcterms.title" content="SecureFiles and Large Objects Developer's Guide">
+    <meta name="dcterms.title" content="SecureFiles and Large Objects Developer&#39;s Guide">
     <meta name="dcterms.isVersionOf" content="ADLOB">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="DBFS-content-API.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="using-DBFS.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="DBFS-content-API.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="using-DBFS.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database SecureFiles and Large Objects Developer's Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="database-file-system.html" property="item" typeof="WebPage"><span property="name">   Database File System (DBFS)</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">   Creating Your Own DBFS Store</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database SecureFiles和Large Objects Developer's Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="database-file-system.html" property="item" typeof="WebPage"><span property="name">数据库文件系统（DBFS）</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">创建自己的DBFS存储</li>
             </ol>
             <a id="GUID-01819696-9FE0-41AB-9388-A0ECA1F72E52" name="GUID-01819696-9FE0-41AB-9388-A0ECA1F72E52"></a><a id="ADLOB0079"></a>
             
-            <h2 id="ADLOB-GUID-01819696-9FE0-41AB-9388-A0ECA1F72E52" class="sect2"><span class="enumeration_chapter">24 </span>   Creating Your Own DBFS Store
-            </h2>
+            <h2 id="ADLOB-GUID-01819696-9FE0-41AB-9388-A0ECA1F72E52" class="sect2"><span class="enumeration_chapter">24</span>创建自己的DBFS存储</h2>
          </header>
          <div class="ind">
             <div>
-               <p>You can create your own DBFS Store using DBFS Content SPI (<code class="codeph">DBMS_DBFS_CONTENT_SPI)</code>.
+               <p>您可以使用DBFS内容SPI（ <code class="codeph">DBMS_DBFS_CONTENT_SPI)</code>创建自己的DBFS存储。
                </p>
-               <p>Topics: </p>
-               <ul style="list-style-type: disc;">
+               <p>话题：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p><a href="creating-your-own-DBFS-store.html#GUID-15A25729-A83D-4B0B-8858-E9DEDA9C4554" title="In order to customize a DBFS store, you must implement the DBFS Content SPI (DBMS_DBFS_CONTENT_SPI). It is the basis for existing stores such as the DBFS SecureFiles Store and the DFFS Hierarchical Store, as well as any user-defined DBFS stores that you create.">Overview of DBFS Store Creation and Use</a></p>
+                     <p><a href="creating-your-own-DBFS-store.html#GUID-15A25729-A83D-4B0B-8858-E9DEDA9C4554" title="要自定义DBFS存储，必须实现DBFS内容SPI（DBMS_DBFS_CONTENT_SPI）。它是现有存储（如DBFS SecureFiles存储和DFFS分层存储）以及您创建的任何用户定义的DBFS存储的基础。">DBFS存储库创建和使用概述</a></p>
                   </li>
                   <li>
-                     <p> <a href="creating-your-own-DBFS-store.html#GUID-5EA68AD7-404E-47CC-86DE-EDB2EBA68119" title="The DBFS Content SPI (Store Provider Interface) is a specification only and has no package body.">DBFS Content Store Provider Interface (DBFS Content SPI)</a></p>
+                     <p> <a href="creating-your-own-DBFS-store.html#GUID-5EA68AD7-404E-47CC-86DE-EDB2EBA68119" title="DBFS内容SPI（存储提供程序接口）仅是规范，没有包体。">DBFS内容存储提供程序接口（DBFS内容SPI）</a></p>
                   </li>
                   <li>
-                     <p><a href="creating-your-own-DBFS-store.html#GUID-FC7FD421-751A-4D8C-927C-A046AFDFD492" title="You can use this example store provider for DBFS, TaBleFileSystem Store Provider ("tbfs"), as a skeleton for custom providers or as a learning tool, to become familiar with the DBFS and its SPI.">Creating a Custom Provider</a></p>
+                     <p><a href="creating-your-own-DBFS-store.html#GUID-FC7FD421-751A-4D8C-927C-A046AFDFD492" title="您可以将此示例存储提供程序用于DBFS，TaBleFileSystem存储提供程序（" tbf="),=" ="">创建自定义提供程序</a></p>
                   </li>
                </ul>
-            </div><a id="ADLOB46227"></a><a id="ADLOB46210"></a><div class="props_rev_3"><a id="GUID-15A25729-A83D-4B0B-8858-E9DEDA9C4554" name="GUID-15A25729-A83D-4B0B-8858-E9DEDA9C4554"></a><h3 id="ADLOB-GUID-15A25729-A83D-4B0B-8858-E9DEDA9C4554" class="sect3">Overview of DBFS Store Creation and Use</h3>
+            </div><a id="ADLOB46227"></a><a id="ADLOB46210"></a><div class="props_rev_3"><a id="GUID-15A25729-A83D-4B0B-8858-E9DEDA9C4554" name="GUID-15A25729-A83D-4B0B-8858-E9DEDA9C4554"></a><h3 id="ADLOB-GUID-15A25729-A83D-4B0B-8858-E9DEDA9C4554" class="sect3">DBFS存储库创建和使用概述</h3>
                <div>
-                  <p>In order to customize a DBFS store, you must implement the DBFS Content SPI (<code class="codeph">DBMS_DBFS_CONTENT_SPI)</code>. It is the basis for existing stores such as the DBFS SecureFiles Store and the DFFS Hierarchical Store, as well as any user-defined DBFS stores that you create.
+                  <p>要自定义DBFS存储，必须实现DBFS内容SPI（ <code class="codeph">DBMS_DBFS_CONTENT_SPI)</code> 。它是现有存储（如DBFS SecureFiles存储和DFFS分层存储）以及您创建的任何用户定义的DBFS存储的基础。
                   </p>
-                  <p>Client-side applications, such the PL/SQL interface, invoke functions and procedures in the DBFS Content API. The DBFS Content API then invokes corresponding subprograms in the DBFS Content SPI to create stores and perform other related functions. </p>
-                  <p>Once you create your DBFS store, you run it much the same way that you would a SecureFiles Store.</p>
+                  <p>客户端应用程序（如PL / SQL接口）调用DBFS Content API中的函数和过程。然后，DBFS Content API调用DBFS内容SPI中的相应子程序来创建存储并执行其他相关功能。</p>
+                  <p>创建DBFS存储后，您将以与SecureFiles存储相同的方式运行它。</p>
                   <div class="infoboxnotealso" id="GUID-15A25729-A83D-4B0B-8858-E9DEDA9C4554__DBFSCONTENTAPI.DBFSSECUREFILESSTORE-DFF8111B">
-                     <p class="notep1">See Also:</p>
-                     <ul style="list-style-type: disc;">
+                     <p class="notep1">也可以看看：</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p><a href="DBFS-content-API.html#GUID-630BE6DB-0178-4EE4-8D7D-824BA886F68E" title="You can enable applications to use the Database File System (DBFS) in several different programming environments.">DBFS Content API</a></p>
+                           <p><a href="DBFS-content-API.html#GUID-630BE6DB-0178-4EE4-8D7D-824BA886F68E" title="您可以使应用程序在多个不同的编程环境中使用数据库文件系统（DBFS）。">DBFS内容API</a></p>
                         </li>
                         <li>
-                           <p><a href="DBFS-securefiles-store.html#GUID-F71C0B85-F08D-4CD0-9EB3-AB84C9B355AE" title="There are certain procedures for setting up and using a DBFS SecureFiles Store.">DBFS SecureFiles Store</a></p>
+                           <p><a href="DBFS-securefiles-store.html#GUID-F71C0B85-F08D-4CD0-9EB3-AB84C9B355AE" title="有一些设置和使用DBFS SecureFiles Store的过程。">DBFS SecureFiles商店</a></p>
                         </li>
                      </ul>
                   </div>
                   <div class="figure" id="GUID-15A25729-A83D-4B0B-8858-E9DEDA9C4554__GUID-EAF65659-C9F9-4198-B8A1-D1AD3748F171">
-                     <p class="titleinfigure">Figure 24-1 Database File System (DBFS)</p><img src="img/adlob201.gif" width="496" alt="Description of Figure 24-1 follows" title="Description of Figure 24-1 follows" longdesc="img_text/adlob201.html"><br><a href="img_text/adlob201.html">Description of "Figure 24-1 Database File System (DBFS)"</a></div>
+                     <p class="titleinfigure">图24-1数据库文件系统（DBFS）</p><img src="img/adlob201.gif" width="496" alt="下面是图24-1的描述" title="下面是图24-1的描述" longdesc="img_text/adlob201.html"><br><a href="img_text/adlob201.html">“图24-1数据库文件系统（DBFS）”的说明</a></div>
                   <!-- class="figure" -->
                </div>
-            </div><a id="ADLOB46102"></a><div class="props_rev_3"><a id="GUID-5EA68AD7-404E-47CC-86DE-EDB2EBA68119" name="GUID-5EA68AD7-404E-47CC-86DE-EDB2EBA68119"></a><h3 id="ADLOB-GUID-5EA68AD7-404E-47CC-86DE-EDB2EBA68119" class="sect3">DBFS Content Store Provider Interface (DBFS Content SPI)</h3>
+            </div><a id="ADLOB46102"></a><div class="props_rev_3"><a id="GUID-5EA68AD7-404E-47CC-86DE-EDB2EBA68119" name="GUID-5EA68AD7-404E-47CC-86DE-EDB2EBA68119"></a><h3 id="ADLOB-GUID-5EA68AD7-404E-47CC-86DE-EDB2EBA68119" class="sect3">DBFS内容存储提供程序接口（DBFS内容SPI）</h3>
                <div>
-                  <p>The DBFS Content SPI (Store Provider Interface) is a specification only and has no package body.</p>
-                  <p>You must implement the package body in order to respond to calls from the DBFS Content API. In other words, DBFS Content SPI is a collection of required program specifications which you must implement using the method signatures and semantics indicated. </p>
-                  <p>You may add additional functions and procedures to the DBFS Content SPI package body as needed. Your implementation may implement other methods and expose other interfaces, but the DBFS Content API will not use these interfaces.</p>
-                  <p>The DBFS Content SPI references various elements such as constants, types, and exceptions defined by the DBFS Content API (package <code class="codeph">DBMS_DBFS_CONTENT</code>).
+                  <p>DBFS内容SPI（存储提供程序接口）仅是规范，没有包体。</p>
+                  <p>您必须实现包体才能响应来自DBFS Content API的调用。换句话说，DBFS内容SPI是必需程序规范的集合，您必须使用指示的方法签名和语义来实现这些规范。</p>
+                  <p>您可以根据需要向DBFS Content SPI包体添加其他功能和过程。您的实现可能实现其他方法并公开其他接口，但DBFS Content API将不使用这些接口。</p>
+                  <p>DBFS内容SPI引用DBFS内容API（包<code class="codeph">DBMS_DBFS_CONTENT</code> ）定义的各种元素，例如常量，类型和异常。
                   </p>
-                  <p>Note that all path name references must be store-qualified, that is, the notion of mount points and full absolute path names has been normalized and converted to store-qualified path names by the DBFS Content API before it invokes any of the Provider SPI methods.</p>
-                  <p>Because the DBFS Content API and Provider SPI is a one-to-many pluggable architecture, the DBFS Content API uses dynamic SQL to invoke methods in the Provider SPI; this may lead to run time errors if your Provider SPI implementation does not follow the Provider SPI specification in this document.</p>
-                  <p>There are no explicit initial or final methods to indicate when the DBFS Content API plugs and unplugs a particular Provider SPI. Provider SPIs must be able to auto-initialize themselves at any SPI entry wpoint.</p>
+                  <p>请注意，所有路径名引用都必须是存储限定的，即，在调用任何Provider SPI方法之前，DBFS Content API已将规范化并将安装点和完整绝对路径名的概念规范化并转换为存储限定路径名。 。</p>
+                  <p>由于DBFS Content API和Provider SPI是一对多可插拔体系结构，因此DBFS Content API使用动态SQL来调用Provider SPI中的方法;如果您的Provider SPI实现不遵循本文档中的Provider SPI规范，这可能会导致运行时错误。</p>
+                  <p>没有明确的初始或最终方法来指示DBFS Content API何时插入并拔出特定的提供者SPI。提供者SPI必须能够在任何SPI入口点自动初始化自己。</p>
                   <div class="infoboxnotealso" id="GUID-5EA68AD7-404E-47CC-86DE-EDB2EBA68119__GUID-A8FF224C-9DCD-4126-8B7D-2C448D560D61">
-                     <p class="notep1">See Also:</p>
+                     <p class="notep1">也可以看看：</p>
                      <p> </p>
-                     <ul style="list-style-type: disc;">
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p><a href="../arpls/DBMS_DBFS_CONTENT_SPI.html#ARPLS72231" target="_blank"><span class="italic">Oracle Database PL/SQL Packages and Types Reference</span></a> for syntax of the <code class="codeph">DBMS_DBFS_CONTENT_SPI</code> package
-                           </p>
+                           <p><a href="../arpls/DBMS_DBFS_CONTENT_SPI.html#ARPLS72231" target="_blank"><span class="italic">Oracle Database PL / SQL包和类型参考</span></a> ，了解<code class="codeph">DBMS_DBFS_CONTENT_SPI</code>包的语法</p>
                         </li>
                         <li>
-                           <p>See the file <code class="codeph">$ORACLE_HOME/rdbms/admin/dbmscapi.sql</code> for more information
-                           </p>
+                           <p>有关更多信息，请参阅文件<code class="codeph">$ORACLE_HOME/rdbms/admin/dbmscapi.sql</code></p>
                         </li>
                      </ul>
                   </div>
                </div>
-            </div><a id="ADLOB46211"></a><div class="sect2"><a id="GUID-FC7FD421-751A-4D8C-927C-A046AFDFD492" name="GUID-FC7FD421-751A-4D8C-927C-A046AFDFD492"></a><h3 id="ADLOB-GUID-FC7FD421-751A-4D8C-927C-A046AFDFD492" class="sect3">Creating a Custom Provider</h3>
+            </div><a id="ADLOB46211"></a><div class="sect2"><a id="GUID-FC7FD421-751A-4D8C-927C-A046AFDFD492" name="GUID-FC7FD421-751A-4D8C-927C-A046AFDFD492"></a><h3 id="ADLOB-GUID-FC7FD421-751A-4D8C-927C-A046AFDFD492" class="sect3">创建自定义提供程序</h3>
                <div>
-                  <p>You can use this example store provider for DBFS, TaBleFileSystem Store Provider ("tbfs"), as a skeleton for custom providers or as a learning tool, to become familiar with the DBFS and its SPI.</p>
-                  <p>This example store provider for DBFS, exposes a relational table containing a <code class="codeph">BLOB</code> column as a flat, non-hierarchical filesystem, that is, a collection of named files.
+                  <p>您可以将此示例存储提供程序用于DBFS，TaBleFileSystem存储提供程序（“tbfs”），作为自定义提供程序的框架或作为学习工具，以熟悉DBFS及其SPI。</p>
+                  <p>此DBFS示例存储提供程序将包含<code class="codeph">BLOB</code>列的关系表公开为平面非分层文件系统，即命名文件的集合。
                   </p>
-                  <p>To use this example, it is assumed that you have installed the Oracle Database 12<span class="italic">c</span> and are familiar with DBFS concepts, and have installed and used <code class="codeph">dbfs_client</code> and <code class="codeph">FUSE</code> to mount and access filesystems backed by the standard SFS store provider.
+                  <p>要使用此示例，假定您已安装Oracle Database 12 <span class="italic">c</span>并熟悉DBFS概念，并已安装并使用<code class="codeph">dbfs_client</code>和<code class="codeph">FUSE</code>来装入和访问由标准SFS存储提供程序支持的文件系统。
                   </p>
-                  <p>The TaBleFileSystem Store Provider ("tbfs") does not aim to be feature-rich or even complete, it does however provide a sufficient demonstration of what it takes for users of DBFS to write their own custom providers that expose their table(s) through <code class="codeph">dbfs_client</code> to traditional filesystem programs. 
+                  <p>TaBleFileSystem存储提供程序（“tbfs”）并非旨在功能丰富甚至完整，但它确实提供了足够的演示，说明DBFS用户可以编写自己的自定义提供程序，通过它们公开其表格。 <code class="codeph">dbfs_client</code>到传统的文件系统程序。
                   </p>
-                  <p>Topics:</p>
-                  <ul style="list-style-type: disc;">
+                  <p>话题：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><a href="creating-your-own-DBFS-store.html#GUID-FC31EEE0-061F-49CC-A02B-687086E5D10C" title="These are the mechanics of the example store provider for DBFS, TaBleFileSystem Store Provider ("tbfs").">Mechanics </a></p>
+                        <p><a href="creating-your-own-DBFS-store.html#GUID-FC31EEE0-061F-49CC-A02B-687086E5D10C" title="这些是DBFS，TaBleFileSystem Store Provider的示例商店提供程序的机制（" tbf=")." ="">机械学</a></p>
                      </li>
                      <li>
-                        <p><a href="creating-your-own-DBFS-store.html#GUID-E2E72747-14A0-4334-A3AE-AC4EEDE9FD45" title="The TBFS.SQL script is the top level driver script.">TBFS.SQL</a></p>
+                        <p><a href="creating-your-own-DBFS-store.html#GUID-E2E72747-14A0-4334-A3AE-AC4EEDE9FD45" title="TBFS.SQL脚本是顶级驱动程序脚本。">TBFS.SQL</a></p>
                      </li>
                      <li>
-                        <p><a href="creating-your-own-DBFS-store.html#GUID-2ADF05F4-1FB5-4B18-9B4B-06B344B806E9" title="The TBL.SQL script creates a test user, a tablespace, the table that backs the filesystem and so on.">TBL.SQL</a></p>
+                        <p><a href="creating-your-own-DBFS-store.html#GUID-2ADF05F4-1FB5-4B18-9B4B-06B344B806E9" title="TBL.SQL脚本创建测试用户，表空间，支持文件系统的表等等。">TBL.SQL</a></p>
                      </li>
                      <li>
-                        <p><a href="creating-your-own-DBFS-store.html#GUID-6EBE7625-C688-4346-A4C6-891772A8D821" title="The spec.sql script provide the SPI specification of the tbfs.">spec.sql</a></p>
+                        <p><a href="creating-your-own-DBFS-store.html#GUID-6EBE7625-C688-4346-A4C6-891772A8D821" title="spec.sql脚本提供tbfs的SPI规范。">spec.sql</a></p>
                      </li>
                      <li>
-                        <p><a href="creating-your-own-DBFS-store.html#GUID-BEE83BB9-C2FE-448B-AF91-5AC9392E13C8" title="The body.sql script provides the SPI implementation of the tbfs.">body.sql</a></p>
+                        <p><a href="creating-your-own-DBFS-store.html#GUID-BEE83BB9-C2FE-448B-AF91-5AC9392E13C8" title="body.sql脚本提供了tbfs的SPI实现。">body.sql</a></p>
                      </li>
                      <li>
-                        <p><a href="creating-your-own-DBFS-store.html#GUID-33C05C50-B474-47F8-AE49-242837A24D3F" title="The capi.sql script registers and mounts the DBFS.">capi.sql</a></p>
+                        <p><a href="creating-your-own-DBFS-store.html#GUID-33C05C50-B474-47F8-AE49-242837A24D3F" title="capi.sql脚本注册并安装DBFS。">capi.sql</a></p>
                      </li>
                   </ul>
-               </div><a id="ADLOB46228"></a><div class="props_rev_3"><a id="GUID-FC31EEE0-061F-49CC-A02B-687086E5D10C" name="GUID-FC31EEE0-061F-49CC-A02B-687086E5D10C"></a><h4 id="ADLOB-GUID-FC31EEE0-061F-49CC-A02B-687086E5D10C" class="sect4">Mechanics </h4>
+               </div><a id="ADLOB46228"></a><div class="props_rev_3"><a id="GUID-FC31EEE0-061F-49CC-A02B-687086E5D10C" name="GUID-FC31EEE0-061F-49CC-A02B-687086E5D10C"></a><h4 id="ADLOB-GUID-FC31EEE0-061F-49CC-A02B-687086E5D10C" class="sect4">机械学</h4>
                   <div>
-                     <p>These are the mechanics of the example store provider for DBFS, TaBleFileSystem Store Provider ("tbfs").</p>
-                     <p>Topics:</p>
-                     <ul style="list-style-type: disc;">
+                     <p>这些是DBFS，TaBleFileSystem存储提供程序（“tbfs”）的示例存储提供程序的机制。</p>
+                     <p>话题：</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p><a href="creating-your-own-DBFS-store.html#GUID-B9323C55-9154-4519-B925-A8B7A6DC2D8B" title="You will need certain files for installation and setup of the DBFS TaBleFileSystem Store Provider ("tbfs").">Installation and Setup</a></p>
+                           <p><a href="creating-your-own-DBFS-store.html#GUID-B9323C55-9154-4519-B925-A8B7A6DC2D8B" title="您将需要某些文件来安装和设置DBFS TaBleFileSystem Store Provider（" tbf=")." ="">安装和设置</a></p>
                         </li>
                         <li>
-                           <p><a href="creating-your-own-DBFS-store.html#GUID-99EBB22D-9D7A-419E-9C97-5A53A3079308" title="Once the example store provider for DBFS, TaBleFileSystem Store Provider ("tbfs") is installed, files can be added or removed in several different ways and other changes can be made to the TBFS.">TBFS Use </a></p>
+                           <p><a href="creating-your-own-DBFS-store.html#GUID-99EBB22D-9D7A-419E-9C97-5A53A3079308" title="一旦DBFS的示例商店提供商，TaBleFileSystem商店提供商（" tbf=")=" ="">TBFS使用</a></p>
                         </li>
                         <li>
-                           <p><a href="creating-your-own-DBFS-store.html#GUID-034FE169-7B56-452F-92E7-2A7CC9236E7B" title="The TBFS is simple because its primary purpose is to serve as a teaching and learning example.">TBFS Internals </a></p>
+                           <p><a href="creating-your-own-DBFS-store.html#GUID-034FE169-7B56-452F-92E7-2A7CC9236E7B" title="TBFS很简单，因为它的主要目的是作为教学和学习的例子。">TBFS内部</a></p>
                         </li>
                      </ul>
-                  </div><a id="ADLOB46229"></a><div class="props_rev_3"><a id="GUID-B9323C55-9154-4519-B925-A8B7A6DC2D8B" name="GUID-B9323C55-9154-4519-B925-A8B7A6DC2D8B"></a><h5 id="ADLOB-GUID-B9323C55-9154-4519-B925-A8B7A6DC2D8B" class="sect5">Installation and Setup</h5>
+                  </div><a id="ADLOB46229"></a><div class="props_rev_3"><a id="GUID-B9323C55-9154-4519-B925-A8B7A6DC2D8B" name="GUID-B9323C55-9154-4519-B925-A8B7A6DC2D8B"></a><h5 id="ADLOB-GUID-B9323C55-9154-4519-B925-A8B7A6DC2D8B" class="sect5">安装和设置</h5>
                      <div>
-                        <p>You will need certain files for installation and setup of the DBFS TaBleFileSystem Store Provider ("tbfs").</p>
-                        <p>The TBFS consists of the following SQL files:</p>
-                        <p><code class="codeph">tbfs.sql</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top-level driver script
+                        <p>您将需要某些文件来安装和设置DBFS TaBleFileSystem Store Provider（“tbfs”）。</p>
+                        <p>TBFS由以下SQL文件组成：</p>
+                        <p><code class="codeph">tbfs.sql</code>顶级驱动程序脚本</p>
+                        <p><code class="codeph">tbl.sql</code>脚本创建测试用户，表空间，支持文件系统的表，等等。
                         </p>
-                        <p><code class="codeph">tbl.sql</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;script to create a test user, tablespace, the table backing the filesystem, and so on.
+                        <p><code class="codeph">spec.sql</code>是<code class="codeph">spec.sql</code>的SPI规范</p>
+                        <p><code class="codeph">body.sql</code>是<code class="codeph">body.sql</code>的SPI实现</p>
+                        <p><code class="codeph">capi.sql</code> DBFS寄存器/挂载脚本</p>
+                        <p>要安装TBFS，只需在包含所有上述文件的目录中以<code class="codeph">SYSDBA</code>身份运行<code class="codeph">tbfs.sql</code> 。 <code class="codeph">tbfs.sql</code>将以正确的顺序加载其他SQL文件。
                         </p>
-                        <p><code class="codeph">spec.sql</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the SPI specification of the tbfs
-                        </p>
-                        <p><code class="codeph">body.sql</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the SPI implementation of the tbfs
-                        </p>
-                        <p><code class="codeph">capi.sql</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DBFS register/mount script
-                        </p>
-                        <p>To install the TBFS, just run <code class="codeph">tbfs.sql</code> as <code class="codeph">SYSDBA</code>, in the directory that contains all of the above files. <code class="codeph">tbfs.sql</code> will load the other SQL files in the proper sequence.
-                        </p>
-                        <p>Ignoring any name conflicts, all of the SQL files should load without any compilation errors. All SQL files should also load without any run time errors, depending on the value of the "plsql_warnings" init.ora parameter, you may see various innocuous warnings.</p>
-                        <p>If there are any name conflicts (tablespace name TBFS, datafile name"tbfs.f", user name TBFS, package name TBFS), the appropriate references in the various SQL files must be changed consistently.</p>
+                        <p>忽略任何名称冲突，应加载所有SQL文件而不会出现任何编译错误。所有SQL文件也应加载而不会出现任何运行时错误，具体取决于“plsql_warnings”init.ora参数的值，您可能会看到各种无害的警告。</p>
+                        <p>如果存在任何名称冲突（表空间名称TBFS，数据文件名称“tbfs.f”，用户名TBFS，包名称TBFS），则必须一致地更改各种SQL文件中的相应引用。</p>
                      </div>
-                  </div><a id="ADLOB46230"></a><div class="props_rev_3"><a id="GUID-99EBB22D-9D7A-419E-9C97-5A53A3079308" name="GUID-99EBB22D-9D7A-419E-9C97-5A53A3079308"></a><h5 id="ADLOB-GUID-99EBB22D-9D7A-419E-9C97-5A53A3079308" class="sect5">TBFS Use </h5>
+                  </div><a id="ADLOB46230"></a><div class="props_rev_3"><a id="GUID-99EBB22D-9D7A-419E-9C97-5A53A3079308" name="GUID-99EBB22D-9D7A-419E-9C97-5A53A3079308"></a><h5 id="ADLOB-GUID-99EBB22D-9D7A-419E-9C97-5A53A3079308" class="sect5">TBFS使用</h5>
                      <div>
-                        <p>Once the example store provider for DBFS, TaBleFileSystem Store Provider ("tbfs") is installed, files can be added or removed in several different ways and other changes can be made to the TBFS.</p>
-                        <p>A <code class="codeph">dbfs_client</code> connected as user TBFS will see a simple, non-hierarchical, filesystem backed by an RDBMS table (TBFS.TBFST).
+                        <p>一旦安装了DBFS的示例存储提供程序，即TaBleFileSystem存储提供程序（“tbfs”），就可以通过几种不同的方式添加或删除文件，并可以对TBFS进行其他更改。</p>
+                        <p>作为用户<code class="codeph">dbfs_client</code>连接的dbfs_client将看到由RDBMS表（TBFS.TBFST）支持的简单，非分层的文件系统。
                         </p>
-                        <p>Files can be added or removed from this filesystem through SQL (that is, through DML on the underlying table), through Unix utilities (mediated by <code class="codeph">dbfs_client</code>), or through PL/SQL (using the DBFS APIs).
+                        <p>可以通过SQL（即通过基础表上的DML），Unix实用程序（由<code class="codeph">dbfs_client</code> ）或通过PL / SQL（使用DBFS API）在此文件系统中添加或删除文件。
                         </p>
-                        <p>Changes to the filesystem made through any of the access methods will be visible, in a transactionally consistent manner (that is, at commit/rollback boundaries) to all of the other access methods.</p>
+                        <p>通过任何访问方法对文件系统所做的更改将以事务一致的方式（即在提交/回滚边界）对所有其他访问方法可见。</p>
                      </div>
-                  </div><a id="ADLOB46231"></a><div class="props_rev_3"><a id="GUID-034FE169-7B56-452F-92E7-2A7CC9236E7B" name="GUID-034FE169-7B56-452F-92E7-2A7CC9236E7B"></a><h5 id="ADLOB-GUID-034FE169-7B56-452F-92E7-2A7CC9236E7B" class="sect5">TBFS Internals </h5>
+                  </div><a id="ADLOB46231"></a><div class="props_rev_3"><a id="GUID-034FE169-7B56-452F-92E7-2A7CC9236E7B" name="GUID-034FE169-7B56-452F-92E7-2A7CC9236E7B"></a><h5 id="ADLOB-GUID-034FE169-7B56-452F-92E7-2A7CC9236E7B" class="sect5">TBFS内部</h5>
                      <div>
-                        <p>The TBFS is simple because its primary purpose is to serve as a teaching and learning example.</p>
-                        <p>However, the implementation shows the path towards a robust, production-quality custom SPI that can plug into the DBFS, and expose existing relational data as Unix filesystems.</p>
-                        <p>The TBFS makes various simplifications in order to remain concise (however, these should not be taken as inviolable limitations of DBFS or the SPI):</p>
-                        <ul style="list-style-type: disc;">
+                        <p>TBFS很简单，因为它的主要目的是作为教学和学习的例子。</p>
+                        <p>但是，该实现显示了一条强大的，生产质量的自定义SPI的路径，可以插入到DBFS中，并将现有的关系数据公开为Unix文件系统。</p>
+                        <p>TBFS进行了各种简化以保持简洁（但是，这些不应被视为DBFS或SPI的不可侵犯的限制）：</p>
+                        <ul style="list-style-type:disc">
                            <li>
-                              <p>The TBFS SPI package handles only a single table with a hard-coded name (TBFS.TBFST). It is possible to use dynamic SQL and additional configuration information to have a single SPI package support multiple tables, each as a separate filesystem (or even to unify data in multiple tables into a single filesystem).</p>
+                              <p>TBFS SPI包仅处理具有硬编码名称的单个表（TBFS.TBFST）。可以使用动态SQL和其他配置信息使单个SPI包支持多个表，每个表作为单独的文件系统（甚至将多个表中的数据统一到单个文件系统中）。</p>
                            </li>
                            <li>
-                              <p>The TBFS does not support filesystem hierarchies; it imposes a flat namespace: a collection of files, identified by a simple item name, under a virtual "/" root directory. Implementing directory hierarchies is significantly more complex because it requires the store provider to manage parent/child relationships in a consistent manner.</p>
-                              <p>Moreover, existing relational data (the kind of data that TBFS is attempting to expose as a filesystem) does not typically have inter-row relationships that form a natural directory/file hierarchy.</p>
+                              <p>TBFS不支持文件系统层次结构;它强加了一个平面命名空间：一个由虚拟“/”根目录下的简单项名称标识的文件集合。实现目录层次结构要复杂得多，因为它要求商店提供商以一致的方式管理父/子关系。</p>
+                              <p>此外，现有的关系数据（TBFS试图作为文件系统公开的数据类型）通常不具有形成自然目录/文件层次结构的行间关系。</p>
                            </li>
                            <li>
-                              <p>Because the TBFS supports only a flat namespace, most methods in the SPI are unimplemented, and the method bodies raise a  <code class="codeph">dbms_dbfs_content.unsupported_operation</code> exception. This exception is also a good starting point for you to write your own custom SPI. You can start with a simple SPI skeleton cloned from the  <code class="codeph">DBMS_DBFS_CONTENT_SPI</code> package, default all method bodies to ones that raise this exception, and subsequently fill in more realistic implementations incrementally.
+                              <p>由于TBFS仅支持平面命名空间，因此SPI中的大多数方法<code class="codeph">dbms_dbfs_content.unsupported_operation</code>实现，并且方法体引发了<code class="codeph">dbms_dbfs_content.unsupported_operation</code>异常。此异常也是您编写自定义SPI的良好起点。您可以从<code class="codeph">DBMS_DBFS_CONTENT_SPI</code>包中克隆的简单SPI骨架开始，将所有方法体默认为引发此异常的体，然后逐步填充更实际的实现。
                               </p>
                            </li>
                            <li>
-                              <p>The table underlying the TBFS is close to being the simplest possible structure (a key/name column and a LOB column). This means that various properties used or expected by DBFS and <code class="codeph">dbfs_client</code> must be generated dynamically (the TBFS implementation shows how this is done for the <code class="codeph">std:guid</code> property).
+                              <p>TBFS底层的表接近于最简单的结构（键/名称列和LOB列）。这意味着必须动态生成DBFS和<code class="codeph">dbfs_client</code>使用或期望的各种属性（TBFS实现显示了如何对<code class="codeph">std:guid</code>属性执行此操作）。
                               </p>
-                              <p>Other properties (such as Unix-style timestamps) are not implemented at all. This still allows a surprisingly functional filesystem to be implemented, but when you write your own custom SPIs, you can easily incorporate support for additional DBFS properties by expanding the structure of their underlying table(s) to include additional columns as needed, or by using existing columns in their existing tables to provide the values for these DBFS properties.</p>
+                              <p>其他属性（例如Unix风格的时间戳）根本没有实现。这仍然允许实现令人惊讶的功能文件系统，但是当您编写自己的自定义SPI时，您可以通过扩展其基础表的结构以根据需要包含其他列，或者通过使用来轻松地合并对其他DBFS属性的支持。现有表中的现有列，以提供这些DBFS属性的值。</p>
                            </li>
                            <li>
-                              <p>The TBFS does not implement a rename/move method; adding support for this (a suitable <code class="codeph">UPDATE</code> statement in the <code class="codeph">renamePath</code> method) is left as an exercise for the user.
+                              <p>TBFS没有实现重命名/移动方法;添加对此的支持（ <code class="codeph">renamePath</code>方法中的合适的<code class="codeph">UPDATE</code>语句）留给用户练习。
                               </p>
                            </li>
                            <li>
-                              <p>The TBFS example uses the string "tbfs" in multiple places (tablespace, datafile, user, package, and even filesystem name). All these uses of  "tbfs" belong in different namespaces—identifying which namespace corresponds to a specific occurrence of the string. "tbfs" in these examples is also a good learning exercise to make sure that the DBFS concepts are clear in your mind.</p>
+                              <p>TBFS示例在多个位置使用字符串“tbfs”（表空间，数据文件，用户，包甚至文件系统名称）。“tbfs”的所有这些用法属于不同的名称空间 - 标识哪个名称空间对应于字符串的特定出现。这些示例中的“tbfs”也是一个很好的学习练习，可以确保DBFS概念在您的脑海中清晰可见。</p>
                            </li>
                         </ul>
                      </div>
                   </div>
                </div><a id="ADLOB46232"></a><div class="props_rev_3"><a id="GUID-E2E72747-14A0-4334-A3AE-AC4EEDE9FD45" name="GUID-E2E72747-14A0-4334-A3AE-AC4EEDE9FD45"></a><h4 id="ADLOB-GUID-E2E72747-14A0-4334-A3AE-AC4EEDE9FD45" class="sect4">TBFS.SQL</h4>
                   <div>
-                     <p>The TBFS.SQL script is the top level driver script.</p>
-                     <p>The TBFS.SQL script:</p><pre class="oac_no_warn" dir="ltr">set echo on;
+                     <p>TBFS.SQL脚本是顶级驱动程序脚本。</p>
+                     <p>TBFS.SQL脚本：</p><pre class="oac_no_warn" dir="ltr">set echo on;
  
 @tbl
 @spec
@@ -244,8 +231,8 @@
 quit;</pre></div>
                </div><a id="ADLOB46233"></a><div class="props_rev_3"><a id="GUID-2ADF05F4-1FB5-4B18-9B4B-06B344B806E9" name="GUID-2ADF05F4-1FB5-4B18-9B4B-06B344B806E9"></a><h4 id="ADLOB-GUID-2ADF05F4-1FB5-4B18-9B4B-06B344B806E9" class="sect4">TBL.SQL</h4>
                   <div>
-                     <p>The TBL.SQL script creates a test user, a tablespace, the table that backs the filesystem and so on.</p>
-                     <p>The TBL.SQL script :</p><pre class="oac_no_warn" dir="ltr">connect / as sysdba
+                     <p>TBL.SQL脚本创建测试用户，表空间，支持文件系统的表等等。</p>
+                     <p>TBL.SQL脚本：</p><pre class="oac_no_warn" dir="ltr">connect / as sysdba
  
 create tablespace tbfs datafile 'tbfs.f' size 100m
     reuse autoextend on
@@ -278,10 +265,9 @@ grant delete on tbfst to dbfs_role;
 grant update on tbfst to dbfs_role;</pre></div>
                </div><a id="ADLOB46234"></a><div class="props_rev_3"><a id="GUID-6EBE7625-C688-4346-A4C6-891772A8D821" name="GUID-6EBE7625-C688-4346-A4C6-891772A8D821"></a><h4 id="ADLOB-GUID-6EBE7625-C688-4346-A4C6-891772A8D821" class="sect4">spec.sql</h4>
                   <div>
-                     <p>The <code class="codeph">spec.sql</code> script provide the SPI specification of the tbfs.
+                     <p><code class="codeph">spec.sql</code>脚本提供<code class="codeph">spec.sql</code>的SPI规范。
                      </p>
-                     <p>The <code class="codeph">spec.sql</code> script:
-                     </p><pre class="oac_no_warn" dir="ltr">connect / as sysdba;
+                     <p><code class="codeph">spec.sql</code>脚本：</p><pre class="oac_no_warn" dir="ltr">connect / as sysdba;
  
 create or replace package tbfs
     authid current_user
@@ -825,10 +811,9 @@ grant execute on tbfs
     to dbfs_role;</pre></div>
                </div><a id="ADLOB46235"></a><div class="props_rev_3"><a id="GUID-BEE83BB9-C2FE-448B-AF91-5AC9392E13C8" name="GUID-BEE83BB9-C2FE-448B-AF91-5AC9392E13C8"></a><h4 id="ADLOB-GUID-BEE83BB9-C2FE-448B-AF91-5AC9392E13C8" class="sect4">body.sql</h4>
                   <div>
-                     <p>The <code class="codeph">body.sql</code> script provides the SPI implementation of the tbfs.
+                     <p><code class="codeph">body.sql</code>脚本提供了<code class="codeph">body.sql</code>的SPI实现。
                      </p>
-                     <p>The <code class="codeph">body.sql</code> script:
-                     </p><pre class="oac_no_warn" dir="ltr">connect / as sysdba;
+                     <p><code class="codeph">body.sql</code>脚本：</p><pre class="oac_no_warn" dir="ltr">connect / as sysdba;
  
 create or replace package body tbfs
 as
@@ -1668,10 +1653,8 @@ end;
 show errors;</pre></div>
                </div><a id="ADLOB46236"></a><div class="props_rev_3"><a id="GUID-33C05C50-B474-47F8-AE49-242837A24D3F" name="GUID-33C05C50-B474-47F8-AE49-242837A24D3F"></a><h4 id="ADLOB-GUID-33C05C50-B474-47F8-AE49-242837A24D3F" class="sect4">capi.sql</h4>
                   <div>
-                     <p>The <code class="codeph">capi.sql</code> script registers and mounts the DBFS.
-                     </p>
-                     <p>The <code class="codeph">capi.sql</code> script:
-                     </p><pre class="oac_no_warn" dir="ltr">connect tbfs/tbfs;
+                     <p><code class="codeph">capi.sql</code>脚本注册并安装DBFS。</p>
+                     <p><code class="codeph">capi.sql</code>脚本：</p><pre class="oac_no_warn" dir="ltr">connect tbfs/tbfs;
  
 exec dbms_dbfs_content.registerStore('MY_TBFS', 'table', 'TBFS');
 exec dbms_dbfs_content.mountStore('MY_TBFS', singleton =&gt; true);

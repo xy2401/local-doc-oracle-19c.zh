@@ -1,14 +1,12 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>EXIT</title>
+      <title>出口</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Backup and Recovery Reference">
-      <meta property="og:description" content>
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
       <meta name="application-name" content="Backup and Recovery Reference">
@@ -45,52 +43,47 @@
     <meta name="dcterms.isVersionOf" content="RCMRF">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="EXECUTE-SCRIPT.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="FLASHBACK-DATABASE.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="EXECUTE-SCRIPT.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="FLASHBACK-DATABASE.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Backup and Recovery Reference</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="rman-commands-at-sign-to-quit.html" property="item" typeof="WebPage"><span property="name"> RMAN Commands: @ (at sign) to QUIT</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">EXIT</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">备份和恢复参考</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="rman-commands-at-sign-to-quit.html" property="item" typeof="WebPage"><span property="name">RMAN命令：@（at符号）到QUIT</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">出口</li>
             </ol>
             <a id="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A" name="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A"></a><a id="RCMRF90177"></a><a id="RCMRF90178"></a><a id="RCMRF128"></a>
             
-            <h2 id="RCMRF-GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A" class="sect2"><span class="enumeration_section">2.22 </span>EXIT
-            </h2>
+            <h2 id="RCMRF-GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A" class="sect2"><span class="enumeration_section">2.22</span>退出</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p class="subhead1" id="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A__GUID-E7BB1B9B-E6C2-4167-91B8-2AED30740DF4">Purpose</p>
-                  <p>Use the <code class="codeph">EXIT</code> command to shut down the Recovery Manager utility. This command is functionally equivalent to the <a href="QUIT.html#GUID-B9E73011-0E55-4B76-ADB1-6B1273D5F605">QUIT</a> command.
+                  <p class="subhead1" id="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A__GUID-E7BB1B9B-E6C2-4167-91B8-2AED30740DF4">目的</p>
+                  <p>使用<code class="codeph">EXIT</code>命令关闭Recovery Manager实用程序。此命令在功能上等同于<a href="QUIT.html#GUID-B9E73011-0E55-4B76-ADB1-6B1273D5F605">QUIT</a>命令。
                   </p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A__GUID-875322D2-DE9C-4B49-BADD-73D5DBA70486">Prerequisites</p>
-                  <p>Execute only at the RMAN prompt.</p>
+                  <p class="subhead1" id="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A__GUID-875322D2-DE9C-4B49-BADD-73D5DBA70486">先决条件</p>
+                  <p>仅在RMAN提示符下执行。</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A__GUID-FBB16C78-0C42-4980-BBA8-C601CCD0C497">Syntax</p>
-                  <p><span class="bold"><span class="italic">exit</span>::=</span></p>
-                  <div class="figure" id="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A__GUID-363F25FA-64DC-473B-9658-882AA7C10E0E"><img src="img/exit.gif" alt="Description of exit.eps follows" title="Description of exit.eps follows" longdesc="img_text/exit.html"><br><a href="img_text/exit.html">Description of the illustration exit.eps</a></div>
+                  <p class="subhead1" id="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A__GUID-FBB16C78-0C42-4980-BBA8-C601CCD0C497">句法</p>
+                  <p><span class="bold"><span class="italic">exit</span> :: =</span></p>
+                  <div class="figure" id="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A__GUID-363F25FA-64DC-473B-9658-882AA7C10E0E"><img src="img/exit.gif" alt="exit.eps的描述如下" title="exit.eps的描述如下" longdesc="img_text/exit.html"><br><a href="img_text/exit.html">说明exit.eps的说明</a></div>
                   <!-- class="figure" -->
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A__GUID-B73C1CC6-559E-41B6-A520-2A1187F8EF83">Example</p>
+                  <p class="subhead1" id="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A__GUID-B73C1CC6-559E-41B6-A520-2A1187F8EF83">例</p>
                </div>
                <!-- class="section" -->
                <div class="example" id="GUID-4A316732-92C9-48CC-8FD9-D59DB5D78E3A__GUID-74B9B5B0-64B8-4892-92ED-6E6A462E0C85">
-                  <p class="titleinexample">Example 2-98 Exiting RMAN</p>
-                  <p>This example terminates RMAN: </p><pre class="oac_no_warn" dir="ltr">RMAN&gt; EXIT</pre></div>
+                  <p class="titleinexample">例2-98退出RMAN</p>
+                  <p>此示例终止RMAN：</p><pre class="oac_no_warn" dir="ltr">RMAN&gt; EXIT</pre></div>
                <!-- class="example" -->
             </div>
          </div>

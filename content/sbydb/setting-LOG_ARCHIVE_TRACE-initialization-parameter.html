@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="The Oracle database uses the LOG_ARCHIVE_TRACE initialization parameter to enable and control the generation of comprehensive trace information for log archiving and redo transport activity.">
       <meta name="description" content="The Oracle database uses the LOG_ARCHIVE_TRACE initialization parameter to enable and control the generation of comprehensive trace information for log archiving and redo transport activity.">
-      <title>Setting Archive Tracing</title>
+      <title>设置存档跟踪</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Concepts and Administration ">
       <meta property="og:description" content="The Oracle database uses the LOG_ARCHIVE_TRACE initialization parameter to enable and control the generation of comprehensive trace information for log archiving and redo transport activity.">
@@ -47,62 +45,52 @@
     <meta name="dcterms.isVersionOf" content="SBYDB">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="creating-data-guard-standby-database-using-RMAN.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="performing-oracle-data-guard-role-transitions.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="creating-data-guard-standby-database-using-RMAN.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="performing-oracle-data-guard-role-transitions.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Concepts and Administration </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="oracle-data-guard-supplemental-information.html" property="item" typeof="WebPage"><span property="name"> Appendixes </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem"> Setting Archive Tracing</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">概念和管理</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="oracle-data-guard-supplemental-information.html" property="item" typeof="WebPage"><span property="name">附录</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">设置存档跟踪</li>
             </ol>
             <a id="GUID-515A27B2-5163-42E1-A78D-B6E979BA54EB" name="GUID-515A27B2-5163-42E1-A78D-B6E979BA54EB"></a><a id="SBYDB01880"></a>
             
-            <h2 id="SBYDB-GUID-515A27B2-5163-42E1-A78D-B6E979BA54EB" class="sect2"><span class="enumeration_chapter">F </span> Setting Archive Tracing
-            </h2>
+            <h2 id="SBYDB-GUID-515A27B2-5163-42E1-A78D-B6E979BA54EB" class="sect2"><span class="enumeration_chapter">F</span>设置存档跟踪</h2>
          </header>
          <div class="ind">
             <div>
-               <p>The Oracle database uses the <code class="codeph">LOG_ARCHIVE_TRACE</code> initialization parameter to enable and control the generation of comprehensive trace information for log archiving and redo transport activity.
+               <p>Oracle数据库使用<code class="codeph">LOG_ARCHIVE_TRACE</code>初始化参数来启用和控制日志归档和重做传输活动的综合跟踪信息的生成。
                </p>
-               <p>The additional tracing that is output when <code class="codeph">LOG_ARCHIVE_TRACE</code> is set to a nonzero value can appear in trace files for an archive process, <code class="codeph">RFS</code> process, <code class="codeph">LGWR</code> process, <code class="codeph">SYNC</code> process, <code class="codeph">ASYNC</code> process, foreground process, <code class="codeph">MRP</code> process, recovery process, log apply process, startup process, shutdown process, and other processes that use redo transport services. Tracing information is written to the Automatic Diagnostic Repository.
+               <p>当<code class="codeph">LOG_ARCHIVE_TRACE</code>设置为非零值时输出的附加跟踪可以出现在跟踪文件中，用于归档过程， <code class="codeph">RFS</code>过程， <code class="codeph">LGWR</code>过程， <code class="codeph">SYNC</code>过程， <code class="codeph">ASYNC</code>过程，前台进程， <code class="codeph">MRP</code>过程，恢复过程，日志应用过程，启动进程，关闭进程和使用重做传输服务的其他进程。跟踪信息将写入自动诊断信息库。
                </p>
                <div class="infoboxnotealso" id="GUID-515A27B2-5163-42E1-A78D-B6E979BA54EB__GUID-8B4C62D8-0D44-4301-9D5D-3A7EDB2F2FCC">
-                  <p class="notep1">See Also:</p>
-                  <ul style="list-style-type: disc;">
+                  <p class="notep1">也可以看看：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><a href="../refrn/LOG_ARCHIVE_TRACE.html#REFRN10093" target="_blank"><span class="italic">Oracle Database Reference</span></a> for a complete description of the <code class="codeph">LOG_ARCHIVE_TRACE</code> initialization parameter and its valid values
-                        </p>
+                        <p>有关<code class="codeph">LOG_ARCHIVE_TRACE</code>初始化参数及其有效值的完整说明，请<a href="../refrn/LOG_ARCHIVE_TRACE.html#REFRN10093" target="_blank"><span class="italic">参见Oracle数据库参考</span></a></p>
                      </li>
                      <li>
-                        <p><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sbydb&amp;id=ADMIN11261" target="_blank"><span class="italic">Oracle Database Administrator's Guide</span></a> for more information about the Automatic Diagnostic Repository
-                        </p>
+                        <p>有关自动诊断信息库的更多信息，请参见<a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sbydb&amp;id=ADMIN11261" target="_blank"><span class="italic">“Oracle数据库管理员指南”</span></a></p>
                      </li>
                   </ul>
                </div>
-            </div><a id="SBYDB4990"></a><div class="props_rev_3"><a id="GUID-E25745D3-B841-4F9B-87FF-4BB7D7415ED0" name="GUID-E25745D3-B841-4F9B-87FF-4BB7D7415ED0"></a><h3 id="SBYDB-GUID-E25745D3-B841-4F9B-87FF-4BB7D7415ED0" class="sect3"><span class="enumeration_section">F.1 </span>Setting the LOG_ARCHIVE_TRACE Initialization Parameter
-               </h3>
+            </div><a id="SBYDB4990"></a><div class="props_rev_3"><a id="GUID-E25745D3-B841-4F9B-87FF-4BB7D7415ED0" name="GUID-E25745D3-B841-4F9B-87FF-4BB7D7415ED0"></a><h3 id="SBYDB-GUID-E25745D3-B841-4F9B-87FF-4BB7D7415ED0" class="sect3"><span class="enumeration_section">F.1</span>设置LOG_ARCHIVE_TRACE初始化参数</h3>
                <div>
-                  <p>To enable, disable, or modify the <code class="codeph">LOG_ARCHIVE_TRACE</code> parameter, you issue an <code class="codeph">ALTER SYSTEM</code> SQL statement.
+                  <p>要启用，禁用或修改<code class="codeph">LOG_ARCHIVE_TRACE</code>参数，请发出<code class="codeph">ALTER SYSTEM</code> SQL语句。
                   </p>
-                  <p>The format for the <code class="codeph">LOG_ARCHIVE_TRACE</code> parameter is as follows, where <span class="variable" translate="no">trace_level</span> is an integer:
-                  </p><pre class="oac_no_warn" dir="ltr">LOG_ARCHIVE_TRACE=<span class="variable" translate="no">trace_level</span>
-</pre><p>The following is an example of setting the <code class="codeph">LOG_ARCHIVE_TRACE</code> parameter:
-                  </p><pre class="oac_no_warn" dir="ltr">SQL&gt; ALTER SYSTEM SET LOG_ARCHIVE_TRACE=15;
-</pre><p>You can combine tracing levels by setting the value of the <code class="codeph">LOG_ARCHIVE_TRACE</code> parameter to the sum of the individual levels. For instance, in the previous example, setting the <code class="codeph">LOG_ARCHIVE_TRACE</code> parameter to a value of 15 sets trace levels 1, 2, 4, and 8.
+                  <p><code class="codeph">LOG_ARCHIVE_TRACE</code>参数的格式如下，其中<span class="variable" translate="no">trace_level</span>是一个整数：</p><pre class="oac_no_warn" dir="ltr">LOG_ARCHIVE_TRACE=<span class="variable" translate="no">trace_level</span>
+</pre><p>以下是设置<code class="codeph">LOG_ARCHIVE_TRACE</code>参数的示例：</p><pre class="oac_no_warn" dir="ltr">SQL&gt; ALTER SYSTEM SET LOG_ARCHIVE_TRACE=15;
+</pre><p>您可以通过将<code class="codeph">LOG_ARCHIVE_TRACE</code>参数的值设置为各个级别的总和来组合跟踪级别。例如，在前面的示例中，将<code class="codeph">LOG_ARCHIVE_TRACE</code>参数设置为15可设置跟踪级别1,2,4和8。
                   </p>
-                  <p>For a complete list and description of valid <code class="codeph">LOG_ARCHIVE_TRACE</code> values, see <a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sbydb&amp;id=REFRN10093" target="_blank"><span class="italic">Oracle Database Reference</span></a>.
+                  <p>有关有效<code class="codeph">LOG_ARCHIVE_TRACE</code>值的完整列表和说明，请参见<a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sbydb&amp;id=REFRN10093" target="_blank"><span class="italic">Oracle数据库参考</span></a> 。
                   </p>
-                  <p>The following are examples of the ARC0 trace data generated on the primary site by the archiving of log file 387 to two different destinations: the service <code class="codeph">standby1</code> and the local directory <code class="codeph">/oracle/dbs</code>.
+                  <p>以下是通过将日志文件387归档到两个不同目的地在主站点上生成的ARC0跟踪数据的示例：服务<code class="codeph">standby1</code>和本地目录<code class="codeph">/oracle/dbs</code> 。
                   </p>
                   <div class="infoboxnote" id="GUID-E25745D3-B841-4F9B-87FF-4BB7D7415ED0__GUID-2AF80106-4344-47AA-A823-AA8AC0EED676">
-                     <p class="notep1">Note:</p>
-                     <p>The level numbers do not appear in the actual trace output; they are shown here for clarification only.</p>
+                     <p class="notep1">注意：</p>
+                     <p>级别编号不会出现在实际的跟踪输出中;它们仅在此处显示以供澄清。</p>
                   </div><pre class="oac_no_warn" dir="ltr">Level   Corresponding entry content (sample) 
 -----   -------------------------------- 
 ( 1)    ARC0: Begin archiving log# 1 seq# 387 thrd# 1 
@@ -149,8 +137,7 @@
         ARCH: STARTING ARCH PROCESSES COMPLETE 
         ARC0 started with pid=8 
         ARC0: Archival started
-</pre><p>The following is the trace data generated by the remote file server (RFS) process on the standby site as it receives archived redo log file 387 in directory <code class="codeph">/stby</code> and applies it to the standby database:
-                  </p><pre class="oac_no_warn" dir="ltr">level    trace output (sample) 
+</pre><p>以下是备用站点上的远程文件服务器（RFS）进程生成的跟踪数据，因为它接收目录<code class="codeph">/stby</code>归档重做日志文件387并将其应用于备用数据库：</p><pre class="oac_no_warn" dir="ltr">level    trace output (sample) 
 ----    ------------------ 
 ( 4)      RFS: Startup received from ARCH pid 9272 
 ( 4)      RFS: Notifier 

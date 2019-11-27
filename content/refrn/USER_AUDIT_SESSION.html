@@ -1,6 +1,4 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,45 +44,38 @@
     <meta name="dcterms.isVersionOf" content="REFRN">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="USER_AUDIT_POLICY_COLUMNS.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="USER_AUDIT_STATEMENT.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="USER_AUDIT_POLICY_COLUMNS.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="USER_AUDIT_STATEMENT.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Reference</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="static-data-dictionary-views.html" property="item" typeof="WebPage"><span property="name">   Static Data Dictionary Views </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="static-data-dictionary-views-5.html" property="item" typeof="WebPage"><span property="name"> Static Data Dictionary Views: DBA_STREAMS_ADD_COLUMN to USER_ZONEMAPS</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库参考</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="static-data-dictionary-views.html" property="item" typeof="WebPage"><span property="name">静态数据字典视图</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="static-data-dictionary-views-5.html" property="item" typeof="WebPage"><span property="name">静态数据字典视图：DBA_STREAMS_ADD_COLUMN到USER_ZONEMAPS</span></a></li>
                <li class="active" property="itemListElement" typeof="ListItem">USER_AUDIT_SESSION</li>
             </ol>
             <a id="GUID-CB8A9DB4-D181-4908-846E-FB32ADABDAF3" name="GUID-CB8A9DB4-D181-4908-846E-FB32ADABDAF3"></a><a id="REFRN26021"></a>
             
-            <h2 id="REFRN-GUID-CB8A9DB4-D181-4908-846E-FB32ADABDAF3" class="sect2"><span class="enumeration_section">6.330 </span>USER_AUDIT_SESSION
-            </h2>
+            <h2 id="REFRN-GUID-CB8A9DB4-D181-4908-846E-FB32ADABDAF3" class="sect2"><span class="enumeration_section">6.330</span> USER_AUDIT_SESSION</h2>
          </header>
          <div class="ind">
             <div>
-               <p><code class="codeph">USER_AUDIT_SESSION</code> displays the audit trail records concerning connections and disconnections of the current user. Its columns are the same as those in <code class="codeph">DBA_AUDIT_SESSION</code>.
-               </p>
+               <p><code class="codeph">USER_AUDIT_SESSION</code>显示有关当前用户的连接和断开连接的审计跟踪记录。它的列与<code class="codeph">DBA_AUDIT_SESSION</code>列相同。</p>
                <div class="section">
                   <div class="infoboxnote" id="GUID-CB8A9DB4-D181-4908-846E-FB32ADABDAF3__GUID-3F5E69CF-83EC-421B-82EA-66C5FE6DDD5C">
-                     <p class="notep1">Note:</p>
-                     <p>This view is populated only in an Oracle Database where unified auditing is not enabled. When unified auditing is enabled in Oracle Database, the audit records are populated in the new audit trail and can be viewed from <code class="codeph">UNIFIED_AUDIT_TRAIL</code>.
-                     </p>
-                     <ul style="list-style-type: disc;">
+                     <p class="notep1">注意：</p>
+                     <p>此视图仅在未启用统一审核的Oracle数据库中填充。在Oracle数据库中启用统一审计时，审计记录将填充在新审计跟踪中，并可从<code class="codeph">UNIFIED_AUDIT_TRAIL</code>查看。</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p><span class="q">"<a href="DBA_AUDIT_SESSION.html#GUID-C89F5D18-5918-4A5A-8F6C-972111C19A1A" title="DBA_AUDIT_SESSION displays all audit trail records concerning CONNECT and DISCONNECT.">DBA_AUDIT_SESSION</a>"</span></p>
+                           <p><span class="q">“ <a href="DBA_AUDIT_SESSION.html#GUID-C89F5D18-5918-4A5A-8F6C-972111C19A1A" title="DBA_AUDIT_SESSION显示有关CONNECT和DISCONNECT的所有审计跟踪记录。">DBA_AUDIT_SESSION</a> ”</span></p>
                         </li>
                         <li>
-                           <p>See <a href="../dbseg/part_6.html#DBSEG006" target="_blank"><span><cite>Oracle Database Security Guide</cite></span></a> for more information about unified auditing.
+                           <p>有关统一审计的详细信息，请参见“ <a href="../dbseg/part_6.html#DBSEG006" target="_blank"><span><cite>Oracle数据库安全指南”</cite></span></a> 。
                            </p>
                         </li>
                         <li>
-                           <p>See <a href="../upgrd/recommended-and-best-practices-complete-upgrading-oracle-database.html#UPGRD52810" target="_blank"><span><cite>Oracle Database Upgrade Guide</cite></span></a> for more information about migrating to unified auditing.
+                           <p>有关迁移到统一审计的详细信息，请参阅“ <a href="../upgrd/recommended-and-best-practices-complete-upgrading-oracle-database.html#UPGRD52810" target="_blank"><span><cite>Oracle数据库升级指南”</cite></span></a> 。
                            </p>
                         </li>
                      </ul>

@@ -1,14 +1,12 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Proactive Database Tuning</title>
+      <title>主动数据库调整</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database 2 Day + Performance Tuning Guide">
-      <meta property="og:description" content>
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
       <meta name="application-name" content="Database 2 Day + Performance Tuning Guide">
@@ -44,39 +42,34 @@
     <meta name="dcterms.isVersionOf" content="TDPPT">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="oracle-database-performance-method.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="automatic-database-performance-monitoring.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="oracle-database-performance-method.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="automatic-database-performance-monitoring.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database 2 Day + Performance Tuning Guide</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem"> Proactive Database Tuning </li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库2天+性能调整指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">主动数据库调整</li>
             </ol>
             <a id="GUID-C7C3107E-0DB2-4442-AA4F-CAF15F863D47" name="GUID-C7C3107E-0DB2-4442-AA4F-CAF15F863D47"></a><a id="TDPPT353"></a>
             
-            <h2 id="TDPPT-GUID-C7C3107E-0DB2-4442-AA4F-CAF15F863D47" class="sect2"><span class="enumeration_part">Part II </span> Proactive Database Tuning 
-            </h2>
+            <h2 id="TDPPT-GUID-C7C3107E-0DB2-4442-AA4F-CAF15F863D47" class="sect2"><span class="enumeration_part">第二部分</span>主动数据库调优</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Part II describes how to tune Oracle Database proactively on a regular basis and contains the following chapters:</p>
-               <ul style="list-style-type: disc;">
+               <p>第二部分介绍了如何定期主动调优Oracle数据库，并包含以下章节：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p><a href="automatic-database-performance-monitoring.html#GUID-5D73B7DC-BC9A-4029-A741-2BF9EBB45AE9" title="Starting with Oracle Database 12c, ADDM is enabled by default in the root container of a multitenant container database (CDB). Starting with Oracle Database 19c, you can also use ADDM in a pluggable database (PDB)."> Automatic Database Performance Monitoring</a></p>
+                     <p><a href="automatic-database-performance-monitoring.html#GUID-5D73B7DC-BC9A-4029-A741-2BF9EBB45AE9" title="从Oracle Database 12c开始，默认情况下在多租户容器数据库（CDB）的根容器中启用ADDM。从Oracle Database 19c开始，您还可以在可插拔数据库（PDB）中使用ADDM。">自动数据库性能监控</a></p>
                   </li>
                   <li>
-                     <p><a href="monitoring-real-time-database-performance.html#GUID-EB19F9B4-A912-4354-8D8D-F89EEFD56704"> Monitoring Real-Time Database Performance </a></p>
+                     <p><a href="monitoring-real-time-database-performance.html#GUID-EB19F9B4-A912-4354-8D8D-F89EEFD56704">监控实时数据库性能</a></p>
                   </li>
                   <li>
-                     <p><a href="monitoring-real-time-database-operations.html#GUID-CE183666-D270-41B1-8410-8CE968168127" title="You can create a composite database operation using the DBMS_SQL_MONITOR package subprograms.The Monitored SQL Executions page of Cloud Control displays a table of database operations that are currently running or have completed.">Monitoring Real-Time Database Operations </a></p>
+                     <p><a href="monitoring-real-time-database-operations.html#GUID-CE183666-D270-41B1-8410-8CE968168127" title="您可以使用DBMS_SQL_MONITOR程序包子程序创建复合数据库操作。Cloud Control的“监视的SQL执行”页面显示当前正在运行或已完成的数据库操作的表。">监控实时数据库操作</a></p>
                   </li>
                   <li>
-                     <p><a href="monitoring-performance-alerts.html#GUID-884BBFEE-BDEB-447E-9384-9FE8FC1D69F9">Monitoring Performance Alerts </a></p>
+                     <p><a href="monitoring-performance-alerts.html#GUID-884BBFEE-BDEB-447E-9384-9FE8FC1D69F9">监控性能警报</a></p>
                   </li>
                </ul>
             </div>

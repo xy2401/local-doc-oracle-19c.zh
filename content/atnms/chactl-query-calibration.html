@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Use the chactl query calibration command to view detailed information about the calibration data of a specific target.">
       <meta name="description" content="Use the chactl query calibration command to view detailed information about the calibration data of a specific target.">
-      <title>chactl query calibration</title>
+      <title>chactl查询校准</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="User’s Guide">
       <meta property="og:description" content="Use the chactl query calibration command to view detailed information about the calibration data of a specific target.">
@@ -47,86 +45,72 @@
     <meta name="dcterms.isVersionOf" content="ATNMS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="chactl-query-repository.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="chactl-remove.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="chactl-query-repository.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="chactl-remove.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">User’s Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="appendixes.html" property="item" typeof="WebPage"><span property="name">Appendixes</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="chactl-command-reference.html" property="item" typeof="WebPage"><span property="name">chactl Command Reference</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">chactl query calibration</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">用户指导</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="appendixes.html" property="item" typeof="WebPage"><span property="name">附录</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="chactl-command-reference.html" property="item" typeof="WebPage"><span property="name">chactl命令参考</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">chactl查询校准</li>
             </ol>
             <a id="GUID-7B21CB95-983B-4F64-AF4E-F1F82CC38412" name="GUID-7B21CB95-983B-4F64-AF4E-F1F82CC38412"></a>
             
-            <h2 id="ATNMS-GUID-7B21CB95-983B-4F64-AF4E-F1F82CC38412" class="sect2"><span class="enumeration_section">D.9 </span>chactl query calibration
-            </h2>
+            <h2 id="ATNMS-GUID-7B21CB95-983B-4F64-AF4E-F1F82CC38412" class="sect2"><span class="enumeration_section">D.9</span> chactl查询校准</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Use the <code class="codeph">chactl query calibration</code> command to view detailed information about the calibration data of a specific target. 
+               <p>使用<code class="codeph">chactl query calibration</code>命令查看有关特定目标的校准数据的详细信息。
                </p>
                <div class="section">
-                  <p class="subhead1" id="GUID-7B21CB95-983B-4F64-AF4E-F1F82CC38412__GUID-4C170772-25D8-435E-954B-3A9F7F81D199">Syntax</p><pre class="pre codeblock"><code>chactl query calibration {-cluster|-db <span class="variable" translate="no">db_unique_name</span>} [-timeranges 'start=<span class="variable" translate="no">time_stamp</span>,end=<span class="variable" translate="no">time_stamp</span>,...'] [-kpiset 'name=<span class="variable" translate="no">kpi_name</span> min=<span class="variable" translate="no">val</span> max=<span class="variable" translate="no">val</span>,...' ] [-interval <span class="variable" translate="no">val</span>][-help]</code></pre><p>Specify the interval in hours.</p>
-                  <p>Specify date and time in the <code class="codeph">YYYY-MM-DD HH24:MI:SS</code> format.
+                  <p class="subhead1" id="GUID-7B21CB95-983B-4F64-AF4E-F1F82CC38412__GUID-4C170772-25D8-435E-954B-3A9F7F81D199">句法</p><pre class="pre codeblock"><code>chactl query calibration {-cluster|-db <span class="variable" translate="no">db_unique_name</span>} [-timeranges 'start=<span class="variable" translate="no">time_stamp</span>,end=<span class="variable" translate="no">time_stamp</span>,...'] [-kpiset 'name=<span class="variable" translate="no">kpi_name</span> min=<span class="variable" translate="no">val</span> max=<span class="variable" translate="no">val</span>,...' ] [-interval <span class="variable" translate="no">val</span>][-help]</code></pre><p>以小时为单位指定间隔。</p>
+                  <p>以<code class="codeph">YYYY-MM-DD HH24:MI:SS</code>格式指定日期和时间。
                   </p>
                   <div class="infoboxnote" id="GUID-7B21CB95-983B-4F64-AF4E-F1F82CC38412__GUID-9C68F451-4E14-4FBB-B109-1B25528D6D5D">
-                     <p class="notep1">Note:</p>
-                     <p>If you do not specify a time interval, then the <code class="codeph">chactl query calibration</code> command displays all the calibration data collected for a specific target.
+                     <p class="notep1">注意：</p>
+                     <p>如果未指定时间间隔，则<code class="codeph">chactl query calibration</code>命令将显示为特定目标收集的所有校准数据。
                      </p>
                   </div>
-                  <p>The following Key Performance Indicators are supported for database:</p> 
-                  <ul style="list-style-type: disc;">
+                  <p>数据库支持以下关键性能指标：</p> 
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><code class="codeph">CPUPERCENT</code> - CPU utilization - Percent
-                        </p>
+                        <p><code class="codeph">CPUPERCENT</code> -  CPU利用率 - 百分比</p>
                      </li>
                      <li>
-                        <p><code class="codeph">IOREAD</code> - Disk read - Mbyte/sec
-                        </p>
+                        <p><code class="codeph">IOREAD</code> - 磁盘读取 -  Mbyte / sec</p>
                      </li>
                      <li>
-                        <p><code class="codeph">DBTIMEPERCALL</code> - Database time per user call - usec/call
-                        </p>
+                        <p><code class="codeph">DBTIMEPERCALL</code> - 每个用户调用的数据库时间 -  usec / call</p>
                      </li>
                      <li>
-                        <p><code class="codeph">IOWRITE</code> - Disk write - Mbyte/sec
-                        </p>
+                        <p><code class="codeph">IOWRITE</code> - 磁盘写入 -  Mbyte / sec</p>
                      </li>
                      <li>
-                        <p><code class="codeph">IOTHROUGHPUT</code> - Disk throughput - IO/sec
-                        </p>
+                        <p><code class="codeph">IOTHROUGHPUT</code> - 磁盘吞吐量 -  IO /秒</p>
                      </li>
                   </ul> 
-                  <p>The following Key Performance Indicators are supported for cluster:</p> 
-                  <ul style="list-style-type: disc;">
+                  <p>群集支持以下关键性能指标：</p> 
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><code class="codeph">CPUPERCENT</code> - CPU utilization - Percent
-                        </p>
+                        <p><code class="codeph">CPUPERCENT</code> -  CPU利用率 - 百分比</p>
                      </li>
                      <li>
-                        <p><code class="codeph">IOREAD</code> - Disk read - Mbyte/sec
-                        </p>
+                        <p><code class="codeph">IOREAD</code> - 磁盘读取 -  Mbyte / sec</p>
                      </li>
                      <li>
-                        <p><code class="codeph">IOWRITE</code> - Disk write - Mbyte/sec
-                        </p>
+                        <p><code class="codeph">IOWRITE</code> - 磁盘写入 -  Mbyte / sec</p>
                      </li>
                      <li>
-                        <p><code class="codeph">IOTHROUGHPUT</code> - Disk throughput - IO/sec
-                        </p>
+                        <p><code class="codeph">IOTHROUGHPUT</code> - 磁盘吞吐量 -  IO /秒</p>
                      </li>
                   </ul>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-7B21CB95-983B-4F64-AF4E-F1F82CC38412__GUID-7A3E5B4F-878C-47F9-B823-B66365F5D370">Examples</p>
-                  <p>To view detailed information about the calibration data of the specified target:</p><pre class="pre codeblock"><code>$ chactl query calibration -db oltpacdb -timeranges 
+                  <p class="subhead1" id="GUID-7B21CB95-983B-4F64-AF4E-F1F82CC38412__GUID-7A3E5B4F-878C-47F9-B823-B66365F5D370">例子</p>
+                  <p>要查看有关指定目标的校准数据的详细信息：</p><pre class="pre codeblock"><code>$ chactl query calibration -db oltpacdb -timeranges 
 'start=2016-07-26 01:00:00,end=2016-07-26 02:00:00,start=2016-07-26 03:00:00,end=2016-07-26 04:00:00' 
 -kpiset 'name=CPUPERCENT min=20 max=40, name=IOTHROUGHPUT min=500 max=9000' -interval 2
 
@@ -228,7 +212,7 @@ MEAN      MEDIAN    STDDEV    MIN       MAX
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="chactl-command-reference.html#GUID-9AD6BC7D-F0F5-41E9-80CB-9BD911FCE586" title="The Oracle Cluster Health Advisor commands enable the Oracle Grid Infrastructure user to administer basic monitoring functionality on the targets.">chactl Command Reference</a></p>
+                     <p><strong>父主题：</strong> <a href="chactl-command-reference.html#GUID-9AD6BC7D-F0F5-41E9-80CB-9BD911FCE586" title="Oracle Cluster Health Advisor命令使Oracle Grid Infrastructure用户能够管理目标上的基本监视功能。">chactl命令参考</a></p>
                   </div>
                </div>
             </div>

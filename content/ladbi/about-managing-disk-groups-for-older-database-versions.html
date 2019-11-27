@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Use Oracle ASM Configuration Assistant (Oracle ASMCA) to create and modify disk groups when you install earlier Oracle databases on Oracle Grid Infrastructure installations.">
       <meta name="description" content="Use Oracle ASM Configuration Assistant (Oracle ASMCA) to create and modify disk groups when you install earlier Oracle databases on Oracle Grid Infrastructure installations.">
-      <title>About Managing Disk Groups for Older Database Versions</title>
+      <title>关于管理旧版数据库版本的磁盘组</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database Installation Guide">
       <meta property="og:description" content="Use Oracle ASM Configuration Assistant (Oracle ASMCA) to create and modify disk groups when you install earlier Oracle databases on Oracle Grid Infrastructure installations.">
@@ -47,40 +45,34 @@
     <meta name="dcterms.isVersionOf" content="LADBI">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="about-upgrading-existing-oracle-automatic-storage-management-instances.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="oracle-acfs-and-oracle-advm.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="about-upgrading-existing-oracle-automatic-storage-management-instances.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="oracle-acfs-and-oracle-advm.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="supported-storage-options-for-oracle-database-and-oracle-grid-infrastructure.html" property="item" typeof="WebPage"><span property="name">Supported Storage
-Options for Oracle Database and Oracle Grid Infrastructure</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">About Managing Disk Groups for Older Database Versions</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="supported-storage-options-for-oracle-database-and-oracle-grid-infrastructure.html" property="item" typeof="WebPage"><span property="name">Oracle数据库和Oracle Grid Infrastructure支持的存储选项</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">关于管理旧版数据库版本的磁盘组</li>
             </ol>
             <a id="GUID-26BEE1AC-A3D2-442E-B734-C69161CFA66B" name="GUID-26BEE1AC-A3D2-442E-B734-C69161CFA66B"></a>
             
-            <h2 id="LADBI-GUID-26BEE1AC-A3D2-442E-B734-C69161CFA66B" class="sect2">About Managing Disk Groups for Older Database Versions</h2>
+            <h2 id="LADBI-GUID-26BEE1AC-A3D2-442E-B734-C69161CFA66B" class="sect2">关于管理旧版数据库版本的磁盘组</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Use Oracle ASM Configuration Assistant (Oracle ASMCA) to create and modify disk groups when you install earlier Oracle databases on Oracle Grid Infrastructure installations.</p>
-               <p>Releases prior to Oracle Database 11<span class="italic">g</span> Release 2 used Oracle Database Configuration Assistant (Oracle DBCA) to perform administrative tasks on Oracle ASM. Starting with Oracle Database 11<span class="italic">g</span> Release 2 (11.2), Oracle ASM is installed as part of an Oracle Grid Infrastructure installation. You can no longer use Oracle DBCA to perform administrative tasks on Oracle ASM.
-               </p>
+               <p>在Oracle Grid Infrastructure安装上安装早期Oracle数据库时，使用Oracle ASM Configuration Assistant（Oracle ASMCA）创建和修改磁盘组。</p>
+               <p>Oracle Database <span class="italic">11g</span>第2版之前的版本使用Oracle数据库配置助手（Oracle DBCA）在Oracle ASM上执行管理任务。从Oracle Database <span class="italic">11g</span>第2版（11.2）开始，Oracle ASM作为Oracle Grid Infrastructure安装的一部分安装。您无法再使用Oracle DBCA在Oracle ASM上执行管理任务。</p>
             </div>
             <div>
                <div class="infoboxnotealso" id="GUID-26BEE1AC-A3D2-442E-B734-C69161CFA66B__GUID-9FD4B37C-72D9-4D6B-8F98-253EA5A18E50">
-                  <p class="notep1">See Also:</p>
-                  <p><a href="../ostmg/diskgroup-compatibility.html#OSTMG02700" target="_blank"><span class="italic">Oracle Automatic Storage Management Administrator's Guide</span></a> for details about configuring disk group compatibility for databases using Oracle Database 11<span class="italic">g</span> software with this release of Oracle Grid Infrastructure.
+                  <p class="notep1">也可以看看：</p>
+                  <p><a href="../ostmg/diskgroup-compatibility.html#OSTMG02700" target="_blank"><span class="italic">“Oracle自动存储管理管理员指南”</span></a> ，详细了解如何使用此版本的Oracle Grid Infrastructure使用Oracle Database <span class="italic">11g</span>软件配置数据库的磁盘组兼容性。
                   </p>
                </div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="supported-storage-options-for-oracle-database-and-oracle-grid-infrastructure.html#GUID-D5A3B718-FB00-420F-BE8B-FA111B1482E6" title="Review supported storage options as part of your installation planning process.">Supported Storage Options for Oracle Database and Oracle Grid Infrastructure</a></p>
+                     <p><strong>父主题：</strong> <a href="supported-storage-options-for-oracle-database-and-oracle-grid-infrastructure.html#GUID-D5A3B718-FB00-420F-BE8B-FA111B1482E6" title="在安装规划过程中查看支持的存储选项。">Oracle数据库和Oracle Grid Infrastructure支持的存储选项</a></p>
                   </div>
                </div>
             </div>

@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="If you created statistics tables using the DBMS_STATS.CREATE_STAT_TABLE procedure, then upgrade these tables by running DBMS_STATS.UPGRADE_STAT_TABLE.">
       <meta name="description" content="If you created statistics tables using the DBMS_STATS.CREATE_STAT_TABLE procedure, then upgrade these tables by running DBMS_STATS.UPGRADE_STAT_TABLE.">
-      <title>Upgrading Statistics Tables Created by the DBMS_STATS Package After Upgrading Oracle Database</title>
+      <title>升级Oracle数据库后升级由DBMS_STATS包创建的统计表</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Migrating Non-CDBs to New Hardware with the Same Operating System and for a New Release">
       <meta property="og:description" content="If you created statistics tables using the DBMS_STATS.CREATE_STAT_TABLE procedure, then upgrade these tables by running DBMS_STATS.UPGRADE_STAT_TABLE.">
@@ -46,38 +44,32 @@
     <meta name="dcterms.isVersionOf" content="SPMSU">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="upgrading-time-zone-file-version-after-upgrading-oracle-db.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="upgrading-externally-authenticated-ssl-users.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="upgrading-time-zone-file-version-after-upgrading-oracle-db.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="upgrading-externally-authenticated-ssl-users.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Migrating Non-CDBs to New Hardware with the Same Operating System and for a New Release</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="post-upgrde-tasks.html" property="item" typeof="WebPage"><span property="name">Post-Upgrade Tasks for Oracle Database</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="required-tasks-to-complete-after-upgrade.html" property="item" typeof="WebPage"><span property="name">Required Tasks to Complete After Upgrading Oracle Database</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Upgrading Statistics Tables Created by the DBMS_STATS Package After Upgrading Oracle Database</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">使用相同的操作系统和新版本将非CDB迁移到新硬件</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="post-upgrde-tasks.html" property="item" typeof="WebPage"><span property="name">Oracle数据库的升级后任务</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="required-tasks-to-complete-after-upgrade.html" property="item" typeof="WebPage"><span property="name">升级Oracle数据库后需要完成的任务</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">升级Oracle数据库后升级由DBMS_STATS包创建的统计表</li>
             </ol>
             <a id="GUID-B22CC865-E3FB-4D7E-821F-A60159E0F833" name="GUID-B22CC865-E3FB-4D7E-821F-A60159E0F833"></a>
             
-            <h2 id="SPMSU-GUID-B22CC865-E3FB-4D7E-821F-A60159E0F833" class="sect2">Upgrading Statistics Tables Created by the DBMS_STATS Package After Upgrading Oracle Database</h2>
+            <h2 id="SPMSU-GUID-B22CC865-E3FB-4D7E-821F-A60159E0F833" class="sect2">升级Oracle数据库后升级由DBMS_STATS包创建的统计表</h2>
          </header>
          <div class="ind">
             <div>
-               <p>If you created statistics tables using the <code>DBMS_STATS.CREATE_STAT_TABLE</code> procedure, then upgrade these tables by running <code>DBMS_STATS.UPGRADE_STAT_TABLE</code>.
-               </p>
+               <p>如果使用<code>DBMS_STATS.CREATE_STAT_TABLE</code>过程创建了统计表，则通过运行<code>DBMS_STATS.UPGRADE_STAT_TABLE</code>升级这些表。</p>
                <div class="section">
                   <p></p>
-                  <p>In the following example, <code class="codeph">green</code> is the owner of the statistics table and <code class="codeph">STAT_TABLE</code> is the name of the statistics table. 
+                  <p>在以下示例中， <code class="codeph">green</code>是统计信息表的所有者， <code class="codeph">STAT_TABLE</code>是统计信息表的名称。
                   </p><pre class="pre codeblock"><code>EXECUTE DBMS_STATS.UPGRADE_STAT_TABLE('green', 'stat_table'); 
-</code></pre><p>Perform this procedure for each statistics table.</p>
+</code></pre><p>对每个统计表执行此过程。</p>
                   <div class="infoboxnotealso" id="GUID-B22CC865-E3FB-4D7E-821F-A60159E0F833__GUID-9EF4BC3C-2F9D-49E3-8C4A-35EC12999E33">
-                     <p class="notep1">See Also:</p>
-                     <p><a href="../arpls/DBMS_STATS.html#ARPLS059" target="_blank"><span class="italic">Oracle Database PL/SQL Packages and Types Reference</span></a> for information about the DBMS_STATS package
-                     </p>
+                     <p class="notep1">也可以看看：</p>
+                     <p>有关DBMS_STATS包的信息<a href="../arpls/DBMS_STATS.html#ARPLS059" target="_blank"><span class="italic">，请参见Oracle Database PL / SQL包和类型参考</span></a></p>
                   </div>
                </div>
                <!-- class="section" -->
@@ -85,7 +77,7 @@
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="required-tasks-to-complete-after-upgrade.html#GUID-C9102D8A-0BD1-41FF-9AE9-656818267FB9" title="Review and complete these required tasks that are specified for your environment after you complete your upgrade.">Required Tasks to Complete After Upgrading Oracle Database</a></p>
+                     <p><strong>父主题：</strong> <a href="required-tasks-to-complete-after-upgrade.html#GUID-C9102D8A-0BD1-41FF-9AE9-656818267FB9" title="完成升级后，请查看并完成为您的环境指定的所需任务。">升级Oracle数据库后需要完成的任务</a></p>
                   </div>
                </div>
             </div>

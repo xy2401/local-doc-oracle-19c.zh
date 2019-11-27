@@ -1,6 +1,4 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,84 +43,74 @@
     <meta name="dcterms.isVersionOf" content="SQLRF">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="NLSSORT.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="NTILE.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="NLSSORT.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="NTILE.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Language Reference </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">Functions</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">NTH_VALUE </li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL语言参考</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">功能</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">NTH_VALUE</li>
             </ol>
             <a id="GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0" name="GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0"></a><a id="SQLRF51563"></a><a id="SQLRF51564"></a><a id="SQLRF51565"></a><a id="SQLRF30031"></a>
             
-            <h2 id="SQLRF-GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0" class="sect2">NTH_VALUE </h2>
+            <h2 id="SQLRF-GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0" class="sect2">NTH_VALUE</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p class="subhead1" id="GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0__GUID-56A22C88-1E90-4258-86E1-932357D9CEA1">Syntax</p>
+                  <p class="subhead1" id="GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0__GUID-56A22C88-1E90-4258-86E1-932357D9CEA1">句法</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <div class="figure" id="GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0__GUID-581A2DAE-8361-470B-9D07-3C3971549490"><img src="img/nth_value.gif" alt="Description of nth_value.eps follows" title="Description of nth_value.eps follows" longdesc="img_text/nth_value.html"><br><a href="img_text/nth_value.html">Description of the illustration nth_value.eps</a></div>
+                  <div class="figure" id="GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0__GUID-581A2DAE-8361-470B-9D07-3C3971549490"><img src="img/nth_value.gif" alt="下面是nth_value.eps的描述" title="下面是nth_value.eps的描述" longdesc="img_text/nth_value.html"><br><a href="img_text/nth_value.html">说明nth_value.eps的描述</a></div>
                   <!-- class="figure" -->
                   <div class="infoboxnotealso" id="GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0__GUID-031D4262-5DC0-4923-8319-92F4BA505BFF">
-                     <p class="notep1">See Also:</p>
-                     <p><span class="q">"<a href="Analytic-Functions.html#GUID-527832F7-63C0-4445-8C16-307FA5084056">Analytic Functions</a>"</span> for information on syntax, semantics, and restrictions of the <span class="italic"><code class="codeph">analytic_clause</code></span></p>
+                     <p class="notep1">也可以看看：</p>
+                     <p><span class="q">“ <a href="Analytic-Functions.html#GUID-527832F7-63C0-4445-8C16-307FA5084056">分析函数</a> ”，</span>用于获取有关<span class="italic"><code class="codeph">analytic_clause</code></span>语法，语义和限制的信息</p>
                   </div>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0__GUID-A8E665C7-FA23-4090-9E15-5F1DB0F3E7E9">Purpose</p>
+                  <p class="subhead1" id="GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0__GUID-A8E665C7-FA23-4090-9E15-5F1DB0F3E7E9">目的</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p><code class="codeph">NTH_VALUE</code> returns the <span class="italic"><code class="codeph">measure_expr</code></span> value of the <span class="italic">n</span>th row in the window defined by the <span class="italic"><code class="codeph">analytic_clause</code></span>. The returned value has the data type of the <span class="italic"><code class="codeph">measure_expr</code></span>.
+                  <p><code class="codeph">NTH_VALUE</code>返回<span class="italic"><code class="codeph">analytic_clause</code></span>定义的窗口中第<span class="italic">n</span>行的<span class="italic"><code class="codeph">measure_expr</code></span>值。返回的值具有<span class="italic"><code class="codeph">measure_expr</code></span>的数据类型。
                   </p>
-                  <ul style="list-style-type: disc;">
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p>{<code class="codeph">RESPECT</code> | <code class="codeph">IGNORE</code>} <code class="codeph">NULLS</code> determines whether null values of <span class="italic"><code class="codeph">measure_expr</code></span> are included in or eliminated from the calculation. The default is <code class="codeph">RESPECT</code> <code class="codeph">NULLS</code>.
+                        <p>{ <code class="codeph">RESPECT</code> | <code class="codeph">IGNORE</code> } <code class="codeph">NULLS</code>确定<span class="italic"><code class="codeph">measure_expr</code></span>空值是否包含在计算中或从计算中消除。默认值为<code class="codeph">RESPECT</code> <code class="codeph">NULLS</code> 。</p>
+                     </li>
+                     <li>
+                        <p><span class="italic"><code class="codeph">n</code></span>确定要返回度量值的第<span class="italic">n</span>行。 <span class="italic"><code class="codeph">n</code></span>可以是常量，绑定变量，列或涉及它们的表达式，只要它解析为正整数即可。如果数据源窗口少于<span class="italic"><code class="codeph">n</code></span>行，则该函数返回<code class="codeph">NULL</code> 。如果<span class="italic"><code class="codeph">n</code></span>为null，则该函数返回错误。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic"><code class="codeph">n</code></span> determines the <span class="italic">n</span>th row for which the measure value is to be returned. <span class="italic"><code class="codeph">n</code></span> can be a constant, bind variable, column, or an expression involving them, as long as it resolves to a positive integer. The function returns <code class="codeph">NULL</code> if the data source window has fewer than <span class="italic"><code class="codeph">n</code></span> rows. If <span class="italic"><code class="codeph">n</code></span> is null, then the function returns an error.
-                        </p>
-                     </li>
-                     <li>
-                        <p><code class="codeph">FROM</code> {<code class="codeph">FIRST</code> | <code class="codeph">LAST</code>} determines whether the calculation begins at the first or last row of the window. The default is <code class="codeph">FROM</code> <code class="codeph">FIRST</code>.
-                        </p>
+                        <p><code class="codeph">FROM</code> { <code class="codeph">FIRST</code> | <code class="codeph">LAST</code> }确定计算是从窗口的第一行还是最后一行开始。默认值为<code class="codeph">FROM</code> <code class="codeph">FIRST</code> 。</p>
                      </li>
                   </ul>
-                  <p>If you omit the <span class="italic"><code class="codeph">windowing_clause</code></span> of the <span class="italic"><code class="codeph">analytic_clause</code></span>, it defaults to <code class="codeph">RANGE</code> <code class="codeph">BETWEEN</code> <code class="codeph">UNBOUNDED</code> <code class="codeph">PRECEDING</code> <code class="codeph">AND</code> <code class="codeph">CURRENT</code> <code class="codeph">ROW</code>. This default sometimes returns an unexpected value for <code class="codeph">NTH_VALUE</code> ... <code class="codeph">FROM</code> <code class="codeph">LAST</code> ... , because the last value in the window is at the bottom of the window, which is not fixed. It keeps changing as the current row changes. For expected results, specify the <span class="italic"><code class="codeph">windowing_clause</code></span> as <code class="codeph">RANGE</code> <code class="codeph">BETWEEN</code> <code class="codeph">UNBOUNDED</code> <code class="codeph">PRECEDING</code> <code class="codeph">AND</code> <code class="codeph">UNBOUNDED</code> <code class="codeph">FOLLOWING</code>. Alternatively, you can specify the <span class="italic"><code class="codeph">windowing_clause</code></span> as <code class="codeph">RANGE</code> <code class="codeph">BETWEEN</code> <code class="codeph">CURRENT</code> <code class="codeph">ROW</code> <code class="codeph">AND</code> <code class="codeph">UNBOUNDED</code> <code class="codeph">FOLLOWING</code>.
-                  </p>
+                  <p>如果省略<span class="italic"><code class="codeph">analytic_clause</code></span>的<span class="italic"><code class="codeph">windowing_clause</code></span> ，则默认为<code class="codeph">RANGE</code> <code class="codeph">BETWEEN</code> <code class="codeph">UNBOUNDED</code> <code class="codeph">PRECEDING</code> <code class="codeph">AND</code> <code class="codeph">CURRENT</code> <code class="codeph">ROW</code> 。此默认值有时会返回<code class="codeph">NTH_VALUE</code>的意外值...<code class="codeph">FROM</code> <code class="codeph">LAST</code> ...，因为窗口中的最后一个值位于窗口的底部，这是不固定的。它会随着当前行的变化而不断变化。对于预期的结果，指定<span class="italic"><code class="codeph">windowing_clause</code></span>为<code class="codeph">RANGE</code> <code class="codeph">BETWEEN</code> <code class="codeph">UNBOUNDED</code> <code class="codeph">PRECEDING</code> <code class="codeph">AND</code> <code class="codeph">UNBOUNDED</code> <code class="codeph">FOLLOWING</code> 。或者，您可以将<span class="italic"><code class="codeph">windowing_clause</code></span>指定为<code class="codeph">RANGE</code> <code class="codeph">BETWEEN</code> <code class="codeph">CURRENT</code> <code class="codeph">ROW</code> <code class="codeph">AND</code> <code class="codeph">UNBOUNDED</code> <code class="codeph">FOLLOWING</code> 。</p>
                   <div class="infoboxnotealso" id="GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0__GUID-2D39D334-5E0F-4D17-ABE5-E3DE03D10BAD">
-                     <p class="notep1">See Also:</p>
-                     <ul style="list-style-type: disc;">
+                     <p class="notep1">也可以看看：</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p><a href="../dwhsg/sql-analysis-reporting-data-warehouses.html#DWHSG02017" target="_blank"><span class="italic">Oracle Database Data Warehousing Guide</span></a> for more information on the use of this function
-                           </p>
+                           <p>有关使用此功能的更多信息，请<a href="../dwhsg/sql-analysis-reporting-data-warehouses.html#DWHSG02017" target="_blank"><span class="italic">参见“Oracle数据库数据仓库指南”</span></a></p>
                         </li>
                         <li>
-                           <p>Appendix C in <a href="../nlspg/appendix-C-collation-derivation-and-determination-rules-for-SQL-operations.html#NLSPG-GUID-AFCE41ED-775B-4A00-AF38-C436776AE0C5" target="_blank"><span class="italic">Oracle Database Globalization Support Guide</span></a> for the collation derivation rules, which define the collation assigned to the return value of <code class="codeph">NTH_VALUE</code> when it is a character value
-                           </p>
+                           <p>“ <a href="../nlspg/appendix-C-collation-derivation-and-determination-rules-for-SQL-operations.html#NLSPG-GUID-AFCE41ED-775B-4A00-AF38-C436776AE0C5" target="_blank"><span class="italic">数据库全球化支持指南”</span></a>中的附录C，用于排序规则派生规则，用于定义在<code class="codeph">NTH_VALUE</code>为字符值时分配给返回值的排序规则</p>
                         </li>
                      </ul>
                   </div>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0__GUID-F59D6409-9FBF-422D-82AF-1163BFA78BF0">Examples</p>
+                  <p class="subhead1" id="GUID-F8A0E88C-67E5-4AA6-9515-95D03A7F9EA0__GUID-F59D6409-9FBF-422D-82AF-1163BFA78BF0">例子</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p>The following example shows the minimum <span class="italic"><code class="codeph">amount_sold</code></span> value for the second <span class="italic"><code class="codeph">channel_id</code></span> in ascending order for each <span class="italic"><code class="codeph">prod_id</code></span> between 13 and 16:
-                  </p><pre class="oac_no_warn" dir="ltr">SELECT prod_id, channel_id, MIN(amount_sold),
+                  <p>以下示例显示了每个<span class="italic"><code class="codeph">prod_id</code></span>在13和16之间的第二个<span class="italic"><code class="codeph">channel_id</code></span>的最小<span class="italic"><code class="codeph">amount_sold</code></span>值（按升序排列）：</p><pre class="oac_no_warn" dir="ltr">SELECT prod_id, channel_id, MIN(amount_sold),
     NTH_VALUE(MIN(amount_sold), 2) OVER (PARTITION BY prod_id ORDER BY channel_id
     ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) nv
   FROM sales

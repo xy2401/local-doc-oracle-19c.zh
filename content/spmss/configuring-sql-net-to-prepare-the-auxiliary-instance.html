@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Add entries for primary and standby databases in tnsnames.ora, and then save the file.">
       <meta name="description" content="Add entries for primary and standby databases in tnsnames.ora, and then save the file.">
-      <title>Configuring SQL*Net to Prepare the Auxiliary Instance on the Destination Host</title>
+      <title>配置SQL * Net以准备目标主机上的辅助实例</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Migrating Non-CDBs to New Hardware with the Same Operating System and Release">
       <meta property="og:description" content="Add entries for primary and standby databases in tnsnames.ora, and then save the file.">
@@ -46,31 +44,27 @@
     <meta name="dcterms.isVersionOf" content="SPMSS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="adding-static-service-to-listener.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="checking-sql-net-configuration.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="adding-static-service-to-listener.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="checking-sql-net-configuration.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Migrating Non-CDBs to New Hardware with the Same Operating System and Release</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="preparing-the-auxiliary-instance-destination-host.html" property="item" typeof="WebPage"><span property="name">Preparing the Auxiliary Instance on the Destination Host</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="configuring-the-network-between-source-and-target-dbs.html" property="item" typeof="WebPage"><span property="name">Configuring the Network Between Source and Target Oracle Databases</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Configuring SQL*Net to Prepare the Auxiliary Instance on the Destination Host</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">使用相同的操作系统和发行版将非CDB迁移到新硬件</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="preparing-the-auxiliary-instance-destination-host.html" property="item" typeof="WebPage"><span property="name">在目标主机上准备辅助实例</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="configuring-the-network-between-source-and-target-dbs.html" property="item" typeof="WebPage"><span property="name">在源和目标Oracle数据库之间配置网络</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">配置SQL * Net以准备目标主机上的辅助实例</li>
             </ol>
             <a id="GUID-78F3585C-250A-476E-91CC-EE573A840E32" name="GUID-78F3585C-250A-476E-91CC-EE573A840E32"></a>
             
-            <h2 id="SPMSS-GUID-78F3585C-250A-476E-91CC-EE573A840E32" class="sect2">Configuring SQL*Net to Prepare the Auxiliary Instance on the Destination Host</h2>
+            <h2 id="SPMSS-GUID-78F3585C-250A-476E-91CC-EE573A840E32" class="sect2">配置SQL * Net以准备目标主机上的辅助实例</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Add entries for primary and standby databases in <code class="codeph">tnsnames.ora</code>, and then save the file.
+               <p>在<code class="codeph">tnsnames.ora</code>添加主数据库和备用数据库的条目，然后保存该文件。
                </p>
                <div class="example" id="GUID-78F3585C-250A-476E-91CC-EE573A840E32__GUID-C9648667-4D28-48BF-BA52-2332323A9455">
-                  <p class="titleinexample">Example 3-4 Adding Net Services</p><pre class="pre codeblock"><code>[oracle @ ora12c-dup ~] $ cd $ ORACLE_HOME / network / admin 
+                  <p class="titleinexample">示例3-4添加网络服务</p><pre class="pre codeblock"><code>[oracle @ ora12c-dup ~] $ cd $ ORACLE_HOME / network / admin 
 [oracle @ ora12c-dup admin] $ cat tnsnames.ora 
  # tnsnames.ora Network Configuration File: /u01/app/oracle/product/12.2.0/dbhome/network/admin/tnsnames.ora 
  # Generated by Oracle configuration tools. 
@@ -96,7 +90,7 @@
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="configuring-the-network-between-source-and-target-dbs.html#GUID-7486D8DB-2476-4251-AAE1-77A48EFF59CF" title="In preparation for duplicating your Oracle Database, configure the network between your source and target Oracle Database instances.">Configuring the Network Between Source and Target Oracle Databases</a></p>
+                     <p><strong>父主题：</strong> <a href="configuring-the-network-between-source-and-target-dbs.html#GUID-7486D8DB-2476-4251-AAE1-77A48EFF59CF" title="为准备复制Oracle数据库，请在源和目标Oracle数据库实例之间配置网络。">在源和目标Oracle数据库之间配置网络</a></p>
                   </div>
                </div>
             </div>

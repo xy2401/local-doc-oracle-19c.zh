@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="This chapter explains the methods to monitor Oracle Clusterware.">
       <meta name="description" content="This chapter explains the methods to monitor Oracle Clusterware.">
-      <title>Monitoring System Metrics for Cluster Nodes</title>
+      <title>监控群集节点的系统指标</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="User’s Guide">
       <meta property="og:description" content="This chapter explains the methods to monitor Oracle Clusterware.">
@@ -47,49 +45,44 @@
     <meta name="dcterms.isVersionOf" content="ATNMS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="chm-emcc-integration.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="monitoring-clusterware-enterprise-manager.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="chm-emcc-integration.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="monitoring-clusterware-enterprise-manager.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">User’s Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="automatically-monitoring-cluster.html" property="item" typeof="WebPage"><span property="name">Automatically Monitoring the Cluster</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Monitoring System Metrics for Cluster Nodes</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">用户指导</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="automatically-monitoring-cluster.html" property="item" typeof="WebPage"><span property="name">自动监控群集</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">监控群集节点的系统指标</li>
             </ol>
             <a id="GUID-E3771F4E-6F18-4641-9468-17BA38082F31" name="GUID-E3771F4E-6F18-4641-9468-17BA38082F31"></a>
             
-            <h2 id="ATNMS-GUID-E3771F4E-6F18-4641-9468-17BA38082F31" class="sect2"><span class="enumeration_chapter">5 </span>Monitoring System Metrics for Cluster Nodes
-            </h2>
+            <h2 id="ATNMS-GUID-E3771F4E-6F18-4641-9468-17BA38082F31" class="sect2"><span class="enumeration_chapter">5</span>群集节点的监控系统指标</h2>
          </header>
          <div class="ind">
             <div>
-               <p>This chapter explains the methods to monitor Oracle Clusterware.</p>
-               <p>Oracle recommends that you use Oracle Enterprise Manager to monitor everyday operations of Oracle Clusterware.</p>
-               <p>Cluster Health Monitor monitors the complete technology stack, including the operating system, ensuring smooth cluster operations. Both the components are enabled, by default, for any Oracle cluster. Oracle strongly recommends that you use both the components. Also, monitor Oracle Clusterware-managed resources using the Clusterware resource activity log.</p>
+               <p>本章介绍了监视Oracle Clusterware的方法。</p>
+               <p>Oracle建议您使用Oracle Enterprise Manager监视Oracle Clusterware的日常操作。</p>
+               <p>Cluster Health Monitor监控整个技术堆栈，包括操作系统，确保平稳的集群操作。默认情况下，这两个组件都针对任何Oracle集群启用。Oracle强烈建议您同时使用这两个组件。此外，使用Clusterware资源活动日志监控Oracle Clusterware管理的资源。</p>
             </div>
             <div>
                <ul class="ullinks">
-                  <li class="ulchildlink"><a href="monitoring-clusterware-enterprise-manager.html#GUID-90D030B5-0D5A-4255-8E8A-4409B898B8FD">Monitoring Oracle Clusterware with Oracle Enterprise Manager</a><br>Use Oracle Enterprise Manager to monitor the Oracle Clusterware environment.
+                  <li class="ulchildlink"><a href="monitoring-clusterware-enterprise-manager.html#GUID-90D030B5-0D5A-4255-8E8A-4409B898B8FD">使用Oracle Enterprise Manager监控Oracle Clusterware</a><br>使用Oracle Enterprise Manager监视Oracle Clusterware环境。
                   </li>
-                  <li class="ulchildlink"><a href="monitoring-clusterware-chm.html#GUID-CE85B3FE-E3B8-46BF-8C17-4834D7FD0633">Monitoring Oracle Clusterware with Cluster Health Monitor</a><br>You can use the OCLUMON command-line tool to interact with Cluster Health Monitor.
+                  <li class="ulchildlink"><a href="monitoring-clusterware-chm.html#GUID-CE85B3FE-E3B8-46BF-8C17-4834D7FD0633">使用Cluster Health Monitor监控Oracle Clusterware</a><br>您可以使用OCLUMON命令行工具与Cluster Health Monitor进行交互。
                   </li>
-                  <li class="ulchildlink"><a href="using-cluster-resource-activity-log.html#GUID-23BEE10D-F2CE-4785-83EE-21A7A7605A47">Using the Cluster Resource Activity Log to Monitor Cluster Resource Failures</a><br>The cluster resource activity log provides precise and specific information about a resource failure, separate from diagnostic logs.
+                  <li class="ulchildlink"><a href="using-cluster-resource-activity-log.html#GUID-23BEE10D-F2CE-4785-83EE-21A7A7605A47">使用群集资源活动日志来监视群集资源故障</a><br>群集资源活动日志提供有关资源故障的精确和特定信息，与诊断日志分开。
                   </li>
                </ul>
                <div class="relinfo">
-                  <p><strong>Related Topics</strong></p>
+                  <p><strong>相关话题</strong></p>
                   <ul>
-                     <li><a href="cluster-resource-activity-log.html#GUID-7650ADB9-3CB1-4516-8470-4501EBB42B01" title="Oracle Clusterware stores logs about resource failures in the cluster resource activity log, which is located in the Grid Infrastructure Management Repository.">Managing the Cluster Resource Activity Log</a></li>
+                     <li><a href="cluster-resource-activity-log.html#GUID-7650ADB9-3CB1-4516-8470-4501EBB42B01" title="Oracle Clusterware将有关资源故障的日志存储在群集资源活动日志中，该日志位于Grid Infrastructure Management资源库中。">管理群集资源活动日志</a></li>
                   </ul>
                </div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="automatically-monitoring-cluster.html#GUID-1703071E-85AF-44B6-B9C9-AA72A38A5467" title="You can use components of Autonomous Health Framework to monitor your cluster on a regular basis.">Automatically Monitoring the Cluster</a></p>
+                     <p><strong>父主题：</strong> <a href="automatically-monitoring-cluster.html#GUID-1703071E-85AF-44B6-B9C9-AA72A38A5467" title="您可以使用Autonomous Health Framework的组件定期监视群集。">自动监视群集</a></p>
                   </div>
                </div>
             </div>

@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Insert a static entry for the standby database in the listener.ora file, and save the file.">
       <meta name="description" content="Insert a static entry for the standby database in the listener.ora file, and save the file.">
-      <title>Adding Static Service to Listener</title>
+      <title>向监听器添加静态服务</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Migrating Non-CDBs to New Hardware with the Same Operating System and for a New Release">
       <meta property="og:description" content="Insert a static entry for the standby database in the listener.ora file, and save the file.">
@@ -46,31 +44,27 @@
     <meta name="dcterms.isVersionOf" content="SPMSU">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="configuring-the-network-between-source-and-target-dbs.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="configuring-sql-net-to-prepare-the-auxiliary-instance.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="configuring-the-network-between-source-and-target-dbs.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="configuring-sql-net-to-prepare-the-auxiliary-instance.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Migrating Non-CDBs to New Hardware with the Same Operating System and for a New Release</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="preparing-the-auxiliary-instance-destination-host.html" property="item" typeof="WebPage"><span property="name">Preparing the Auxiliary Instance on the Destination Host</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="configuring-the-network-between-source-and-target-dbs.html" property="item" typeof="WebPage"><span property="name">Configuring the Network Between Source and Target Oracle Databases</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Adding Static Service to Listener</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">使用相同的操作系统和新版本将非CDB迁移到新硬件</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="preparing-the-auxiliary-instance-destination-host.html" property="item" typeof="WebPage"><span property="name">在目标主机上准备辅助实例</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="configuring-the-network-between-source-and-target-dbs.html" property="item" typeof="WebPage"><span property="name">在源和目标Oracle数据库之间配置网络</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">向监听器添加静态服务</li>
             </ol>
             <a id="GUID-D431F758-F7CC-43F8-A8D2-82941DB0E578" name="GUID-D431F758-F7CC-43F8-A8D2-82941DB0E578"></a>
             
-            <h2 id="SPMSU-GUID-D431F758-F7CC-43F8-A8D2-82941DB0E578" class="sect2">Adding Static Service to Listener</h2>
+            <h2 id="SPMSU-GUID-D431F758-F7CC-43F8-A8D2-82941DB0E578" class="sect2">向监听器添加静态服务</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Insert a static entry for the standby database in the <code class="codeph">listener.ora</code> file, and save the file.
+               <p>在<code class="codeph">listener.ora</code>文件中插入备用数据库的静态条目，然后保存该文件。
                </p>
                <div class="example" id="GUID-D431F758-F7CC-43F8-A8D2-82941DB0E578__GUID-58BCF4AD-14A8-4768-91AD-29396A2BFDD8">
-                  <p class="titleinexample">Example 4-3 Adding Static Service to Listener</p><pre class="pre codeblock"><code>[oracle @ ora12c-dup admin] $ cat listener.ora 
+                  <p class="titleinexample">示例4-3向监听器添加静态服务</p><pre class="pre codeblock"><code>[oracle @ ora12c-dup admin] $ cat listener.ora 
  # listener.ora Network Configuration File: 
  /u01/app/oracle/product/12.2.0/dbhome/network/admin/listener.ora 
  # Generated by Oracle configuration tools. 
@@ -98,7 +92,7 @@
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="configuring-the-network-between-source-and-target-dbs.html#GUID-7486D8DB-2476-4251-AAE1-77A48EFF59CF" title="In preparation for duplicating your Oracle Database, configure the network between your source and target Oracle Database instances.">Configuring the Network Between Source and Target Oracle Databases</a></p>
+                     <p><strong>父主题：</strong> <a href="configuring-the-network-between-source-and-target-dbs.html#GUID-7486D8DB-2476-4251-AAE1-77A48EFF59CF" title="为准备复制Oracle数据库，请在源和目标Oracle数据库实例之间配置网络。">在源和目标Oracle数据库之间配置网络</a></p>
                   </div>
                </div>
             </div>

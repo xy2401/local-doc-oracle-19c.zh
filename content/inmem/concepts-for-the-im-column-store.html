@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="This part introduces the Oracle Database In-Memory (Database In-Memory) feature set, and explains the basic architecture of the In-Memory Column Store (IM column store).">
       <meta name="description" content="This part introduces the Oracle Database In-Memory (Database In-Memory) feature set, and explains the basic architecture of the In-Memory Column Store (IM column store).">
-      <title>Oracle Database In-Memory Concepts</title>
+      <title>Oracle数据库内存概念</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database In-Memory Guide">
       <meta property="og:description" content="This part introduces the Oracle Database In-Memory (Database In-Memory) feature set, and explains the basic architecture of the In-Memory Column Store (IM column store).">
@@ -46,34 +44,29 @@
     <meta name="dcterms.isVersionOf" content="INMEM">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="release-changes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="intro-to-in-memory-column-store.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="release-changes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="intro-to-in-memory-column-store.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database In-Memory Guide</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Oracle Database In-Memory Concepts</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库内存指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Oracle数据库内存概念</li>
             </ol>
             <a id="GUID-5A72B48A-8427-41AE-9220-E46042BC90C4" name="GUID-5A72B48A-8427-41AE-9220-E46042BC90C4"></a>
             
-            <h2 id="INMEM-GUID-5A72B48A-8427-41AE-9220-E46042BC90C4" class="sect2"><span class="enumeration_part">Part I </span>Oracle Database In-Memory Concepts
-            </h2>
+            <h2 id="INMEM-GUID-5A72B48A-8427-41AE-9220-E46042BC90C4" class="sect2"><span class="enumeration_part">第一部分</span> Oracle数据库内存概念</h2>
          </header>
          <div class="ind">
             <div>
-               <p>This part introduces the Oracle Database In-Memory (Database In-Memory) feature set, and explains the basic architecture of the In-Memory Column Store (IM column store).</p>
-               <p>This part contains the following chapters:</p>
+               <p>本部分介绍Oracle数据库内存（Database In-Memory）功能集，并说明内存中列存储（IM列存储）的基本体系结构。</p>
+               <p>本部分包含以下章节：</p>
             </div>
             <div>
                <ul class="ullinks">
-                  <li class="ulchildlink"><a href="intro-to-in-memory-column-store.html#GUID-BFA53515-7643-41E5-A296-654AB4A9F9E7">Introduction to Oracle Database In-Memory</a><br>Oracle Database In-Memory (Database In-Memory) is a suite of features that greatly improves performance for real-time analytics and mixed workloads. The In-Memory Column Store (IM column store) is the key feature of Database In-Memory.
+                  <li class="ulchildlink"><a href="intro-to-in-memory-column-store.html#GUID-BFA53515-7643-41E5-A296-654AB4A9F9E7">Oracle数据库内存简介</a><br>Oracle数据库内存（Database In-Memory）是一套功能，可以极大地提高实时分析和混合工作负载的性能。内存中列存储（IM列存储）是Database In-Memory的关键功能。
                   </li>
-                  <li class="ulchildlink"><a href="in-memory-column-store-architecture.html#GUID-EEA265EE-8FBA-4457-8C3F-315B9EEA2224">In-Memory Column Store Architecture</a><br>The <span class="bold">In-Memory Column Store</span> (IM column store) stores tables and partitions in memory using a <span class="bold">columnar format</span> optimized for rapid scans. Oracle Database uses a sophisticated architecture to manage data in columnar and row formats simultaneously.
+                  <li class="ulchildlink"><a href="in-memory-column-store-architecture.html#GUID-EEA265EE-8FBA-4457-8C3F-315B9EEA2224">内存列存储架构</a><br><span class="bold">内存中列存储</span> （IM列存储）使用针对快速扫描优化的<span class="bold">柱形格式</span>将表和分区存储在内存中。Oracle数据库使用复杂的体系结构同时管理柱形和行格式的数据。
                   </li>
                </ul>
             </div>

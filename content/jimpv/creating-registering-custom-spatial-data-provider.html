@@ -1,19 +1,17 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="This appendix shows a sample implementation of a spatial data provider, and explains how to register this provider to be used with the map visualization component.">
       <meta name="description" content="This appendix shows a sample implementation of a spatial data provider, and explains how to register this provider to be used with the map visualization component.">
-      <title>Creating and Registering a Custom Spatial Data Provider</title>
+      <title>创建和注册自定义空间数据提供程序</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="Map Visualization Developer's Guide ">
+      <meta property="og:title" content="Map Visualization Developer&#39;s Guide ">
       <meta property="og:description" content="This appendix shows a sample implementation of a spatial data provider, and explains how to register this provider to be used with the map visualization component.">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="Map Visualization Developer's Guide">
+      <meta name="application-name" content="Map Visualization Developer&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="spatial-and-graph-map-visualization-developers-guide.pdf" title="PDF File" type="application/pdf">
@@ -43,49 +41,39 @@
         </script>
       <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"oracle-database","element_name":"Oracle Database","display_in_url":true},"release":{"short_name":"19","element_name":"Release 19","display_in_url":true}}}</script>
       
-    <meta name="dcterms.title" content="Spatial and Graph Map Visualization Developer's Guide">
+    <meta name="dcterms.title" content="Spatial and Graph Map Visualization Developer&#39;s Guide">
     <meta name="dcterms.isVersionOf" content="JIMPV">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="xml-formats-map-visualizer.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="ogc-wms-support-map-visualzation-component.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="xml-formats-map-visualizer.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="ogc-wms-support-map-visualzation-component.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Map Visualization Developer's Guide </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem"> Creating and Registering a Custom Spatial Data Provider</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">地图可视化开发人员指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">创建和注册自定义空间数据提供程序</li>
             </ol>
             <a id="GUID-EEDC5892-3E42-477E-BCC8-140873665EC4" name="GUID-EEDC5892-3E42-477E-BCC8-140873665EC4"></a><a id="JIMPV9250"></a>
             
-            <h2 id="JIMPV-GUID-EEDC5892-3E42-477E-BCC8-140873665EC4" class="sect2"><span class="enumeration_chapter">B </span> Creating and Registering a Custom Spatial Data Provider
-            </h2>
+            <h2 id="JIMPV-GUID-EEDC5892-3E42-477E-BCC8-140873665EC4" class="sect2"><span class="enumeration_chapter">B</span>创建和注册自定义空间数据提供程序</h2>
          </header>
          <div class="ind">
             <div>
-               <p>This appendix shows a sample implementation of a spatial data provider, and explains how to register this provider to be used with the map visualization component.</p>
-               <p>The complete implementation can be found under the map visualization component <code class="codeph">web/demo/spatialprovider </code>directory. The implementation uses then following files:
-               </p>
-               <ul style="list-style-type: disc;">
+               <p>本附录显示了空间数据提供程序的示例实现，并说明了如何注册此提供程序以与地图可视化组件一起使用。</p>
+               <p>完整的实现可以在地图可视化组件<code class="codeph">web/demo/spatialprovider</code>目录下找到。该实现使用以下文件：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p><code class="codeph">us_bigcities.xml</code>: sample XML file that the provider parses
-                     </p>
+                     <p><code class="codeph">us_bigcities.xml</code> ：提供程序解析的示例XML文件</p>
                   </li>
                   <li>
-                     <p><code class="codeph">customSpatialProviderSample.java</code>: Java implementation of the spatial data provider
-                     </p>
+                     <p><code class="codeph">customSpatialProviderSample.java</code> ：空间数据提供程序的Java实现</p>
                   </li>
                   <li>
-                     <p><code class="codeph">spatialprovider.jar</code>: jar file with the compiled version of the customSpatialProviderSample.java source file
-                     </p>
+                     <p><code class="codeph">spatialprovider.jar</code> ：包含customSpatialProviderSample.java源文件的编译版本的jar文件</p>
                   </li>
                </ul>
-               <p>The <code class="codeph">us_bigcities.xml</code> file has sections to define the data attributes, the data extents, and the feature information, including the geometry (in GML format) and the attribute values. This file includes the following:
-               </p><pre class="oac_no_warn" dir="ltr">&lt;?xml version="1.0" standalone="yes"?&gt;
+               <p><code class="codeph">us_bigcities.xml</code>文件包含用于定义数据属性，数据范围和特征信息的部分，包括几何（以GML格式）和属性值。该文件包括以下内容：</p><pre class="oac_no_warn" dir="ltr">&lt;?xml version="1.0" standalone="yes"?&gt;
 &lt;spatial_data&gt;
  
 &lt;data_attributes&gt;
@@ -115,24 +103,23 @@
 </pre></div>
             <div>
                <ul class="ullinks">
-                  <li class="ulchildlink"><a href="creating-registering-custom-spatial-data-provider.html#GUID-8A0AC852-B281-42C1-9BB8-94BF25A79453">Implementing the Spatial Provider Class</a><br>The spatial provider class interface must be implemented.
+                  <li class="ulchildlink"><a href="creating-registering-custom-spatial-data-provider.html#GUID-8A0AC852-B281-42C1-9BB8-94BF25A79453">实现Spatial Provider类</a><br>必须实现空间提供程序类接口。
                   </li>
-                  <li class="ulchildlink"><a href="creating-registering-custom-spatial-data-provider.html#GUID-D858FC6A-7590-4F7E-B73C-B134DDA9853C">Registering the Spatial Provider with the Map Visualization Component</a><br>To register the spatial provider with the map visualization component, add the following in the spatial provider section of the map visualization component configuration file, and then restart the map visualization component.
+                  <li class="ulchildlink"><a href="creating-registering-custom-spatial-data-provider.html#GUID-D858FC6A-7590-4F7E-B73C-B134DDA9853C">使用Map Visualization Component注册Spatial Provider</a><br>要使用地图可视化组件注册空间提供程序，请在地图可视化组件配置文件的空间提供程序部分中添加以下内容，然后重新启动地图可视化组件。
                   </li>
-                  <li class="ulchildlink"><a href="creating-registering-custom-spatial-data-provider.html#GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A">Rendering the External Spatial Data</a><br>To enable you to render the sample external spatial data that comes with the map visualization component kit, create a data source pointing to this data.
+                  <li class="ulchildlink"><a href="creating-registering-custom-spatial-data-provider.html#GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A">渲染外部空间数据</a><br>要使您能够渲染地图可视化组件工具包附带的示例外部空间数据，请创建指向此数据的数据源。
                   </li>
                </ul>
             </div>
-            <a id="JIMPV9867"></a><a id="JIMPV9866"></a><div class="props_rev_3"><a id="GUID-8A0AC852-B281-42C1-9BB8-94BF25A79453" name="GUID-8A0AC852-B281-42C1-9BB8-94BF25A79453"></a><h3 id="JIMPV-GUID-8A0AC852-B281-42C1-9BB8-94BF25A79453" class="sect3"><span class="enumeration_section">B.1 </span>Implementing the Spatial Provider Class
-               </h3>
+            <a id="JIMPV9867"></a><a id="JIMPV9866"></a><div class="props_rev_3"><a id="GUID-8A0AC852-B281-42C1-9BB8-94BF25A79453" name="GUID-8A0AC852-B281-42C1-9BB8-94BF25A79453"></a><h3 id="JIMPV-GUID-8A0AC852-B281-42C1-9BB8-94BF25A79453" class="sect3"><span class="enumeration_section">B.1</span>实现空间提供者类</h3>
                <div>
-                  <p>The spatial provider class interface must be implemented.</p>
-                  <p>The provider must implement the class interface shown in <a href="map-visualization-concepts.html#GUID-583B47AE-76C2-4E23-9202-2055D7C3AE42">Custom Geometry Themes</a>. <a href="creating-registering-custom-spatial-data-provider.html#GUID-8A0AC852-B281-42C1-9BB8-94BF25A79453__CHDHDCJI">Example B-1</a> contains the partial code for the spatial provider in the supplied demo. Note that this sample code is deliberately simplified; it is not optimized, and the provider does not create any spatial indexing mechanism.
+                  <p>必须实现空间提供程序类接口。</p>
+                  <p>提供程序必须实现<a href="map-visualization-concepts.html#GUID-583B47AE-76C2-4E23-9202-2055D7C3AE42">自定义几何主题中</a>显示的类接口。<a href="creating-registering-custom-spatial-data-provider.html#GUID-8A0AC852-B281-42C1-9BB8-94BF25A79453__CHDHDCJI">示例B-1</a>包含所提供演示中空间提供程序的部分代码。请注意，此示例代码是故意简化的;它未经过优化，提供程序不会创建任何空间索引机制。
                   </p>
-                  <p>After you have implemented the provider code, compile it and generate a jar file with this compiled class. The file <code class="codeph">spatialprovider.jar</code> in the demo directory contains the compiled version of this sample code, and you can use it directly. Copy this jar file to a directory that is part of the map visualization component's CLASSPATH definition, such as the <code class="codeph">web/WB-INF/lib</code> directory.
+                  <p>在实现提供程序代码之后，编译它并使用此编译类生成jar文件。demo目录中的文件<code class="codeph">spatialprovider.jar</code>包含此示例代码的编译版本，您可以直接使用它。将此jar文件复制到一个目录，该目录是地图可视化组件的CLASSPATH定义的一部分，例如<code class="codeph">web/WB-INF/lib</code>目录。
                   </p>
                   <div class="example" id="GUID-8A0AC852-B281-42C1-9BB8-94BF25A79453__CHDHDCJI">
-                     <p class="titleinexample">Example B-1 Implementing the Spatial Provider Class</p><pre class="oac_no_warn" dir="ltr">package spatialprovider.samples;
+                     <p class="titleinexample">示例B-1实现空间提供者类</p><pre class="oac_no_warn" dir="ltr">package spatialprovider.samples;
  
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
@@ -325,15 +312,14 @@ public class CustomSpatialProviderSample implements SDataProvider
                <div>
                   <div class="familylinks">
                      <div class="parentlink">
-                        <p><strong>Parent topic:</strong> <a href="creating-registering-custom-spatial-data-provider.html#GUID-EEDC5892-3E42-477E-BCC8-140873665EC4" title="This appendix shows a sample implementation of a spatial data provider, and explains how to register this provider to be used with the map visualization component.">Creating and Registering a Custom Spatial Data Provider</a></p>
+                        <p><strong>父主题：</strong> <a href="creating-registering-custom-spatial-data-provider.html#GUID-EEDC5892-3E42-477E-BCC8-140873665EC4" title="本附录显示了空间数据提供程序的示例实现，并说明了如何注册此提供程序以与地图可视化组件一起使用。">创建和注册自定义空间数据提供程序</a></p>
                      </div>
                   </div>
                </div>
                
-            </div><a id="JIMPV9868"></a><div class="props_rev_3"><a id="GUID-D858FC6A-7590-4F7E-B73C-B134DDA9853C" name="GUID-D858FC6A-7590-4F7E-B73C-B134DDA9853C"></a><h3 id="JIMPV-GUID-D858FC6A-7590-4F7E-B73C-B134DDA9853C" class="sect3"><span class="enumeration_section">B.2 </span>Registering the Spatial Provider with the Map Visualization Component
-               </h3>
+            </div><a id="JIMPV9868"></a><div class="props_rev_3"><a id="GUID-D858FC6A-7590-4F7E-B73C-B134DDA9853C" name="GUID-D858FC6A-7590-4F7E-B73C-B134DDA9853C"></a><h3 id="JIMPV-GUID-D858FC6A-7590-4F7E-B73C-B134DDA9853C" class="sect3"><span class="enumeration_section">B.2</span>使用Map Visualization Component注册Spatial Provider</h3>
                <div>
-                  <p>To register the spatial provider with the map visualization component, add the following in the spatial provider section of the map visualization component configuration file, and then restart the map visualization component.</p><pre class="oac_no_warn" dir="ltr">&lt;s_data_provider
+                  <p>要使用地图可视化组件注册空间提供程序，请在地图可视化组件配置文件的空间提供程序部分中添加以下内容，然后重新启动地图可视化组件。</p><pre class="oac_no_warn" dir="ltr">&lt;s_data_provider
   id="xmlProvider"
   class="spatialprovider.samples.CustomSpatialProviderSample"
   &gt;
@@ -341,23 +327,22 @@ public class CustomSpatialProviderSample implements SDataProvider
     &lt;parameter name="datadir" value="/temp/data" /&gt;
   &lt;/parameters&gt;
 &lt;/s_data_provider&gt;
-</pre><p>When you restart the map visualization component, you should see a console message that the spatial provider has been registered. For example:</p><pre class="oac_no_warn" dir="ltr">2007-10-01 14:30:31.109 NOTIFICATION Spatial Provider xmlProvider has been registered.</pre></div>
+</pre><p>重新启动地图可视化组件时，您应该看到已注册空间提供程序的控制台消息。例如：</p><pre class="oac_no_warn" dir="ltr">2007-10-01 14:30:31.109 NOTIFICATION Spatial Provider xmlProvider has been registered.</pre></div>
                <div>
                   <div class="familylinks">
                      <div class="parentlink">
-                        <p><strong>Parent topic:</strong> <a href="creating-registering-custom-spatial-data-provider.html#GUID-EEDC5892-3E42-477E-BCC8-140873665EC4" title="This appendix shows a sample implementation of a spatial data provider, and explains how to register this provider to be used with the map visualization component.">Creating and Registering a Custom Spatial Data Provider</a></p>
+                        <p><strong>父主题：</strong> <a href="creating-registering-custom-spatial-data-provider.html#GUID-EEDC5892-3E42-477E-BCC8-140873665EC4" title="本附录显示了空间数据提供程序的示例实现，并说明了如何注册此提供程序以与地图可视化组件一起使用。">创建和注册自定义空间数据提供程序</a></p>
                      </div>
                   </div>
                </div>
                
-            </div><a id="JIMPV9871"></a><a id="JIMPV9870"></a><a id="JIMPV9869"></a><div class="props_rev_3"><a id="GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A" name="GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A"></a><h3 id="JIMPV-GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A" class="sect3"><span class="enumeration_section">B.3 </span>Rendering the External Spatial Data
-               </h3>
+            </div><a id="JIMPV9871"></a><a id="JIMPV9870"></a><a id="JIMPV9869"></a><div class="props_rev_3"><a id="GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A" name="GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A"></a><h3 id="JIMPV-GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A" class="sect3"><span class="enumeration_section">B.3</span>渲染外部空间数据</h3>
                <div>
-                  <p>To enable you to render the sample external spatial data that comes with the map visualization component kit, create a data source pointing to this data.</p>
-                  <p><a href="creating-registering-custom-spatial-data-provider.html#GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A__CHDJGGDB">Example B-2</a> is an XML request that contains a dynamic custom geometry theme.
+                  <p>要使您能够渲染地图可视化组件工具包附带的示例外部空间数据，请创建指向此数据的数据源。</p>
+                  <p><a href="creating-registering-custom-spatial-data-provider.html#GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A__CHDJGGDB">示例B-2</a>是包含动态自定义几何主题的XML请求。
                   </p>
                   <div class="example" id="GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A__CHDJGGDB">
-                     <p class="titleinexample">Example B-2 Map Request to Render External Spatial Data</p><pre class="oac_no_warn" dir="ltr">&lt;?xml version="1.0" standalone="yes"?&gt;
+                     <p class="titleinexample">示例B-2渲染外部空间数据的映射请求</p><pre class="oac_no_warn" dir="ltr">&lt;?xml version="1.0" standalone="yes"?&gt;
 &lt;map_request
  title="Custom Geometry Theme"
  datasource="mvdemo"
@@ -393,16 +378,14 @@ public class CustomSpatialProviderSample implements SDataProvider
    &lt;/theme&gt;
  &lt;/themes&gt;
 &lt;/map_request&gt;
-</pre><p>In <a href="creating-registering-custom-spatial-data-provider.html#GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A__CHDJGGDB">Example B-2</a>, the file name in the <code class="codeph">&lt;parameter&gt;</code> element points to <code class="codeph">/lbs/demo/spatialprovider/us_bigcities.xml</code>. If the file path is not accessible to the map visualization component, the map request may generate error messages in the log file, such as the following:
-                     </p><pre class="oac_no_warn" dir="ltr">07/09/28 10:26:47 ParseData: Can not access file: /lbs/demo/spatialprovider/us_bigcities.xml
+</pre><p>在<a href="creating-registering-custom-spatial-data-provider.html#GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A__CHDJGGDB">示例B-2中</a> ， <code class="codeph">&lt;parameter&gt;</code>元素中的文件名指向<code class="codeph">/lbs/demo/spatialprovider/us_bigcities.xml</code> 。如果地图可视化组件无法访问文件路径，则映射请求可能会在日志文件中生成错误消息，如下所示：</p><pre class="oac_no_warn" dir="ltr">07/09/28 10:26:47 ParseData: Can not access file: /lbs/demo/spatialprovider/us_bigcities.xml
 07/09/28 10:26:47 ParseData: File to be parsed: /temp/data\us_bigcities.xml
 07/09/28 10:26:47 ParseData: File can not be accessed on provider data directory. Copy files there.
-</pre><p>When the map visualization component searches for the file, it first tries to access the file using the original theme definition parameter; and if that fails, it tries the data directory defined in the map visualization component configuration file (<code class="codeph">/temp/data</code> in the preceding example error messages). Therefore, if the original theme definition data path is not accessible to the map visualization component, copy the data files to the directory defined in the configuration file before you issue the map request.
-                     </p>
-                     <p>If the map visualization component can find the data file, the map request in<a href="creating-registering-custom-spatial-data-provider.html#GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A__CHDJGGDB">Example B-2</a> should generate an image like the one in <a href="creating-registering-custom-spatial-data-provider.html#GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A__CHDCAGGC">Figure B-1</a>.
+</pre><p>当地图可视化组件搜索文件时，它首先尝试使用原始主题定义参数访问该文件;如果失败，它会尝试在地图可视化组件配置文件中定义的数据目录（前面示例错误消息中的<code class="codeph">/temp/data</code> ）。因此，如果地图可视化组件无法访问原始主题定义数据路径，请在发出映射请求之前将数据文件复制到配置文件中定义的目录。</p>
+                     <p>如果地图可视化组件可以找到数据文件，则<a href="creating-registering-custom-spatial-data-provider.html#GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A__CHDJGGDB">示例B-2中</a>的地图请求应生成<a href="creating-registering-custom-spatial-data-provider.html#GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A__CHDCAGGC">如图B-1中</a>的图像。
                      </p>
                      <div class="figure" id="GUID-5BA7E90F-FD89-4D84-9BBA-9C47D7DE212A__CHDCAGGC">
-                        <p class="titleinfigure">Figure B-1 Map Image Using Custom Geometry Theme and External Spatial Data</p><img src="img/custom_theme.gif" alt="Description of Figure B-1 follows" title="Description of Figure B-1 follows" longdesc="img_text/custom_theme.html"><br><a href="img_text/custom_theme.html">Description of "Figure B-1 Map Image Using Custom Geometry Theme and External Spatial Data"</a></div>
+                        <p class="titleinfigure">图B-1使用自定义几何主题和外部空间数据映射图像</p><img src="img/custom_theme.gif" alt="下面描述图B-1" title="下面描述图B-1" longdesc="img_text/custom_theme.html"><br><a href="img_text/custom_theme.html">“图B-1使用自定义几何主题和外部空间数据映射图像”的描述</a></div>
                      <!-- class="figure" -->
                   </div>
                   <!-- class="example" -->
@@ -410,7 +393,7 @@ public class CustomSpatialProviderSample implements SDataProvider
                <div>
                   <div class="familylinks">
                      <div class="parentlink">
-                        <p><strong>Parent topic:</strong> <a href="creating-registering-custom-spatial-data-provider.html#GUID-EEDC5892-3E42-477E-BCC8-140873665EC4" title="This appendix shows a sample implementation of a spatial data provider, and explains how to register this provider to be used with the map visualization component.">Creating and Registering a Custom Spatial Data Provider</a></p>
+                        <p><strong>父主题：</strong> <a href="creating-registering-custom-spatial-data-provider.html#GUID-EEDC5892-3E42-477E-BCC8-140873665EC4" title="本附录显示了空间数据提供程序的示例实现，并说明了如何注册此提供程序以与地图可视化组件一起使用。">创建和注册自定义空间数据提供程序</a></p>
                      </div>
                   </div>
                </div>

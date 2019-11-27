@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Starting with Oracle Database 18c, you can simplify patching and mass rollouts of software across multiple database servers by deploying a read-only Oracle home as a software image.">
       <meta name="description" content="Starting with Oracle Database 18c, you can simplify patching and mass rollouts of software across multiple database servers by deploying a read-only Oracle home as a software image.">
-      <title>About Configuring an Oracle Home in Read-Only Mode</title>
+      <title>关于以只读模式配置Oracle Home</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database Upgrade Guide">
       <meta property="og:description" content="Starting with Oracle Database 18c, you can simplify patching and mass rollouts of software across multiple database servers by deploying a read-only Oracle home as a software image.">
@@ -46,58 +44,53 @@
     <meta name="dcterms.isVersionOf" content="UPGRD">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="tasks-prepare-upgrade-oracle-database.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="image-based-oracle-database-installations.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="tasks-prepare-upgrade-oracle-database.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="image-based-oracle-database-installations.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="tasks-prepare-upgrade-oracle-database.html" property="item" typeof="WebPage"><span property="name"> Preparing to Upgrade Oracle Database </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">About Configuring an Oracle Home in Read-Only Mode</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="tasks-prepare-upgrade-oracle-database.html" property="item" typeof="WebPage"><span property="name">准备升级Oracle数据库</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">关于以只读模式配置Oracle Home</li>
             </ol>
             <a id="GUID-DD6B0856-AB17-47E9-BDC3-1CD1EBD169F6" name="GUID-DD6B0856-AB17-47E9-BDC3-1CD1EBD169F6"></a>
             
-            <h2 id="UPGRD-GUID-DD6B0856-AB17-47E9-BDC3-1CD1EBD169F6" class="sect2">About Configuring an Oracle Home in Read-Only Mode</h2>
+            <h2 id="UPGRD-GUID-DD6B0856-AB17-47E9-BDC3-1CD1EBD169F6" class="sect2">关于以只读模式配置Oracle Home</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Starting with Oracle Database 18c, you can simplify patching and mass rollouts of software across multiple database servers by deploying a read-only Oracle home as a software image.</p>
-               <p>A read-only Oracle home (<code class="codeph">ORACLE_HOME</code>) prevents both creation and modification of files inside the Oracle home directory. To configure an Oracle home in read-only mode, you first install Oracle Database software using a <span class="italic">software-only</span> deployment, and then configure it as a read-only Oracle home before you create the listener and the database. 
+               <p>从Oracle Database 18c开始，您可以通过将只读Oracle主目录部署为软件映像来简化跨多个数据库服务器的软件修补和批量部署。</p>
+               <p>只读Oracle主目录（ <code class="codeph">ORACLE_HOME</code> ）可防止在Oracle主目录中创建和修改文件。要以只读模式配置Oracle主目录，首先使用<span class="italic">纯软件</span>部署安装Oracle数据库软件，然后在创建侦听器和数据库之前将其配置为只读Oracle主目录。
                </p>
-               <p>Traditional read-write Oracle homes contain instance-specific files, so if you patch them, then you must patch each of them individually. However, when the Oracle home is read-only, instance-specific files are stored separately in the Oracle base directory (<code class="codeph">ORACLE_BASE</code>), instead of the Oracle home. Because of this configuration, you can use a read-only Oracle home as a software image that you can share across multiple database servers, because it stores only the static files. This option simplifies patching and mass rollout, because when you want to distribute a patch to multiple database servers, you only need to update one Oracle home image.
+               <p>传统的读写Oracle主目录包含特定于实例的文件，因此如果您对其进行修补，则必须单独修补每个文件。但是，当Oracle主目录为只读时，特定于实例的文件将单独存储在Oracle基本目录（ <code class="codeph">ORACLE_BASE</code> ）中，而不是Oracle主目录中。由于此配置，您可以使用只读Oracle主目录作为可以跨多个数据库服务器共享的软件映像，因为它只存储静态文件。此选项简化了修补和批量部署，因为当您要将修补程序分发到多个数据库服务器时，只需更新一个Oracle主映像。
                </p>
-               <p>Apart from the traditional <code class="codeph">ORACLE_BASE</code> and <code class="codeph">ORACLE_HOME</code> directories, the following additional directories exist in a read-only Oracle home:
-               </p>
-               <ul style="list-style-type: disc;">
+               <p>除了传统的<code class="codeph">ORACLE_BASE</code>和<code class="codeph">ORACLE_HOME</code>目录之外，只读Oracle主目录中还存在以下附加目录：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p><code class="codeph">ORACLE_BASE_HOME</code>: This is a subdirectory within the <code class="codeph">ORACLE_BASE</code> directory. This directory contains user-specific files, instance-specific files, and log files.
+                     <p><code class="codeph">ORACLE_BASE_HOME</code> ：这是<code class="codeph">ORACLE_BASE</code>目录中的子目录。此目录包含特定于用户的文件，特定于实例的文件和日志文件。
                      </p>
                   </li>
                   <li>
-                     <p><code class="codeph">ORACLE_BASE_CONFIG</code>: This directory is same as the <code class="codeph">ORACLE_BASE</code> directory. This directory contains instance-specific dynamic files, such as configuration files.
+                     <p><code class="codeph">ORACLE_BASE_CONFIG</code> ：该目录与<code class="codeph">ORACLE_BASE</code>目录相同。此目录包含特定于实例的动态文件，例如配置文件。
                      </p>
                   </li>
                </ul>
             </div>
             <div>
                <div class="relinfo">
-                  <p><strong>Related Topics</strong></p>
+                  <p><strong>相关话题</strong></p>
                   <ul>
-                     <li><a href="../ladbi/configuring-read-only-oracle-homes.html#GUID-906DA159-AC83-4ACC-A8A6-5B4A39EB72E1" target="_blank"><span><cite>Oracle Database Installation Guide</cite></span></a></li>
+                     <li><a href="../ladbi/configuring-read-only-oracle-homes.html#GUID-906DA159-AC83-4ACC-A8A6-5B4A39EB72E1" target="_blank"><span><cite>Oracle数据库安装指南</cite></span></a></li>
                   </ul>
                </div>
                <div class="infoboxnotealso" id="GUID-DD6B0856-AB17-47E9-BDC3-1CD1EBD169F6__GUID-98ADE19F-BA12-41A9-A57B-160D841D80E6">
-                  <p class="notep1">See Also:</p>
-                  <p>“Configuring Read-Only Oracle Homes” in the Oracle Database installation guide specific to your platform for more information about configuring an Oracle home in read-only mode.</p>
+                  <p class="notep1">也可以看看：</p>
+                  <p>有关以特定于您的平台的Oracle数据库安装指南中的“配置只读Oracle主目录”，以获取有关以只读模式配置Oracle主目录的更多信息。</p>
                </div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="tasks-prepare-upgrade-oracle-database.html#GUID-733D2563-A42D-4366-9FCD-DABD25D0E2DF" title="Complete preupgrade tasks and checks to assist you with completing a successful upgrade.">Preparing to Upgrade Oracle Database</a></p>
+                     <p><strong>父主题：</strong> <a href="tasks-prepare-upgrade-oracle-database.html#GUID-733D2563-A42D-4366-9FCD-DABD25D0E2DF" title="完成预升级任务和检查以帮助您完成成功升级。">准备升级Oracle数据库</a></p>
                   </div>
                </div>
             </div>

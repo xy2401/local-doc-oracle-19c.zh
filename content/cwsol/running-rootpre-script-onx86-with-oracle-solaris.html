@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="On x86 (64-bit) platforms running Oracle Solaris, if you install Oracle Solaris Cluster in addition to Oracle Clusterware, then complete the following task.">
       <meta name="description" content="On x86 (64-bit) platforms running Oracle Solaris, if you install Oracle Solaris Cluster in addition to Oracle Clusterware, then complete the following task.">
-      <title>Running the rootpre.sh Script on x86 with Oracle Solaris Cluster</title>
+      <title>使用Oracle Solaris Cluster在x86上运行rootpre.sh脚本</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Grid Infrastructure Installation and Upgrade Guide">
       <meta property="og:description" content="On x86 (64-bit) platforms running Oracle Solaris, if you install Oracle Solaris Cluster in addition to Oracle Clusterware, then complete the following task.">
@@ -47,47 +45,42 @@
     <meta name="dcterms.isVersionOf" content="CWSOL">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="oracle-solaris-cluster-configuration-on-sparc.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="enabling-the-name-service-cache-daemon.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="oracle-solaris-cluster-configuration-on-sparc.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="enabling-the-name-service-cache-daemon.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure Installation and Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="configuring-operating-systems-for-oracle-grid-infrastructure-on-oracle-solaris.html" property="item" typeof="WebPage"><span property="name">Configuring Oracle Solaris Operating Systems for Oracle Grid Infrastructure</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Running the rootpre.sh Script on x86 with Oracle Solaris Cluster</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure安装和升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="configuring-operating-systems-for-oracle-grid-infrastructure-on-oracle-solaris.html" property="item" typeof="WebPage"><span property="name">为Oracle Grid Infrastructure配置Oracle Solaris操作系统</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">使用Oracle Solaris Cluster在x86上运行rootpre.sh脚本</li>
             </ol>
             <a id="GUID-B6CFFE59-E6D1-45E3-B49E-39944CC2EA19" name="GUID-B6CFFE59-E6D1-45E3-B49E-39944CC2EA19"></a>
             
-            <h2 id="CWSOL-GUID-B6CFFE59-E6D1-45E3-B49E-39944CC2EA19" class="sect2">Running the rootpre.sh Script on x86 with Oracle Solaris Cluster</h2>
+            <h2 id="CWSOL-GUID-B6CFFE59-E6D1-45E3-B49E-39944CC2EA19" class="sect2">使用Oracle Solaris Cluster在x86上运行rootpre.sh脚本</h2>
          </header>
          <div class="ind">
             <div>
-               <p>On x86 (64-bit) platforms running Oracle Solaris, if you install Oracle Solaris Cluster in addition to Oracle Clusterware, then complete the following task.</p>
+               <p>在运行Oracle Solaris的x86（64位）平台上，如果除了Oracle Clusterware之外还安装了Oracle Solaris Cluster，则完成以下任务。</p>
                <ol>
-                  <li class="stepexpand"><span>Switch user to <code class="codeph">root</code>:</span><div><pre class="pre codeblock"><code>$ su - root</code></pre></div>
+                  <li class="stepexpand"><span>将用户切换到<code class="codeph">root</code> ：</span><div><pre class="pre codeblock"><code>$ su - root</code></pre></div>
                   </li>
-                  <li class="stepexpand"><span>Complete one of the following steps, depending on the location of the installation:</span><ul>
+                  <li class="stepexpand"><span>完成以下步骤之一，具体取决于安装位置：</span><ul>
                         <li>
-                           <p>If the installation files are on an installation media, then enter a command similar to the following, where <span class="italic">mountpoint</span> is the disk mount point directory or the path of the database directory on the installation media:
-                           </p><pre class="pre codeblock"><code># <span class="italic">mountpoint</span>/grid/rootpre.sh</code></pre></li>
+                           <p>如果安装文件位于安装介质上，则输入类似于以下内容的命令，其中<span class="italic">mountpoint</span>是磁盘安装点目录或安装介质上数据库目录的路径：</p><pre class="pre codeblock"><code># <span class="italic">mountpoint</span>/grid/rootpre.sh</code></pre></li>
                         <li>
-                           <p>If the installation files are on the hard disk, change directory to the directory /Disk1 and enter the following command:</p><pre class="pre codeblock"><code># ./rootpre.sh</code></pre></li>
+                           <p>如果安装文件位于硬盘上，请将目录更改为目录/ Disk1并输入以下命令：</p><pre class="pre codeblock"><code># ./rootpre.sh</code></pre></li>
                      </ul>
                   </li>
-                  <li class="stepexpand"><span>Exit from the <code class="codeph">root</code> account:</span><div><pre class="pre codeblock"><code># exit</code></pre></div>
+                  <li class="stepexpand"><span>退出<code class="codeph">root</code>帐户：</span><div><pre class="pre codeblock"><code># exit</code></pre></div>
                   </li>
-                  <li class="stepexpand"><span>Repeat steps 1 through 3 on all nodes of the cluster.</span></li>
+                  <li class="stepexpand"><span>在群集的所有节点上重复步骤1到3。</span></li>
                </ol>
             </div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="configuring-operating-systems-for-oracle-grid-infrastructure-on-oracle-solaris.html#GUID-9BFE7368-399D-4659-9BA3-BE1297AB7289" title="Complete operating system configuration requirements and checks for Oracle Solaris operating systems before you start installation.">Configuring Oracle Solaris Operating Systems for Oracle Grid Infrastructure</a></p>
+                     <p><strong>父主题：</strong> <a href="configuring-operating-systems-for-oracle-grid-infrastructure-on-oracle-solaris.html#GUID-9BFE7368-399D-4659-9BA3-BE1297AB7289" title="在开始安装之前，请完成操作系统配置要求并检查Oracle Solaris操作系统。">为Oracle Grid Infrastructure配置Oracle Solaris操作系统</a></p>
                   </div>
                </div>
             </div>

@@ -1,17 +1,15 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>CONTEXT Query Application</title>
+      <title>上下文查询应用程序</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="Application Developer's Guide ">
+      <meta property="og:title" content="Application Developer&#39;s Guide ">
       <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="Application Developer's Guide">
+      <meta name="application-name" content="Application Developer&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="text-application-developers-guide.pdf" title="PDF File" type="application/pdf">
@@ -41,207 +39,187 @@
         </script>
       <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"oracle-database","element_name":"Oracle Database","display_in_url":true},"release":{"short_name":"19","element_name":"Release 19","display_in_url":true}}}</script>
       
-    <meta name="dcterms.title" content="Text Application Developer's Guide">
+    <meta name="dcterms.title" content="Text Application Developer&#39;s Guide">
     <meta name="dcterms.isVersionOf" content="CCAPP">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="migrating-oracle-text-applications.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="CATSEARCH-query-application.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="migrating-oracle-text-applications.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="CATSEARCH-query-application.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Application Developer's Guide </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem"> CONTEXT Query Application</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">应用程序开发人员指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">上下文查询应用程序</li>
             </ol>
             <a id="GUID-1F1B44E8-ACCA-446A-84EA-67FA692476BA" name="GUID-1F1B44E8-ACCA-446A-84EA-67FA692476BA"></a><a id="CCAPP3000"></a>
             
-            <h2 id="CCAPP-GUID-1F1B44E8-ACCA-446A-84EA-67FA692476BA" class="sect2"><span class="enumeration_chapter">A </span> CONTEXT Query Application
-            </h2>
+            <h2 id="CCAPP-GUID-1F1B44E8-ACCA-446A-84EA-67FA692476BA" class="sect2"><span class="enumeration_chapter">上下文</span>查询应用</h2>
          </header>
          <div class="ind">
             <div>
-               <p><a id="d40230e61" class="indexterm-anchor"></a><a id="d40230e65" class="indexterm-anchor"></a><a id="d40230e67" class="indexterm-anchor"></a><a id="d40230e71" class="indexterm-anchor"></a>This appendix describes how to build a simple web search application by using the <code class="codeph">CONTEXT</code> index type.
+               <p><a id="d40230e61" class="indexterm-anchor"></a><a id="d40230e65" class="indexterm-anchor"></a><a id="d40230e67" class="indexterm-anchor"></a><a id="d40230e71" class="indexterm-anchor"></a>本附录介绍如何使用<code class="codeph">CONTEXT</code>索引类型构建简单的Web搜索应用程序。
                </p>
-               <p>This appendix contains the following topics:</p>
-               <ul style="list-style-type: disc;">
+               <p>本附录包含以下主题：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p><a href="CONTEXT-query-application.html#GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE">Web Query Application Overview</a></p>
+                     <p><a href="CONTEXT-query-application.html#GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE">Web查询应用程序概述</a></p>
                   </li>
                   <li>
-                     <p><a href="CONTEXT-query-application.html#GUID-02600A05-F136-464F-A683-0504F6809388">The PL/SQL Server Pages (PSP) Web Application</a></p>
+                     <p><a href="CONTEXT-query-application.html#GUID-02600A05-F136-464F-A683-0504F6809388">PL / SQL Server页面（PSP）Web应用程序</a></p>
                   </li>
                   <li>
-                     <p><a href="CONTEXT-query-application.html#GUID-DEABF1DC-7C2E-436D-A83F-D036260B0B32">The Java Server Pages (JSP) Web Application</a></p>
+                     <p><a href="CONTEXT-query-application.html#GUID-DEABF1DC-7C2E-436D-A83F-D036260B0B32">Java Server Pages（JSP）Web应用程序</a></p>
                   </li>
                </ul>
-            </div><a id="CCAPP9528"></a><a id="CCAPP9529"></a><a id="CCAPP9371"></a><div class="props_rev_3"><a id="GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE" name="GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE"></a><h3 id="CCAPP-GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE" class="sect3"><span class="enumeration_section">A.1 </span>Web Query Application Overview
-               </h3>
+            </div><a id="CCAPP9528"></a><a id="CCAPP9529"></a><a id="CCAPP9371"></a><div class="props_rev_3"><a id="GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE" name="GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE"></a><h3 id="CCAPP-GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE" class="sect3"><span class="enumeration_section">A.1</span> Web查询应用程序概述</h3>
                <div>
-                  <p>A common use of Oracle Text is to index HTML files on websites and provide search capabilities to users. The sample application in this appendix indexes a set of HTML files stored in the database. It also uses a web server connected to Oracle Database to provide the search service.</p>
-                  <p>This appendix describes two versions of the Web query application: </p>
-                  <ul style="list-style-type: disc;">
+                  <p>Oracle Text的一个常见用途是为网站上的HTML文件编制索引，并为用户提供搜索功能。本附录中的示例应用程序对存储在数据库中的一组HTML文件进行索引。它还使用连接到Oracle数据库的Web服务器来提供搜索服务。</p>
+                  <p>本附录描述了Web查询应用程序的两个版本：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p>One using PL/SQL Server Pages (<span class="bold">PSP</span>)
-                        </p>
+                        <p>一个使用PL / SQL Server Pages（ <span class="bold">PSP</span> ）</p>
                      </li>
                      <li>
-                        <p>One using Java Server Pages (<span class="bold">JSP</span>)
-                        </p>
+                        <p>一个使用Java Server Pages（ <span class="bold">JSP</span> ）</p>
                      </li>
                   </ul>
-                  <p><a href="CONTEXT-query-application.html#GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE__CHDIHHGG">Figure A-1</a> shows the JSP version of the text query application.
+                  <p><a href="CONTEXT-query-application.html#GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE__CHDIHHGG">图A-1</a>显示了文本查询应用程序的JSP版本。
                   </p>
                   <div class="figure" id="GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE__CHDIHHGG">
-                     <p class="titleinfigure">Figure A-1 The Text Query Application</p><img src="img/search01b.png" width="557" alt="Description of Figure A-1 follows" title="Description of Figure A-1 follows" longdesc="img_text/search01b.html"><br><a href="img_text/search01b.html">Description of "Figure A-1 The Text Query Application"</a></div>
+                     <p class="titleinfigure">图A-1文本查询应用程序</p><img src="img/search01b.png" width="557" alt="下面是图A-1的描述" title="下面是图A-1的描述" longdesc="img_text/search01b.html"><br><a href="img_text/search01b.html">“图A-1文本查询应用程序”的描述</a></div>
                   <!-- class="figure" -->
-                  <p><a href="CONTEXT-query-application.html#GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE__CHDGCBIC">Figure A-2</a> shows the results of the text query.
+                  <p><a href="CONTEXT-query-application.html#GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE__CHDGCBIC">图A-2</a>显示了文本查询的结果。
                   </p>
                   <div class="figure" id="GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE__CHDGCBIC">
-                     <p class="titleinfigure">Figure A-2 Text Query Application with Results</p><img src="img/search02b.png" width="557" alt="Description of Figure A-2 follows" title="Description of Figure A-2 follows" longdesc="img_text/search02b.html"><br><a href="img_text/search02b.html">Description of "Figure A-2 Text Query Application with Results"</a></div>
+                     <p class="titleinfigure">图A-2带结果的文本查询应用程序</p><img src="img/search02b.png" width="557" alt="下面是图A-2的描述" title="下面是图A-2的描述" longdesc="img_text/search02b.html"><br><a href="img_text/search02b.html">“图A-2带结果的文本查询应用程序”的描述</a></div>
                   <!-- class="figure" -->
-                  <p>The application returns links to documents containing the search term. Each document has four links:</p>
-                  <ul style="list-style-type: disc;">
+                  <p>应用程序返回包含搜索词的文档的链接。每个文档都有四个链接：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p>The <span class="bold">HTML</span> link displays the document.
+                        <p><span class="bold">HTML</span>链接显示文档。
                         </p>
-                        <p>Graphics are not displayed in the filtered document.</p>
+                        <p>图形不会显示在已过滤的文档中。</p>
                      </li>
                      <li>
-                        <p>The <span class="bold">Highlight</span> link displays the document with the search term highlighted. 
+                        <p><span class="bold">突出显示</span>链接显示<span class="bold">突出</span>显示搜索词的文档。
                         </p>
                      </li>
                      <li>
-                        <p>The <span class="bold">Theme</span> link shows the top 50 themes associated with the document.
+                        <p><span class="bold">主题</span>链接显示与文档关联的前50个主题。
                         </p>
-                        <p>The <span class="bold">Gist</span> link displays a short summary of the document.
+                        <p><span class="bold">Gist</span>链接显示文档的简短摘要。
                         </p>
                      </li>
                   </ul>
                </div>
-            </div><a id="CCAPP9530"></a><a id="CCAPP9372"></a><div class="props_rev_3"><a id="GUID-02600A05-F136-464F-A683-0504F6809388" name="GUID-02600A05-F136-464F-A683-0504F6809388"></a><h3 id="CCAPP-GUID-02600A05-F136-464F-A683-0504F6809388" class="sect3"><span class="enumeration_section">A.2 </span>The PL/SQL Server Pages (PSP) Web Application
-               </h3>
+            </div><a id="CCAPP9530"></a><a id="CCAPP9372"></a><div class="props_rev_3"><a id="GUID-02600A05-F136-464F-A683-0504F6809388" name="GUID-02600A05-F136-464F-A683-0504F6809388"></a><h3 id="CCAPP-GUID-02600A05-F136-464F-A683-0504F6809388" class="sect3"><span class="enumeration_section">A.2</span> PL / SQL Server页面（PSP）Web应用程序</h3>
                <div>
-                  <p>The PSP web application is based on PL/SQL server pages. <a href="CONTEXT-query-application.html#GUID-02600A05-F136-464F-A683-0504F6809388__CACJEDFE">Figure A-3</a> illustrates how the browser calls the PSP-stored procedure on Oracle Database through a web server.
+                  <p>PSP Web应用程序基于PL / SQL服务器页面。<a href="CONTEXT-query-application.html#GUID-02600A05-F136-464F-A683-0504F6809388__CACJEDFE">图A-3</a>说明了浏览器如何通过Web服务器调用Oracle数据库上的PSP存储过程。
                   </p>
-                  <p>This section contains the following topics:</p>
-                  <ul style="list-style-type: disc;">
+                  <p>本节包含以下主题：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><a href="CONTEXT-query-application.html#GUID-0D3EACC2-9FBC-480F-A742-F7F402905BB8">PSP Web Application Prerequisites</a></p>
+                        <p><a href="CONTEXT-query-application.html#GUID-0D3EACC2-9FBC-480F-A742-F7F402905BB8">PSP Web应用程序先决条件</a></p>
                      </li>
                      <li>
-                        <p><a href="CONTEXT-query-application.html#GUID-03558FFB-EFEF-4B43-92CA-E9ABB5EC0E6B">Building the PSP Web Application</a></p>
+                        <p><a href="CONTEXT-query-application.html#GUID-03558FFB-EFEF-4B43-92CA-E9ABB5EC0E6B">构建PSP Web应用程序</a></p>
                      </li>
                      <li>
-                        <p><a href="CONTEXT-query-application.html#GUID-5399C5D7-77E6-4BD9-AAD8-21D63279E630">PSP Web Application Sample Code</a></p>
+                        <p><a href="CONTEXT-query-application.html#GUID-5399C5D7-77E6-4BD9-AAD8-21D63279E630">PSP Web应用程序示例代码</a></p>
                      </li>
                   </ul>
                   <div class="figure" id="GUID-02600A05-F136-464F-A683-0504F6809388__CACJEDFE">
-                     <p class="titleinfigure">Figure A-3 The PSP Web Application</p><img src="img/ccapp012.gif" width="596" alt="Description of Figure A-3 follows" title="Description of Figure A-3 follows" longdesc="img_text/ccapp012.html"><br><a href="img_text/ccapp012.html">Description of "Figure A-3 The PSP Web Application"</a></div>
+                     <p class="titleinfigure">图A-3 PSP Web应用程序</p><img src="img/ccapp012.gif" width="596" alt="下面是图A-3的描述" title="下面是图A-3的描述" longdesc="img_text/ccapp012.html"><br><a href="img_text/ccapp012.html">“图A-3 PSP Web应用程序”的描述</a></div>
                   <!-- class="figure" -->
-               </div><a id="CCAPP9373"></a><div class="props_rev_3"><a id="GUID-0D3EACC2-9FBC-480F-A742-F7F402905BB8" name="GUID-0D3EACC2-9FBC-480F-A742-F7F402905BB8"></a><h4 id="CCAPP-GUID-0D3EACC2-9FBC-480F-A742-F7F402905BB8" class="sect4"><span class="enumeration_section">A.2.1 </span>PSP Web Application Prerequisites
-                  </h4>
+               </div><a id="CCAPP9373"></a><div class="props_rev_3"><a id="GUID-0D3EACC2-9FBC-480F-A742-F7F402905BB8" name="GUID-0D3EACC2-9FBC-480F-A742-F7F402905BB8"></a><h4 id="CCAPP-GUID-0D3EACC2-9FBC-480F-A742-F7F402905BB8" class="sect4"><span class="enumeration_section">A.2.1</span> PSP Web应用程序先决条件</h4>
                   <div>
-                     <p>This application has the following requirements:</p>
-                     <ul style="list-style-type: disc;">
+                     <p>此应用程序具有以下要求：</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p>Your Oracle Database must be up and running.</p>
+                           <p>您的Oracle数据库必须已启动并正在运行。</p>
                         </li>
                         <li>
-                           <p>You unlocked the SCOTT account is unlocked with its password, and the account has <code class="codeph">CREATE,</code> <code class="codeph">RESOURCE,</code> and <code class="codeph">CTXAPP</code> privileges.
+                           <p>您解锁SCOTT帐户时使用其密码解锁，该帐户具有<code class="codeph">CREATE,</code> <code class="codeph">RESOURCE,</code>和<code class="codeph">CTXAPP</code>权限。
                            </p>
                         </li>
                         <li>
-                           <p>The Oracle PL/SQL gateway must be running.</p>
+                           <p>Oracle PL / SQL网关必须正在运行。</p>
                         </li>
                         <li>
-                           <p>A web server such as Apache is up and running and is correctly configured to send requests to Oracle Database.</p>
+                           <p>Apache等Web服务器已启动并正在运行，并且已正确配置为向Oracle数据库发送请求。</p>
                         </li>
                      </ul>
                      <div class="infoboxnotealso" id="GUID-0D3EACC2-9FBC-480F-A742-F7F402905BB8__GUID-A6C42CA6-B81B-45E8-AB98-D34D38E601BB">
-                        <p class="notep1">See Also:</p>
-                        <ul style="list-style-type: disc;">
+                        <p class="notep1">也可以看看：</p>
+                        <ul style="list-style-type:disc">
                            <li>
-                              <p><a href="../jsqlj/key-programming-considerations.html#JSQLJ196" target="_blank"><span class="italic">Oracle Database SQLJ Developer's Guide</span></a> for a connection example
-                              </p>
+                              <p><a href="../jsqlj/key-programming-considerations.html#JSQLJ196" target="_blank"><span class="italic">Oracle数据库SQLJ开发人员指南，</span></a>用于连接示例</p>
                            </li>
                            <li>
-                              <p><a href="../adfns/web-applications.html#ADFNS015" target="_blank"><span class="italic">Oracle Database Development Guide</span></a> for complete information about setting up the PL/SQL gateway and developing PL/SQL web applications
-                              </p>
+                              <p>有关设置PL / SQL网关和开发PL / SQL Web应用程序的完整信息，请参见<a href="../adfns/web-applications.html#ADFNS015" target="_blank"><span class="italic">“Oracle数据库开发指南”</span></a></p>
                            </li>
                            <li>
-                              <p><span class="italic">Oracle Database 2 Day + PHP Developer's Guide</span> for information about installing Apache HTTP Server
-                              </p>
+                              <p>有关安装Apache HTTP Server的信息，请参阅<span class="italic">Oracle Database 2 Day + PHP Developer's Guide</span></p>
                            </li>
                         </ul>
                      </div>
                   </div>
-               </div><a id="CCAPP9374"></a><div class="props_rev_3"><a id="GUID-03558FFB-EFEF-4B43-92CA-E9ABB5EC0E6B" name="GUID-03558FFB-EFEF-4B43-92CA-E9ABB5EC0E6B"></a><h4 id="CCAPP-GUID-03558FFB-EFEF-4B43-92CA-E9ABB5EC0E6B" class="sect4"><span class="enumeration_section">A.2.2 </span>Building the PSP Web Application
-                  </h4>
+               </div><a id="CCAPP9374"></a><div class="props_rev_3"><a id="GUID-03558FFB-EFEF-4B43-92CA-E9ABB5EC0E6B" name="GUID-03558FFB-EFEF-4B43-92CA-E9ABB5EC0E6B"></a><h4 id="CCAPP-GUID-03558FFB-EFEF-4B43-92CA-E9ABB5EC0E6B" class="sect4"><span class="enumeration_section">A.2.2</span>构建PSP Web应用程序</h4>
                   <div>
                      <div class="section">
-                        <p>To create PSP web application:</p>
+                        <p>要创建PSP Web应用程序：</p>
                      </div>
                      <!-- class="section" -->
                      <ol>
-                        <li class="stepexpand"><span>Create your text tables.</span><div>
-                              <p>You must create text tables with the <code class="codeph">CREATE</code> <code class="codeph">TABLE</code> command to store your HTML files. These examples create the <code class="codeph">output_table,</code> <code class="codeph">gist_table,</code> and <code class="codeph">theme_table</code> tables:
-                              </p><pre class="oac_no_warn" dir="ltr">CREATE TABLE output_table  (query_id NUMBER, document CLOB);
+                        <li class="stepexpand"><span>创建文本表。</span><div>
+                              <p>必须使用<code class="codeph">CREATE</code> <code class="codeph">TABLE</code>命令创建文本表以存储HTML文件。这些示例创建<code class="codeph">output_table,</code> <code class="codeph">gist_table,</code>和<code class="codeph">theme_table</code>表：</p><pre class="oac_no_warn" dir="ltr">CREATE TABLE output_table  (query_id NUMBER, document CLOB);
 CREATE TABLE gist_table  (query_id NUMBER, pov VARCHAR2(80), gist CLOB);
 CREATE TABLE theme_table  (query_id NUMBER, theme VARCHAR2(2000), weight NUMBER);
 </pre></div>
                         </li>
-                        <li class="stepexpand"><span>Load HTML documents into the table by using SQL*Loader.</span><div>
-                              <p>You must load the text tables with the HTML files. This example uses the <a href="CONTEXT-query-application.html#GUID-D4D8B356-1F41-4927-8984-8195C0A05EB9">loader.ctl</a> control file to load the files named in <a href="CONTEXT-query-application.html#GUID-C9175A31-89FE-4B66-99A5-D60E6E7C4EB6">loader.dat</a>. The SQL*Loader statement is as follows:
-                              </p><pre class="oac_no_warn" dir="ltr">% sqlldr userid=scott/<span class="italic">password</span> control=loader.ctl 
+                        <li class="stepexpand"><span>使用SQL * Loader将HTML文档加载到表中。</span><div>
+                              <p>您必须使用HTML文件加载文本表。此示例使用<a href="CONTEXT-query-application.html#GUID-D4D8B356-1F41-4927-8984-8195C0A05EB9">loader.ctl</a>控制文件来加载在<a href="CONTEXT-query-application.html#GUID-C9175A31-89FE-4B66-99A5-D60E6E7C4EB6">loader.dat中</a>指定的文件。SQL * Loader语句如下：</p><pre class="oac_no_warn" dir="ltr">% sqlldr userid=scott/<span class="italic">password</span> control=loader.ctl 
 </pre></div>
                         </li>
-                        <li class="stepexpand"><span>Create the <code class="codeph">CONTEXT</code> index.<a id="d40230e553" class="indexterm-anchor"></a><a id="d40230e557" class="indexterm-anchor"></a><a id="d40230e561" class="indexterm-anchor"></a><a id="d40230e565" class="indexterm-anchor"></a></span><div>
-                              <p>Index the HTML files by creating a <code class="codeph">CONTEXT</code> index on the text column, as shown here. Because you are indexing HTML, this example uses the <code class="codeph">NULL_FILTER</code> preference type for no filtering, and it uses the <code class="codeph">HTML_SECTION_GROUP</code> type, as follows:
-                              </p><pre class="oac_no_warn" dir="ltr">create index idx_search_table on search_table(text)
+                        <li class="stepexpand"><span>创建<code class="codeph">CONTEXT</code>索引。<a id="d40230e553" class="indexterm-anchor"></a><a id="d40230e557" class="indexterm-anchor"></a><a id="d40230e561" class="indexterm-anchor"></a><a id="d40230e565" class="indexterm-anchor"></a></span><div>
+                              <p>通过在文本列上创建<code class="codeph">CONTEXT</code>索引来索引HTML文件，如下所示。因为您正在索引HTML，所以此示例使用<code class="codeph">NULL_FILTER</code>首选项类型进行无过滤，并使用<code class="codeph">HTML_SECTION_GROUP</code>类型，如下所示：</p><pre class="oac_no_warn" dir="ltr">create index idx_search_table on search_table(text)
   indextype is ctxsys.context parameters
   ('filter ctxsys.null_filter section group CTXSYS.HTML_SECTION_GROUP');
 </pre></div>
                         </li>
-                        <li class="stepexpand"><span>Compile the <code class="codeph">search_htmlservices</code> package in Oracle Database.</span><div>
-                              <p>The application must present selected documents to the user. To do so, Oracle Database must read the documents from the character large object <code class="codeph">(CLOB)</code> in <code class="codeph">search_table</code> and output the result for viewing. To do that, call procedures in the <code class="codeph">search_htmlservices</code> package. Compile the file <a href="CONTEXT-query-application.html#GUID-6F1889D2-689F-4548-8B0A-D6ED37ECC092">search_htmlservices.sql</a> file at the SQL*Plus prompt as follows:
-                              </p><pre class="oac_no_warn" dir="ltr">SQL&gt; @search_htmlservices.sql
+                        <li class="stepexpand"><span>编译Oracle数据库中的<code class="codeph">search_htmlservices</code>包。</span><div>
+                              <p>应用程序必须向用户显示所选文档。为此，Oracle数据库必须从<code class="codeph">search_table</code>的字符大对象<code class="codeph">(CLOB)</code>读取文档并输出结果以供查看。为此，请调用<code class="codeph">search_htmlservices</code>包中的过程。在SQL * Plus提示符下编译文件<a href="CONTEXT-query-application.html#GUID-6F1889D2-689F-4548-8B0A-D6ED37ECC092">search_htmlservices.sql</a>文件，如下所示：</p><pre class="oac_no_warn" dir="ltr">SQL&gt; @search_htmlservices.sql
 
 Package created.
 </pre></div>
                         </li>
-                        <li class="stepexpand"><span>Compile the <code class="codeph">search_html</code> PSP page with loadpsp.</span><div>
-                              <p>The search page is invoked by calling <a href="CONTEXT-query-application.html#GUID-B82F1C3B-2EAC-4036-9584-ED7384D9CB80">search_html.psp</a> from a browser. You compile search_html in Oracle Database with the <code class="codeph">loadpsp</code> command-line program as follows:
-                              </p><pre class="oac_no_warn" dir="ltr">% loadpsp -replace -user scott/<span class="italic">password</span> search_html.psp
-</pre><p>The output appears as:</p><pre class="oac_no_warn" dir="ltr">"search_html.psp": procedure "search_html" created.</pre><div class="infoboxnotealso" id="GUID-03558FFB-EFEF-4B43-92CA-E9ABB5EC0E6B__GUID-0F0008F6-A5EC-4701-B3B4-7A95072258D8">
-                                 <p class="notep1">See Also:</p>
-                                 <p>Oracle Database 11g Release 2 (11.2) of Oracle Database Development Guide for more information about using PSP</p>
+                        <li class="stepexpand"><span>使用<code class="codeph">search_html</code>编译<code class="codeph">search_html</code> PSP页面。</span><div>
+                              <p>通过从浏览器调用<a href="CONTEXT-query-application.html#GUID-B82F1C3B-2EAC-4036-9584-ED7384D9CB80">search_html.psp</a>来调用搜索页面。您可以使用<code class="codeph">loadpsp</code>命令行程序在Oracle数据库中编译search_html，如下所示：</p><pre class="oac_no_warn" dir="ltr">% loadpsp -replace -user scott/<span class="italic">password</span> search_html.psp
+</pre><p>输出显示为：</p><pre class="oac_no_warn" dir="ltr">"search_html.psp": procedure "search_html" created.</pre><div class="infoboxnotealso" id="GUID-03558FFB-EFEF-4B43-92CA-E9ABB5EC0E6B__GUID-0F0008F6-A5EC-4701-B3B4-7A95072258D8">
+                                 <p class="notep1">也可以看看：</p>
+                                 <p>有关使用PSP的更多信息，请参见“Oracle数据库开发指南”的Oracle Database 11g第2版（11.2）</p>
                               </div>
                            </div>
                         </li>
-                        <li class="stepexpand"><span>Configure your web server.</span><div>
-                              <p>You must configure your web server to accept client PSP requests as a URL. Your web server forwards these requests to Oracle Database and returns server output to the browser. See <a href="CONTEXT-query-application.html#GUID-02600A05-F136-464F-A683-0504F6809388__CACJEDFE">Figure A-3</a>.
+                        <li class="stepexpand"><span>配置Web服务器。</span><div>
+                              <p>您必须将Web服务器配置为接受客户端PSP请求作为URL。您的Web服务器将这些请求转发到Oracle数据库并将服务器输出返回给浏览器。<a href="CONTEXT-query-application.html#GUID-02600A05-F136-464F-A683-0504F6809388__CACJEDFE">见图A-3</a> 。
                               </p>
-                              <p>You can use the Oracle WebDB web listener or Oracle Application Server, which includes the Apache web server.</p>
+                              <p>您可以使用Oracle WebDB Web侦听器或Oracle Application Server，其中包括Apache Web服务器。</p>
                            </div>
                         </li>
-                        <li class="stepexpand"><span>Enter the query from a browser.</span><div>
-                              <p>You can access the query application from a browser by using a URL. You configure the URL with your web server. An example URL might look like the following:</p><pre class="oac_no_warn" dir="ltr">http://server.example.com:7777/mypath/search_html
-</pre><p>The application displays a query entry box in your browser and returns the query results as a list of HTML links, as shown in <a href="CONTEXT-query-application.html#GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE__CHDIHHGG">Figure A-1</a> and <a href="CONTEXT-query-application.html#GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE__CHDGCBIC">Figure A-2</a>.
+                        <li class="stepexpand"><span>从浏览器输入查询。</span><div>
+                              <p>您可以使用URL从浏览器访问查询应用程序。您使用Web服务器配置URL。示例URL可能如下所示：</p><pre class="oac_no_warn" dir="ltr">http://server.example.com:7777/mypath/search_html
+</pre><p>应用程序在浏览器中显示一个查询输入框，并将查询结果作为HTML链接列表返回， <a href="CONTEXT-query-application.html#GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE__CHDIHHGG">如图A-1</a>和<a href="CONTEXT-query-application.html#GUID-D58C935C-301F-44F4-BF28-050B83EA2ACE__CHDGCBIC">图A-2所示</a> 。
                               </p>
                            </div>
                         </li>
                      </ol>
                   </div>
-               </div><a id="CCAPP9375"></a><div class="props_rev_3"><a id="GUID-5399C5D7-77E6-4BD9-AAD8-21D63279E630" name="GUID-5399C5D7-77E6-4BD9-AAD8-21D63279E630"></a><h4 id="CCAPP-GUID-5399C5D7-77E6-4BD9-AAD8-21D63279E630" class="sect4"><span class="enumeration_section">A.2.3 </span>PSP Web Application Sample Code
-                  </h4>
+               </div><a id="CCAPP9375"></a><div class="props_rev_3"><a id="GUID-5399C5D7-77E6-4BD9-AAD8-21D63279E630" name="GUID-5399C5D7-77E6-4BD9-AAD8-21D63279E630"></a><h4 id="CCAPP-GUID-5399C5D7-77E6-4BD9-AAD8-21D63279E630" class="sect4"><span class="enumeration_section">A.2.3</span> PSP Web应用程序示例代码</h4>
                   <div>
-                     <p>This section lists the code used to build the example Web application. It includes the following files:</p>
-                     <ul style="list-style-type: disc;">
+                     <p>本节列出了用于构建示例Web应用程序的代码。它包括以下文件：</p>
+                     <ul style="list-style-type:disc">
                         <li>
                            <p><a href="CONTEXT-query-application.html#GUID-D4D8B356-1F41-4927-8984-8195C0A05EB9">loader.ctl</a></p>
                         </li>
@@ -255,11 +233,10 @@ Package created.
                            <p><a href="CONTEXT-query-application.html#GUID-B82F1C3B-2EAC-4036-9584-ED7384D9CB80">search_html.psp</a></p>
                         </li>
                      </ul>
-                  </div><a id="CCAPP9376"></a><div class="props_rev_3"><a id="GUID-D4D8B356-1F41-4927-8984-8195C0A05EB9" name="GUID-D4D8B356-1F41-4927-8984-8195C0A05EB9"></a><h5 id="CCAPP-GUID-D4D8B356-1F41-4927-8984-8195C0A05EB9" class="sect5"><span class="enumeration_section">A.2.3.1 </span>loader.ctl
-                     </h5>
+                  </div><a id="CCAPP9376"></a><div class="props_rev_3"><a id="GUID-D4D8B356-1F41-4927-8984-8195C0A05EB9" name="GUID-D4D8B356-1F41-4927-8984-8195C0A05EB9"></a><h5 id="CCAPP-GUID-D4D8B356-1F41-4927-8984-8195C0A05EB9" class="sect5"><span class="enumeration_section">A.2.3.1</span> loader.ctl</h5>
                      <div>
                         <div class="section">
-                           <p>This example shows a sample <code class="codeph">loader.ctl</code> file. It is used by <code class="codeph">sqlldr</code> to load the <code class="codeph">loader.dat</code> data file.
+                           <p>此示例显示了一个示例<code class="codeph">loader.ctl</code>文件。<code class="codeph">sqlldr</code>使用它来加载<code class="codeph">loader.dat</code>数据文件。
                            </p><pre class="oac_no_warn" dir="ltr">LOAD DATA 
         INFILE 'loader.dat'
         INTO TABLE search_table 
@@ -271,11 +248,10 @@ Package created.
          text           LOBFILE(text_file) TERMINATED BY EOF)</pre></div>
                         <!-- class="section" -->
                      </div>
-                  </div><a id="CCAPP9377"></a><div class="props_rev_3"><a id="GUID-C9175A31-89FE-4B66-99A5-D60E6E7C4EB6" name="GUID-C9175A31-89FE-4B66-99A5-D60E6E7C4EB6"></a><h5 id="CCAPP-GUID-C9175A31-89FE-4B66-99A5-D60E6E7C4EB6" class="sect5"><span class="enumeration_section">A.2.3.2 </span>loader.dat
-                     </h5>
+                  </div><a id="CCAPP9377"></a><div class="props_rev_3"><a id="GUID-C9175A31-89FE-4B66-99A5-D60E6E7C4EB6" name="GUID-C9175A31-89FE-4B66-99A5-D60E6E7C4EB6"></a><h5 id="CCAPP-GUID-C9175A31-89FE-4B66-99A5-D60E6E7C4EB6" class="sect5"><span class="enumeration_section">A.2.3.2</span> loader.dat</h5>
                      <div>
                         <div class="section">
-                           <p>This example shows a sample <code class="codeph">loader.dat</code> file. Each row contains three fields: a reference number for the document, a label (or "title"), and the name of the HTML document to load into the text column of <code class="codeph">search_table.</code> The file has been truncated for this example.
+                           <p>此示例显示了一个示例<code class="codeph">loader.dat</code>文件。每行包含三个字段：文档的引用号，标签（或“标题”），以及要加载到<code class="codeph">search_table.</code>的文本列中的HTML文档的名称<code class="codeph">search_table.</code> 该示例已截断该文件。
                            </p><pre class="oac_no_warn" dir="ltr">1;   Pizza Shredder;Pizza.html
 2;   Refrigerator w/ Front-Door Auto Cantaloupe Dispenser;Cantaloupe.html
 3;   Self-Tipping Couch;Couch.html
@@ -284,12 +260,10 @@ Package created.
 6;   Esteem-Building Talking Pillow;Snooze.html</pre></div>
                         <!-- class="section" -->
                      </div>
-                  </div><a id="CCAPP9668"></a><a id="CCAPP9669"></a><a id="CCAPP9670"></a><a id="CCAPP9671"></a><a id="CCAPP9672"></a><a id="CCAPP9673"></a><a id="CCAPP9674"></a><a id="CCAPP9667"></a><div class="props_rev_3"><a id="GUID-19B22A53-0B88-483E-9909-49EC1FAF1382" name="GUID-19B22A53-0B88-483E-9909-49EC1FAF1382"></a><h5 id="CCAPP-GUID-19B22A53-0B88-483E-9909-49EC1FAF1382" class="sect5"><span class="enumeration_section">A.2.3.3 </span>HTML Files for loader.dat Example
-                     </h5>
+                  </div><a id="CCAPP9668"></a><a id="CCAPP9669"></a><a id="CCAPP9670"></a><a id="CCAPP9671"></a><a id="CCAPP9672"></a><a id="CCAPP9673"></a><a id="CCAPP9674"></a><a id="CCAPP9667"></a><div class="props_rev_3"><a id="GUID-19B22A53-0B88-483E-9909-49EC1FAF1382" name="GUID-19B22A53-0B88-483E-9909-49EC1FAF1382"></a><h5 id="CCAPP-GUID-19B22A53-0B88-483E-9909-49EC1FAF1382" class="sect5"><span class="enumeration_section">A.2.3.3 loader.dat的</span> HTML文件示例</h5>
                      <div>
-                        <p>The HTML files that are named and loaded into <code class="codeph">loader.dat</code> are included here for your reference as follows:
-                        </p>
-                        <ul style="list-style-type: disc;">
+                        <p>这里包含了命名并加载到<code class="codeph">loader.dat</code>中的HTML文件，供您参考，如下所示：</p>
+                        <ul style="list-style-type:disc">
                            <li>
                               <p><a href="CONTEXT-query-application.html#GUID-19B22A53-0B88-483E-9909-49EC1FAF1382__CIADFIGC">Pizza.html</a></p>
                            </li>
@@ -536,8 +510,7 @@ cower in the corner. Now you will join in every conversation.
 &lt;/html&gt;</pre></div>
                         <!-- class="section" -->
                      </div>
-                  </div><a id="CCAPP9378"></a><div class="props_rev_3"><a id="GUID-6F1889D2-689F-4548-8B0A-D6ED37ECC092" name="GUID-6F1889D2-689F-4548-8B0A-D6ED37ECC092"></a><h5 id="CCAPP-GUID-6F1889D2-689F-4548-8B0A-D6ED37ECC092" class="sect5"><span class="enumeration_section">A.2.3.4 </span>search_htmlservices.sql
-                     </h5>
+                  </div><a id="CCAPP9378"></a><div class="props_rev_3"><a id="GUID-6F1889D2-689F-4548-8B0A-D6ED37ECC092" name="GUID-6F1889D2-689F-4548-8B0A-D6ED37ECC092"></a><h5 id="CCAPP-GUID-6F1889D2-689F-4548-8B0A-D6ED37ECC092" class="sect5"><span class="enumeration_section">A.2.3.4</span> search_htmlservices.sql</h5>
                      <div>
                         <div class="section"><pre class="oac_no_warn" dir="ltr">set define off
  
@@ -621,8 +594,7 @@ show errors
 set define on</pre></div>
                         <!-- class="section" -->
                      </div>
-                  </div><a id="CCAPP9379"></a><div class="props_rev_3"><a id="GUID-B82F1C3B-2EAC-4036-9584-ED7384D9CB80" name="GUID-B82F1C3B-2EAC-4036-9584-ED7384D9CB80"></a><h5 id="CCAPP-GUID-B82F1C3B-2EAC-4036-9584-ED7384D9CB80" class="sect5"><span class="enumeration_section">A.2.3.5 </span>search_html.psp
-                     </h5>
+                  </div><a id="CCAPP9379"></a><div class="props_rev_3"><a id="GUID-B82F1C3B-2EAC-4036-9584-ED7384D9CB80" name="GUID-B82F1C3B-2EAC-4036-9584-ED7384D9CB80"></a><h5 id="CCAPP-GUID-B82F1C3B-2EAC-4036-9584-ED7384D9CB80" class="sect5"><span class="enumeration_section">A.2.3.5</span> search_html.psp</h5>
                      <div>
                         <div class="section"><pre class="oac_no_warn" dir="ltr">&lt;%@ plsql procedure="search_html" %&gt;
 &lt;%@ plsql parameter="query" default="null" %&gt;
@@ -720,51 +692,45 @@ IF query IS NULL THEN
                      </div>
                   </div>
                </div>
-            </div><a id="CCAPP9380"></a><div class="props_rev_3"><a id="GUID-DEABF1DC-7C2E-436D-A83F-D036260B0B32" name="GUID-DEABF1DC-7C2E-436D-A83F-D036260B0B32"></a><h3 id="CCAPP-GUID-DEABF1DC-7C2E-436D-A83F-D036260B0B32" class="sect3"><span class="enumeration_section">A.3 </span>The Java Server Pages (JSP) Web Application
-               </h3>
+            </div><a id="CCAPP9380"></a><div class="props_rev_3"><a id="GUID-DEABF1DC-7C2E-436D-A83F-D036260B0B32" name="GUID-DEABF1DC-7C2E-436D-A83F-D036260B0B32"></a><h3 id="CCAPP-GUID-DEABF1DC-7C2E-436D-A83F-D036260B0B32" class="sect3"><span class="enumeration_section">A.3</span> Java Server Pages（JSP）Web应用程序</h3>
                <div>
-                  <p>Creating the JSP-based web application involves most of the same steps as those used in building the PSP-based application. See <span class="q">"<a href="CONTEXT-query-application.html#GUID-03558FFB-EFEF-4B43-92CA-E9ABB5EC0E6B">Building the PSP Web Application</a>"</span> for more information. You can use the same <code class="codeph">loader.dat</code> and <code class="codeph">loader.ctl</code> files. However, with the JSP-based application, you do not need to do the following:
-                  </p>
-                  <ul style="list-style-type: disc;">
+                  <p>创建基于JSP的Web应用程序涉及与构建基于PSP的应用程序中使用的大多数步骤相同的步骤。有关更多信息，请参阅<span class="q">“ <a href="CONTEXT-query-application.html#GUID-03558FFB-EFEF-4B43-92CA-E9ABB5EC0E6B">构建PSP Web应用程序</a> ”</span> 。您可以使用相同的<code class="codeph">loader.dat</code>和<code class="codeph">loader.ctl</code>文件。但是，使用基于JSP的应用程序，您不需要执行以下操作：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p>Compile the <code class="codeph">search_htmlservices</code> package
-                        </p>
+                        <p>编译<code class="codeph">search_htmlservices</code>包</p>
                      </li>
                      <li>
-                        <p>Compile the <code class="codeph">search_html</code> PSP page with <code class="codeph">loadpsp</code></p>
+                        <p>编译<code class="codeph">search_html</code>与PSP页<code class="codeph">loadpsp</code></p>
                      </li>
                   </ul>
-                  <p>This section contains the following topics:</p>
-                  <ul style="list-style-type: disc;">
+                  <p>本节包含以下主题：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><a href="CONTEXT-query-application.html#GUID-3749D0FF-0B93-4224-AD99-0AC17FDF4A01">JSP Web Application Prerequisites</a></p>
+                        <p><a href="CONTEXT-query-application.html#GUID-3749D0FF-0B93-4224-AD99-0AC17FDF4A01">JSP Web应用程序先决条件</a></p>
                      </li>
                      <li>
-                        <p><a href="CONTEXT-query-application.html#GUID-CC35F085-B0A1-450D-B5C5-1E16C747AF0A">JSP Web Application Sample Code</a></p>
+                        <p><a href="CONTEXT-query-application.html#GUID-CC35F085-B0A1-450D-B5C5-1E16C747AF0A">JSP Web应用程序示例代码</a></p>
                      </li>
                   </ul>
-               </div><a id="CCAPP9381"></a><div class="props_rev_3"><a id="GUID-3749D0FF-0B93-4224-AD99-0AC17FDF4A01" name="GUID-3749D0FF-0B93-4224-AD99-0AC17FDF4A01"></a><h4 id="CCAPP-GUID-3749D0FF-0B93-4224-AD99-0AC17FDF4A01" class="sect4"><span class="enumeration_section">A.3.1 </span>JSP Web Application Prerequisites
-                  </h4>
+               </div><a id="CCAPP9381"></a><div class="props_rev_3"><a id="GUID-3749D0FF-0B93-4224-AD99-0AC17FDF4A01" name="GUID-3749D0FF-0B93-4224-AD99-0AC17FDF4A01"></a><h4 id="CCAPP-GUID-3749D0FF-0B93-4224-AD99-0AC17FDF4A01" class="sect4"><span class="enumeration_section">A.3.1</span> JSP Web应用程序先决条件</h4>
                   <div>
-                     <p>The JSP web application has the following requirements:</p>
-                     <ul style="list-style-type: disc;">
+                     <p>JSP Web应用程序具有以下要求：</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p>Your Oracle Database must be up and running.</p>
+                           <p>您的Oracle数据库必须已启动并正在运行。</p>
                         </li>
                         <li>
-                           <p>You have a web server such as Apache Tomcat, which can run JavaServer Pages (JSP) scripts that connect to the Oracle Database by using Java Database Connectivity (JDBC).</p>
+                           <p>您有一个Web服务器，例如Apache Tomcat，它可以运行使用Java数据库连接（JDBC）连接到Oracle数据库的JavaServer Pages（JSP）脚本。</p>
                         </li>
                      </ul>
                      <div class="infoboxnotealso" id="GUID-3749D0FF-0B93-4224-AD99-0AC17FDF4A01__GUID-0BB76621-754C-47F3-B3BD-A0AE6787D5CC">
-                        <p class="notep1">See Also:</p>
-                        <p><span class="italic">Oracle Database 2 Day + PHP Developer's Guide</span> for information about installing Apache HTTP Server
-                        </p>
+                        <p class="notep1">也可以看看：</p>
+                        <p>有关安装Apache HTTP Server的信息，请参阅<span class="italic">Oracle Database 2 Day + PHP Developer's Guide</span></p>
                      </div>
                   </div>
-               </div><a id="CCAPP9382"></a><div class="props_rev_3"><a id="GUID-CC35F085-B0A1-450D-B5C5-1E16C747AF0A" name="GUID-CC35F085-B0A1-450D-B5C5-1E16C747AF0A"></a><h4 id="CCAPP-GUID-CC35F085-B0A1-450D-B5C5-1E16C747AF0A" class="sect4"><span class="enumeration_section">A.3.2 </span>JSP Web Application Sample Code
-                  </h4>
+               </div><a id="CCAPP9382"></a><div class="props_rev_3"><a id="GUID-CC35F085-B0A1-450D-B5C5-1E16C747AF0A" name="GUID-CC35F085-B0A1-450D-B5C5-1E16C747AF0A"></a><h4 id="CCAPP-GUID-CC35F085-B0A1-450D-B5C5-1E16C747AF0A" class="sect4"><span class="enumeration_section">A.3.2</span> JSP Web应用程序示例代码</h4>
                   <div>
-                     <p>This section lists the Java code used to build the example web application, as shown in the <code class="codeph">TextSearchApp.jsp</code> file. 
+                     <p>本节列出了用于构建示例Web应用程序的Java代码，如<code class="codeph">TextSearchApp.jsp</code>文件中所示。
                      </p><pre class="oac_no_warn" dir="ltr">&lt;%@page language="java" pageEncoding="utf-8" contentType="text/html; charset=utf-8" %&gt;
 &lt;%@ page import="java.sql.*, java.util.*, java.net.*, 
    oracle.jdbc.*, oracle.sql.*, oracle.jsp.dbutil.*" %&gt;

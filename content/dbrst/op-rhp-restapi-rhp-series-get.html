@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans" >
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>REST APIs for Oracle Database - Get all the series</title>
+        <title>适用于Oracle数据库的REST API  - 获取所有系列</title>
 		<link rel="schema.dcterms" href="http://purl.org/dc/terms/">
 		<meta name="dcterms.dateCopyrighted" content="2018, 2019">
 		<meta name="dcterms.category" content="database">
@@ -44,30 +43,23 @@
     <meta name="dcterms.title" content="REST APIs for Oracle Database">
     <meta name="dcterms.release" content="Release 19">
   </head>
-    <body>
+    <body >
         <div class="noscript alert alert-danger text-center" role="alert">
-            <a class="pull-left" href="op-rhp-restapi-rhp-images-imageid-get.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-            <a class="pull-right" href="op-rhp-restapi-rhp-series-seriesid-get.html">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-            <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        </div>
+            <a class="pull-left" href="op-rhp-restapi-rhp-images-imageid-get.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a class="pull-right" href="op-rhp-restapi-rhp-series-seriesid-get.html">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
         <article>
 
             
             <header id="top">
 
                 <ol class="breadcrumb">
-                    <li><a href="index.html">REST APIs for Oracle Database</a></li>
-                    <li>Tasks</li>
+                    <li><a href="index.html">适用于Oracle数据库的REST API</a></li>
+                    <li>任务</li>
                     
-                    <li>
-                        
-                        Fleet Patching and Provisioning
-                        
-                    </li>
+                    <li>舰队修补和供应</li>
                     
                     <li class="active">
                         
-                        <a href="api-fleet-patching-and-provisioning-rhp-manage-gold-images.html">RHP - Manage Gold Images</a>
+                        <a href="api-fleet-patching-and-provisioning-rhp-manage-gold-images.html">RHP  - 管理黄金图像</a>
                         
                     </li>
                     
@@ -77,44 +69,43 @@
                 
                 
                 <div>
-                	<div class="dropdown btn-group pull-right" style="clear: right;">
-                		<button id="dLabel" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jump to <span class="caret"></span>
-                		</button>
+                	<div class="dropdown btn-group pull-right" style="clear:right">
+                		<button id="dLabel" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">跳到<span class="caret"></span></button>
       					<ul class="dropdown-menu" aria-labelledby="dLabel">
-          					<li><a href="#request" data-toggle="ignore">Request</a></li>
-          					<li><a href="#response" data-toggle="ignore">Response</a></li>
+          					<li><a href="#request" data-toggle="ignore">请求</a></li>
+          					<li><a href="#response" data-toggle="ignore">响应</a></li>
           					
       					</ul>
     				</div>
-     				<h2>Get all the series</h2>
+     				<h2>获取所有系列</h2>
      			</div>
                 
                 <div>
-                    <div class="label label-get text-uppercase">get</div>
-                    <p><strong>/rhp-restapi/rhp/series</strong></p>
+                    <div class="label label-get text-uppercase">得到</div>
+                    <p><strong>/ RHP-RESTAPI / RHP /系列</strong></p>
                 </div>
             </header>
             <section>
 
-                <div class="description">Returns a list of series names available in the server.</div>
+                <div class="description">返回服务器中可用的系列名称列表。</div>
 
-                <h3 id="request">Request</h3>
+                <h3 id="request">请求</h3>
                 
-                <p>There are no request parameters for this operation.</p>
+                <p>此操作没有请求参数。</p>
                 
-
-                
-                
-                <a style="float: right" href="#top">Back to Top</a>
-
-                <h3 id="response">Response</h3>
 
                 
                 
-                <div class="h5">Supported Media Types</div>
+                <a href="#top" style="float:right">回到顶部</a>
+
+                <h3 id="response">响应</h3>
+
+                
+                
+                <div class="h5">支持的媒体类型</div>
                 <ul class="media-types">
                     
-                    <li>application/json</li>
+                    <li>应用程序/ JSON</li>
                     
                 </ul>
                 
@@ -124,24 +115,24 @@
 
                 
                 <div class="response">
-                <h4 class="response-code range-200">200 Response</h4>
+                <h4 class="response-code range-200">200回复</h4>
                 <div class="response-body">
-                <div>OK. A JSON object containing an "items" property populated with 0 or more elements with at least an Id property and the links array with at least the "self" link.</div>
+                <div>好。包含“items”属性的JSON对象，该属性使用至少具有Id属性的0个或更多元素填充，并且链接数组至少具有“self”链接。</div>
 
                 
 
 
                 
                     <div class="entity">
-                    <div class="h5 hidden-print">Body (<span class="schema-path"></span>)</div>
+                    <div class="h5 hidden-print">身体 （ <span class="schema-path"></span> ）</div>
 
 
                     <div class="schema-container">
                     
                     <div id="200-definitions-arrayOfItems" class="swagger-schema">
-    <div class="panel-heading">Root Schema : arrayOfItems</div>
+    <div class="panel-heading">Root Schema：arrayOfItems</div>
     
-      <div class="schema-type">Type: <code>object</code></div>
+      <div class="schema-type">输入： <code>object</code></div>
       
     
 
@@ -194,12 +185,10 @@
     
 
     
-        <a href="#" role="button" data-toggle="schema-view" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm">Show Source</a>
+        <a href="#" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm" role="button" data-toggle="schema-view">显示来源</a>
         <ul class="schema-properties">
             
-            <li><a role="button" data-toggle="prop-collapse" href="#200-definitions-arrayOfItems-properties-items-properties-items" aria-expanded="false" aria-controls="200-definitions-arrayOfItems-properties-items-properties-items">
-            items(optional): 
-            array </a> <a href="#200-definitions-arrayOfItems-properties-items" role="button" class="btn btn-default btn-sm btn-xsm">items</a>
+            <li><a href="#200-definitions-arrayOfItems-properties-items-properties-items" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="200-definitions-arrayOfItems-properties-items-properties-items">items（可选）：数组</a> <a href="#200-definitions-arrayOfItems-properties-items" class="btn btn-default btn-sm btn-xsm" role="button">项</a>
             
             <div class="collapse schema-summary" id="200-definitions-arrayOfItems-properties-items-properties-items">
                 
@@ -260,10 +249,10 @@
 
                     
                     <div id="200-definitions-arrayOfItems-properties-items" class="swagger-schema">
-    <div class="panel-heading">Nested Schema : items</div>
+    <div class="panel-heading">嵌套架构：项目</div>
     
       
-      <div class="schema-type">Type: <code>array</code></div>
+      <div class="schema-type">类型： <code>array</code></div>
     
 
     
@@ -317,12 +306,10 @@
     
 
     
-        <a href="#" role="button" data-toggle="schema-view" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm">Show Source</a>
+        <a href="#" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm" role="button" data-toggle="schema-view">显示来源</a>
         <ul class="schema-properties">
             
-            <li><a role="button" data-toggle="prop-collapse" href="#200-definitions-singleResource-items-0" aria-expanded="false" aria-controls="200-definitions-singleResource-items-0">
-            Array of: 
-                object </a> <a href="#200-definitions-singleResource" role="button" class="btn btn-default btn-sm btn-xsm">singleResource</a>
+            <li><a href="#200-definitions-singleResource-items-0" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="200-definitions-singleResource-items-0">数组：对象</a> <a href="#200-definitions-singleResource" class="btn btn-default btn-sm btn-xsm" role="button">singleResource</a>
             
             <div class="collapse schema-summary" id="200-definitions-singleResource-items-0">
                 
@@ -376,9 +363,9 @@
 
                     
                     <div id="200-definitions-singleResource" class="swagger-schema">
-    <div class="panel-heading">Nested Schema : singleResource</div>
+    <div class="panel-heading">嵌套架构：singleResource</div>
     
-      <div class="schema-type">Type: <code>object</code></div>
+      <div class="schema-type">输入： <code>object</code></div>
       
     
 
@@ -431,12 +418,10 @@
     
 
     
-        <a href="#" role="button" data-toggle="schema-view" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm">Show Source</a>
+        <a href="#" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm" role="button" data-toggle="schema-view">显示来源</a>
         <ul class="schema-properties">
             
-            <li><a role="button" data-toggle="prop-collapse" href="#200-definitions-singleResource-properties-links-properties-links" aria-expanded="false" aria-controls="200-definitions-singleResource-properties-links-properties-links">
-            links(optional): 
-            array </a> <a href="#200-definitions-singleResource-properties-links" role="button" class="btn btn-default btn-sm btn-xsm">links</a>
+            <li><a href="#200-definitions-singleResource-properties-links-properties-links" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="200-definitions-singleResource-properties-links-properties-links">links（可选）：数组</a> <a href="#200-definitions-singleResource-properties-links" class="btn btn-default btn-sm btn-xsm" role="button">链接</a>
             
             <div class="collapse schema-summary" id="200-definitions-singleResource-properties-links-properties-links">
                 
@@ -466,9 +451,7 @@
             </div>
             </li>
             
-            <li><a role="button" data-toggle="prop-collapse" href="#200-definitions-singleResource-properties-resourceId-properties-resourceId" aria-expanded="false" aria-controls="200-definitions-singleResource-properties-resourceId-properties-resourceId">
-            resourceId(optional): 
-            string</a>
+            <li><a href="#200-definitions-singleResource-properties-resourceId-properties-resourceId" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="200-definitions-singleResource-properties-resourceId-properties-resourceId">resourceId（可选）：字符串</a>
             <div class="collapse schema-summary" id="200-definitions-singleResource-properties-resourceId-properties-resourceId">
                 
                 
@@ -537,10 +520,10 @@
 
                     
                     <div id="200-definitions-singleResource-properties-links" class="swagger-schema">
-    <div class="panel-heading">Nested Schema : links</div>
+    <div class="panel-heading">嵌套架构：链接</div>
     
       
-      <div class="schema-type">Type: <code>array</code></div>
+      <div class="schema-type">类型： <code>array</code></div>
     
 
     
@@ -594,12 +577,10 @@
     
 
     
-        <a href="#" role="button" data-toggle="schema-view" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm">Show Source</a>
+        <a href="#" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm" role="button" data-toggle="schema-view">显示来源</a>
         <ul class="schema-properties">
             
-            <li><a role="button" data-toggle="prop-collapse" href="#200-definitions-singleResourceLinks-items-0" aria-expanded="false" aria-controls="200-definitions-singleResourceLinks-items-0">
-            Array of: 
-                object </a> <a href="#200-definitions-singleResourceLinks" role="button" class="btn btn-default btn-sm btn-xsm">singleResourceLinks</a>
+            <li><a href="#200-definitions-singleResourceLinks-items-0" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="200-definitions-singleResourceLinks-items-0">数组：对象</a> <a href="#200-definitions-singleResourceLinks" class="btn btn-default btn-sm btn-xsm" role="button">singleResourceLinks</a>
             
             <div class="collapse schema-summary" id="200-definitions-singleResourceLinks-items-0">
                 
@@ -653,9 +634,9 @@
 
                     
                     <div id="200-definitions-singleResourceLinks" class="swagger-schema">
-    <div class="panel-heading">Nested Schema : singleResourceLinks</div>
+    <div class="panel-heading">嵌套模式：singleResourceLinks</div>
     
-      <div class="schema-type">Type: <code>object</code></div>
+      <div class="schema-type">输入： <code>object</code></div>
       
     
 
@@ -708,12 +689,10 @@
     
 
     
-        <a href="#" role="button" data-toggle="schema-view" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm">Show Source</a>
+        <a href="#" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm" role="button" data-toggle="schema-view">显示来源</a>
         <ul class="schema-properties">
             
-            <li><a role="button" data-toggle="prop-collapse" href="#200-definitions-singleResourceLinks-properties-href-properties-href" aria-expanded="false" aria-controls="200-definitions-singleResourceLinks-properties-href-properties-href">
-            href(optional): 
-            string</a>
+            <li><a href="#200-definitions-singleResourceLinks-properties-href-properties-href" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="200-definitions-singleResourceLinks-properties-href-properties-href">href（可选）：字符串</a>
             <div class="collapse schema-summary" id="200-definitions-singleResourceLinks-properties-href-properties-href">
                 
                 
@@ -741,7 +720,7 @@
 
 
 
-<div>The referenced hyperlink element provided in an absolute format.</div>
+<div>引用的超链接元素以绝对格式提供。</div>
 
 
 
@@ -750,9 +729,7 @@
             </div>
             </li>
             
-            <li><a role="button" data-toggle="prop-collapse" href="#200-definitions-singleResourceLinks-properties-rel-properties-rel" aria-expanded="false" aria-controls="200-definitions-singleResourceLinks-properties-rel-properties-rel">
-            rel(optional): 
-            string</a>
+            <li><a href="#200-definitions-singleResourceLinks-properties-rel-properties-rel" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="200-definitions-singleResourceLinks-properties-rel-properties-rel">rel（可选）：字符串</a>
             <div class="collapse schema-summary" id="200-definitions-singleResourceLinks-properties-rel-properties-rel">
                 
                 
@@ -776,18 +753,13 @@
 
 
 
-<div>Allowed Values: <code>[
-    &quot;self&quot;,
-    &quot;collection&quot;,
-    &quot;up&quot;,
-    &quot;describedBy&quot;
-]</code></div>
+<div>允许值： <code>[ "self", "collection", "up", "describedBy" ]</code></div>
 
 
 
 
 
-<div>Specify the type of relationship the link has with the described resource.</div>
+<div>指定链接与描述的资源的关系类型。</div>
 
 
 
@@ -843,24 +815,24 @@
                 </div>
                 
                 <div class="response">
-                <h4 class="response-code range">Default Response</h4>
+                <h4 class="response-code range">默认响应</h4>
                 <div class="response-body">
-                <div>Unexpected error. A JSON object containing error details of the issue while executing the operation.</div>
+                <div>意外的错误。一个JSON对象，包含执行操作时问题的错误详细信息。</div>
 
                 
 
 
                 
                     <div class="entity">
-                    <div class="h5 hidden-print">Body (<span class="schema-path"></span>)</div>
+                    <div class="h5 hidden-print">身体 （ <span class="schema-path"></span> ）</div>
 
 
                     <div class="schema-container">
                     
                     <div id="default-definitions-errorResource" class="swagger-schema">
-    <div class="panel-heading">Root Schema : errorResource</div>
+    <div class="panel-heading">Root Schema：errorResource</div>
     
-      <div class="schema-type">Type: <code>object</code></div>
+      <div class="schema-type">输入： <code>object</code></div>
       
     
 
@@ -913,12 +885,10 @@
     
 
     
-        <a href="#" role="button" data-toggle="schema-view" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm">Show Source</a>
+        <a href="#" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm" role="button" data-toggle="schema-view">显示来源</a>
         <ul class="schema-properties">
             
-            <li><a role="button" data-toggle="prop-collapse" href="#default-definitions-errorResource-properties-errorCode-properties-errorCode" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-errorCode-properties-errorCode">
-            errorCode(optional): 
-            string</a>
+            <li><a href="#default-definitions-errorResource-properties-errorCode-properties-errorCode" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-errorCode-properties-errorCode">errorCode（可选）：字符串</a>
             <div class="collapse schema-summary" id="default-definitions-errorResource-properties-errorCode-properties-errorCode">
                 
                 
@@ -946,7 +916,7 @@
 
 
 
-<div>Application specific error code, related to the error message shown at tittle.</div>
+<div>特定于应用程序的错误代码，与tittle中显示的错误消息有关。</div>
 
 
 
@@ -955,9 +925,7 @@
             </div>
             </li>
             
-            <li><a role="button" data-toggle="prop-collapse" href="#default-definitions-errorResource-properties-errorDetails-properties-errorDetails" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-errorDetails-properties-errorDetails">
-            errorDetails(optional): 
-            array </a> <a href="#default-definitions-errorResource-properties-errorDetails" role="button" class="btn btn-default btn-sm btn-xsm">errorDetails</a>
+            <li><a href="#default-definitions-errorResource-properties-errorDetails-properties-errorDetails" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-errorDetails-properties-errorDetails">errorDetails（可选）：array</a> <a href="#default-definitions-errorResource-properties-errorDetails" class="btn btn-default btn-sm btn-xsm" role="button">errorDetails</a>
             
             <div class="collapse schema-summary" id="default-definitions-errorResource-properties-errorDetails-properties-errorDetails">
                 
@@ -982,16 +950,14 @@
 
 
 
-<div class="description">If multiple errors are reported they can be organized in a hierarchical structure in this array.</div>
+<div class="description">如果报告了多个错误，则可以在此阵列中以分层结构组织它们。</div>
 
 
                 
             </div>
             </li>
             
-            <li><a role="button" data-toggle="prop-collapse" href="#default-definitions-errorResource-properties-errorPath-properties-errorPath" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-errorPath-properties-errorPath">
-            errorPath(optional): 
-            string</a>
+            <li><a href="#default-definitions-errorResource-properties-errorPath-properties-errorPath" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-errorPath-properties-errorPath">errorPath（可选）：string</a>
             <div class="collapse schema-summary" id="default-definitions-errorResource-properties-errorPath-properties-errorPath">
                 
                 
@@ -1019,7 +985,7 @@
 
 
 
-<div>XPath or JSON path to indicate where the error occurs.</div>
+<div>用于指示错误发生位置的XPath或JSON路径。</div>
 
 
 
@@ -1028,9 +994,7 @@
             </div>
             </li>
             
-            <li><a role="button" data-toggle="prop-collapse" href="#default-definitions-errorResource-properties-instance-properties-instance" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-instance-properties-instance">
-            instance(optional): 
-            string</a>
+            <li><a href="#default-definitions-errorResource-properties-instance-properties-instance" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-instance-properties-instance">instance（可选）：string</a>
             <div class="collapse schema-summary" id="default-definitions-errorResource-properties-instance-properties-instance">
                 
                 
@@ -1058,7 +1022,7 @@
 
 
 
-<div>URI to the link that provides more detail about the error.</div>
+<div>链接的URI，提供有关错误的更多详细信息。</div>
 
 
 
@@ -1067,9 +1031,7 @@
             </div>
             </li>
             
-            <li><a role="button" data-toggle="prop-collapse" href="#default-definitions-errorResource-properties-status-properties-status" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-status-properties-status">
-            status(optional): 
-            integer</a>
+            <li><a href="#default-definitions-errorResource-properties-status-properties-status" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-status-properties-status">status（可选）：整数</a>
             <div class="collapse schema-summary" id="default-definitions-errorResource-properties-status-properties-status">
                 
                 
@@ -1097,7 +1059,7 @@
 
 
 
-<div>HTTP status code.</div>
+<div>HTTP状态代码。</div>
 
 
 
@@ -1106,9 +1068,7 @@
             </div>
             </li>
             
-            <li><a role="button" data-toggle="prop-collapse" href="#default-definitions-errorResource-properties-title-properties-title" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-title-properties-title">
-            title(optional): 
-            string</a>
+            <li><a href="#default-definitions-errorResource-properties-title-properties-title" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-title-properties-title">title（可选）：string</a>
             <div class="collapse schema-summary" id="default-definitions-errorResource-properties-title-properties-title">
                 
                 
@@ -1136,7 +1096,7 @@
 
 
 
-<div>Summary error message.</div>
+<div>摘要错误消息。</div>
 
 
 
@@ -1145,9 +1105,7 @@
             </div>
             </li>
             
-            <li><a role="button" data-toggle="prop-collapse" href="#default-definitions-errorResource-properties-type-properties-type" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-type-properties-type">
-            type(optional): 
-            string</a>
+            <li><a href="#default-definitions-errorResource-properties-type-properties-type" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="default-definitions-errorResource-properties-type-properties-type">type（可选）：string</a>
             <div class="collapse schema-summary" id="default-definitions-errorResource-properties-type-properties-type">
                 
                 
@@ -1175,7 +1133,7 @@
 
 
 
-<div>Link to HTTP error code page.</div>
+<div>链接到HTTP错误代码页。</div>
 
 
 
@@ -1242,10 +1200,10 @@
 
                     
                     <div id="default-definitions-errorResource-properties-errorDetails" class="swagger-schema">
-    <div class="panel-heading">Nested Schema : errorDetails</div>
+    <div class="panel-heading">嵌套架构：errorDetails</div>
     
       
-      <div class="schema-type">Type: <code>array</code></div>
+      <div class="schema-type">类型： <code>array</code></div>
     
 
     
@@ -1291,7 +1249,7 @@
     
 
     
-    <div>If multiple errors are reported they can be organized in a hierarchical structure in this array.</div>
+    <div>如果报告了多个错误，则可以在此阵列中以分层结构组织它们。</div>
     
 
     
@@ -1301,12 +1259,10 @@
     
 
     
-        <a href="#" role="button" data-toggle="schema-view" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm">Show Source</a>
+        <a href="#" class="toggle-schema pull-right btn btn-default btn-sm btn-xsm" role="button" data-toggle="schema-view">显示来源</a>
         <ul class="schema-properties">
             
-            <li><a role="button" data-toggle="prop-collapse" href="#default-definitions-errorResource-items-0" aria-expanded="false" aria-controls="default-definitions-errorResource-items-0">
-            Array of: 
-                object </a> <a href="#default-definitions-errorResource" role="button" class="btn btn-default btn-sm btn-xsm">errorResource</a>
+            <li><a href="#default-definitions-errorResource-items-0" role="button" data-toggle="prop-collapse" aria-expanded="false" aria-controls="default-definitions-errorResource-items-0">数组：对象</a> <a href="#default-definitions-errorResource" class="btn btn-default btn-sm btn-xsm" role="button">errorResource</a>
             
             <div class="collapse schema-summary" id="default-definitions-errorResource-items-0">
                 
@@ -1371,7 +1327,7 @@
                 </div>
                 
 
-				<a style="float: right" href="#top">Back to Top</a>
+				<a href="#top" style="float:right">回到顶部</a>
 				
                 
 

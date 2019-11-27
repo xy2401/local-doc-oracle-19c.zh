@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Review this information for IP name and address requirements for Grid Naming Service (GNS).">
       <meta name="description" content="Review this information for IP name and address requirements for Grid Naming Service (GNS).">
-      <title>IP Name and Address Requirements For Grid Naming Service (GNS)</title>
+      <title>网格命名服务（GNS）的IP名称和地址要求</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Grid Infrastructure Installation and Upgrade Guide">
       <meta property="og:description" content="Review this information for IP name and address requirements for Grid Naming Service (GNS).">
@@ -47,38 +45,34 @@
     <meta name="dcterms.isVersionOf" content="CWSOL">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="cluster-name-and-scan-requirements.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="ip-name-and-address-requirements-for-multi-cluster-gns.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="cluster-name-and-scan-requirements.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="ip-name-and-address-requirements-for-multi-cluster-gns.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure Installation and Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="configuring-networks-for-oracle-grid-infrastructure-and-oracle-rac.html" property="item" typeof="WebPage"><span property="name">Configuring Networks for Oracle Grid Infrastructure and Oracle RAC</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="oracle-grid-infrastructure-ip-name-and-address-requirements.html" property="item" typeof="WebPage"><span property="name">Oracle Grid Infrastructure IP Name and Address Requirements</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">IP Name and Address Requirements For Grid Naming Service (GNS)</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure安装和升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="configuring-networks-for-oracle-grid-infrastructure-and-oracle-rac.html" property="item" typeof="WebPage"><span property="name">为Oracle Grid Infrastructure和Oracle RAC配置网络</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="oracle-grid-infrastructure-ip-name-and-address-requirements.html" property="item" typeof="WebPage"><span property="name">Oracle Grid Infrastructure IP名称和地址要求</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">网格命名服务（GNS）的IP名称和地址要求</li>
             </ol>
             <a id="GUID-B3769D0B-E0AB-4AF8-B1C5-AFC6DF93F3B0" name="GUID-B3769D0B-E0AB-4AF8-B1C5-AFC6DF93F3B0"></a>
             
-            <h2 id="CWSOL-GUID-B3769D0B-E0AB-4AF8-B1C5-AFC6DF93F3B0" class="sect2">IP Name and Address Requirements For Grid Naming Service (GNS)</h2>
+            <h2 id="CWSOL-GUID-B3769D0B-E0AB-4AF8-B1C5-AFC6DF93F3B0" class="sect2">网格命名服务（GNS）的IP名称和地址要求</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Review this information for IP name and address requirements for Grid Naming Service (GNS).</p>
+               <p>查看此信息，了解网格命名服务（GNS）的IP名称和地址要求。</p>
                <div class="section">
-                  <p class="subhead1" id="GUID-B3769D0B-E0AB-4AF8-B1C5-AFC6DF93F3B0__GUID-AD237152-1090-409A-8F05-C69A3BD9CA5D">IP Name and Address Requirements For Grid Naming Service (GNS)</p>
-                  <p>If you enable Grid Naming Service (GNS), then name resolution requests to the cluster are delegated to the GNS, which is listening on the GNS virtual IP address. The domain name server (DNS) must be configured to delegate resolution requests for cluster names (any names in the subdomain delegated to the cluster) to the GNS. When a request comes to the domain, GNS processes the requests and responds with the appropriate addresses for the name requested. To use GNS, you must specify a static IP address for the GNS VIP address.</p>
+                  <p class="subhead1" id="GUID-B3769D0B-E0AB-4AF8-B1C5-AFC6DF93F3B0__GUID-AD237152-1090-409A-8F05-C69A3BD9CA5D">网格命名服务（GNS）的IP名称和地址要求</p>
+                  <p>如果启用网格命名服务（GNS），则会将对群集的名称解析请求委派给正在侦听GNS虚拟IP地址的GNS。必须将域名服务器（DNS）配置为将对群集名称（委派给群集的子域中的任何名称）的解析请求委派给GNS。当请求到达域时，GNS处理请求并使用所请求名称的适当地址进行响应。要使用GNS，您必须为GNS VIP地址指定静态IP地址。</p>
                </div>
                <!-- class="section" -->
             </div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="oracle-grid-infrastructure-ip-name-and-address-requirements.html#GUID-B2067229-E8F6-49E0-97D4-C9482479BB65" title="Review this information for Oracle Grid Infrastructure IP Name and Address requirements.">Oracle Grid Infrastructure IP Name and Address Requirements</a></p>
+                     <p><strong>父主题：</strong> <a href="oracle-grid-infrastructure-ip-name-and-address-requirements.html#GUID-B2067229-E8F6-49E0-97D4-C9482479BB65" title="查看有关Oracle Grid Infrastructure IP名称和地址要求的此信息。">Oracle Grid Infrastructure IP名称和地址要求</a></p>
                   </div>
                </div>
             </div>

@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Examples illustrate how to configure the Oracle Database components that are used by XStream. The examples configure sample client applications that communicate with an XStream outbound server and inbound server.">
       <meta name="description" content="Examples illustrate how to configure the Oracle Database components that are used by XStream. The examples configure sample client applications that communicate with an XStream outbound server and inbound server.">
-      <title>Sample XStream Client Application</title>
+      <title>示例XStream客户端应用程序</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="XStream Guide ">
       <meta property="og:description" content="Examples illustrate how to configure the Oracle Database components that are used by XStream. The examples configure sample client applications that communicate with an XStream outbound server and inbound server.">
@@ -47,193 +45,186 @@
     <meta name="dcterms.isVersionOf" content="XSTRM">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="appendixes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="xstream-out-restrictions.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="appendixes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="xstream-out-restrictions.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">XStream Guide </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="appendixes.html" property="item" typeof="WebPage"><span property="name">Appendixes </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Sample XStream Client Application</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">XStream指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="appendixes.html" property="item" typeof="WebPage"><span property="name">附录</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">示例XStream客户端应用程序</li>
             </ol>
             <a id="GUID-B914FF75-92AA-4270-BF71-E9A5AA9228F8" name="GUID-B914FF75-92AA-4270-BF71-E9A5AA9228F8"></a>
             
-            <h2 id="XSTRM-GUID-B914FF75-92AA-4270-BF71-E9A5AA9228F8" class="sect2"><span class="enumeration_chapter">A </span>Sample XStream Client Application
-            </h2>
+            <h2 id="XSTRM-GUID-B914FF75-92AA-4270-BF71-E9A5AA9228F8" class="sect2"><span class="enumeration_chapter">A</span>样品XStream的客户端应用程序</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Examples illustrate how to configure the Oracle Database components that are used by XStream. The examples configure sample client applications that communicate with an XStream outbound server and inbound server.</p>
+               <p>示例说明如何配置XStream使用的Oracle数据库组件。这些示例配置与XStream出站服务器和入站服务器通信的示例客户端应用程序。</p>
             </div>
             <div>
                <ul class="ullinks">
-                  <li class="ulchildlink"><a href="sample-xstream-client-application.html#GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94">About the Sample XStream Client Application</a><br>A sample XStream client application illustrates the basic tasks that are required of an XStream Out and XStream In application.
+                  <li class="ulchildlink"><a href="sample-xstream-client-application.html#GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94">关于Sample XStream客户端应用程序</a><br>示例XStream客户端应用程序说明了XStream Out和XStream In应用程序所需的基本任务。
                   </li>
-                  <li class="ulchildlink"><a href="sample-xstream-client-application.html#GUID-E54E3782-5710-4889-B206-77CCB5BE0EB4">Sample XStream Client Application for the Oracle Call Interface API</a><br>To run the sample XStream client application for the OCI API, compile and link the application file.
+                  <li class="ulchildlink"><a href="sample-xstream-client-application.html#GUID-E54E3782-5710-4889-B206-77CCB5BE0EB4">Oracle Call Interface API的示例XStream客户端应用程序</a><br>要为OCI API运行示例XStream客户端应用程序，请编译并链接应用程序文件。
                   </li>
-                  <li class="ulchildlink"><a href="sample-xstream-client-application.html#GUID-952CEB45-9E0D-49AE-853A-912524B49853">Sample XStream Client Application for the Java API</a><br>To run the sample XStream client application for the Java API, compile and link the application file.
+                  <li class="ulchildlink"><a href="sample-xstream-client-application.html#GUID-952CEB45-9E0D-49AE-853A-912524B49853">Java API的示例XStream客户端应用程序</a><br>要为Java API运行示例XStream客户端应用程序，请编译并链接应用程序文件。
                   </li>
                </ul>
                <div class="infoboxnotealso" id="GUID-B914FF75-92AA-4270-BF71-E9A5AA9228F8__GUID-23B0AF79-7AA7-43A2-8A86-14BDFBF48D7E">
-                  <p class="notep1">See Also:</p>
-                  <ul style="list-style-type: disc;">
+                  <p class="notep1">也可以看看：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><span class="q">"<a href="xstream-out-concepts.html#GUID-B59B1F79-91F6-4495-B946-5DCEB317E0D6" title="Become familiar with concepts related to XStream Out.">XStream Out Concepts</a>"</span></p>
+                        <p><span class="q">“ <a href="xstream-out-concepts.html#GUID-B59B1F79-91F6-4495-B946-5DCEB317E0D6" title="熟悉与XStream Out相关的概念。">XStream Out Concepts</a> ”</span></p>
                      </li>
                      <li>
-                        <p><span class="q">"<a href="introduction-to-xstream.html#GUID-21FC23DF-2881-4CFD-AF74-9A1173D768FF" title="There are several common XStream use cases.">XStream Use Cases</a>"</span></p>
+                        <p><span class="q">“ <a href="introduction-to-xstream.html#GUID-21FC23DF-2881-4CFD-AF74-9A1173D768FF" title="有几种常见的XStream用例。">XStream用例</a> ”</span></p>
                      </li>
                      <li>
-                        <p><a href="../lnoci/intro-to-oci-interface-for-XStream.html#LNOCI72903" target="_blank"><span><cite>Oracle Call Interface Programmer's Guide</cite></span></a></p>
+                        <p><a href="../lnoci/intro-to-oci-interface-for-XStream.html#LNOCI72903" target="_blank"><span><cite>Oracle调用接口程序员指南</cite></span></a></p>
                      </li>
                      <li>
-                        <p><a href="../stxjv/index.html" target="_blank"><span><cite>Oracle Database XStream Java API Reference</cite></span></a></p>
+                        <p><a href="../stxjv/index.html" target="_blank"><span><cite>Oracle数据库XStream Java API参考</cite></span></a></p>
                      </li>
                   </ul>
                </div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="appendixes.html#GUID-08D451B5-2D76-447B-B39B-20CC73110D19" title="Appendixes include information about XStream client applications and XStream restrictions.">Appendixes</a></p>
+                     <p><strong>父主题：</strong> <a href="appendixes.html#GUID-08D451B5-2D76-447B-B39B-20CC73110D19" title="附录包括有关XStream客户端应用程序和XStream限制的信息。">附录</a></p>
                   </div>
                </div>
             </div>
-            <a id="XSTRM1640"></a><a id="XSTRM1568"></a><a id="XSTRM72732"></a><div class="props_rev_3"><a id="GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94" name="GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94"></a><h3 id="XSTRM-GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94" class="sect3"><span class="enumeration_section">A.1 </span>About the Sample XStream Client Application
-               </h3>
+            <a id="XSTRM1640"></a><a id="XSTRM1568"></a><a id="XSTRM72732"></a><div class="props_rev_3"><a id="GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94" name="GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94"></a><h3 id="XSTRM-GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94" class="sect3"><span class="enumeration_section">A.1</span>关于示例XStream客户端应用程序</h3>
                <div>
-                  <p>A sample XStream client application illustrates the basic tasks that are required of an XStream Out and XStream In application.</p>
-                  <p>The application performs the following tasks:</p>
-                  <ul style="list-style-type: disc;">
+                  <p>示例XStream客户端应用程序说明了XStream Out和XStream In应用程序所需的基本任务。</p>
+                  <p>该应用程序执行以下任务：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p>It attaches to an XStream outbound server and inbound server and waits for LCRs from the outbound server. The outbound server and inbound server are in two different databases.</p>
+                        <p>它附加到XStream出站服务器和入站服务器，并等待来自出站服务器的LCR。出站服务器和入站服务器位于两个不同的数据库中。</p>
                      </li>
                      <li>
-                        <p>When it receives an LCR from the outbound server, it immediately sends the LCR to the inbound server.</p>
+                        <p>当它从出站服务器收到LCR时，它会立即将LCR发送到入站服务器。</p>
                      </li>
                      <li>
-                        <p>It periodically gets the processed low position from the inbound server and sends this value to the outbound server.</p>
+                        <p>它定期从入站服务器获取已处理的低位置，并将此值发送到出站服务器。</p>
                      </li>
                      <li>
-                        <p>It periodically sends a "ping" LCR from the outbound server to the inbound server to move the inbound server's processed low position forward in times of low activity.</p>
+                        <p>它定期从出站服务器向入站服务器发送“ping”LCR，以便在活动较少时将入站服务器处理的低位置向前移动。</p>
                      </li>
                   </ul>
-                  <p>In an XStream Out configuration that does not send LCRs to an inbound server, the client application must obtain the processed low position in another way.</p>
-                  <p>This application waits indefinitely for transactions from the outbound server. To interrupt the application, enter the interrupt command for your operating system. For example, the interrupt command on some operating systems is <code class="codeph">control-C</code>. If the program is restarted, then the outbound server starts sending LCRs from the processed low position that was set during the previous run.
+                  <p>在不将LCR发送到入站服务器的XStream Out配置中，客户端应用程序必须以另一种方式获取已处理的低位置。</p>
+                  <p>此应用程序无限期地等待来自出站服务器的事务。要中断应用程序，请输入操作系统的中断命令。例如，某些操作系统上的中断命令是<code class="codeph">control-C</code> 。如果程序重新启动，则出站服务器开始从上一次运行期间设置的已处理低位发送LCR。
                   </p>
-                  <p><a href="sample-xstream-client-application.html#GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94__CBDIHADI">Figure A-1</a> provides an overview of the XStream environment configured in this section.
+                  <p><a href="sample-xstream-client-application.html#GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94__CBDIHADI">图A-1</a>提供了本节中配置的XStream环境的概述。
                   </p>
                   <div class="figure" id="GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94__CBDIHADI">
-                     <p class="titleinfigure">Figure A-1 Sample XStream Configuration</p><img src="img/xstrm508.gif" width="600" alt="Description of Figure A-1 follows" title="Description of Figure A-1 follows" longdesc="img_text/xstrm508.html"><br><a href="img_text/xstrm508.html">Description of "Figure A-1 Sample XStream Configuration"</a></div>
+                     <p class="titleinfigure">图A-1 XStream配置示例</p><img src="img/xstrm508.gif" width="600" alt="下面是图A-1的描述" title="下面是图A-1的描述" longdesc="img_text/xstrm508.html"><br><a href="img_text/xstrm508.html">“图A-1 XStream配置示例”的说明</a></div>
                   <!-- class="figure" -->
-                  <p>Before running the sample application, ensure that the following components exist:</p>
-                  <ul style="list-style-type: disc;">
+                  <p>在运行示例应用程序之前，请确保存在以下组件：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p>Two Oracle databases with network connectivity between them</p>
+                        <p>两个Oracle数据库，它们之间具有网络连接</p>
                      </li>
                      <li>
-                        <p>An XStream administrator on both databases</p>
+                        <p>两个数据库上的XStream管理员</p>
                      </li>
                      <li>
-                        <p>An outbound server configuration on one database, including a capture process, queue, and outbound server</p>
+                        <p>一个数据库上的出站服务器配置，包括捕获进程，队列和出站服务器</p>
                      </li>
                      <li>
-                        <p>An inbound server configuration on another database</p>
-                     </li>
-                  </ul>
-                  <p>If you are running the sample application with a multitenant container database (CDB), then ensure that the client application connects to the correct container:</p>
-                  <ul style="list-style-type: disc;">
-                     <li>
-                        <p>When the client application connects to the outbound server, it must connect to the root.</p>
-                     </li>
-                     <li>
-                        <p>When the client application connects to the inbound server, it must connect to the container in which the inbound server was created.</p>
+                        <p>另一个数据库上的入站服务器配置</p>
                      </li>
                   </ul>
-                  <p>The sample applications in the following sections perform the same tasks. One sample application uses the OCI API, and the other uses the Java API.</p>
-                  <ul style="list-style-type: disc;">
+                  <p>如果您使用多租户容器数据库（CDB）运行示例应用程序，请确保客户端应用程序连接到正确的容器：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><a href="sample-xstream-client-application.html#GUID-E54E3782-5710-4889-B206-77CCB5BE0EB4" title="To run the sample XStream client application for the OCI API, compile and link the application file.">Sample XStream Client Application for the Oracle Call Interface API</a></p>
+                        <p>当客户端应用程序连接到出站服务器时，它必须连接到根。</p>
                      </li>
                      <li>
-                        <p><a href="sample-xstream-client-application.html#GUID-952CEB45-9E0D-49AE-853A-912524B49853" title="To run the sample XStream client application for the Java API, compile and link the application file.">Sample XStream Client Application for the Java API</a></p>
+                        <p>当客户端应用程序连接到入站服务器时，它必须连接到创建入站服务器的容器。</p>
+                     </li>
+                  </ul>
+                  <p>以下部分中的示例应用程序执行相同的任务。一个示例应用程序使用OCI API，另一个使用Java API。</p>
+                  <ul style="list-style-type:disc">
+                     <li>
+                        <p><a href="sample-xstream-client-application.html#GUID-E54E3782-5710-4889-B206-77CCB5BE0EB4" title="要为OCI API运行示例XStream客户端应用程序，请编译并链接应用程序文件。">Oracle Call Interface API的示例XStream客户端应用程序</a></p>
+                     </li>
+                     <li>
+                        <p><a href="sample-xstream-client-application.html#GUID-952CEB45-9E0D-49AE-853A-912524B49853" title="要为Java API运行示例XStream客户端应用程序，请编译并链接应用程序文件。">Java API的示例XStream客户端应用程序</a></p>
                      </li>
                   </ul>
                   <div class="infoboxnote" id="GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94__GUID-4231CE64-849C-4E9B-BDE1-268608E66A2E">
-                     <p class="notep1">Note:</p>
-                     <p>An Oracle Database installation includes several XStream demos. These demos are in the following location:</p><pre class="oac_no_warn" dir="ltr">$ORACLE_HOME/rdbms/demo/xstream
+                     <p class="notep1">注意：</p>
+                     <p>Oracle数据库安装包括几个XStream演示。这些演示位于以下位置：</p><pre class="oac_no_warn" dir="ltr">$ORACLE_HOME/rdbms/demo/xstream
 </pre></div>
                </div>
                <div>
                   <div class="infoboxnotealso" id="GUID-0C0C8EC2-3730-4294-B8D8-D865DF5CAC94__GUID-EA6145CF-AA41-47AE-BB6E-900BE0424BA2">
-                     <p class="notep1">See Also:</p>
-                     <ul style="list-style-type: disc;">
+                     <p class="notep1">也可以看看：</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p><span class="q">"<a href="general-xstream-concepts.html#GUID-077AAE24-54CF-4102-9969-9540608FFB65" title="Each LCR has a position attribute. The position of an LCR identifies its placement in the stream of LCRs in a transaction.">Position Order in an LCR Stream</a>"</span></p>
+                           <p><span class="q">“ <a href="general-xstream-concepts.html#GUID-077AAE24-54CF-4102-9969-9540608FFB65" title="每个LCR都有一个位置属性。LCR的位置标识其在交易中的LCR流中的位置。">在LCR流中定位订单</a> ”</span></p>
                         </li>
                         <li>
-                           <p><span class="q">"<a href="configuring-xstream-out.html#GUID-1338E648-E214-4666-98A1-8B8D0085EB23" title="You can configure the Oracle Database components that are used by XStream Out.">Configuring XStream Out</a>"</span></p>
+                           <p><span class="q">“ <a href="configuring-xstream-out.html#GUID-1338E648-E214-4666-98A1-8B8D0085EB23" title="您可以配置XStream Out使用的Oracle数据库组件。">配置XStream Out</a> ”</span></p>
                         </li>
                         <li>
-                           <p><span class="q">"<a href="configuring-xstream-in.html#GUID-B0F20D2D-7F63-4CE6-B15F-435B5A3DFBED" title="You can configure the Oracle Database components that are used by XStream.">Configuring XStream In</a>"</span></p>
+                           <p><span class="q">“ <a href="configuring-xstream-in.html#GUID-B0F20D2D-7F63-4CE6-B15F-435B5A3DFBED" title="您可以配置XStream使用的Oracle数据库组件。">配置XStream</a> ”</span></p>
                         </li>
                         <li>
-                           <p><a href="../arpls/DBMS_XSTREAM_AUTH.html#ARPLS73653" target="_blank"><span><cite>Oracle Database PL/SQL Packages and Types Reference</cite></span></a></p>
+                           <p><a href="../arpls/DBMS_XSTREAM_AUTH.html#ARPLS73653" target="_blank"><span><cite>Oracle数据库PL / SQL包和类型参考</cite></span></a></p>
                         </li>
                      </ul>
                   </div>
                   <div class="familylinks">
                      <div class="parentlink">
-                        <p><strong>Parent topic:</strong> <a href="sample-xstream-client-application.html#GUID-B914FF75-92AA-4270-BF71-E9A5AA9228F8" title="Examples illustrate how to configure the Oracle Database components that are used by XStream. The examples configure sample client applications that communicate with an XStream outbound server and inbound server.">Sample XStream Client Application</a></p>
+                        <p><strong>父主题：</strong> <a href="sample-xstream-client-application.html#GUID-B914FF75-92AA-4270-BF71-E9A5AA9228F8" title="示例说明如何配置XStream使用的Oracle数据库组件。这些示例配置与XStream出站服务器和入站服务器通信的示例客户端应用程序。">示例XStream客户端应用程序</a></p>
                      </div>
                   </div>
                </div>
                
-            </div><a id="XSTRM1569"></a><div class="props_rev_3"><a id="GUID-E54E3782-5710-4889-B206-77CCB5BE0EB4" name="GUID-E54E3782-5710-4889-B206-77CCB5BE0EB4"></a><h3 id="XSTRM-GUID-E54E3782-5710-4889-B206-77CCB5BE0EB4" class="sect3"><span class="enumeration_section">A.2 </span>Sample XStream Client Application for the Oracle Call Interface API
-               </h3>
+            </div><a id="XSTRM1569"></a><div class="props_rev_3"><a id="GUID-E54E3782-5710-4889-B206-77CCB5BE0EB4" name="GUID-E54E3782-5710-4889-B206-77CCB5BE0EB4"></a><h3 id="XSTRM-GUID-E54E3782-5710-4889-B206-77CCB5BE0EB4" class="sect3"><span class="enumeration_section">A.2</span> Oracle Call Interface API的示例XStream客户端应用程序</h3>
                <div>
-                  <p>To run the sample XStream client application for the OCI API, compile and link the application file.</p>
-                  <p>Next, enter the following on a command line:</p><pre class="oac_no_warn" dir="ltr">xio -ob_svr <span class="italic">xout_name</span> -ob_db <span class="italic">sn_xout_db</span> -ob_usr <span class="italic">xout_cu</span> -ob_pwd <span class="italic">xout_cu_pass</span> 
+                  <p>要为OCI API运行示例XStream客户端应用程序，请编译并链接应用程序文件。</p>
+                  <p>接下来，在命令行中输入以下内容：</p><pre class="oac_no_warn" dir="ltr">xio -ob_svr <span class="italic">xout_name</span> -ob_db <span class="italic">sn_xout_db</span> -ob_usr <span class="italic">xout_cu</span> -ob_pwd <span class="italic">xout_cu_pass</span> 
 -ib_svr <span class="italic">xin_name</span> -ib_db <span class="italic">sn_xin_db</span> -ib_usr <span class="italic">xin_au</span> -ib_pwd <span class="italic">xin_au_pass</span>
-</pre><p>Substitute the appropriate values for the following placeholders:</p>
-                  <ul style="list-style-type: disc;">
+</pre><p>替换以下占位符的适当值：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><span class="italic">xout_name</span> is the name of the outbound server.
+                        <p><span class="italic">xout_name</span>是出站服务器的名称。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">sn_xout_db</span> is the service name for the outbound server's database.
+                        <p><span class="italic">sn_xout_db</span>是出站服务器数据库的服务名称。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xout_cu</span> is the outbound server's connect user.
+                        <p><span class="italic">xout_cu</span>是出站服务器的连接用户。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xout_cu_pass</span> is the password for the outbound server's connect user.
+                        <p><span class="italic">xout_cu_pass</span>是出站服务器的连接用户的密码。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xin_name</span> is the name of the inbound server.
+                        <p><span class="italic">xin_name</span>是入站服务器的名称。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">sn_xin_db</span> is the service name for the inbound server's database.
+                        <p><span class="italic">sn_xin_db</span>是入站服务器数据库的服务名称。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xin_au</span> is the inbound server's apply user.
+                        <p><span class="italic">xin_au</span>是入站服务器的应用用户。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xin_au_pass</span> is the password for the inbound server's apply user.
+                        <p><span class="italic">xin_au_pass</span>是入站服务器的应用用户的密码。
                         </p>
                      </li>
                   </ul>
-                  <p>When the sample client application is running, it prints information about the row LCRs it is processing. The output looks similar to the following:</p><pre class="oac_no_warn" dir="ltr"> ----------- ROW LCR Header  -----------------
+                  <p>示例客户端应用程序运行时，它会打印有关正在处理的行LCR的信息。输出类似于以下内容：</p><pre class="oac_no_warn" dir="ltr"> ----------- ROW LCR Header  -----------------
   src_db_name=DB.EXAMPLE.COM
   cmd_type=UPDATE txid=17.0.74
   owner=HR oname=COUNTRIES 
@@ -251,33 +242,31 @@
   src_db_name=DB.EXAMPLE.COM
   cmd_type=UPDATE txid=12.25.77
   owner=OE oname=ORDERS 
-</pre><p>This output contains the following information for each row LCR:</p>
-                  <ul style="list-style-type: disc;">
+</pre><p>此输出包含每行LCR的以下信息：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><code class="codeph">src_db_name</code> shows the source database for the change encapsulated in the row LCR.
+                        <p><code class="codeph">src_db_name</code>显示封装在行LCR中的更改的源数据库。</p>
+                     </li>
+                     <li>
+                        <p><code class="codeph">cmd_type</code>显示进行更改的SQL语句的类型。
                         </p>
                      </li>
                      <li>
-                        <p><code class="codeph">cmd_type</code> shows the type of SQL statement that made the change.
+                        <p><code class="codeph">txid</code>显示包含行LCR的事务的事务ID。</p>
+                     </li>
+                     <li>
+                        <p><code class="codeph">owner</code>显示已更改的数据库对象的所有者。
                         </p>
                      </li>
                      <li>
-                        <p><code class="codeph">txid</code> shows the transaction ID of the transaction that includes the row LCR.
-                        </p>
-                     </li>
-                     <li>
-                        <p><code class="codeph">owner</code> shows the owner of the database object that was changed.
-                        </p>
-                     </li>
-                     <li>
-                        <p><code class="codeph">oname</code> shows the name of the database object that was changed.
+                        <p><code class="codeph">oname</code>显示已更改的数据库对象的名称。
                         </p>
                      </li>
                   </ul>
-                  <p>This demo is available in the following location:</p><pre class="oac_no_warn" dir="ltr">$ORACLE_HOME/rdbms/demo/xstream/oci
-</pre><p>The file name for the demo is <code class="codeph">xio.c</code>. See the <code class="codeph">README.txt</code> file in the demo directory for more information about compiling and running the application.
+                  <p>此演示位于以下位置：</p><pre class="oac_no_warn" dir="ltr">$ORACLE_HOME/rdbms/demo/xstream/oci
+</pre><p>演示的文件名是<code class="codeph">xio.c</code>有关编译和运行应用程序的更多信息，请参阅演示目录中的<code class="codeph">README.txt</code>文件。
                   </p>
-                  <p>The code for the sample application that uses the OCI API follows:</p><pre class="oac_no_warn" dir="ltr">#ifndef OCI_ORACLE
+                  <p>使用OCI API的示例应用程序的代码如下：</p><pre class="oac_no_warn" dir="ltr">#ifndef OCI_ORACLE
 #include &lt;oci.h&gt;
 #endif
  
@@ -1045,70 +1034,69 @@ static void get_inputs(conn_info_t *xout_params, conn_info_t *xin_params,
                <div>
                   <div class="familylinks">
                      <div class="parentlink">
-                        <p><strong>Parent topic:</strong> <a href="sample-xstream-client-application.html#GUID-B914FF75-92AA-4270-BF71-E9A5AA9228F8" title="Examples illustrate how to configure the Oracle Database components that are used by XStream. The examples configure sample client applications that communicate with an XStream outbound server and inbound server.">Sample XStream Client Application</a></p>
+                        <p><strong>父主题：</strong> <a href="sample-xstream-client-application.html#GUID-B914FF75-92AA-4270-BF71-E9A5AA9228F8" title="示例说明如何配置XStream使用的Oracle数据库组件。这些示例配置与XStream出站服务器和入站服务器通信的示例客户端应用程序。">示例XStream客户端应用程序</a></p>
                      </div>
                   </div>
                </div>
                
-            </div><a id="XSTRM1570"></a><div class="props_rev_3"><a id="GUID-952CEB45-9E0D-49AE-853A-912524B49853" name="GUID-952CEB45-9E0D-49AE-853A-912524B49853"></a><h3 id="XSTRM-GUID-952CEB45-9E0D-49AE-853A-912524B49853" class="sect3"><span class="enumeration_section">A.3 </span>Sample XStream Client Application for the Java API
-               </h3>
+            </div><a id="XSTRM1570"></a><div class="props_rev_3"><a id="GUID-952CEB45-9E0D-49AE-853A-912524B49853" name="GUID-952CEB45-9E0D-49AE-853A-912524B49853"></a><h3 id="XSTRM-GUID-952CEB45-9E0D-49AE-853A-912524B49853" class="sect3"><span class="enumeration_section">A.3</span> Java API的示例XStream客户端应用程序</h3>
                <div>
-                  <p>To run the sample XStream client application for the Java API, compile and link the application file.</p>
-                  <p>Next, enter the following on a command line:</p><pre class="oac_no_warn" dir="ltr">java xio <span class="italic">xsin_oraclesid</span> <span class="italic">xsin_host</span> <span class="italic">xsin_port</span> <span class="italic">xsin_username</span> 
+                  <p>要为Java API运行示例XStream客户端应用程序，请编译并链接应用程序文件。</p>
+                  <p>接下来，在命令行中输入以下内容：</p><pre class="oac_no_warn" dir="ltr">java xio <span class="italic">xsin_oraclesid</span> <span class="italic">xsin_host</span> <span class="italic">xsin_port</span> <span class="italic">xsin_username</span> 
 <span class="italic">xsin_passwd</span> <span class="italic">xin_servername</span> <span class="italic">xsout_oraclesid</span> <span class="italic">xsout_host</span> <span class="italic">xsout_port</span> 
 <span class="italic">xsout_username</span> <span class="italic">xsout_passwd</span> <span class="italic">xsout_servername</span>
-</pre><p>Substitute the appropriate values for the following placeholders:</p>
-                  <ul style="list-style-type: disc;">
+</pre><p>替换以下占位符的适当值：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><span class="italic">xsin_oraclesid</span> is the Oracle SID of the inbound server's database.
+                        <p><span class="italic">xsin_oraclesid</span>是入站服务器数据库的Oracle SID。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xsin_host</span> is the host name of the computer system running the inbound server.
+                        <p><span class="italic">xsin_host</span>是运行入站服务器的计算机系统的主机名。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xsin_port</span> is the port number of the listener for the inbound server's database.
+                        <p><span class="italic">xsin_port</span>是入站服务器数据库的侦听器的端口号。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xsin_username</span> is the inbound server's apply user.
+                        <p><span class="italic">xsin_username</span>是入站服务器的应用用户。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xsin_passwd</span> is the password for the inbound server's apply user.
+                        <p><span class="italic">xsin_passwd</span>是入站服务器的应用用户的密码。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xin_servername</span> is the name of the inbound server.
+                        <p><span class="italic">xin_servername</span>是入站服务器的名称。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xsout_oraclesid</span> is the Oracle SID of the outbound server's database.
+                        <p><span class="italic">xsout_oraclesid</span>是出站服务器数据库的Oracle SID。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xsout_host</span> is the host name of the computer system running the outbound server.
+                        <p><span class="italic">xsout_host</span>是运行出站服务器的计算机系统的主机名。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xsout_port</span> is the port number of the listener for the outbound server's database.
+                        <p><span class="italic">xsout_port</span>是出站服务器数据库的侦听器的端口号。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xsout_username</span> is the outbound server's connect user.
+                        <p><span class="italic">xsout_username</span>是出站服务器的连接用户。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xsout_passwd</span> is the password for the outbound server's connect user.
+                        <p><span class="italic">xsout_passwd</span>是出站服务器的连接用户的密码。
                         </p>
                      </li>
                      <li>
-                        <p><span class="italic">xsout_servername</span> is the name of the outbound server.
+                        <p><span class="italic">xsout_servername</span>是出站服务器的名称。
                         </p>
                      </li>
                   </ul>
-                  <p>When the sample client application is running, it prints information about attaching to the inbound server and outbound server, along with the last position for each server. The output looks similar to the following:</p><pre class="oac_no_warn" dir="ltr">xsin_host = server2.example.com
+                  <p>示例客户端应用程序运行时，它会打印有关附加到入站服务器和出站服务器的信息，以及每个服务器的最后位置。输出类似于以下内容：</p><pre class="oac_no_warn" dir="ltr">xsin_host = server2.example.com
 xsin_port = 1482
 xsin_ora_sid = db2
 xsin connection url: jdbc:oracle:oci:@server2.example.com:1482:db2
@@ -1120,10 +1108,10 @@ Attached to inbound server:xin
 Inbound Server Last Position is: 0000000920250000000100000001000000092025000000010000000101
 Attached to outbound server:xout
 Last Position is: 0000000920250000000100000001000000092025000000010000000101
-</pre><p>This demo is available in the following location:</p><pre class="oac_no_warn" dir="ltr">$ORACLE_HOME/rdbms/demo/xstream/java
-</pre><p>The file name for the demo is <code class="codeph">xio.java</code>. See the <code class="codeph">README.txt</code> file in the demo directory for more information about compiling and running the application.
+</pre><p>此演示位于以下位置：</p><pre class="oac_no_warn" dir="ltr">$ORACLE_HOME/rdbms/demo/xstream/java
+</pre><p>该演示的文件名是<code class="codeph">xio.java</code> 。有关编译和运行应用程序的更多信息，请参阅演示目录中的<code class="codeph">README.txt</code>文件。
                   </p>
-                  <p>The code for the sample application that uses the Java API follows:</p><pre class="oac_no_warn" dir="ltr">import oracle.streams.*;
+                  <p>使用Java API的示例应用程序的代码如下：</p><pre class="oac_no_warn" dir="ltr">import oracle.streams.*;
 import oracle.jdbc.internal.OracleConnection;
 import oracle.jdbc.*;
 import oracle.sql.*;
@@ -1443,7 +1431,7 @@ public class xio
                <div>
                   <div class="familylinks">
                      <div class="parentlink">
-                        <p><strong>Parent topic:</strong> <a href="sample-xstream-client-application.html#GUID-B914FF75-92AA-4270-BF71-E9A5AA9228F8" title="Examples illustrate how to configure the Oracle Database components that are used by XStream. The examples configure sample client applications that communicate with an XStream outbound server and inbound server.">Sample XStream Client Application</a></p>
+                        <p><strong>父主题：</strong> <a href="sample-xstream-client-application.html#GUID-B914FF75-92AA-4270-BF71-E9A5AA9228F8" title="示例说明如何配置XStream使用的Oracle数据库组件。这些示例配置与XStream出站服务器和入站服务器通信的示例客户端应用程序。">示例XStream客户端应用程序</a></p>
                      </div>
                   </div>
                </div>

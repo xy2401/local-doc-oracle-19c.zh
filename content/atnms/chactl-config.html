@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Use the chactl config command to list all the targets being monitored, along with the current model of each target.">
       <meta name="description" content="Use the chactl config command to list all the targets being monitored, along with the current model of each target.">
-      <title>chactl config</title>
+      <title>chactl配置</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="User’s Guide">
       <meta property="og:description" content="Use the chactl config command to list all the targets being monitored, along with the current model of each target.">
@@ -47,41 +45,36 @@
     <meta name="dcterms.isVersionOf" content="ATNMS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="chactl-status.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="chactl-calibrate.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="chactl-status.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="chactl-calibrate.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">User’s Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="appendixes.html" property="item" typeof="WebPage"><span property="name">Appendixes</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="chactl-command-reference.html" property="item" typeof="WebPage"><span property="name">chactl Command Reference</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">chactl config</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">用户指导</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="appendixes.html" property="item" typeof="WebPage"><span property="name">附录</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="chactl-command-reference.html" property="item" typeof="WebPage"><span property="name">chactl命令参考</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">chactl配置</li>
             </ol>
             <a id="GUID-942D5587-41BA-4599-A79E-E2C69A24647F" name="GUID-942D5587-41BA-4599-A79E-E2C69A24647F"></a>
             
-            <h2 id="ATNMS-GUID-942D5587-41BA-4599-A79E-E2C69A24647F" class="sect2"><span class="enumeration_section">D.4 </span>chactl config
-            </h2>
+            <h2 id="ATNMS-GUID-942D5587-41BA-4599-A79E-E2C69A24647F" class="sect2"><span class="enumeration_section">D.4</span> chactl配置</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Use the <code class="codeph">chactl config</code> command to list all the targets being monitored, along with the current model of each target.
+               <p>使用<code class="codeph">chactl config</code>命令列出所有受监视的目标，以及每个目标的当前模型。
                </p>
                <div class="section">
-                  <p>If the specified target is a multitenant container database (CDB) or a cluster, then the <code class="codeph">chactl config</code> command also displays the configuration data status.
+                  <p>如果指定的目标是多租户容器数据库（CDB）或集群，则<code class="codeph">chactl config</code>命令还会显示配置数据状态。
                   </p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-942D5587-41BA-4599-A79E-E2C69A24647F__GUID-D038501A-F398-4708-A764-A91A0E2C5468">Syntax</p><pre class="pre codeblock"><code>chactl config {cluster|database -db <span class="variable" translate="no">db_unique_name</span>}[-help]</code></pre></div>
+                  <p class="subhead1" id="GUID-942D5587-41BA-4599-A79E-E2C69A24647F__GUID-D038501A-F398-4708-A764-A91A0E2C5468">句法</p><pre class="pre codeblock"><code>chactl config {cluster|database -db <span class="variable" translate="no">db_unique_name</span>}[-help]</code></pre></div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-942D5587-41BA-4599-A79E-E2C69A24647F__GUID-4A6D07D3-99F7-4AFA-A828-90022A7DAFCF">Examples</p>
-                  <p>To display the monitor configuration and the specified model of each target:</p><pre class="pre codeblock"><code>$ chactl config 
+                  <p class="subhead1" id="GUID-942D5587-41BA-4599-A79E-E2C69A24647F__GUID-4A6D07D3-99F7-4AFA-A828-90022A7DAFCF">例子</p>
+                  <p>要显示监视器配置和每个目标的指定模型：</p><pre class="pre codeblock"><code>$ chactl config 
 Databases monitored: prodDB, hrDB</code></pre><pre class="pre codeblock"><code>$ chactl config database &#x2013;db prodDB
 Monitor: Enabled
 Model: GoldDB</code></pre><pre class="pre codeblock"><code>$ chactl config cluster
@@ -92,7 +85,7 @@ Model: DEFAULT_CLUSTER</code></pre></div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="chactl-command-reference.html#GUID-9AD6BC7D-F0F5-41E9-80CB-9BD911FCE586" title="The Oracle Cluster Health Advisor commands enable the Oracle Grid Infrastructure user to administer basic monitoring functionality on the targets.">chactl Command Reference</a></p>
+                     <p><strong>父主题：</strong> <a href="chactl-command-reference.html#GUID-9AD6BC7D-F0F5-41E9-80CB-9BD911FCE586" title="Oracle Cluster Health Advisor命令使Oracle Grid Infrastructure用户能够管理目标上的基本监视功能。">chactl命令参考</a></p>
                   </div>
                </div>
             </div>

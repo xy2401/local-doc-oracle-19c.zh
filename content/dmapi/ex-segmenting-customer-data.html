@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="The examples in this section use an Expectation Maximization clustering model to segment the customer data based on common characteristics.">
       <meta name="description" content="The examples in this section use an Expectation Maximization clustering model to segment the customer data based on common characteristics.">
-      <title>Example: Segmenting Customer Data</title>
+      <title>示例：细分客户数据</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="API Guide">
       <meta property="og:description" content="The examples in this section use an Expectation Maximization clustering model to segment the customer data based on common characteristics.">
@@ -47,32 +45,27 @@
     <meta name="dcterms.isVersionOf" content="DMAPI">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="ex-analyzing-preferred-customers.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="ex-building-ESA-model-wiki.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="ex-analyzing-preferred-customers.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="ex-building-ESA-model-wiki.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">API Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="using-data-mining-API.html" property="item" typeof="WebPage"><span property="name">Using the Data Mining API</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="data-mining-SQL.html" property="item" typeof="WebPage"><span property="name">Data Mining With SQL   </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Example: Segmenting Customer Data</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">API指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-data-mining-API.html" property="item" typeof="WebPage"><span property="name">使用Data Mining API</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="data-mining-SQL.html" property="item" typeof="WebPage"><span property="name">使用SQL进行数据挖掘</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">示例：细分客户数据</li>
             </ol>
             <a id="GUID-AF8605CF-286F-4979-B0EC-A61189D17887" name="GUID-AF8605CF-286F-4979-B0EC-A61189D17887"></a><a id="DMPRG804"></a><a id="DMPRG805"></a><a id="DMPRG806"></a><a id="DMPRG803"></a>
             
-            <h2 id="DMAPI-GUID-AF8605CF-286F-4979-B0EC-A61189D17887" class="sect2"><span class="enumeration_section">27.4 </span>Example: Segmenting Customer Data
-            </h2>
+            <h2 id="DMAPI-GUID-AF8605CF-286F-4979-B0EC-A61189D17887" class="sect2"><span class="enumeration_section">27.4</span>示例：细分客户数据</h2>
          </header>
          <div class="ind">
             <div>
-               <p>The examples in this section use an Expectation Maximization clustering model to segment the customer data based on common characteristics.</p>
+               <p>本节中的示例使用期望最大化聚类模型根据共同特征对客户数据进行分段。</p>
                <div class="example" id="GUID-AF8605CF-286F-4979-B0EC-A61189D17887__BABJGEID">
-                  <p class="titleinexample">Example 27-6 Compute Customer Segments</p>
-                  <p>This query computes natural groupings of customers and returns the number of customers <a id="d28128e26" class="indexterm-anchor"></a>in each group.
+                  <p class="titleinexample">示例27-6计算客户细分</p>
+                  <p>此查询计算客户的自然分组并返回客户数<a id="d28128e26" class="indexterm-anchor"></a>在每个小组中。
                   </p><pre class="oac_no_warn" dir="ltr"><a id="d28128e30" class="indexterm-anchor"></a>SELECT CLUSTER_ID(em_sh_clus_sample USING *) AS clus, COUNT(*) AS cnt
   FROM mining_data_apply_v
 GROUP BY CLUSTER_ID(em_sh_clus_sample USING *)
@@ -92,8 +85,8 @@ ORDER BY cnt DESC;
         18         36</pre></div>
                <!-- class="example" -->
                <div class="example" id="GUID-AF8605CF-286F-4979-B0EC-A61189D17887__BABJBBHH">
-                  <p class="titleinexample">Example 27-7 Find the Customers Who Are Most Likely To Be in the Largest Segment</p>
-                  <p>The query in <a href="ex-segmenting-customer-data.html#GUID-AF8605CF-286F-4979-B0EC-A61189D17887__BABJGEID">Example 27-6</a> shows that segment 9 has the most members. The following query lists the five customers who are most likely to be in segment 9. 
+                  <p class="titleinexample">例27-7找到最有可能成为最大细分市场的客户</p>
+                  <p><a href="ex-segmenting-customer-data.html#GUID-AF8605CF-286F-4979-B0EC-A61189D17887__BABJGEID">例27-6</a>中的查询显示段9的成员最多。以下查询列出了最有可能位于第9段的五个客户。
                   </p><pre class="oac_no_warn" dir="ltr">SELECT cust_id
 FROM (SELECT cust_id, RANK() over (ORDER BY prob DESC, cust_id) rnk_clus2
   FROM (SELECT cust_id,
@@ -111,8 +104,8 @@ ORDER BY rnk_clus2;
     100021</pre></div>
                <!-- class="example" -->
                <div class="example" id="GUID-AF8605CF-286F-4979-B0EC-A61189D17887__BABGCJGE">
-                  <p class="titleinexample">Example 27-8 Find Key Characteristics of the Most Representative Customer in the Largest Cluster</p>
-                  <p>The query in <a href="ex-segmenting-customer-data.html#GUID-AF8605CF-286F-4979-B0EC-A61189D17887__BABJBBHH">Example 27-7</a> lists customer 100002 first in the list of likely customers for segment 9. The following query returns the five characteristics that are most significant in determining the assignment of customer 100002 to segments with probability &gt; 20% (only segment 9 for this customer). 
+                  <p class="titleinexample">示例27-8查找最大群集中最具代表性的客户的关键特征</p>
+                  <p><a href="ex-segmenting-customer-data.html#GUID-AF8605CF-286F-4979-B0EC-A61189D17887__BABJBBHH">例27-7</a>中的查询在第9段的可能客户列表中首先列出了客户100002。以下查询返回在确定将客户100002分配给概率&gt; 20％的段（对于此客户仅为段9）时最重要的五个特征。
                   </p><pre class="oac_no_warn" dir="ltr">SELECT S.cluster_id, probability prob,
        <a id="d28128e51" class="indexterm-anchor"></a>CLUSTER_DETAILS(em_sh_clus_sample, S.cluster_id, 5 using T.*) det
  FROM

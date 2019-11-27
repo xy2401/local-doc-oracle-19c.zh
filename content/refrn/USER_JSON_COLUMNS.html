@@ -1,6 +1,4 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,42 +44,35 @@
     <meta name="dcterms.isVersionOf" content="REFRN">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="USER_JOINGROUPS.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="USER_JSON_DATAGUIDE_FIELDS.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="USER_JOINGROUPS.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="USER_JSON_DATAGUIDE_FIELDS.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Reference</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="static-data-dictionary-views.html" property="item" typeof="WebPage"><span property="name">   Static Data Dictionary Views </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="static-data-dictionary-views-5.html" property="item" typeof="WebPage"><span property="name"> Static Data Dictionary Views: DBA_STREAMS_ADD_COLUMN to USER_ZONEMAPS</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库参考</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="static-data-dictionary-views.html" property="item" typeof="WebPage"><span property="name">静态数据字典视图</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="static-data-dictionary-views-5.html" property="item" typeof="WebPage"><span property="name">静态数据字典视图：DBA_STREAMS_ADD_COLUMN到USER_ZONEMAPS</span></a></li>
                <li class="active" property="itemListElement" typeof="ListItem">USER_JSON_COLUMNS</li>
             </ol>
             <a id="GUID-176B3A0C-9C30-4BE7-A0A0-0CC4ACDAEA6F" name="GUID-176B3A0C-9C30-4BE7-A0A0-0CC4ACDAEA6F"></a><a id="REFRN26963"></a>
             
-            <h2 id="REFRN-GUID-176B3A0C-9C30-4BE7-A0A0-0CC4ACDAEA6F" class="sect2"><span class="enumeration_section">6.479 </span>USER_JSON_COLUMNS
-            </h2>
+            <h2 id="REFRN-GUID-176B3A0C-9C30-4BE7-A0A0-0CC4ACDAEA6F" class="sect2"><span class="enumeration_section">6.479</span> USER_JSON_COLUMNS</h2>
          </header>
          <div class="ind">
             <div>
-               <p><code class="codeph">USER_JSON_COLUMNS</code> provides information on the JavaScript Object Notation (JSON) columns for which the user is the owner. Its columns (except for <code class="codeph">OWNER</code>) are the same as those in <code class="codeph">ALL_JSON_COLUMNS</code>.
-               </p>
+               <p><code class="codeph">USER_JSON_COLUMNS</code>提供有关用户所有者的JavaScript Object Notation（JSON）列的信息。它的列（ <code class="codeph">OWNER</code>除外）与<code class="codeph">ALL_JSON_COLUMNS</code>列相同。</p>
                <div class="section">
-                  <p>Each column owned by the user that has an IS JSON check constraint in an AND condition appears in this view. This view enables a user to find all the JSON columns that he or she owns.</p>
-                  <p>For example, if a check constraint combines the IS JSON condition with another condition using logical condition OR, then the column is not listed in this view. In this case, it is not certain that the data in the column is JSON data. For example, the following constraint does not ensure that the data in column jcol is JSON data:</p><pre class="oac_no_warn" dir="ltr">jcol is json OR length(jcol) &lt; 1000
+                  <p>此视图中将显示用户拥有的每个具有AND条件的IS JSON检查约束的列。此视图使用户能够查找他或她拥有的所有JSON列。</p>
+                  <p>例如，如果检查约束将IS JSON条件与使用逻辑条件OR的另一个条件组合在一起，则该列不会在此视图中列出。在这种情况下，不确定列中的数据是否为JSON数据。例如，以下约束不能确保列jcol中的数据是JSON数据：</p><pre class="oac_no_warn" dir="ltr">jcol is json OR length(jcol) &lt; 1000
 </pre><div class="infoboxnotealso" id="GUID-176B3A0C-9C30-4BE7-A0A0-0CC4ACDAEA6F__GUID-E3F6E8DF-27DD-48A7-B6CF-FFF6982C9813">
-                     <p class="notep1">See Also:</p>
-                     <ul style="list-style-type: disc;">
+                     <p class="notep1">也可以看看：</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p><span class="q">"<a href="ALL_JSON_COLUMNS.html#GUID-0FEC03C4-8F07-47C0-8FC0-A771EBF5D057" title="ALL_JSON_COLUMNS provides information on the JavaScript Object Notation (JSON) columns accessible to the current user.">ALL_JSON_COLUMNS</a>"</span></p>
+                           <p><span class="q">“ <a href="ALL_JSON_COLUMNS.html#GUID-0FEC03C4-8F07-47C0-8FC0-A771EBF5D057" title="ALL_JSON_COLUMNS提供有关当前用户可访问的JavaScript Object Notation（JSON）列的信息。">ALL_JSON_COLUMNS</a> ”</span></p>
                         </li>
                         <li>
-                           <p><a href="../adjsn/json-in-oracle-database.html#ADXDB6246" target="_blank"><span><cite>Oracle XML&nbsp;DB Developer’s Guide</cite></span></a> for more information about using JSON with Oracle Database
-                           </p>
+                           <p>有关将JSON与Oracle数据库一起使用的更多信息，请参阅<a href="../adjsn/json-in-oracle-database.html#ADXDB6246" target="_blank"><span><cite>Oracle XML DB Developer's Guide</cite></span></a></p>
                         </li>
                      </ul>
                   </div>

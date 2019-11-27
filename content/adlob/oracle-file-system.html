@@ -1,19 +1,17 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="abstract" content>
-      <meta name="description" content>
-      <title>Oracle File System (OFS) Server</title>
+      <meta name="abstract" content="">
+      <meta name="description" content="">
+      <title>Oracle文件系统（OFS）服务器</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="Database SecureFiles and Large Objects Developer's Guide">
-      <meta property="og:description" content>
+      <meta property="og:title" content="Database SecureFiles and Large Objects Developer&#39;s Guide">
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="Database SecureFiles and Large Objects Developer's Guide">
+      <meta name="application-name" content="Database SecureFiles and Large Objects Developer&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="securefiles-and-large-objects-developers-guide.pdf" title="PDF File" type="application/pdf">
@@ -43,39 +41,34 @@
         </script>
       <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"oracle-database","element_name":"Oracle Database","display_in_url":true},"release":{"short_name":"19","element_name":"Release 19","display_in_url":true}}}</script>
       
-    <meta name="dcterms.title" content="SecureFiles and Large Objects Developer's Guide">
+    <meta name="dcterms.title" content="SecureFiles and Large Objects Developer&#39;s Guide">
     <meta name="dcterms.isVersionOf" content="ADLOB">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="migrating-columns-from-LONGs-to-LOBs.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="introducing-network-file-system.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="migrating-columns-from-LONGs-to-LOBs.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="introducing-network-file-system.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database SecureFiles and Large Objects Developer's Guide</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Oracle File System (OFS) Server</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database SecureFiles和Large Objects Developer's Guide</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Oracle文件系统（OFS）服务器</li>
             </ol>
             <a id="GUID-5613B15C-9976-4148-A167-4C279E28372D" name="GUID-5613B15C-9976-4148-A167-4C279E28372D"></a>
             
-            <h2 id="ADLOB-GUID-5613B15C-9976-4148-A167-4C279E28372D" class="sect2"><span class="enumeration_part">Part VI </span>Oracle File System (OFS) Server
-            </h2>
+            <h2 id="ADLOB-GUID-5613B15C-9976-4148-A167-4C279E28372D" class="sect2"><span class="enumeration_part">第六部分</span> Oracle文件系统（OFS）服务器</h2>
          </header>
          <div class="ind">
             <div>
                <p></p>
-               <p>The OFS server is a new background process that will be created as part of instance startup and it will contain several pools of Oracle threads to work as file system server threads. The main job of this background process is to manage the worker threads.</p>
-               <p>This part contains the following chapters:</p>
-               <ul style="list-style-type: disc;">
+               <p>OFS服务器是一个新的后台进程，它将作为实例启动的一部分创建，它将包含几个Oracle线程池作为文件系统服务器线程。此后台进程的主要工作是管理工作线程。</p>
+               <p>本部分包含以下章节：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p><a href="introducing-network-file-system.html#GUID-099C7265-BAED-4970-9A6B-0DD7F620B18E">Introducing Network File System (NFS)</a></p>
+                     <p><a href="introducing-network-file-system.html#GUID-099C7265-BAED-4970-9A6B-0DD7F620B18E">介绍网络文件系统（NFS）</a></p>
                   </li>
                   <li>
-                     <p><a href="using-ofs.html#GUID-096E9ADD-544B-4C83-90A4-835DBF9DFF0C">Using OFS</a></p>
+                     <p><a href="using-ofs.html#GUID-096E9ADD-544B-4C83-90A4-835DBF9DFF0C">使用OFS</a></p>
                   </li>
                </ul>
             </div>

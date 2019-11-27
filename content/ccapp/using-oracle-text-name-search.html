@@ -1,19 +1,17 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Oracle Text provides a name search feature to handle inaccurate data and misspelled names.">
       <meta name="description" content="Oracle Text provides a name search feature to handle inaccurate data and misspelled names.">
-      <title>Using Oracle Text Name Search</title>
+      <title>使用Oracle文本名称搜索</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="Application Developer's Guide ">
+      <meta property="og:title" content="Application Developer&#39;s Guide ">
       <meta property="og:description" content="Oracle Text provides a name search feature to handle inaccurate data and misspelled names.">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="Application Developer's Guide">
+      <meta name="application-name" content="Application Developer&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="text-application-developers-guide.pdf" title="PDF File" type="application/pdf">
@@ -43,51 +41,43 @@
         </script>
       <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"oracle-database","element_name":"Oracle Database","display_in_url":true},"release":{"short_name":"19","element_name":"Release 19","display_in_url":true}}}</script>
       
-    <meta name="dcterms.title" content="Text Application Developer's Guide">
+    <meta name="dcterms.title" content="Text Application Developer&#39;s Guide">
     <meta name="dcterms.isVersionOf" content="CCAPP">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="searching-document-sections-in-oracle-text.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="working-with-thesaurus-in-oracle-text.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="searching-document-sections-in-oracle-text.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="working-with-thesaurus-in-oracle-text.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Application Developer's Guide </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem"> Using Oracle Text Name Search </li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">应用程序开发人员指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">使用Oracle文本名称搜索</li>
             </ol>
             <a id="GUID-B1190985-8419-4E6D-83AF-60F1A1474071" name="GUID-B1190985-8419-4E6D-83AF-60F1A1474071"></a><a id="CCAPP9534"></a>
             
-            <h2 id="CCAPP-GUID-B1190985-8419-4E6D-83AF-60F1A1474071" class="sect2"><span class="enumeration_chapter">12 </span> Using Oracle Text Name Search 
-            </h2>
+            <h2 id="CCAPP-GUID-B1190985-8419-4E6D-83AF-60F1A1474071" class="sect2"><span class="enumeration_chapter">12</span>使用Oracle文本名称搜索</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Oracle Text provides a name search feature to handle inaccurate data and misspelled names.</p>
-               <p>This chapter contains the following topics:</p>
-               <ul style="list-style-type: disc;">
+               <p>Oracle Text提供名称搜索功能来处理不准确的数据和拼写错误的名称。</p>
+               <p>本章包含以下主题：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p><a href="using-oracle-text-name-search.html#GUID-D3E9CF36-BB4A-4C66-8E62-CD723A2399F4">Overview of Name Search</a></p>
+                     <p><a href="using-oracle-text-name-search.html#GUID-D3E9CF36-BB4A-4C66-8E62-CD723A2399F4">名称搜索概述</a></p>
                   </li>
                   <li>
-                     <p><a href="using-oracle-text-name-search.html#GUID-41C7CABC-597C-499D-BD29-326A65A0B65A">Examples of Using Name Search</a></p>
+                     <p><a href="using-oracle-text-name-search.html#GUID-41C7CABC-597C-499D-BD29-326A65A0B65A">使用名称搜索的示例</a></p>
                   </li>
                </ul>
-            </div><a id="CCAPP9535"></a><div class="props_rev_3"><a id="GUID-D3E9CF36-BB4A-4C66-8E62-CD723A2399F4" name="GUID-D3E9CF36-BB4A-4C66-8E62-CD723A2399F4"></a><h3 id="CCAPP-GUID-D3E9CF36-BB4A-4C66-8E62-CD723A2399F4" class="sect3"><span class="enumeration_section">12.1 </span>Overview of Name Search
-               </h3>
+            </div><a id="CCAPP9535"></a><div class="props_rev_3"><a id="GUID-D3E9CF36-BB4A-4C66-8E62-CD723A2399F4" name="GUID-D3E9CF36-BB4A-4C66-8E62-CD723A2399F4"></a><h3 id="CCAPP-GUID-D3E9CF36-BB4A-4C66-8E62-CD723A2399F4" class="sect3"><span class="enumeration_section">12.1</span>名称搜索概述</h3>
                <div>
-                  <p>Someone a<a id="d34646e139" class="indexterm-anchor"></a><a id="d34646e141" class="indexterm-anchor"></a><a id="d34646e145" class="indexterm-anchor"></a>ccustomed to the spelling rules of one culture can have difficulty applying those same rules to a name from a different culture. Name searching (also called name matching) provides a solution to match proper names that might differ in spelling due to orthographic variation. It also enables you to search for somewhat inaccurate data, such as might occur when a record's first name and surname are not properly segmented. The main advantage of name searching is the ability to handle somewhat inaccurate data.
+                  <p>习惯于一种文化的拼写规则的人可能难以将这些相同的规则应用于来自不同文化的名称。名称搜索（也称为名称匹配）提供了一种解决方案，以匹配由于正交变化而在拼写上可能不同的专有名称。它还使您能够搜索有些不准确的数据，例如当记录的名字和姓氏未正确分段时可能会出现这种情况。名称搜索的主要优点是能够处理有些不准确的数据。
                   </p>
                </div>
-            </div><a id="CCAPP9536"></a><div class="props_rev_3"><a id="GUID-41C7CABC-597C-499D-BD29-326A65A0B65A" name="GUID-41C7CABC-597C-499D-BD29-326A65A0B65A"></a><h3 id="CCAPP-GUID-41C7CABC-597C-499D-BD29-326A65A0B65A" class="sect3"><span class="enumeration_section">12.2 </span>Name Search Examples
-               </h3>
+            </div><a id="CCAPP9536"></a><div class="props_rev_3"><a id="GUID-41C7CABC-597C-499D-BD29-326A65A0B65A" name="GUID-41C7CABC-597C-499D-BD29-326A65A0B65A"></a><h3 id="CCAPP-GUID-41C7CABC-597C-499D-BD29-326A65A0B65A" class="sect3"><span class="enumeration_section">12.2</span>名称搜索示例</h3>
                <div>
-                  <p><a id="d34646e214" class="indexterm-anchor"></a>The following example illustrates how to use <a id="d34646e219" class="indexterm-anchor"></a><code class="codeph">NDATA</code> sections to search on names:
-                  </p><pre class="oac_no_warn" dir="ltr">drop table people;
+                  <p><a id="d34646e214" class="indexterm-anchor"></a>以下示例说明了如何使用<a id="d34646e219" class="indexterm-anchor"></a>用于搜索名称的<code class="codeph">NDATA</code>部分：</p><pre class="oac_no_warn" dir="ltr">drop table people;
  
 create table people (
   full_name varchar2(2000)
@@ -139,8 +129,7 @@ select /*+ FIRST_ROWS */ full_name, score(1)
   where contains(full_name,  'ndata( full_name, '||:name||') ',1)&gt;0
   order by score(1) desc
 /
-</pre><p>The following example illustrates a more complicated version of using <code class="codeph">NDATA</code> sections to search on names:
-                  </p><pre class="oac_no_warn" dir="ltr">create table emp (
+</pre><p>以下示例说明了使用<code class="codeph">NDATA</code>节搜索名称的更复杂版本：</p><pre class="oac_no_warn" dir="ltr">create table emp (
     first_name    varchar2(30),
     middle_name   varchar2(30),
     last_name     varchar2(30),

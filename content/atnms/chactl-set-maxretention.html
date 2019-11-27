@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Use the chactl set maxretention command to set the maximum retention time for the diagnostic data.">
       <meta name="description" content="Use the chactl set maxretention command to set the maximum retention time for the diagnostic data.">
-      <title>chactl set maxretention</title>
+      <title>chactl设置maxretention</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="User’s Guide">
       <meta property="og:description" content="Use the chactl set maxretention command to set the maximum retention time for the diagnostic data.">
@@ -47,53 +45,48 @@
     <meta name="dcterms.isVersionOf" content="ATNMS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="chactl-import-model.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="chactl-resize-repository.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="chactl-import-model.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="chactl-resize-repository.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">User’s Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="appendixes.html" property="item" typeof="WebPage"><span property="name">Appendixes</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="chactl-command-reference.html" property="item" typeof="WebPage"><span property="name">chactl Command Reference</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">chactl set maxretention</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">用户指导</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="appendixes.html" property="item" typeof="WebPage"><span property="name">附录</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="chactl-command-reference.html" property="item" typeof="WebPage"><span property="name">chactl命令参考</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">chactl设置maxretention</li>
             </ol>
             <a id="GUID-1A72946C-B85A-436A-A0BD-579938832505" name="GUID-1A72946C-B85A-436A-A0BD-579938832505"></a>
             
-            <h2 id="ATNMS-GUID-1A72946C-B85A-436A-A0BD-579938832505" class="sect2"><span class="enumeration_section">D.14 </span>chactl set maxretention
-            </h2>
+            <h2 id="ATNMS-GUID-1A72946C-B85A-436A-A0BD-579938832505" class="sect2"><span class="enumeration_section">D.14</span> chactl set maxretention</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Use the <code class="codeph">chactl set maxretention</code> command to set the maximum retention time for the diagnostic data. 
+               <p>使用<code class="codeph">chactl set maxretention</code>命令设置诊断数据的最长保留时间。
                </p>
                <div class="section">
-                  <p>The default and minimum retention time is 72 hours. If the Oracle Cluster Health Advisor repository does not have enough space, then the retention time is decreased for all the targets.</p>
+                  <p>默认和最短保留时间为72小时。如果Oracle Cluster Health Advisor存储库没有足够的空间，则所有目标的保留时间都会减少。</p>
                   <div class="p">
                      <div class="infoboxnote" id="GUID-1A72946C-B85A-436A-A0BD-579938832505__GUID-0A553CB9-BC28-4B43-8CF9-8812AAC5CD72">
-                        <p class="notep1">Note:</p>
-                        <p>Oracle Cluster Health Advisor stops monitoring if the retention time is less than 24 hours.</p>
+                        <p class="notep1">注意：</p>
+                        <p>如果保留时间少于24小时，Oracle Cluster Health Advisor将停止监控。</p>
                      </div>
                   </div>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-1A72946C-B85A-436A-A0BD-579938832505__GUID-1F3A9479-25BE-42AB-AAC6-7D51A7E5D9CC">Syntax</p><pre class="pre codeblock"><code>chactl set maxretention -time <span class="variable" translate="no">retention_time</span> [-help]</code></pre><p>Specify the retention time in hours.</p>
+                  <p class="subhead1" id="GUID-1A72946C-B85A-436A-A0BD-579938832505__GUID-1F3A9479-25BE-42AB-AAC6-7D51A7E5D9CC">句法</p><pre class="pre codeblock"><code>chactl set maxretention -time <span class="variable" translate="no">retention_time</span> [-help]</code></pre><p>以小时为单位指定保留时间。</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-1A72946C-B85A-436A-A0BD-579938832505__GUID-71BED3FF-23A5-447E-B973-F8CA25839CC7">Examples</p>
-                  <p>To set the maximum retention time to 80 hours:</p><pre class="pre codeblock"><code>$ chactl set maxretention -time 80
+                  <p class="subhead1" id="GUID-1A72946C-B85A-436A-A0BD-579938832505__GUID-71BED3FF-23A5-447E-B973-F8CA25839CC7">例子</p>
+                  <p>要将最长保留时间设置为80小时：</p><pre class="pre codeblock"><code>$ chactl set maxretention -time 80
 max retention successfully set to 80 hours</code></pre></div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-1A72946C-B85A-436A-A0BD-579938832505__GUID-9F45E86B-B810-4DB1-AFD7-BF6D17D36B6D">Error Message</p>
-                  <p><span class="bold">Error:</span> <samp class="msgph">Specified time is smaller than the allowed minimum</samp></p>
-                  <p><span class="bold">Description:</span> This message is returned if the input value for maximum retention time is smaller than the minimum value.
+                  <p class="subhead1" id="GUID-1A72946C-B85A-436A-A0BD-579938832505__GUID-9F45E86B-B810-4DB1-AFD7-BF6D17D36B6D">错误信息</p>
+                  <p><span class="bold">错误：</span> <samp class="msgph">指定的时间小于允许的最小值</samp></p>
+                  <p><span class="bold">描述：</span>如果最大保留时间的输入值小于最小值，则返回此消息。
                   </p>
                </div>
                <!-- class="section" -->
@@ -101,7 +94,7 @@ max retention successfully set to 80 hours</code></pre></div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="chactl-command-reference.html#GUID-9AD6BC7D-F0F5-41E9-80CB-9BD911FCE586" title="The Oracle Cluster Health Advisor commands enable the Oracle Grid Infrastructure user to administer basic monitoring functionality on the targets.">chactl Command Reference</a></p>
+                     <p><strong>父主题：</strong> <a href="chactl-command-reference.html#GUID-9AD6BC7D-F0F5-41E9-80CB-9BD911FCE586" title="Oracle Cluster Health Advisor命令使Oracle Grid Infrastructure用户能够管理目标上的基本监视功能。">chactl命令参考</a></p>
                   </div>
                </div>
             </div>

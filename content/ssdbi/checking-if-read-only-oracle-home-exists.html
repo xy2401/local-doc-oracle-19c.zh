@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Run the orabasehome command to determine if your Oracle home is a read/write or read-only Oracle home.">
       <meta name="description" content="Run the orabasehome command to determine if your Oracle home is a read/write or read-only Oracle home.">
-      <title>Determining if an Oracle Home is Read-Only</title>
+      <title>确定Oracle Home是否为只读</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database Installation Guide">
       <meta property="og:description" content="Run the orabasehome command to determine if your Oracle home is a read/write or read-only Oracle home.">
@@ -47,39 +45,35 @@
     <meta name="dcterms.isVersionOf" content="SSDBI">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="running-demo-from-oracle-base-home.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="file-path-directory-changes-read-only-oracle-home.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="running-demo-from-oracle-base-home.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="file-path-directory-changes-read-only-oracle-home.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="configuring-read-only-oracle-homes.html" property="item" typeof="WebPage"><span property="name">Configuring Read-Only Oracle Homes</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Determining if an Oracle Home is Read-Only</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="configuring-read-only-oracle-homes.html" property="item" typeof="WebPage"><span property="name">配置只读Oracle主目录</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">确定Oracle Home是否为只读</li>
             </ol>
             <a id="GUID-7B4C699F-49B1-42D9-94A6-6112B2F7945A" name="GUID-7B4C699F-49B1-42D9-94A6-6112B2F7945A"></a>
             
-            <h2 id="SSDBI-GUID-7B4C699F-49B1-42D9-94A6-6112B2F7945A" class="sect2">Determining if an Oracle Home is Read-Only</h2>
+            <h2 id="SSDBI-GUID-7B4C699F-49B1-42D9-94A6-6112B2F7945A" class="sect2">确定Oracle Home是否为只读</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Run the <code>orabasehome</code> command to determine if your Oracle home is a read/write or read-only Oracle home.
+               <p>运行<code>orabasehome</code>命令以确定您的Oracle主目录是读/写还是只读Oracle主目录。
                </p>
-               <div class="section">If the output of the <code>orabasehome</code> command is the same as $ORACLE_HOME, then your Oracle home is in read/write mode. If the output displays the path <code>ORACLE_BASE/homes/HOME_NAME</code>, then your Oracle home is in read-only mode.
+               <div class="section">如果<code>orabasehome</code>命令的输出与$ ORACLE_HOME相同，那么您的Oracle主目录处于读/写模式。如果输出显示路径<code>ORACLE_BASE/homes/HOME_NAME</code> ，则表示您的Oracle主目录处于只读模式。
                </div>
                <!-- class="section" -->
                <ol>
-                  <li class="stepexpand"><span>Set the ORACLE_HOME environment variable:</span><div>
-                        <p>Bourne, Bash or Korn shell:</p><pre class="pre codeblock"><code>$ ORACLE_HOME=/u01/app/oracle/product/19.0.0/dbhome_1
-$ export ORACLE_HOME</code></pre><p>C shell:</p><pre class="pre codeblock"><code>% setenv ORACLE_HOME /u01/app/oracle/product/19.0.0/dbhome_1</code></pre></div>
+                  <li class="stepexpand"><span>设置ORACLE_HOME环境变量：</span><div>
+                        <p>Bourne，Bash或Korn shell：</p><pre class="pre codeblock"><code>$ ORACLE_HOME=/u01/app/oracle/product/19.0.0/dbhome_1
+$ export ORACLE_HOME</code></pre><p>C shell：</p><pre class="pre codeblock"><code>% setenv ORACLE_HOME /u01/app/oracle/product/19.0.0/dbhome_1</code></pre></div>
                   </li>
-                  <li class="stepexpand"><span>Go to the <code>bin</code> directory and run the <code>orabasehome</code> command:</span><div><pre class="pre codeblock"><code>$ cd $ORACLE_HOME/bin
+                  <li class="stepexpand"><span>转到<code>bin</code>目录并运行<code>orabasehome</code>命令：</span><div><pre class="pre codeblock"><code>$ cd $ORACLE_HOME/bin
 $ ./orabasehome
-/u01/app/oracle/homes/OraDB19Home1</code></pre><p>In this example, the Oracle home is in read-only mode.</p>
+/u01/app/oracle/homes/OraDB19Home1</code></pre><p>在此示例中，Oracle主目录处于只读模式。</p>
                      </div>
                   </li>
                </ol>
@@ -87,7 +81,7 @@ $ ./orabasehome
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="configuring-read-only-oracle-homes.html#GUID-906DA159-AC83-4ACC-A8A6-5B4A39EB72E1" title="Understand how read-only Oracle homes work and how you can configure read-only Oracle homes.">Configuring Read-Only Oracle Homes</a></p>
+                     <p><strong>父主题：</strong> <a href="configuring-read-only-oracle-homes.html#GUID-906DA159-AC83-4ACC-A8A6-5B4A39EB72E1" title="了解只读Oracle主页的工作方式以及如何配置只读Oracle主目录。">配置只读Oracle主目录</a></p>
                   </div>
                </div>
             </div>

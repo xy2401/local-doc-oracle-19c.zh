@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="The diff report attached to the previous email notification shows a summary of differences between the most recent runs.">
       <meta name="description" content="The diff report attached to the previous email notification shows a summary of differences between the most recent runs.">
-      <title>Generating a Diff Report</title>
+      <title>生成差异报告</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="User’s Guide">
       <meta property="og:description" content="The diff report attached to the previous email notification shows a summary of differences between the most recent runs.">
@@ -47,36 +45,31 @@
     <meta name="dcterms.isVersionOf" content="ATNMS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="running-ondemand-daemon.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="sending-results-by-email.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="running-ondemand-daemon.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="sending-results-by-email.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">User’s Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="analyzing-risks-and-complying-best-practices.html" property="item" typeof="WebPage"><span property="name">Analyzing the Cluster Configuration</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="purpose-oracle-orachk-and-oracle-exachk.html" property="item" typeof="WebPage"><span property="name">Analyzing Risks and Complying with Best Practices</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="manually-generate-health-check-reports.html" property="item" typeof="WebPage"><span property="name">Using Oracle ORAchk and Oracle EXAchk to Manually Generate Health Check Reports</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Generating a Diff Report</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">用户指导</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="analyzing-risks-and-complying-best-practices.html" property="item" typeof="WebPage"><span property="name">分析群集配置</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="purpose-oracle-orachk-and-oracle-exachk.html" property="item" typeof="WebPage"><span property="name">分析风险并遵守最佳实践</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="manually-generate-health-check-reports.html" property="item" typeof="WebPage"><span property="name">使用Oracle ORAchk和Oracle EXAchk手动生成运行状况检查报告</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">生成差异报告</li>
             </ol>
             <a id="GUID-2D3C236F-B7C6-43D0-882C-5C39D82CB6C7" name="GUID-2D3C236F-B7C6-43D0-882C-5C39D82CB6C7"></a>
             
-            <h2 id="ATNMS-GUID-2D3C236F-B7C6-43D0-882C-5C39D82CB6C7" class="sect2"><span class="enumeration_section">2.4.4 </span>Generating a Diff Report
-            </h2>
+            <h2 id="ATNMS-GUID-2D3C236F-B7C6-43D0-882C-5C39D82CB6C7" class="sect2"><span class="enumeration_section">2.4.4</span>生成差异报告</h2>
          </header>
          <div class="ind">
             <div>
-               <p>The diff report attached to the previous email notification shows a summary of differences between the most recent runs.</p>
+               <p>附加到上一封电子邮件通知的差异报告显示了最近一次运行之间差异的摘要。</p>
                <div class="section">
-                  <p class="subhead1" id="GUID-2D3C236F-B7C6-43D0-882C-5C39D82CB6C7__GUID-E9A07325-BDDF-419F-A928-C0AFC8C26950">To identify the changes since the last run:</p>
+                  <p class="subhead1" id="GUID-2D3C236F-B7C6-43D0-882C-5C39D82CB6C7__GUID-E9A07325-BDDF-419F-A928-C0AFC8C26950">要识别自上次运行以来的更改：</p>
                </div>
                <!-- class="section" -->
                <ol>
-                  <li class="stepexpand"><span>Run the following command:</span><div><pre class="pre codeblock"><code>$ ./orachk &#x2013;diff <span class="variable" translate="no">report_1</span> <span class="variable" translate="no">report_2</span></code></pre><p>Review the diff report to see a baseline comparison of the two reports and then a list of differences.</p>
+                  <li class="stepexpand"><span>运行以下命令：</span><div><pre class="pre codeblock"><code>$ ./orachk &#x2013;diff <span class="variable" translate="no">report_1</span> <span class="variable" translate="no">report_2</span></code></pre><p>查看差异报告以查看两个报告的基线比较，然后查看差异列表。</p>
                      </div>
                   </li>
                </ol>
@@ -84,7 +77,7 @@
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="manually-generate-health-check-reports.html#GUID-F70634F5-89EA-484E-AA56-EBD129D8B218" title="This section explains the procedures to manually generate health check reports.">Using Oracle ORAchk and Oracle EXAchk to Manually Generate Health Check Reports</a></p>
+                     <p><strong>父主题：</strong> <a href="manually-generate-health-check-reports.html#GUID-F70634F5-89EA-484E-AA56-EBD129D8B218" title="本节介绍手动生成运行状况检查报告的过程。">使用Oracle ORAchk和Oracle EXAchk手动生成运行状况检查报告</a></p>
                   </div>
                </div>
             </div>

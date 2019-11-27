@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="You can run the deinstall command with the -paramfile option to use the values you specify in the response file.">
       <meta name="description" content="You can run the deinstall command with the -paramfile option to use the values you specify in the response file.">
-      <title>Deinstallation Response File Example for Oracle Grid Infrastructure for a Cluster</title>
+      <title>针对群集的Oracle Grid Infrastructure的卸载响应文件示例</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Grid Infrastructure Installation and Upgrade Guide">
       <meta property="og:description" content="You can run the deinstall command with the -paramfile option to use the values you specify in the response file.">
@@ -47,30 +45,25 @@
     <meta name="dcterms.isVersionOf" content="CWSOL">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="deinstallation-examples-for-oracle-database.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="migrating-standalone-oracle-grid-infrastructure-servers-to-a-cluster.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="deinstallation-examples-for-oracle-database.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="migrating-standalone-oracle-grid-infrastructure-servers-to-a-cluster.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure Installation and Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="removing-oracle-database-software.html" property="item" typeof="WebPage"><span property="name">Removing Oracle Database Software</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Deinstallation Response File Example for Oracle Grid Infrastructure for a Cluster</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure安装和升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="removing-oracle-database-software.html" property="item" typeof="WebPage"><span property="name">删除Oracle数据库软件</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">针对群集的Oracle Grid Infrastructure的卸载响应文件示例</li>
             </ol>
             <a id="GUID-55DDDD8A-7B2D-4257-8D7A-6E6952873BE7" name="GUID-55DDDD8A-7B2D-4257-8D7A-6E6952873BE7"></a>
             
-            <h2 id="CWSOL-GUID-55DDDD8A-7B2D-4257-8D7A-6E6952873BE7" class="sect2">Deinstallation Response File Example for Oracle Grid Infrastructure for a Cluster</h2>
+            <h2 id="CWSOL-GUID-55DDDD8A-7B2D-4257-8D7A-6E6952873BE7" class="sect2">针对群集的Oracle Grid Infrastructure的卸载响应文件示例</h2>
          </header>
          <div class="ind">
             <div>
-               <p>You can run the <code>deinstall</code> command with the <code class="codeph">-paramfile</code> option to use the values you specify in the response file.
+               <p>您可以使用<code class="codeph">-paramfile</code>选项运行<code>deinstall</code>命令，以使用您在响应文件中指定的值。
                </p>
-               <p>The following is an example of a response file for a cluster on nodes <code class="codeph">node1</code> and <code class="codeph">node2</code>, in which the Oracle Grid Infrastructure for a cluster software binary owner is <code class="codeph">grid</code>, the Oracle Grid Infrastructure home (Grid home) is in the path <code class="codeph">/u01/app/19.0.0/grid</code>, the Oracle base (the Oracle base for Oracle Grid Infrastructure, containing Oracle ASM log files, Oracle Clusterware logs, and other administrative files) is <code class="codeph">/u01/app/grid/</code>, the central Oracle Inventory home (<code class="codeph">oraInventory</code>) is <code class="codeph">/u01/app/oraInventory</code>, the virtual IP addresses (VIP) are <code class="codeph">192.0.2.2</code> and <code class="codeph">192.0.2.4</code>, the local node (the node where you run the deinstallation session from) is <code class="codeph">node1</code>:
-               </p><pre class="pre codeblock"><code># Copyright (c) 2005, 2016 Oracle Corporation.  All rights reserved.
+               <p>以下是节点<code class="codeph">node1</code>和<code class="codeph">node2</code>上的集群响应文件的示例，其中集群软件二进制所有者的Oracle Grid Infrastructure为<code class="codeph">grid</code> ，Oracle Grid Infrastructure主目录（Grid home）位于路径<code class="codeph">/u01/app/19.0.0/grid</code>基础（Oracle Grid Infrastructure的Oracle基础，包含Oracle ASM日志文件，Oracle Clusterware日志和其他管理文件）是<code class="codeph">/u01/app/grid/</code> ，中央Oracle Inventory主页（ <code class="codeph">oraInventory</code> ）是<code class="codeph">/u01/app/oraInventory</code> ，虚拟IP地址（VIP）是<code class="codeph">192.0.2.2</code>和<code class="codeph">192.0.2.4</code> ，本地节点（运行卸载会话的节点）是<code class="codeph">node1</code> ：</p><pre class="pre codeblock"><code># Copyright (c) 2005, 2016 Oracle Corporation.  All rights reserved.
 ORACLE_HOME=/u01/app/12.2.0/grid
 CDATA_AUSIZE=4
 BIG_CLUSTER=true
@@ -204,23 +197,21 @@ NEW_NODEVIPS='n1-vip/255.255.252.0/eth0,n2-vip/255.255.252.0/eth0'
 SCAN_NAME=node1-cluster-scan.node1-cluster.com
 RIM_NODE_LIST=
 INVENTORY_LOCATION=/u01/app/oraInventory</code></pre><div class="infoboxnote" id="GUID-55DDDD8A-7B2D-4257-8D7A-6E6952873BE7__GUID-D2EEFF55-105B-43E4-AACB-84324BA1F121">
-                  <p class="notep1">Note:</p>
-                  <p>Do not use quotation marks with variables except in the following cases:</p>
-                  <ul style="list-style-type: disc;">
+                  <p class="notep1">注意：</p>
+                  <p>除以下情况外，不要在变量中使用引号：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p>Around addresses in <span class="variable" translate="no">CRS_NODEVIPS</span>:
-                        </p><pre class="oac_no_warn" dir="ltr">CRS_NODEVIPS='n1-vip/255.255.252.0/eth0,n2-vip/255.255.252.0/eth0'
+                        <p><span class="variable" translate="no">CRS_NODEVIPS</span>地址<span class="variable" translate="no">CRS_NODEVIPS</span> ：</p><pre class="oac_no_warn" dir="ltr">CRS_NODEVIPS='n1-vip/255.255.252.0/eth0,n2-vip/255.255.252.0/eth0'
 </pre></li>
                      <li>
-                        <p>Around interface names in <span class="variable" translate="no">NETWORKS</span>:
-                        </p><pre class="oac_no_warn" dir="ltr">NETWORKS="eth0"/192.0.2.1\:public,"eth1"/10.0.0.1\:cluster_interconnect VIP1_IP=192.0.2.2</pre></li>
+                        <p>围绕<span class="variable" translate="no">NETWORKS</span>接口名称：</p><pre class="oac_no_warn" dir="ltr">NETWORKS="eth0"/192.0.2.1\:public,"eth1"/10.0.0.1\:cluster_interconnect VIP1_IP=192.0.2.2</pre></li>
                   </ul>
                </div>
             </div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="removing-oracle-database-software.html#GUID-5619EBF0-C89E-4349-AE6F-A8F8B3B06BD1" title="These topics describe how to remove Oracle software and configuration files.">Removing Oracle Database Software</a></p>
+                     <p><strong>父主题：</strong> <a href="removing-oracle-database-software.html#GUID-5619EBF0-C89E-4349-AE6F-A8F8B3B06BD1" title="这些主题描述了如何删除Oracle软件和配置文件。">删除Oracle数据库软件</a></p>
                   </div>
                </div>
             </div>

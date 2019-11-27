@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="You must designate a group as the OSKMDBA group during installation. Members of this group are granted the SYSKM privileges to perform Transparent Data Encryption keystore operations.">
       <meta name="description" content="You must designate a group as the OSKMDBA group during installation. Members of this group are granted the SYSKM privileges to perform Transparent Data Encryption keystore operations.">
-      <title>Creating the OSKMDBA Group for Database Installations</title>
+      <title>为数据库安装创建OSKMDBA组</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Grid Infrastructure Installation and Upgrade Guide">
       <meta property="og:description" content="You must designate a group as the OSKMDBA group during installation. Members of this group are granted the SYSKM privileges to perform Transparent Data Encryption keystore operations.">
@@ -47,31 +45,25 @@
     <meta name="dcterms.isVersionOf" content="CWLIN">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="creating-the-osdgdba-group-for-database-installations.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="creating-the-racdba-group-for-database-installations.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="creating-the-osdgdba-group-for-database-installations.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="creating-the-racdba-group-for-database-installations.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure Installation and Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="configuring-users-groups-and-environments-for-oracle-grid-infrastructure-and-oracle-database.html" property="item" typeof="WebPage"><span property="name">Configuring Users, Groups and Environments for Oracle Grid Infrastructure and Oracle Database</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="creating-operating-system-privileges-groups.html" property="item" typeof="WebPage"><span property="name">Creating Operating
-System Privileges Groups</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Creating the OSKMDBA Group for Database Installations</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure安装和升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="configuring-users-groups-and-environments-for-oracle-grid-infrastructure-and-oracle-database.html" property="item" typeof="WebPage"><span property="name">为Oracle Grid Infrastructure和Oracle数据库配置用户，组和环境</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="creating-operating-system-privileges-groups.html" property="item" typeof="WebPage"><span property="name">创建操作系统权限组</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">为数据库安装创建OSKMDBA组</li>
             </ol>
             <a id="GUID-62FC41B0-0CCE-4788-9BBC-2131258ED59F" name="GUID-62FC41B0-0CCE-4788-9BBC-2131258ED59F"></a>
             
-            <h2 id="CWLIN-GUID-62FC41B0-0CCE-4788-9BBC-2131258ED59F" class="sect2">Creating the OSKMDBA Group for Database Installations</h2>
+            <h2 id="CWLIN-GUID-62FC41B0-0CCE-4788-9BBC-2131258ED59F" class="sect2">为数据库安装创建OSKMDBA组</h2>
          </header>
          <div class="ind">
             <div>
-               <p>You must designate a group as the OSKMDBA group during installation. Members of this group are granted the SYSKM privileges to perform Transparent Data Encryption keystore operations.</p>
-               <div class="section">If you want a separate group for Transparent Data Encryption, then create the OSKMDBA group using the group name <code class="codeph">kmdba</code> unless a group with that name already exists:
-               </div>
+               <p>您必须在安装期间将组指定为OSKMDBA组。该组的成员被授予SYSKM权限以执行透明数据加密密钥库操作。</p>
+               <div class="section">如果要为透明数据加密创建单独的组，请使用组名称<code class="codeph">kmdba</code>创建OSKMDBA组，除非已存在具有该名称的组：</div>
                <!-- class="section" -->
                <div class="example" id="GUID-62FC41B0-0CCE-4788-9BBC-2131258ED59F__GUID-87E9E5C8-7B9E-451A-9933-EB59C5BBBB0F"><pre class="pre codeblock"><code># /usr/sbin/groupadd -g 54326 kmdba
 </code></pre></div>
@@ -80,7 +72,7 @@ System Privileges Groups</span></a></li>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="creating-operating-system-privileges-groups.html#GUID-164A7218-166D-4B58-9A86-88149E8FCB83" title="The following sections describe how to create operating system groups for Oracle Grid Infrastructure and Oracle Database:">Creating Operating System Privileges Groups</a></p>
+                     <p><strong>父主题：</strong> <a href="creating-operating-system-privileges-groups.html#GUID-164A7218-166D-4B58-9A86-88149E8FCB83" title="以下部分介绍如何为Oracle Grid Infrastructure和Oracle数据库创建操作系统组：">创建操作系统权限组</a></p>
                   </div>
                </div>
             </div>

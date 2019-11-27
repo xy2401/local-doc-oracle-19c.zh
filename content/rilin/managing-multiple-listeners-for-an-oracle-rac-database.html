@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Review to understand how to use SRVCTL and TNS_ADMIN to manage listeners">
       <meta name="description" content="Review to understand how to use SRVCTL and TNS_ADMIN to manage listeners">
-      <title>Managing Multiple Listeners for an Oracle RAC Database</title>
+      <title>管理Oracle RAC数据库的多个侦听器</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Real Application Clusters Installation Guide">
       <meta property="og:description" content="Review to understand how to use SRVCTL and TNS_ADMIN to manage listeners">
@@ -47,34 +45,29 @@
     <meta name="dcterms.isVersionOf" content="RILIN">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="remote-listeners-for-an-oracle-rac-database.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="how-oracle-database-uses-the-listener-file-listener-ora.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="remote-listeners-for-an-oracle-rac-database.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="how-oracle-database-uses-the-listener-file-listener-ora.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="understanding-the-oracle-rac-installed-configuration.html" property="item" typeof="WebPage"><span property="name"> Understanding the Oracle RAC Installed Configuration </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="oracle-net-services-configuration-files-and-parameters.html" property="item" typeof="WebPage"><span property="name">Oracle Net Services Configuration Files and Parameters</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="listener-configuration-and-the-listener-ora-file.html" property="item" typeof="WebPage"><span property="name">Listener Configuration and the listener.ora File</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Managing Multiple Listeners for an Oracle RAC Database</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="understanding-the-oracle-rac-installed-configuration.html" property="item" typeof="WebPage"><span property="name">了解Oracle RAC安装配置</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="oracle-net-services-configuration-files-and-parameters.html" property="item" typeof="WebPage"><span property="name">Oracle Net Services配置文件和参数</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="listener-configuration-and-the-listener-ora-file.html" property="item" typeof="WebPage"><span property="name">监听器配置和listener.ora文件</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">管理Oracle RAC数据库的多个侦听器</li>
             </ol>
             <a id="GUID-397E5EE4-D0E4-45EE-8CC4-08191F285B5E" name="GUID-397E5EE4-D0E4-45EE-8CC4-08191F285B5E"></a><a id="RILIN1283"></a>
             
-            <h2 id="RILIN-GUID-397E5EE4-D0E4-45EE-8CC4-08191F285B5E" class="sect2">Managing Multiple Listeners for an Oracle RAC Database</h2>
+            <h2 id="RILIN-GUID-397E5EE4-D0E4-45EE-8CC4-08191F285B5E" class="sect2">管理Oracle RAC数据库的多个侦听器</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Review to understand how to use <code>SRVCTL</code> and <code>TNS_ADMIN</code> to manage listeners
-               </p>
+               <p>查看以了解如何使用<code>SRVCTL</code>和<code>TNS_ADMIN</code>来管理侦听器</p>
                <div class="section">
-                  <p>To administer Oracle Database 19c local and SCAN listeners using the <code>lsnrctl</code> command, set your <span class="parmname" translate="no">ORACLE_HOME</span> environment variable to the path for the Grid home. Do not attempt to use the <code>lsnrctl</code> commands from Oracle home locations for earlier releases, because they cannot be used with Oracle Database 19c.
+                  <p>要使用<code>lsnrctl</code>命令管理Oracle Database 19c本地和SCAN侦听器，请将<span class="parmname" translate="no">ORACLE_HOME</span>环境变量设置为Grid home的路径。不要尝试使用Oracle主位置的<code>lsnrctl</code>命令用于早期版本，因为它们不能与Oracle Database 19c一起使用。
                   </p>
-                  <p>For listeners not managed by Oracle Clusterware, you can use a non-default location for the <code>listener.ora</code> file by setting the <span class="parmname" translate="no">TNS_ADMIN</span> environment variable or registry value to point to the directory that contains the Oracle Net Services configuration files. To use a non-default location for a listener managed by Oracle Clusterware, you must use <code>SRVCTL</code> and the <code>setenv</code> command to modify the value of <span class="parmname" translate="no">TNS_ADMIN</span> for each listener.
+                  <p>对于不受Oracle Clusterware管理的侦听器，可以通过将<span class="parmname" translate="no">TNS_ADMIN</span>环境变量或注册表值设置为指向包含Oracle Net Services配置文件的目录，为<code>listener.ora</code>文件使用非默认位置。要为Oracle Clusterware管理的侦听器使用非默认位置，必须使用<code>SRVCTL</code>和<code>setenv</code>命令为每个侦听器修改<span class="parmname" translate="no">TNS_ADMIN</span>的值。
                   </p>
                </div>
                <!-- class="section" -->
@@ -82,7 +75,7 @@
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="listener-configuration-and-the-listener-ora-file.html#GUID-56E9F177-5A27-4BD6-97ED-A823011F2C98" title="In Oracle RAC environments, Oracle recommends that you let the Oracle Agent manage Oracle listeners for Oracle Databases.">Listener Configuration and the listener.ora File</a></p>
+                     <p><strong>父主题：</strong> <a href="listener-configuration-and-the-listener-ora-file.html#GUID-56E9F177-5A27-4BD6-97ED-A823011F2C98" title="在Oracle RAC环境中，Oracle建议您让Oracle代理管理Oracle数据库的Oracle侦听器。">侦听器配置和listener.ora文件</a></p>
                   </div>
                </div>
             </div>

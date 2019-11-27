@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Use the chactl query repository command to view the maximum retention time, number of targets, and the size of the Oracle Cluster Health Advisor repository.">
       <meta name="description" content="Use the chactl query repository command to view the maximum retention time, number of targets, and the size of the Oracle Cluster Health Advisor repository.">
-      <title>chactl query repository</title>
+      <title>chactl查询存储库</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="User’s Guide">
       <meta property="og:description" content="Use the chactl query repository command to view the maximum retention time, number of targets, and the size of the Oracle Cluster Health Advisor repository.">
@@ -47,36 +45,31 @@
     <meta name="dcterms.isVersionOf" content="ATNMS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="chactl-query-model.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="chactl-query-calibration.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="chactl-query-model.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="chactl-query-calibration.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">User’s Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="appendixes.html" property="item" typeof="WebPage"><span property="name">Appendixes</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="chactl-command-reference.html" property="item" typeof="WebPage"><span property="name">chactl Command Reference</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">chactl query repository</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">用户指导</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="appendixes.html" property="item" typeof="WebPage"><span property="name">附录</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="chactl-command-reference.html" property="item" typeof="WebPage"><span property="name">chactl命令参考</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">chactl查询存储库</li>
             </ol>
             <a id="GUID-41B609B2-4F3F-41D6-B16B-25D84E4AF67C" name="GUID-41B609B2-4F3F-41D6-B16B-25D84E4AF67C"></a>
             
-            <h2 id="ATNMS-GUID-41B609B2-4F3F-41D6-B16B-25D84E4AF67C" class="sect2"><span class="enumeration_section">D.8 </span>chactl query repository
-            </h2>
+            <h2 id="ATNMS-GUID-41B609B2-4F3F-41D6-B16B-25D84E4AF67C" class="sect2"><span class="enumeration_section">D.8</span> chactl查询存储库</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Use the <code class="codeph">chactl query repository</code> command to view the maximum retention time, number of targets, and the size of the Oracle Cluster Health Advisor repository. 
+               <p>使用<code class="codeph">chactl query repository</code>命令可以查看最大保留时间，目标数以及Oracle Cluster Health Advisor存储库的大小。
                </p>
                <div class="section">
-                  <p class="subhead1" id="GUID-41B609B2-4F3F-41D6-B16B-25D84E4AF67C__GUID-885F13C5-6643-4E72-8AB7-B01E038212F3">Syntax</p><pre class="pre codeblock"><code>chactl query repository [-help]</code></pre></div>
+                  <p class="subhead1" id="GUID-41B609B2-4F3F-41D6-B16B-25D84E4AF67C__GUID-885F13C5-6643-4E72-8AB7-B01E038212F3">句法</p><pre class="pre codeblock"><code>chactl query repository [-help]</code></pre></div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-41B609B2-4F3F-41D6-B16B-25D84E4AF67C__GUID-847AA6EE-7422-444C-A0F9-5B181E234BB3">Examples</p>
-                  <p>To view information about the Oracle Cluster Health Advisor repository:</p><pre class="pre codeblock"><code>$ chactl query repository
+                  <p class="subhead1" id="GUID-41B609B2-4F3F-41D6-B16B-25D84E4AF67C__GUID-847AA6EE-7422-444C-A0F9-5B181E234BB3">例子</p>
+                  <p>要查看有关Oracle Cluster Health Advisor存储库的信息：</p><pre class="pre codeblock"><code>$ chactl query repository
 specified max retention time(hrs) : 72
 available retention time(hrs)     : 212
 available number of entities      : 2
@@ -88,7 +81,7 @@ allocated repository size(gb)     : 0.07</code></pre></div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="chactl-command-reference.html#GUID-9AD6BC7D-F0F5-41E9-80CB-9BD911FCE586" title="The Oracle Cluster Health Advisor commands enable the Oracle Grid Infrastructure user to administer basic monitoring functionality on the targets.">chactl Command Reference</a></p>
+                     <p><strong>父主题：</strong> <a href="chactl-command-reference.html#GUID-9AD6BC7D-F0F5-41E9-80CB-9BD911FCE586" title="Oracle Cluster Health Advisor命令使Oracle Grid Infrastructure用户能够管理目标上的基本监视功能。">chactl命令参考</a></p>
                   </div>
                </div>
             </div>

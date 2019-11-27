@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Run these commands on the source and destination databases to find character sets that are compatible.">
       <meta name="description" content="Run these commands on the source and destination databases to find character sets that are compatible.">
-      <title>Checking Character Set Compatibility</title>
+      <title>检查字符集兼容性</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Migrating Non-CDBs to New Hardware with a Different Endian Operating System and for the Same Release">
       <meta property="og:description" content="Run these commands on the source and destination databases to find character sets that are compatible.">
@@ -46,27 +44,23 @@
     <meta name="dcterms.isVersionOf" content="SPMDS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="migrating-oracle-database.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="transporting-tablespaces-between-databases.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="migrating-oracle-database.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="transporting-tablespaces-between-databases.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Migrating Non-CDBs to New Hardware with a Different Endian Operating System and for the Same Release</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="migrating-oracle-database.html" property="item" typeof="WebPage"><span property="name">Migrating Oracle Database</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Checking Character Set Compatibility</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">使用不同的Endian操作系统和同一版本将非CDB迁移到新硬件</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="migrating-oracle-database.html" property="item" typeof="WebPage"><span property="name">迁移Oracle数据库</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">检查字符集兼容性</li>
             </ol>
             <a id="GUID-57DE97DF-228E-4DE7-94C5-EDAB329BB2B2" name="GUID-57DE97DF-228E-4DE7-94C5-EDAB329BB2B2"></a>
             
-            <h2 id="SPMDS-GUID-57DE97DF-228E-4DE7-94C5-EDAB329BB2B2" class="sect2">Checking Character Set Compatibility</h2>
+            <h2 id="SPMDS-GUID-57DE97DF-228E-4DE7-94C5-EDAB329BB2B2" class="sect2">检查字符集兼容性</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Run these commands on the source and destination databases to find character sets that are compatible.</p>
+               <p>在源和目标数据库上运行这些命令以查找兼容的字符集。</p>
                <div class="p"><pre class="pre codeblock"><code>SQL&gt; show parameter CHARACTER
 
 NAME                    TYPE        VALUE
@@ -89,7 +83,7 @@ NLS_CHARACTERSET           WE8MSWIN1252
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="migrating-oracle-database.html#GUID-F224185E-6AEC-45FC-B4F3-7F8B6469606D" title="Use the transportable tablespaces feature to copy a set of tablespaces from one Oracle Database to another.">Migrating Oracle Database</a></p>
+                     <p><strong>父主题：</strong> <a href="migrating-oracle-database.html#GUID-F224185E-6AEC-45FC-B4F3-7F8B6469606D" title="使用可传输表空间功能将一组表空间从一个Oracle数据库复制到另一个Oracle数据库。">迁移Oracle数据库</a></p>
                   </div>
                </div>
             </div>

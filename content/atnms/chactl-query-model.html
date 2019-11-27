@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Use the chactl query model command to list all Oracle Cluster Health Advisor models or to view detailed information about a specific Oracle Cluster Health Advisor model.">
       <meta name="description" content="Use the chactl query model command to list all Oracle Cluster Health Advisor models or to view detailed information about a specific Oracle Cluster Health Advisor model.">
-      <title>chactl query model</title>
+      <title>chactl查询模型</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="User’s Guide">
       <meta property="og:description" content="Use the chactl query model command to list all Oracle Cluster Health Advisor models or to view detailed information about a specific Oracle Cluster Health Advisor model.">
@@ -47,38 +45,33 @@
     <meta name="dcterms.isVersionOf" content="ATNMS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="chactl-query-diagnosis.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="chactl-query-repository.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="chactl-query-diagnosis.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="chactl-query-repository.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">User’s Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="appendixes.html" property="item" typeof="WebPage"><span property="name">Appendixes</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="chactl-command-reference.html" property="item" typeof="WebPage"><span property="name">chactl Command Reference</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">chactl query model</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">用户指导</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="appendixes.html" property="item" typeof="WebPage"><span property="name">附录</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="chactl-command-reference.html" property="item" typeof="WebPage"><span property="name">chactl命令参考</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">chactl查询模型</li>
             </ol>
             <a id="GUID-F434A716-1875-464D-BCDE-E77969641F5C" name="GUID-F434A716-1875-464D-BCDE-E77969641F5C"></a>
             
-            <h2 id="ATNMS-GUID-F434A716-1875-464D-BCDE-E77969641F5C" class="sect2"><span class="enumeration_section">D.7 </span>chactl query model
-            </h2>
+            <h2 id="ATNMS-GUID-F434A716-1875-464D-BCDE-E77969641F5C" class="sect2"><span class="enumeration_section">D.7</span> chactl查询模型</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Use the <code class="codeph">chactl query model</code> command to list all Oracle Cluster Health Advisor models or to view detailed information about a specific Oracle Cluster Health Advisor model. 
+               <p>使用<code class="codeph">chactl query model</code>命令列出所有Oracle Cluster Health Advisor模型或查看有关特定Oracle Cluster Health Advisor模型的详细信息。
                </p>
                <div class="section">
-                  <p class="subhead1" id="GUID-F434A716-1875-464D-BCDE-E77969641F5C__GUID-D2916707-DEE8-4F60-A372-918C79A46BA3">Syntax</p><pre class="pre codeblock"><code>chactl query model [-name <span class="variable" translate="no">model_name</span> [-verbose]][-help]</code></pre></div>
+                  <p class="subhead1" id="GUID-F434A716-1875-464D-BCDE-E77969641F5C__GUID-D2916707-DEE8-4F60-A372-918C79A46BA3">句法</p><pre class="pre codeblock"><code>chactl query model [-name <span class="variable" translate="no">model_name</span> [-verbose]][-help]</code></pre></div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-F434A716-1875-464D-BCDE-E77969641F5C__GUID-211F7B8D-86F1-44D8-9874-C9EEB3509E96">Examples</p>
-                  <ul style="list-style-type: disc;">
+                  <p class="subhead1" id="GUID-F434A716-1875-464D-BCDE-E77969641F5C__GUID-211F7B8D-86F1-44D8-9874-C9EEB3509E96">例子</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p>To list all base Oracle Cluster Health Advisor models:</p><pre class="pre codeblock"><code>$ chactl query model
+                        <p>列出所有基本Oracle Cluster Health Advisor模型：</p><pre class="pre codeblock"><code>$ chactl query model
 Models: MOD1, MOD2, MOD3, MOD4, MOD5, MOD6, MOD7</code></pre><pre class="pre codeblock"><code>$ chactl query model -name weekday 
 Model: weekday
 Target Type: DATABASE
@@ -89,7 +82,7 @@ Calibration Date: 2016-09-10 12:59:49
 Calibration Time Ranges: start=2016-09-09 16:00:00,end=2016-09-09 23:00:00
 Calibration KPIs: not specified</code></pre></li>
                      <li>
-                        <p>To view detailed information, including calibration metadata, about the specific Oracle Cluster Health Advisor model:</p><pre class="pre codeblock"><code>$ chactl query model -name MOD5 -verbose 
+                        <p>要查看有关特定Oracle Cluster Health Advisor模型的详细信息（包括校准元数据），请执行以下操作：</p><pre class="pre codeblock"><code>$ chactl query model -name MOD5 -verbose 
 Model: MOD5
 CREATION_DATE:          Jan 10,2016 10:10
 VALIDATION_STATUS:      Validated
@@ -106,7 +99,7 @@ CAL_DATA_FROM_TARGETS   inst73, inst75
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="chactl-command-reference.html#GUID-9AD6BC7D-F0F5-41E9-80CB-9BD911FCE586" title="The Oracle Cluster Health Advisor commands enable the Oracle Grid Infrastructure user to administer basic monitoring functionality on the targets.">chactl Command Reference</a></p>
+                     <p><strong>父主题：</strong> <a href="chactl-command-reference.html#GUID-9AD6BC7D-F0F5-41E9-80CB-9BD911FCE586" title="Oracle Cluster Health Advisor命令使Oracle Grid Infrastructure用户能够管理目标上的基本监视功能。">chactl命令参考</a></p>
                   </div>
                </div>
             </div>

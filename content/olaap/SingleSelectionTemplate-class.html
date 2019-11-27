@@ -1,17 +1,15 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>SingleSelectionTemplate Class</title>
+      <title>SingleSelectionTemplate类</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="Java API Developer's Guide ">
-      <meta property="og:description" content>
+      <meta property="og:title" content="Java API Developer&#39;s Guide ">
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="Java API Developer's Guide">
+      <meta name="application-name" content="Java API Developer&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="olap-java-api-developers-guide.pdf" title="PDF File" type="application/pdf">
@@ -41,40 +39,34 @@
         </script>
       <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"oracle-database","element_name":"Oracle Database","display_in_url":true},"release":{"short_name":"19","element_name":"Release 19","display_in_url":true}}}</script>
       
-    <meta name="dcterms.title" content="OLAP Java API Developer's Guide">
+    <meta name="dcterms.title" content="OLAP Java API Developer&#39;s Guide">
     <meta name="dcterms.isVersionOf" content="OLAAP">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="setting-up-development-environment.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="book-index.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="setting-up-development-environment.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="book-index.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Java API Developer's Guide </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem"> SingleSelectionTemplate Class</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Java API开发人员指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">SingleSelectionTemplate类</li>
             </ol>
             <a id="GUID-923EAA61-EFC2-4269-943F-9C0369837D4E" name="GUID-923EAA61-EFC2-4269-943F-9C0369837D4E"></a><a id="OLAAP404"></a>
             
-            <h2 id="OLAAP-GUID-923EAA61-EFC2-4269-943F-9C0369837D4E" class="sect2"><span class="enumeration_chapter">B </span> SingleSelectionTemplate Class
-            </h2>
+            <h2 id="OLAAP-GUID-923EAA61-EFC2-4269-943F-9C0369837D4E" class="sect2"><span class="enumeration_chapter">B</span> SingleSelectionTemplate类</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p>This appendix contains the code for the <code class="codeph">SingleSelectionTemplate</code> class. This class is used by the examples in <a href="using-transaction-provider.html#GUID-E290E8B5-CC10-4BDF-91B1-7189BE7F12B9"> Using a TransactionProvider</a>, and <a href="creating-dynamic-queries.html#GUID-16DC09F2-FA92-4987-A125-2EE813B7413E"> Creating Dynamic Queries</a>.
+                  <p>本附录包含<code class="codeph">SingleSelectionTemplate</code>类的代码。此类由“ <a href="using-transaction-provider.html#GUID-E290E8B5-CC10-4BDF-91B1-7189BE7F12B9">使用TransactionProvider</a> ”和“ <a href="creating-dynamic-queries.html#GUID-16DC09F2-FA92-4987-A125-2EE813B7413E">创建动态查询”中</a>的示例<a href="using-transaction-provider.html#GUID-E290E8B5-CC10-4BDF-91B1-7189BE7F12B9">使用</a> 。
                   </p>
                </div>
                <!-- class="section" -->
-            </div><a id="OLAAP405"></a><div class="props_rev_3"><a id="GUID-9129B5DC-80F9-4E59-B26B-94B54ED238FE" name="GUID-9129B5DC-80F9-4E59-B26B-94B54ED238FE"></a><h3 id="OLAAP-GUID-9129B5DC-80F9-4E59-B26B-94B54ED238FE" class="sect3"><span class="enumeration_section">B.1 </span>Code for the SingleSelectionTemplate Class
-               </h3>
+            </div><a id="OLAAP405"></a><div class="props_rev_3"><a id="GUID-9129B5DC-80F9-4E59-B26B-94B54ED238FE" name="GUID-9129B5DC-80F9-4E59-B26B-94B54ED238FE"></a><h3 id="OLAAP-GUID-9129B5DC-80F9-4E59-B26B-94B54ED238FE" class="sect3"><span class="enumeration_section">B.1</span> SingleSelectionTemplate类的代码</h3>
                <div>
                   <div class="section">
-                     <p><a id="d30677e82" class="indexterm-anchor"></a>The following is the <code class="codeph">SingleSelectionTemplate.java</code> class.
+                     <p><a id="d30677e82" class="indexterm-anchor"></a>以下是<code class="codeph">SingleSelectionTemplate.java</code>类。
                      </p><pre class="oac_no_warn" dir="ltr">import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;

@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Review this information to understand about DBCA actions during Oracle RAC database creation.">
       <meta name="description" content="Review this information to understand about DBCA actions during Oracle RAC database creation.">
-      <title>Actions Performed By DBCA for Oracle RAC Databases</title>
+      <title>DBCA针对Oracle RAC数据库执行的操作</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Real Application Clusters Installation Guide">
       <meta property="og:description" content="Review this information to understand about DBCA actions during Oracle RAC database creation.">
@@ -47,51 +45,46 @@
     <meta name="dcterms.isVersionOf" content="RILIN">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="using-dbca-to-specify-database-initialization-parameters-for-oracle-rac.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="using-dbca-to-create-an-oracle-rac-one-node-database.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="using-dbca-to-specify-database-initialization-parameters-for-oracle-rac.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="using-dbca-to-create-an-oracle-rac-one-node-database.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="selecting-dbca-options-to-create-oracle-rac-or-oracle-rac-one-node-databases-with-dbca.html" property="item" typeof="WebPage"><span property="name">Creating Oracle RAC or Oracle RAC One Node Databases with DBCA </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="creating-an-oracle-rac-or-oracle-rac-one-node-database-with-dbca.html" property="item" typeof="WebPage"><span property="name">Selecting DBCA Options to Create an Oracle RAC or Oracle RAC One Node Database</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Actions Performed By DBCA for Oracle RAC Databases</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="selecting-dbca-options-to-create-oracle-rac-or-oracle-rac-one-node-databases-with-dbca.html" property="item" typeof="WebPage"><span property="name">使用DBCA创建Oracle RAC或Oracle RAC One节点数据库</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="creating-an-oracle-rac-or-oracle-rac-one-node-database-with-dbca.html" property="item" typeof="WebPage"><span property="name">选择DBCA选项以创建Oracle RAC或Oracle RAC One节点数据库</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">DBCA针对Oracle RAC数据库执行的操作</li>
             </ol>
             <a id="GUID-D84E4426-CF97-4BE7-A944-09ABE6A2D2C3" name="GUID-D84E4426-CF97-4BE7-A944-09ABE6A2D2C3"></a><a id="RILIN1240"></a>
             
-            <h2 id="RILIN-GUID-D84E4426-CF97-4BE7-A944-09ABE6A2D2C3" class="sect2">Actions Performed By DBCA for Oracle RAC Databases</h2>
+            <h2 id="RILIN-GUID-D84E4426-CF97-4BE7-A944-09ABE6A2D2C3" class="sect2">DBCA针对Oracle RAC数据库执行的操作</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Review this information to understand about DBCA actions during Oracle RAC database creation.</p>
-               <p>After you respond to DBCA prompts, review the Summary dialog information and click <span class="uicontrol bold">OK</span>, DBCA does the following: 
-               </p>
-               <ul style="list-style-type: disc;">
+               <p>查看此信息以了解Oracle RAC数据库创建期间的DBCA操作。</p>
+               <p>在响应DBCA提示后，查看“摘要”对话框信息并单击“ <span class="uicontrol bold">确定”</span> ，DBCA将执行以下操作：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p>Creates an Oracle RAC database, and its instances</p>
+                     <p>创建Oracle RAC数据库及其实例</p>
                   </li>
                   <li>
-                     <p>Creates the Oracle RAC data dictionary views</p>
+                     <p>创建Oracle RAC数据字典视图</p>
                   </li>
                   <li>
-                     <p>Starts the CRS (Cluster Ready Service) resource for the database</p>
+                     <p>启动数据库的CRS（群集就绪服务）资源</p>
                   </li>
                </ul>
                <div class="infoboxnote" id="GUID-D84E4426-CF97-4BE7-A944-09ABE6A2D2C3__GUID-12A853D6-09C6-4C70-BF07-6DD54C10E20E">
-                  <p class="notep1">Caution:</p>
-                  <p>After you have created the Oracle RAC database, if you decide to install additional Oracle Database products in the Oracle RAC database you have created, then before you attempt to install the products, you must stop all processes running in the Oracle RAC database homes. </p>
-                  <p>You must stop all processes running in the Oracle RAC homes so that Oracle Universal Installer can relink certain executables and libraries.</p>
+                  <p class="notep1">警告：</p>
+                  <p>创建Oracle RAC数据库后，如果决定在已创建的Oracle RAC数据库中安装其他Oracle数据库产品，则在尝试安装产品之前，必须停止在Oracle RAC数据库主目录中运行的所有进程。</p>
+                  <p>您必须停止在Oracle RAC主目录中运行的所有进程，以便Oracle Universal Installer可以重新链接某些可执行文件和库。</p>
                </div>
             </div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="creating-an-oracle-rac-or-oracle-rac-one-node-database-with-dbca.html#GUID-8B2CB0F2-7C9C-487B-BCA6-F86E9CE1D288" title="Review this information to use Database Configuration Assistant (DBCA) to create Oracle RAC or Oracle RAC One Node Database.">Selecting DBCA Options to Create an Oracle RAC or Oracle RAC One Node Database</a></p>
+                     <p><strong>父主题：</strong> <a href="creating-an-oracle-rac-or-oracle-rac-one-node-database-with-dbca.html#GUID-8B2CB0F2-7C9C-487B-BCA6-F86E9CE1D288" title="查看此信息以使用Database Configuration Assistant（DBCA）创建Oracle RAC或Oracle RAC One节点数据库。">选择DBCA选项以创建Oracle RAC或Oracle RAC单节点数据库</a></p>
                   </div>
                </div>
             </div>

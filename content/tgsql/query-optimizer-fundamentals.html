@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="To tune Oracle SQL, you must understand the query optimizer. The optimizer is built-in software that determines the most efficient method for a statement to access data.">
       <meta name="description" content="To tune Oracle SQL, you must understand the query optimizer. The optimizer is built-in software that determines the most efficient method for a statement to access data.">
-      <title>Query Optimizer Fundamentals</title>
+      <title>查询优化工具基础知识</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="SQL Tuning Guide">
       <meta property="og:description" content="To tune Oracle SQL, you must understand the query optimizer. The optimizer is built-in software that determines the most efficient method for a statement to access data.">
@@ -46,36 +44,31 @@
     <meta name="dcterms.isVersionOf" content="TGSQL">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="sql-performance-methodology.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="sql-processing.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="sql-performance-methodology.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="sql-processing.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Tuning Guide</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Query Optimizer Fundamentals</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL调优指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">查询优化工具基础知识</li>
             </ol>
             <a id="GUID-EF45F82A-F17D-4C79-9B6A-8CBBB95F0684" name="GUID-EF45F82A-F17D-4C79-9B6A-8CBBB95F0684"></a><a id="TGSQL174"></a>
             
-            <h2 id="TGSQL-GUID-EF45F82A-F17D-4C79-9B6A-8CBBB95F0684" class="sect2"><span class="enumeration_part">Part II </span>Query Optimizer Fundamentals
-            </h2>
+            <h2 id="TGSQL-GUID-EF45F82A-F17D-4C79-9B6A-8CBBB95F0684" class="sect2"><span class="enumeration_part">第二部分</span>查询优化器基础知识</h2>
          </header>
          <div class="ind">
             <div>
-               <p>To tune Oracle SQL, you must understand the query optimizer. The optimizer is built-in software that determines the most efficient method for a statement to access data.</p>
-               <p>This part contains the following chapters:</p>
+               <p>要调优Oracle SQL，您必须了解查询优化器。优化器是内置软件，用于确定语句访问数据的最有效方法。</p>
+               <p>本部分包含以下章节：</p>
             </div>
             <div>
                <ul class="ullinks">
-                  <li class="ulchildlink"><a href="sql-processing.html#GUID-B3415175-41F2-4EBB-95CF-5F8B5C39E927">SQL Processing</a><br>This chapter explains how database processes DDL statements to create objects, DML to modify data, and queries to retrieve data.
+                  <li class="ulchildlink"><a href="sql-processing.html#GUID-B3415175-41F2-4EBB-95CF-5F8B5C39E927">SQL处理</a><br>本章介绍数据库如何处理DDL语句以创建对象，DML如何修改数据以及查询以检索数据。
                   </li>
-                  <li class="ulchildlink"><a href="query-optimizer-concepts.html#GUID-06129ACE-36B2-4534-AE68-EDFCAEBB3B5D">Query Optimizer Concepts</a><br>This chapter describes the most important concepts relating to the query optimizer, including its principal components.
+                  <li class="ulchildlink"><a href="query-optimizer-concepts.html#GUID-06129ACE-36B2-4534-AE68-EDFCAEBB3B5D">查询优化器概念</a><br>本章描述了与查询优化器相关的最重要的概念，包括其主要组件。
                   </li>
-                  <li class="ulchildlink"><a href="query-transformations.html#GUID-B2914447-CD6D-411C-8467-6E10E78F3DE0">Query Transformations</a><br>This chapter describes the most important optimizer techniques for transforming queries.
+                  <li class="ulchildlink"><a href="query-transformations.html#GUID-B2914447-CD6D-411C-8467-6E10E78F3DE0">查询转换</a><br>本章介绍了用于转换查询的最重要的优化器技术。
                   </li>
                </ul>
             </div>

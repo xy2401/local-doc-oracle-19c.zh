@@ -1,19 +1,17 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="This appendix provides the XML schema definition that is used for GeoRaster metadata.">
       <meta name="description" content="This appendix provides the XML schema definition that is used for GeoRaster metadata.">
-      <title>GeoRaster Metadata XML Schema</title>
+      <title>GeoRaster元数据XML架构</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="GeoRaster Developer's Guide ">
+      <meta property="og:title" content="GeoRaster Developer&#39;s Guide ">
       <meta property="og:description" content="This appendix provides the XML schema definition that is used for GeoRaster metadata.">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="GeoRaster Developer's Guide">
+      <meta name="application-name" content="GeoRaster Developer&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="spatial-and-graph-georaster-developers-guide.pdf" title="PDF File" type="application/pdf">
@@ -43,32 +41,27 @@
         </script>
       <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"oracle-database","element_name":"Oracle Database","display_in_url":true},"release":{"short_name":"19","element_name":"Release 19","display_in_url":true}}}</script>
       
-    <meta name="dcterms.title" content="Spatial and Graph GeoRaster Developer's Guide">
+    <meta name="dcterms.title" content="Spatial and Graph GeoRaster Developer&#39;s Guide">
     <meta name="dcterms.isVersionOf" content="GEORS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="SDO_GEOR_UTL-reference.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="book-index.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="SDO_GEOR_UTL-reference.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="book-index.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">GeoRaster Developer's Guide </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">GeoRaster Metadata XML Schema</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">GeoRaster开发人员指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">GeoRaster元数据XML架构</li>
             </ol>
             <a id="GUID-6814D440-F50A-473C-84F6-60709DC5620D" name="GUID-6814D440-F50A-473C-84F6-60709DC5620D"></a><a id="GEORS900"></a>
             
-            <h2 id="GEORS-GUID-6814D440-F50A-473C-84F6-60709DC5620D" class="sect2"><span class="enumeration_chapter">A </span>GeoRaster Metadata XML Schema
-            </h2>
+            <h2 id="GEORS-GUID-6814D440-F50A-473C-84F6-60709DC5620D" class="sect2"><span class="enumeration_chapter">一个</span>元数据的GeoRaster XML模式</h2>
          </header>
          <div class="ind">
             <div>
-               <p>This appendix provides the XML schema definition that is used for GeoRaster metadata.</p>
-               <p>The following is the definition of the GeoRaster metadata XML schema. (You can also see this definition by querying the SDO_GEOR_XMLSCHEMA_TABLE table, which is described in <a href="georaster-datatypes.html#GUID-16D246D1-7895-4C68-BFFC-79DBA2926C46" title="GeoRaster defines an XML schema to store and manage the GeoRaster metadata.">GeoRaster XML Schema</a>.)
+               <p>本附录提供了用于GeoRaster元数据的XML模式定义。</p>
+               <p>以下是GeoRaster元数据XML架构的定义。（您还可以通过查询<a href="georaster-datatypes.html#GUID-16D246D1-7895-4C68-BFFC-79DBA2926C46" title="GeoRaster定义了一个XML模式来存储和管理GeoRaster元数据。">GeoRaster XML Schema中</a>描述的SDO_GEOR_XMLSCHEMA_TABLE表来查看此定义。）
                </p><pre class="oac_no_warn" dir="ltr">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!-- Oracle GeoRaster Metadata Schema --&gt;
 &lt;xsd:schema targetNamespace="http://xmlns.oracle.com/spatial/georaster" xmlns="http://xmlns.oracle.com/spatial/georaster" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="0.0"&gt;

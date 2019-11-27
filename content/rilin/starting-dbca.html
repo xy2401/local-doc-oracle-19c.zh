@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="To start DBCA, connect as the installation owner account (for example, oracle) to one of your nodes where Oracle RAC is installed, load SSH keys into memory, and enter the command dbca from the $ORACLE_HOME/bin directory.">
       <meta name="description" content="To start DBCA, connect as the installation owner account (for example, oracle) to one of your nodes where Oracle RAC is installed, load SSH keys into memory, and enter the command dbca from the $ORACLE_HOME/bin directory.">
-      <title>Starting DBCA</title>
+      <title>启动DBCA</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Real Application Clusters Installation Guide">
       <meta property="og:description" content="To start DBCA, connect as the installation owner account (for example, oracle) to one of your nodes where Oracle RAC is installed, load SSH keys into memory, and enter the command dbca from the $ORACLE_HOME/bin directory.">
@@ -47,33 +45,29 @@
     <meta name="dcterms.isVersionOf" content="RILIN">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="creating-an-oracle-rac-or-oracle-rac-one-node-database-with-dbca.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="cluster-detection-and-node-selection-when-using-dbca.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="creating-an-oracle-rac-or-oracle-rac-one-node-database-with-dbca.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="cluster-detection-and-node-selection-when-using-dbca.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="selecting-dbca-options-to-create-oracle-rac-or-oracle-rac-one-node-databases-with-dbca.html" property="item" typeof="WebPage"><span property="name">Creating Oracle RAC or Oracle RAC One Node Databases with DBCA </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="creating-an-oracle-rac-or-oracle-rac-one-node-database-with-dbca.html" property="item" typeof="WebPage"><span property="name">Selecting DBCA Options to Create an Oracle RAC or Oracle RAC One Node Database</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Starting DBCA</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="selecting-dbca-options-to-create-oracle-rac-or-oracle-rac-one-node-databases-with-dbca.html" property="item" typeof="WebPage"><span property="name">使用DBCA创建Oracle RAC或Oracle RAC One节点数据库</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="creating-an-oracle-rac-or-oracle-rac-one-node-database-with-dbca.html" property="item" typeof="WebPage"><span property="name">选择DBCA选项以创建Oracle RAC或Oracle RAC One节点数据库</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">启动DBCA</li>
             </ol>
             <a id="GUID-E4B492BD-74BA-4ECA-871D-38ED19A99156" name="GUID-E4B492BD-74BA-4ECA-871D-38ED19A99156"></a><a id="RILIN1236"></a>
             
-            <h2 id="RILIN-GUID-E4B492BD-74BA-4ECA-871D-38ED19A99156" class="sect2">Starting DBCA</h2>
+            <h2 id="RILIN-GUID-E4B492BD-74BA-4ECA-871D-38ED19A99156" class="sect2">启动DBCA</h2>
          </header>
          <div class="ind">
             <div>
-               <p>To start DBCA, connect as the installation owner account (for example, <code class="codeph">oracle</code>) to one of your nodes where Oracle RAC is installed, load SSH keys into memory, and enter the command <code class="codeph">dbca</code> from the <code class="codeph">$ORACLE_HOME/bin</code> directory.
+               <p>要启动DBCA，请将安装所有者帐户（例如， <code class="codeph">oracle</code> ）连接到安装了Oracle RAC的其中一个节点，将SSH密钥加载到内存中，然后从<code class="codeph">$ORACLE_HOME/bin</code>目录输入命令<code class="codeph">dbca</code> 。
                </p>
                <div class="section">
                   <div class="infoboxnote" id="GUID-E4B492BD-74BA-4ECA-871D-38ED19A99156__GUID-874FDC80-5E35-40AE-898D-7DAD977F4B98">
-                     <p class="notep1">Note:</p>
-                     <p>You no longer need to set the operating system environment variables <code class="codeph">ORACLE_HOME</code> to the Oracle RAC database home, or <code class="codeph">ORACLE_UNQNAME</code> to the database unique name.
+                     <p class="notep1">注意：</p>
+                     <p>您不再需要将操作系统环境变量<code class="codeph">ORACLE_HOME</code>设置为Oracle RAC数据库主目录，或将<code class="codeph">ORACLE_UNQNAME</code>设置为数据库唯一名称。
                      </p>
                   </div>
                </div>
@@ -82,7 +76,7 @@
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="creating-an-oracle-rac-or-oracle-rac-one-node-database-with-dbca.html#GUID-8B2CB0F2-7C9C-487B-BCA6-F86E9CE1D288" title="Review this information to use Database Configuration Assistant (DBCA) to create Oracle RAC or Oracle RAC One Node Database.">Selecting DBCA Options to Create an Oracle RAC or Oracle RAC One Node Database</a></p>
+                     <p><strong>父主题：</strong> <a href="creating-an-oracle-rac-or-oracle-rac-one-node-database-with-dbca.html#GUID-8B2CB0F2-7C9C-487B-BCA6-F86E9CE1D288" title="查看此信息以使用Database Configuration Assistant（DBCA）创建Oracle RAC或Oracle RAC One节点数据库。">选择DBCA选项以创建Oracle RAC或Oracle RAC单节点数据库</a></p>
                   </div>
                </div>
             </div>

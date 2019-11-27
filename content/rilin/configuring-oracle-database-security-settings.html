@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Use Oracle Database Configuration Assistant (DBCA) commands to change security settings after installation.">
       <meta name="description" content="Use Oracle Database Configuration Assistant (DBCA) commands to change security settings after installation.">
-      <title>Configuring Oracle Database Security Settings</title>
+      <title>配置Oracle数据库安全设置</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Real Application Clusters Installation Guide">
       <meta property="og:description" content="Use Oracle Database Configuration Assistant (DBCA) commands to change security settings after installation.">
@@ -47,39 +45,33 @@
     <meta name="dcterms.isVersionOf" content="RILIN">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="configuring-oracle-database-vault.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="configuring-oracle-label-security.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="configuring-oracle-database-vault.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="configuring-oracle-label-security.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="oracle-real-application-clusters-postinstallation-procedures.html" property="item" typeof="WebPage"><span property="name"> Oracle Real Application Clusters Postinstallation Procedures</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="product-specific-postinstallation-tasks.html" property="item" typeof="WebPage"><span property="name">Product-Specific
-Postinstallation Tasks</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Configuring Oracle Database Security Settings</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="oracle-real-application-clusters-postinstallation-procedures.html" property="item" typeof="WebPage"><span property="name">Oracle Real Application Clusters安装后过程</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="product-specific-postinstallation-tasks.html" property="item" typeof="WebPage"><span property="name">特定于产品的安装后任务</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">配置Oracle数据库安全设置</li>
             </ol>
             <a id="GUID-22395778-68A4-40AF-986A-FF095139DC34" name="GUID-22395778-68A4-40AF-986A-FF095139DC34"></a>
             
-            <h2 id="RILIN-GUID-22395778-68A4-40AF-986A-FF095139DC34" class="sect2">Configuring Oracle Database Security Settings</h2>
+            <h2 id="RILIN-GUID-22395778-68A4-40AF-986A-FF095139DC34" class="sect2">配置Oracle数据库安全设置</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Use Oracle Database Configuration Assistant (DBCA) commands to change security settings after installation.</p>
+               <p>使用Oracle Database Configuration Assistant（DBCA）命令在安装后更改安全设置。</p>
                <div class="section">
-                  <p>To enable or disable the database security configuration after installation, you must use command-line Oracle Database Configuration Assistant (DBCA) options. By design, the DBCA graphical user interface (GUI) does not have the option to enable or disable secure configuration. For example, to enable the security settings after installation, use a command of the following form, where <code class="codeph">myRACdb1.example.com</code> is the either the name of the local database instance, or the value set for the initialization parameter <code class="codeph">DB_UNIQUE_NAME</code>:
-                  </p><pre class="pre codeblock"><code>dbca &#x2013;configureDatabase &#x2013;sourceDB myRACdb1.example.com -SID
+                  <p>要在安装后启用或禁用数据库安全性配置，必须使用命令行Oracle数据库配置助手（DBCA）选项。根据设计，DBCA图形用户界面（GUI）无法启用或禁用安全配置。例如，要在安装后启用安全设置，请使用以下格式的命令，其中<code class="codeph">myRACdb1.example.com</code>是本地数据库实例的名称，或者是初始化参数<code class="codeph">DB_UNIQUE_NAME</code>的值集：</p><pre class="pre codeblock"><code>dbca &#x2013;configureDatabase &#x2013;sourceDB myRACdb1.example.com -SID
 &#x2013;enableSecurityConfiguration true</code></pre></div>
                <!-- class="section" -->
             </div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="product-specific-postinstallation-tasks.html#GUID-A9482056-E8C2-41AA-B784-6B8114C32AEC" title="You must complete postinstallation tasks before you can use some Oracle Database features.">Product-Specific Postinstallation Tasks</a></p>
+                     <p><strong>父主题：</strong> <a href="product-specific-postinstallation-tasks.html#GUID-A9482056-E8C2-41AA-B784-6B8114C32AEC" title="必须先完成安装后安装任务，然后才能使用某些Oracle数据库功能。">特定于产品的安装后任务</a></p>
                   </div>
                </div>
             </div>

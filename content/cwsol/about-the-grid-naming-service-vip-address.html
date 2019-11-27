@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="The GNS virtual IP address is a static IP address configured in the Domain Name System (DNS).">
       <meta name="description" content="The GNS virtual IP address is a static IP address configured in the Domain Name System (DNS).">
-      <title>About the Grid Naming Service (GNS) Virtual IP Address</title>
+      <title>关于网格命名服务（GNS）虚拟IP地址</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Grid Infrastructure Installation and Upgrade Guide">
       <meta property="og:description" content="The GNS virtual IP address is a static IP address configured in the Domain Name System (DNS).">
@@ -47,42 +45,38 @@
     <meta name="dcterms.isVersionOf" content="CWSOL">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="about-the-virtual-ip-address.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="about-the-scan.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="about-the-virtual-ip-address.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="about-the-scan.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure Installation and Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="configuring-networks-for-oracle-grid-infrastructure-and-oracle-rac.html" property="item" typeof="WebPage"><span property="name">Configuring Networks for Oracle Grid Infrastructure and Oracle RAC</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="understanding-network-addresses.html" property="item" typeof="WebPage"><span property="name">Understanding Network Addresses</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">About the Grid Naming Service (GNS) Virtual IP Address</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure安装和升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="configuring-networks-for-oracle-grid-infrastructure-and-oracle-rac.html" property="item" typeof="WebPage"><span property="name">为Oracle Grid Infrastructure和Oracle RAC配置网络</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="understanding-network-addresses.html" property="item" typeof="WebPage"><span property="name">了解网络地址</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">关于网格命名服务（GNS）虚拟IP地址</li>
             </ol>
             <a id="GUID-A4EE0CC6-A5F1-4507-82D6-D5C43E0F1584" name="GUID-A4EE0CC6-A5F1-4507-82D6-D5C43E0F1584"></a>
             
-            <h2 id="CWSOL-GUID-A4EE0CC6-A5F1-4507-82D6-D5C43E0F1584" class="sect2">About the Grid Naming Service (GNS) Virtual IP Address</h2>
+            <h2 id="CWSOL-GUID-A4EE0CC6-A5F1-4507-82D6-D5C43E0F1584" class="sect2">关于网格命名服务（GNS）虚拟IP地址</h2>
          </header>
          <div class="ind">
             <div>
-               <p>The GNS virtual IP address is a static IP address configured in the Domain Name System (DNS). </p>
-               <p>The DNS delegates queries to the GNS virtual IP address, and the GNS daemon responds to incoming name resolution requests at that address. Within the subdomain, the GNS enables the cluster to map host names and IP addresses dynamically as nodes are added and removed from the cluster, without requiring additional host configuration in the DNS.</p>
-               <p>To enable GNS, you must have your network administrator provide a set of IP addresses for a subdomain assigned to the cluster (for example, <code class="codeph">grid.example.com</code>), and delegate DNS requests for that subdomain to the GNS virtual IP address for the cluster, which GNS serves. DHCP provides the set of IP addresses to the cluster. DHCP must be available on the public network for the cluster.
+               <p>GNS虚拟IP地址是在域名系统（DNS）中配置的静态IP地址。</p>
+               <p>DNS将查询委托给GNS虚拟IP地址，GNS守护程序响应该地址的传入名称解析请求。在子域内，GNS使群集能够在群集中添加和删除节点时动态映射主机名和IP地址，而无需在DNS中进行其他主机配置。</p>
+               <p>要启用GNS，您必须让网络管理员为分配给群集的子域提供一组IP地址（例如， <code class="codeph">grid.example.com</code> ），并将该子域的DNS请求委派给群集的GNS虚拟IP地址，GNS服务。DHCP为群集提供一组IP地址。DHCP必须在群集的公共网络上可用。
                </p>
             </div>
             <div>
                <div class="relinfo">
-                  <p><strong>Related Topics</strong></p>
+                  <p><strong>相关话题</strong></p>
                   <ul>
-                     <li><a href="../cwadd/introduction-to-oracle-clusterware.html#CWADD91886" target="_blank"><span><cite>Oracle Clusterware Administration and Deployment Guide</cite></span></a></li>
+                     <li><a href="../cwadd/introduction-to-oracle-clusterware.html#CWADD91886" target="_blank"><span><cite>“Oracle Clusterware管理和部署指南”</cite></span></a></li>
                   </ul>
                </div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="understanding-network-addresses.html#GUID-335B0950-82D6-475D-A839-121E15C3ABAA" title="Identify each interface as a public or private interface, or as an interface that you do not want Oracle Grid Infrastructure or Oracle Flex ASM cluster to use.">Understanding Network Addresses</a></p>
+                     <p><strong>父主题：</strong> <a href="understanding-network-addresses.html#GUID-335B0950-82D6-475D-A839-121E15C3ABAA" title="将每个接口标识为公共或私有接口，或者作为您不希望Oracle Grid Infrastructure或Oracle Flex ASM集群使用的接口。">了解网络地址</a></p>
                   </div>
                </div>
             </div>

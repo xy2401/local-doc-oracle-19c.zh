@@ -1,6 +1,4 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +6,7 @@
       <title>NLS_CHARSET_DECL_LEN</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="SQL Language Reference ">
-      <meta property="og:description" content>
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
       <meta name="application-name" content="SQL Language Reference">
@@ -45,50 +43,46 @@
     <meta name="dcterms.isVersionOf" content="SQLRF">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="NEXT_DAY.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="NLS_CHARSET_ID.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="NEXT_DAY.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="NLS_CHARSET_ID.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Language Reference </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">Functions</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">NLS_CHARSET_DECL_LEN </li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL语言参考</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">功能</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">NLS_CHARSET_DECL_LEN</li>
             </ol>
             <a id="GUID-5F0939C0-4AFB-4CEA-9899-BDE85B9B2F11" name="GUID-5F0939C0-4AFB-4CEA-9899-BDE85B9B2F11"></a><a id="SQLRF51542"></a><a id="SQLRF51543"></a><a id="SQLRF51544"></a><a id="SQLRF00673"></a>
             
-            <h2 id="SQLRF-GUID-5F0939C0-4AFB-4CEA-9899-BDE85B9B2F11" class="sect2">NLS_CHARSET_DECL_LEN </h2>
+            <h2 id="SQLRF-GUID-5F0939C0-4AFB-4CEA-9899-BDE85B9B2F11" class="sect2">NLS_CHARSET_DECL_LEN</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p class="subhead1" id="GUID-5F0939C0-4AFB-4CEA-9899-BDE85B9B2F11__GUID-5725D536-3075-4CFD-BF87-842C1E5CC7A1">Syntax</p>
+                  <p class="subhead1" id="GUID-5F0939C0-4AFB-4CEA-9899-BDE85B9B2F11__GUID-5725D536-3075-4CFD-BF87-842C1E5CC7A1">句法</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <div class="figure" id="GUID-5F0939C0-4AFB-4CEA-9899-BDE85B9B2F11__GUID-636415BF-963D-4091-AC49-4EAF26A2FE14"><img src="img/nls_charset_decl_len.gif" alt="Description of nls_charset_decl_len.eps follows" title="Description of nls_charset_decl_len.eps follows" longdesc="img_text/nls_charset_decl_len.html"><br><a href="img_text/nls_charset_decl_len.html">Description of the illustration nls_charset_decl_len.eps</a></div>
+                  <div class="figure" id="GUID-5F0939C0-4AFB-4CEA-9899-BDE85B9B2F11__GUID-636415BF-963D-4091-AC49-4EAF26A2FE14"><img src="img/nls_charset_decl_len.gif" alt="下面是nls_charset_decl_len.eps的描述" title="下面是nls_charset_decl_len.eps的描述" longdesc="img_text/nls_charset_decl_len.html"><br><a href="img_text/nls_charset_decl_len.html">插图说明nls_charset_decl_len.eps</a></div>
                   <!-- class="figure" -->
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-5F0939C0-4AFB-4CEA-9899-BDE85B9B2F11__GUID-8A745190-6E57-45CF-A720-CE579971458A">Purpose</p>
+                  <p class="subhead1" id="GUID-5F0939C0-4AFB-4CEA-9899-BDE85B9B2F11__GUID-8A745190-6E57-45CF-A720-CE579971458A">目的</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p><code class="codeph">NLS_CHARSET_DECL_LEN</code> returns the declaration length (in number of characters) of an <code class="codeph">NCHAR</code> column. The <span class="italic"><code class="codeph">byte_count</code></span> argument is the width of the column. The <span class="italic"><code class="codeph">char_set_id</code></span> argument is the character set ID of the column.
+                  <p><code class="codeph">NLS_CHARSET_DECL_LEN</code>返回<code class="codeph">NCHAR</code>列的声明长度（以字符数表示）。<span class="italic"><code class="codeph">byte_count</code></span>参数是列的宽度。<span class="italic"><code class="codeph">char_set_id</code></span>参数是列的字符集ID。
                   </p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-5F0939C0-4AFB-4CEA-9899-BDE85B9B2F11__GUID-A4582AB8-EEC5-40F3-A988-5DFB9E2112F7">Examples</p>
+                  <p class="subhead1" id="GUID-5F0939C0-4AFB-4CEA-9899-BDE85B9B2F11__GUID-A4582AB8-EEC5-40F3-A988-5DFB9E2112F7">例子</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p>The following example returns the number of characters that are in a 200-byte column when you are using a multibyte character set:</p><pre class="oac_no_warn" dir="ltr">SELECT NLS_CHARSET_DECL_LEN(200, nls_charset_id('ja16eucfixed')) 
+                  <p>以下示例返回使用多字节字符集时200字节列中的字符数：</p><pre class="oac_no_warn" dir="ltr">SELECT NLS_CHARSET_DECL_LEN(200, nls_charset_id('ja16eucfixed')) 
   FROM DUAL; 
 
 NLS_CHARSET_DECL_LEN(200,NLS_CHARSET_ID('JA16EUCFIXED'))

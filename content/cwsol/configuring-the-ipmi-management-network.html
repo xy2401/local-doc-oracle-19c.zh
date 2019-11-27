@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="For Oracle Clusterware, you must configure the ILOM/BMC for static IP addresses.">
       <meta name="description" content="For Oracle Clusterware, you must configure the ILOM/BMC for static IP addresses.">
-      <title>Configuring the IPMI Management Network</title>
+      <title>配置IPMI管理网络</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Grid Infrastructure Installation and Upgrade Guide">
       <meta property="og:description" content="For Oracle Clusterware, you must configure the ILOM/BMC for static IP addresses.">
@@ -47,38 +45,34 @@
     <meta name="dcterms.isVersionOf" content="CWSOL">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="requirements-for-enabling-ipmi.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="configuring-the-bmc.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="requirements-for-enabling-ipmi.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="configuring-the-bmc.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure Installation and Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="configuring-users-groups-and-environments-for-oracle-grid-infrastructure-and-oracle-database.html" property="item" typeof="WebPage"><span property="name">Configuring Users, Groups and Environments for Oracle Grid Infrastructure and Oracle Database</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="enabling-intelligent-platform-management-interface-ipmi.html" property="item" typeof="WebPage"><span property="name">Enabling Intelligent Platform Management Interface (IPMI)</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Configuring the IPMI Management Network</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure安装和升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="configuring-users-groups-and-environments-for-oracle-grid-infrastructure-and-oracle-database.html" property="item" typeof="WebPage"><span property="name">为Oracle Grid Infrastructure和Oracle数据库配置用户，组和环境</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="enabling-intelligent-platform-management-interface-ipmi.html" property="item" typeof="WebPage"><span property="name">启用智能平台管理界面（IPMI）</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">配置IPMI管理网络</li>
             </ol>
             <a id="GUID-17BBDBFE-7CA9-48EB-8EBB-782E9A18229B" name="GUID-17BBDBFE-7CA9-48EB-8EBB-782E9A18229B"></a>
             
-            <h2 id="CWSOL-GUID-17BBDBFE-7CA9-48EB-8EBB-782E9A18229B" class="sect2">Configuring the IPMI Management Network</h2>
+            <h2 id="CWSOL-GUID-17BBDBFE-7CA9-48EB-8EBB-782E9A18229B" class="sect2">配置IPMI管理网络</h2>
          </header>
          <div class="ind">
             <div>
-               <p>For Oracle Clusterware, you must configure the ILOM/BMC for static IP addresses. </p>
-               <p>On Oracle Solaris platforms, the BMC shares configuration information with the Integrated Lights Out Manager service processor (ILOM). Configuring the BMC with dynamic addresses (DHCP) is not supported on Oracle Solaris.</p>
+               <p>对于Oracle Clusterware，您必须为静态IP地址配置ILOM / BMC。</p>
+               <p>在Oracle Solaris平台上，BMC与Integrated Lights Out Manager服务处理器（ILOM）共享配置信息。Oracle Solaris不支持使用动态地址（DHCP）配置BMC。</p>
                <div class="infoboxnote" id="GUID-17BBDBFE-7CA9-48EB-8EBB-782E9A18229B__GUID-8188F704-AC62-4538-8A08-BD2358515C4B">
-                  <p class="notep1">Note:</p>
-                  <p>If you configure IPMI, and you use Grid Naming Service (GNS) you still must configure separate addresses for the IPMI interfaces. As the IPMI adapter is not seen directly by the host, the IPMI adapter is not visible to GNS as an address on the host.</p>
+                  <p class="notep1">注意：</p>
+                  <p>如果配置IPMI，并且使用网格命名服务（GNS），则仍必须为IPMI接口配置单独的地址。由于主机不直接看到IPMI适配器，因此GNS不会将IPMI适配器显示为主机上的地址。</p>
                </div>
             </div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="enabling-intelligent-platform-management-interface-ipmi.html#GUID-96249852-936C-480C-A166-6926A654F014" title="Intelligent Platform Management Interface (IPMI) provides a set of common interfaces to computer hardware and firmware that system administrators can use to monitor system health and manage the system.">Enabling Intelligent Platform Management Interface (IPMI)</a></p>
+                     <p><strong>父主题：</strong> <a href="enabling-intelligent-platform-management-interface-ipmi.html#GUID-96249852-936C-480C-A166-6926A654F014" title="智能平台管理接口（IPMI）为计算机硬件和固件提供了一组通用接口，系统管理员可以使用这些接口来监控系统运行状况并管理系统。">启用智能平台管理界面（IPMI）</a></p>
                   </div>
                </div>
             </div>

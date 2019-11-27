@@ -1,11 +1,9 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Prediction Details</title>
+      <title>预测细节</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="API Guide">
       <meta property="og:description" content="">
@@ -45,41 +43,35 @@
     <meta name="dcterms.isVersionOf" content="DMAPI">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="using-data-mining-SQL-functions.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="real-time-scoring.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="using-data-mining-SQL-functions.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="real-time-scoring.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">API Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="using-data-mining-API.html" property="item" typeof="WebPage"><span property="name">Using the Data Mining API</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="scoring-deployment.html" property="item" typeof="WebPage"><span property="name"> Scoring and Deployment </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Prediction Details</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">API指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-data-mining-API.html" property="item" typeof="WebPage"><span property="name">使用Data Mining API</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="scoring-deployment.html" property="item" typeof="WebPage"><span property="name">评分和部署</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">预测细节</li>
             </ol>
             <a id="GUID-28A6F6E9-398C-426C-943C-F3CB1C635610" name="GUID-28A6F6E9-398C-426C-943C-F3CB1C635610"></a><a id="DMPRG776"></a>
             
-            <h2 id="DMAPI-GUID-28A6F6E9-398C-426C-943C-F3CB1C635610" class="sect2"><span class="enumeration_section">32.3 </span>Prediction Details
-            </h2>
+            <h2 id="DMAPI-GUID-28A6F6E9-398C-426C-943C-F3CB1C635610" class="sect2"><span class="enumeration_section">32.3</span>预测细节</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Prediction details are XML strings that provide information about the score. Details are available for all types of scoring: clustering, feature extraction, classification, regression, and anomaly detection. Details are available whether scoring is dynamic or the result of model apply. </p>
-               <p>The details functions, <code class="codeph">CLUSTER_DETAILS</code>, <code class="codeph">FEATURE_DETAILS</code>, and <code class="codeph">PREDICTION_DETAILS</code> return the actual value of attributes used for scoring and the relative importance of the attributes in determining the score. By default, the functions return the five most important attributes in descending order of importance.
+               <p>预测详细信息是XML字符串，提供有关分数的信息。详细信息适用于所有类型的评分：聚类，特征提取，分类，回归和异常检测。无论评分是动态的还是应用模型的结果，都可以获得详细信息。</p>
+               <p>详细信息函数<code class="codeph">CLUSTER_DETAILS</code> ， <code class="codeph">FEATURE_DETAILS</code>和<code class="codeph">PREDICTION_DETAILS</code>返回用于评分的属性的实际值以及属性在确定分数时的相对重要性。默认情况下，函数按重要性的降序返回五个最重要的属性。
                </p>
-            </div><a id="DMPRG829"></a><a id="DMPRG828"></a><div class="props_rev_3"><a id="GUID-3DE3B80D-B6E5-4803-A903-76F16408B74F" name="GUID-3DE3B80D-B6E5-4803-A903-76F16408B74F"></a><h3 id="DMAPI-GUID-3DE3B80D-B6E5-4803-A903-76F16408B74F" class="sect3"><span class="enumeration_section">32.3.1 </span>Cluster Details
-               </h3>
+            </div><a id="DMPRG829"></a><a id="DMPRG828"></a><div class="props_rev_3"><a id="GUID-3DE3B80D-B6E5-4803-A903-76F16408B74F" name="GUID-3DE3B80D-B6E5-4803-A903-76F16408B74F"></a><h3 id="DMAPI-GUID-3DE3B80D-B6E5-4803-A903-76F16408B74F" class="sect3"><span class="enumeration_section">32.3.1</span>集群详细信息</h3>
                <div>
                   <div class="section">
-                     <p>For the most likely cluster assignments of customer 100955 (probability of assignment &gt; 20%), the query in the following example produces the five attributes that have the most impact for each of the likely clusters. The clustering functions apply an Expectation Maximization model named <code class="codeph">em_sh_clus_sample</code> to the data selected from <code class="codeph">mining_data_apply_v</code>. The "5" specified in <code class="codeph">CLUSTER_DETAILS</code> is not required, because five attributes are returned by default.
+                     <p>对于客户100955的最可能的集群分配（分配概率&gt; 20％），以下示例中的查询生成对每个可能的集群影响最大的五个属性。聚类函数将名为<code class="codeph">em_sh_clus_sample</code>的期望最大化模型<code class="codeph">em_sh_clus_sample</code>从<code class="codeph">mining_data_apply_v</code>选择的数据。 <code class="codeph">CLUSTER_DETAILS</code>指定的“5”不是必需的，因为默认情况下返回五个属性。
                      </p>
                   </div>
                   <!-- class="section" -->
                   <div class="example" id="GUID-3DE3B80D-B6E5-4803-A903-76F16408B74F__BABBDDIG">
-                     <p class="titleinexample">Example 32-6 Cluster Details</p><pre class="oac_no_warn" dir="ltr">SELECT S.cluster_id, probability prob,
+                     <p class="titleinexample">示例32-6群集详细信息</p><pre class="oac_no_warn" dir="ltr">SELECT S.cluster_id, probability prob,
            CLUSTER_DETAILS(em_sh_clus_sample, S.cluster_id, 5 USING T.*) det
     FROM
       (SELECT v.*, CLUSTER_SET(em_sh_clus_sample, NULL, 0.2 USING *) pset
@@ -109,17 +101,16 @@ CLUSTER_ID  PROB DET
 </pre></div>
                   <!-- class="example" -->
                </div>
-            </div><a id="DMPRG831"></a><a id="DMPRG830"></a><div class="props_rev_3"><a id="GUID-7B7BBCAE-3152-4EAD-882D-65BCD11572F6" name="GUID-7B7BBCAE-3152-4EAD-882D-65BCD11572F6"></a><h3 id="DMAPI-GUID-7B7BBCAE-3152-4EAD-882D-65BCD11572F6" class="sect3"><span class="enumeration_section">32.3.2 </span>Feature Details
-               </h3>
+            </div><a id="DMPRG831"></a><a id="DMPRG830"></a><div class="props_rev_3"><a id="GUID-7B7BBCAE-3152-4EAD-882D-65BCD11572F6" name="GUID-7B7BBCAE-3152-4EAD-882D-65BCD11572F6"></a><h3 id="DMAPI-GUID-7B7BBCAE-3152-4EAD-882D-65BCD11572F6" class="sect3"><span class="enumeration_section">32.3.2</span>功能详细信息</h3>
                <div>
                   <div class="section">
-                     <p>The query in the following example returns the three attributes that have the greatest impact on the top Principal Components Analysis (PCA) projection for customer 101501. The <code class="codeph">FEATURE_DETAILS</code> function applies a Singular Value Decomposition model named <code class="codeph">svd_sh_sample</code> to the data selected from <code class="codeph">svd_sh_sample_build_num</code>.
+                     <p>以下示例中的查询返回对客户101501的主要主成分分析（PCA）投影影响最大的三个属性。<code class="codeph">FEATURE_DETAILS</code>函数将名为<code class="codeph">svd_sh_sample</code>的奇异值分解模型应用于从<code class="codeph">svd_sh_sample_build_num</code>选择的数据。
                      </p>
                      <p></p>
                   </div>
                   <!-- class="section" -->
                   <div class="example" id="GUID-7B7BBCAE-3152-4EAD-882D-65BCD11572F6__BABHEIII">
-                     <p class="titleinexample">Example 32-7 Feature Details</p><pre class="oac_no_warn" dir="ltr">SELECT FEATURE_DETAILS(svd_sh_sample, 1, 3 USING *) proj1det
+                     <p class="titleinexample">例32-7功能详细信息</p><pre class="oac_no_warn" dir="ltr">SELECT FEATURE_DETAILS(svd_sh_sample, 1, 3 USING *) proj1det
   FROM svd_sh_sample_build_num
   WHERE CUST_ID = 101501;
  
@@ -133,16 +124,14 @@ PROJ1DET
 </pre></div>
                   <!-- class="example" -->
                </div>
-            </div><a id="DMPRG833"></a><a id="DMPRG835"></a><a id="DMPRG837"></a><a id="DMPRG832"></a><div class="props_rev_3"><a id="GUID-BF9D58F4-FF25-430C-84D7-411A6B3071CA" name="GUID-BF9D58F4-FF25-430C-84D7-411A6B3071CA"></a><h3 id="DMAPI-GUID-BF9D58F4-FF25-430C-84D7-411A6B3071CA" class="sect3"><span class="enumeration_section">32.3.3 </span>Prediction Details
-               </h3>
+            </div><a id="DMPRG833"></a><a id="DMPRG835"></a><a id="DMPRG837"></a><a id="DMPRG832"></a><div class="props_rev_3"><a id="GUID-BF9D58F4-FF25-430C-84D7-411A6B3071CA" name="GUID-BF9D58F4-FF25-430C-84D7-411A6B3071CA"></a><h3 id="DMAPI-GUID-BF9D58F4-FF25-430C-84D7-411A6B3071CA" class="sect3"><span class="enumeration_section">32.3.3</span>预测细节</h3>
                <div>
                   <div class="section">
-                     <p>The query in the following example returns the attributes that are most important in predicting the age of customer 100010. The prediction functions apply a Generalized Linear Model Regression model named <code class="codeph">GLMR_SH_Regr_sample</code> to the data selected from <code class="codeph">mining_data_apply_v</code>.
-                     </p>
+                     <p>以下示例中的查询返回在预测客户年龄100010时最重要的属性。预测函数将名为<code class="codeph">GLMR_SH_Regr_sample</code>的广义线性模型回归模型<code class="codeph">GLMR_SH_Regr_sample</code>从<code class="codeph">mining_data_apply_v</code>选择的数据。</p>
                   </div>
                   <!-- class="section" -->
                   <div class="example" id="GUID-BF9D58F4-FF25-430C-84D7-411A6B3071CA__BABGBJIB">
-                     <p class="titleinexample">Example 32-8 Prediction Details for Regression</p><pre class="oac_no_warn" dir="ltr">SELECT cust_id,
+                     <p class="titleinexample">例32-8回归的预测细节</p><pre class="oac_no_warn" dir="ltr">SELECT cust_id,
       PREDICTION(GLMR_SH_Regr_sample USING *) pr,
       PREDICTION_DETAILS(GLMR_SH_Regr_sample USING *) pd
   FROM mining_data_apply_v
@@ -160,12 +149,12 @@ CUST_ID    PR PD
 </pre></div>
                   <!-- class="example" -->
                   <div class="section">
-                     <p>The query in the following example returns the customers who work in Tech Support and are likely to use an affinity card (with more than 85% probability). The prediction functions apply an Support Vector Machine (SVM) Classification model named <code class="codeph">svmc_sh_clas_sample</code>. to the data selected from <code class="codeph">mining_data_apply_v</code>. The query includes the prediction details, which show that education is the most important predictor. 
+                     <p>以下示例中的查询返回在技术支持中工作且可能使用关联卡的客户（概率超过85％）。预测函数应用名为<code class="codeph">svmc_sh_clas_sample</code>的支持向量机（SVM）分类模型。从<code class="codeph">mining_data_apply_v</code>选择的数据。查询包括预测细节，表明教育是最重要的预测因子。
                      </p>
                   </div>
                   <!-- class="section" -->
                   <div class="example" id="GUID-BF9D58F4-FF25-430C-84D7-411A6B3071CA__BABFJFEF">
-                     <p class="titleinexample">Example 32-9 Prediction Details for Classification</p><pre class="oac_no_warn" dir="ltr">SELECT cust_id, PREDICTION_DETAILS(svmc_sh_clas_sample, 1 USING *) PD
+                     <p class="titleinexample">示例32-9分类的预测详细信息</p><pre class="oac_no_warn" dir="ltr">SELECT cust_id, PREDICTION_DETAILS(svmc_sh_clas_sample, 1 USING *) PD
       FROM mining_data_apply_v
   WHERE PREDICTION_PROBABILITY(svmc_sh_clas_sample, 1 USING *) &gt; 0.85
   AND occupation = 'TechSup'
@@ -210,12 +199,12 @@ CUST_ID PD
 </pre></div>
                   <!-- class="example" -->
                   <div class="section">
-                     <p>The query in the following example returns the two customers that differ the most from the rest of the customers. The prediction functions apply an anomaly detection model named <code class="codeph">SVMO_SH_Clas_sample</code> to the data selected from <code class="codeph">mining_data_apply_v</code>. Anomaly Detection uses a one-class SVM classifier.
+                     <p>以下示例中的查询返回与其他客户差异最大的两个客户。预测函数将名为<code class="codeph">SVMO_SH_Clas_sample</code>的异常检测模型<code class="codeph">SVMO_SH_Clas_sample</code>从<code class="codeph">mining_data_apply_v</code>选择的数据。异常检测使用一类SVM分类器。
                      </p>
                   </div>
                   <!-- class="section" -->
                   <div class="example" id="GUID-BF9D58F4-FF25-430C-84D7-411A6B3071CA__BABHHAEH">
-                     <p class="titleinexample">Example 32-10 Prediction Details for Anomaly Detection</p><pre class="oac_no_warn" dir="ltr">SELECT cust_id, pd FROM
+                     <p class="titleinexample">例32-10异常检测的预测细节</p><pre class="oac_no_warn" dir="ltr">SELECT cust_id, pd FROM
   (SELECT cust_id,        
          PREDICTION_DETAILS(SVMO_SH_Clas_sample, 0 USING *) pd,
          RANK() OVER (ORDER BY prediction_probability(
@@ -244,29 +233,28 @@ CUST_ID PD
                   <!-- class="example" -->
                </div>
             </div>
-            <div class="sect2"><a id="GUID-0ABE2189-A385-48C6-88FD-E8F59B021BE1" name="GUID-0ABE2189-A385-48C6-88FD-E8F59B021BE1"></a><h3 id="DMAPI-GUID-0ABE2189-A385-48C6-88FD-E8F59B021BE1" class="sect3"><span class="enumeration_section">32.3.4 </span>GROUPING Hint
-               </h3>
+            <div class="sect2"><a id="GUID-0ABE2189-A385-48C6-88FD-E8F59B021BE1" name="GUID-0ABE2189-A385-48C6-88FD-E8F59B021BE1"></a><h3 id="DMAPI-GUID-0ABE2189-A385-48C6-88FD-E8F59B021BE1" class="sect3"><span class="enumeration_section">32.3.4分组</span>提示</h3>
                <div>
-                  <p>Data mining functions consist of SQL functions such as <code class="codeph">PREDICTION*</code>, <code class="codeph">CLUSTER*</code>, <code class="codeph">FEATURE*</code>, and <code class="codeph">ORA_DM_*</code>. The <code class="codeph">GROUPING</code> hint is an optional hint which applies to data mining scoring functions when scoring partitioned models. 
+                  <p>数据挖掘功能包括SQL函数，如<code class="codeph">PREDICTION*</code> ， <code class="codeph">CLUSTER*</code> ， <code class="codeph">FEATURE*</code>和<code class="codeph">ORA_DM_*</code> 。<code class="codeph">GROUPING</code>提示是一个可选提示，适用于对分区模型进行评分时的数据挖掘评分功能。
                   </p>
                   <div class="section">
-                     <p class="subhead2" id="GUID-0ABE2189-A385-48C6-88FD-E8F59B021BE1__GUID-3E298C71-D1E5-4E3D-B822-3E3B85FEC1A3">Enhanced PREDICTION Function Command Format</p>
-                     <p>This hint results in partitioning the input data set into distinct data slices so that each partition is scored in its entirety before advancing to the next partition. However, parallelism by partition is still available. Data slices are determined by the partitioning key columns used when the model was built. This method can be used with any data mining function against a partitioned model. The hint may yield a query performance gain when scoring large data that is associated with many partitions but may negatively impact performance when scoring large data with few partitions on large systems. Typically, there is no performance gain if you use the hint for single row queries.</p><pre class="pre codeblock"><code>&lt;prediction function&gt; ::=
+                     <p class="subhead2" id="GUID-0ABE2189-A385-48C6-88FD-E8F59B021BE1__GUID-3E298C71-D1E5-4E3D-B822-3E3B85FEC1A3">增强的PREDICTION函数命令格式</p>
+                     <p>此提示导致将输入数据集划分为不同的数据切片，以便在前进到下一个分区之前对每个分区进行整体评分。但是，仍然可以通过分区进行并行处理。数据切片由构建模型时使用的分区键列确定。此方法可用于针对分区模型的任何数据挖掘功能。在对与许多分区关联的大数据进行评分时，该提示可能会产生查询性能提升，但在对大型系统上具有较少分区的大数据进行评分时可能会对性能产生负面影响。通常，如果将提示用于单行查询，则不会有性能提升。</p><pre class="pre codeblock"><code>&lt;prediction function&gt; ::=
     PREDICTION &lt;left paren&gt; /*+ GROUPING */ &lt;prediction model&gt;
         [ &lt;comma&gt; &lt;class value&gt; [ &lt;comma&gt; &lt;top N&gt; ] ]
-        USING &lt;mining attribute list&gt; &lt;right paren&gt;</code></pre><p>The syntax for only the <code>PREDICTION</code> function is given but it is applicable to any Data mining function where <code>PREDICTION</code>, <code class="codeph">CLUSTERING</code>, and <code class="codeph">FEATURE_EXTRACTION</code> scoring functions occur.
+        USING &lt;mining attribute list&gt; &lt;right paren&gt;</code></pre><p>仅给出了<code>PREDICTION</code>函数的语法，但它适用于任何发生<code>PREDICTION</code> ， <code class="codeph">CLUSTERING</code>和<code class="codeph">FEATURE_EXTRACTION</code>评分函数的数据挖掘函数。
                      </p>
                   </div>
                   <!-- class="section" -->
                   <div class="example" id="GUID-0ABE2189-A385-48C6-88FD-E8F59B021BE1__GUID-DDEC3A38-7BAD-4D4C-9799-AB849F5FE230">
-                     <p class="titleinexample">Example 32-11 Example</p><pre class="pre codeblock"><code>SELECT PREDICTION(/*+ GROUPING */my_model USING *) pred FROM &lt;input table&gt;;</code></pre></div>
+                     <p class="titleinexample">例32-11例子</p><pre class="pre codeblock"><code>SELECT PREDICTION(/*+ GROUPING */my_model USING *) pred FROM &lt;input table&gt;;</code></pre></div>
                   <!-- class="example" -->
                </div>
                <div>
                   <div class="relinfo">
-                     <p><strong>Related Topics</strong></p>
+                     <p><strong>相关话题</strong></p>
                      <ul>
-                        <li><a href="../sqlrf/PREDICTION.html#SQLRF-GUID-DA66A1C3-BFB2-43A1-A3FF-93D4A3DAB9C6" target="_blank"><span><cite>Oracle Database SQL Language Reference</cite></span></a></li>
+                        <li><a href="../sqlrf/PREDICTION.html#SQLRF-GUID-DA66A1C3-BFB2-43A1-A3FF-93D4A3DAB9C6" target="_blank"><span><cite>Oracle数据库SQL语言参考</cite></span></a></li>
                      </ul>
                   </div>
                </div>

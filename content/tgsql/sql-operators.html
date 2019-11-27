@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="A row source is a set of rows returned by a step in the execution plan. A SQL operator acts on a row source.">
       <meta name="description" content="A row source is a set of rows returned by a step in the execution plan. A SQL operator acts on a row source.">
-      <title>SQL Operators: Access Paths and Joins</title>
+      <title>SQL运算符：访问路径和连接</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="SQL Tuning Guide">
       <meta property="og:description" content="A row source is a set of rows returned by a step in the execution plan. A SQL operator acts on a row source.">
@@ -46,36 +44,31 @@
     <meta name="dcterms.isVersionOf" content="TGSQL">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="optimizer-ref.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="optimizer-access-paths.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="optimizer-ref.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="optimizer-access-paths.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Tuning Guide</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">SQL Operators: Access Paths and Joins</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL调优指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">SQL运算符：访问路径和连接</li>
             </ol>
             <a id="GUID-37BA8AC8-B8F5-402E-8398-552AFDACED8E" name="GUID-37BA8AC8-B8F5-402E-8398-552AFDACED8E"></a><a id="TGSQL95354"></a>
             
-            <h2 id="TGSQL-GUID-37BA8AC8-B8F5-402E-8398-552AFDACED8E" class="sect2"><span class="enumeration_part">Part IV </span>SQL Operators: Access Paths and Joins
-            </h2>
+            <h2 id="TGSQL-GUID-37BA8AC8-B8F5-402E-8398-552AFDACED8E" class="sect2"><span class="enumeration_part">第四部分</span> SQL操作符：访问路径和连接</h2>
          </header>
          <div class="ind">
             <div>
-               <p>A <strong class="term">row source</strong> is a set of rows returned by a step in the execution plan. A <strong class="term">SQL operator</strong> acts on a row source. 
+               <p><strong class="term">行源</strong>是执行计划中的步骤返回的一组行。<strong class="term">SQL运算符</strong>作用于行源。
                </p>
-               <p>A unary operator acts on one input, as with access paths. A binary operator acts on two outputs, as with joins.</p>
-               <p>This part contains the following chapters:</p>
+               <p>一元运算符作用于一个输入，与访问路径一样。与连接一样，二元运算符作用于两个输出。</p>
+               <p>本部分包含以下章节：</p>
             </div>
             <div>
                <ul class="ullinks">
-                  <li class="ulchildlink"><a href="optimizer-access-paths.html#GUID-00711237-35D3-4CFC-A234-59B3EC53DCD1">Optimizer Access Paths</a><br>An <strong class="term">access path</strong> is a technique used by a query to retrieve rows from a row source.
+                  <li class="ulchildlink"><a href="optimizer-access-paths.html#GUID-00711237-35D3-4CFC-A234-59B3EC53DCD1">优化器访问路径</a><br><strong class="term">访问路径</strong>是查询用于从行源检索行的技术。
                   </li>
-                  <li class="ulchildlink"><a href="joins.html#GUID-BD96F1B4-76D4-43DF-98B6-D07F46838C4A">Joins</a><br>Oracle Database provides several optimizations for joining row sets.
+                  <li class="ulchildlink"><a href="joins.html#GUID-BD96F1B4-76D4-43DF-98B6-D07F46838C4A">加盟</a><br>Oracle数据库为加入行集提供了多种优化。
                   </li>
                </ul>
             </div>

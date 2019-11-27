@@ -1,11 +1,9 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>TO_CHAR (character)</title>
+      <title>TO_CHAR（角色）</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="SQL Language Reference ">
       <meta property="og:description" content="">
@@ -45,69 +43,62 @@
     <meta name="dcterms.isVersionOf" content="SQLRF">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="TO_CHAR-bfile-blob.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="TO_CHAR-datetime.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="TO_CHAR-bfile-blob.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="TO_CHAR-datetime.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Language Reference </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">Functions</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">TO_CHAR (character) </li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL语言参考</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">功能</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">TO_CHAR（角色）</li>
             </ol>
             <a id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC" name="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC"></a><a id="SQLRF51871"></a><a id="SQLRF51872"></a><a id="SQLRF51873"></a><a id="SQLRF51874"></a><a id="SQLRF06128"></a>
             
-            <h2 id="SQLRF-GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC" class="sect2">TO_CHAR (character) </h2>
+            <h2 id="SQLRF-GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC" class="sect2">TO_CHAR（角色）</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p class="subhead1" id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC__GUID-FFB5487E-334C-48F4-B2AC-E69A1E18F8A5">Syntax</p>
+                  <p class="subhead1" id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC__GUID-FFB5487E-334C-48F4-B2AC-E69A1E18F8A5">句法</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC__GUID-79D08EC1-1439-4F33-8B54-AA2BA402F812"><span class="italic">to_char_char</span>::=
-                  </p>
+                  <p class="subhead1" id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC__GUID-79D08EC1-1439-4F33-8B54-AA2BA402F812"><span class="italic">to_char_char</span> :: =</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <div class="figure" id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC__GUID-1731135D-6FA5-468A-B59D-AA888349E8C1"><img src="img/to_char_char.gif" alt="Description of to_char_char.eps follows" title="Description of to_char_char.eps follows" longdesc="img_text/to_char_char.html"><br><a href="img_text/to_char_char.html">Description of the illustration to_char_char.eps</a></div>
+                  <div class="figure" id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC__GUID-1731135D-6FA5-468A-B59D-AA888349E8C1"><img src="img/to_char_char.gif" alt="to_char_char.eps的描述如下" title="to_char_char.eps的描述如下" longdesc="img_text/to_char_char.html"><br><a href="img_text/to_char_char.html">to_char_char.eps插图的描述</a></div>
                   <!-- class="figure" -->
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC__GUID-E05A9F0C-60D2-48C2-9DD7-37B443A763C7">Purpose</p>
+                  <p class="subhead1" id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC__GUID-E05A9F0C-60D2-48C2-9DD7-37B443A763C7">目的</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p><code class="codeph">TO_CHAR</code> (character) converts <code class="codeph">NCHAR</code>, <code class="codeph">NVARCHAR2</code>, <code class="codeph">CLOB</code>, or <code class="codeph">NCLOB</code> data to the database character set. The value returned is always <code class="codeph">VARCHAR2</code>.
+                  <p><code class="codeph">TO_CHAR</code> （字符）将<code class="codeph">NCHAR</code> ， <code class="codeph">NVARCHAR2</code> ， <code class="codeph">CLOB</code>或<code class="codeph">NCLOB</code>数据转换为数据库字符集。返回的值始终为<code class="codeph">VARCHAR2</code> 。
                   </p>
-                  <p>When you use this function to convert a character LOB into the database character set, if the LOB value to be converted is larger than the target type, then the database returns an error.</p>
+                  <p>使用此函数将字符LOB转换为数据库字符集时，如果要转换的LOB值大于目标类型，则数据库将返回错误。</p>
                   <div class="infoboxnotealso" id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC__GUID-1446A90F-18A2-4A72-A7DF-672D61352E34">
-                     <p class="notep1">See Also:</p>
-                     <p>Appendix C in <a href="../nlspg/appendix-C-collation-derivation-and-determination-rules-for-SQL-operations.html#NLSPG-GUID-AFCE41ED-775B-4A00-AF38-C436776AE0C5" target="_blank"><span class="italic">Oracle Database Globalization Support Guide</span></a> for the collation derivation rules, which define the collation assigned to the character return value of this function
-                     </p>
+                     <p class="notep1">也可以看看：</p>
+                     <p>“ <a href="../nlspg/appendix-C-collation-derivation-and-determination-rules-for-SQL-operations.html#NLSPG-GUID-AFCE41ED-775B-4A00-AF38-C436776AE0C5" target="_blank"><span class="italic">数据库全球化支持指南”</span></a>中的附录C，用于排序规则派生规则，用于定义分配给此函数的字符返回值的排序规则</p>
                   </div>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC__GUID-4D666181-C110-4A94-B566-BFBDF8A154E3">Examples</p>
+                  <p class="subhead1" id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC__GUID-4D666181-C110-4A94-B566-BFBDF8A154E3">例子</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p>The following example interprets a simple string as character data:</p><pre class="oac_no_warn" dir="ltr">SELECT TO_CHAR('01110') FROM DUAL;
+                  <p>以下示例将简单字符串解释为字符数据：</p><pre class="oac_no_warn" dir="ltr">SELECT TO_CHAR('01110') FROM DUAL;
 
 TO_CH
 -----
 01110
-</pre><p>Compare this example with the first example for <a href="TO_CHAR-number.html#GUID-00DA076D-2468-41AB-A3AC-CC78DBA0D9CB">TO_CHAR (number)</a>.
+</pre><p>将此示例与<a href="TO_CHAR-number.html#GUID-00DA076D-2468-41AB-A3AC-CC78DBA0D9CB">TO_CHAR（数字）</a>的第一个示例进行比较。
                   </p>
-                  <p>The following example converts some <code class="codeph">CLOB</code> data from the <code class="codeph">pm.print_media</code> table to the database character set:
-                  </p><pre class="oac_no_warn" dir="ltr">SELECT TO_CHAR(ad_sourcetext) FROM print_media
+                  <p>以下示例将<code class="codeph">pm.print_media</code>表中的一些<code class="codeph">CLOB</code>数据转换为数据库字符集：</p><pre class="oac_no_warn" dir="ltr">SELECT TO_CHAR(ad_sourcetext) FROM print_media
       WHERE product_id = 2268;
 
 TO_CHAR(AD_SOURCETEXT)
@@ -121,9 +112,8 @@ you're online.
 **********************************</pre></div>
                <!-- class="section" -->
                <div class="section">
-                  <p><span class="bold">TO_CHAR (character) Function: Example</span></p>
-                  <p>The following statements create a table named <code class="codeph">empl_temp</code> and populate it with employee details:
-                  </p><pre class="pre codeblock"><code>CREATE TABLE empl_temp 
+                  <p><span class="bold">TO_CHAR（字符）功能：示例</span></p>
+                  <p>以下语句创建一个名为<code class="codeph">empl_temp</code>的表，并使用员工详细信息填充它：</p><pre class="pre codeblock"><code>CREATE TABLE empl_temp 
   ( 
      employee_id NUMBER(6), 
      first_name  VARCHAR2(20), 
@@ -144,7 +134,7 @@ INSERT INTO empl_temp
 VALUES(113,'Johnnie','Smith','example.com','12-JAN-2014','1002','Mid-Career Employee');
 
 INSERT INTO empl_temp
-VALUES(115,'Jane','Doe','example.com','15-JAN-2015','1005','Executive Employee');</code></pre><p>The following statement converts CLOB data to the database character set:</p><pre class="pre codeblock"><code>SELECT To_char(clob_column) "CLOB_TO_CHAR" 
+VALUES(115,'Jane','Doe','example.com','15-JAN-2015','1005','Executive Employee');</code></pre><p>以下语句将CLOB数据转换为数据库字符集：</p><pre class="pre codeblock"><code>SELECT To_char(clob_column) "CLOB_TO_CHAR" 
 FROM   empl_temp 
 WHERE  employee_id IN ( 111, 112, 115 );
 
@@ -153,8 +143,8 @@ CLOB_TO_CHAR
 Experienced Employee
 Junior Employee
 Executive Employee</code></pre><div class="infoboxnote" id="GUID-EC078E16-11FE-4ABE-AE05-DA9AC1B4BEBC__GUID-FB9B3525-E849-4811-ACF9-541D09D4B584">
-                     <p class="notep1">Live SQL:</p>
-                     <p>View and run a related example on Oracle Live SQL at <a href="https://livesql.oracle.com/apex/livesql/docs/sqlrf/to_char/tochar_basic.html" target="_blank"><span class="italic">Using the TO_CHAR Function</span></a></p>
+                     <p class="notep1">实时SQL：</p>
+                     <p><a href="https://livesql.oracle.com/apex/livesql/docs/sqlrf/to_char/tochar_basic.html" target="_blank"><span class="italic">使用TO_CHAR函数</span></a>在Oracle Live SQL上查看并运行相关示例</p>
                   </div>
                </div>
                <!-- class="section" -->

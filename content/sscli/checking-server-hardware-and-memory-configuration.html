@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Use this procedure to gather information about your server configuration.">
       <meta name="description" content="Use this procedure to gather information about your server configuration.">
-      <title>Checking Server Hardware and Memory Configuration</title>
+      <title>检查服务器硬件和内存配置</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database Client Installation Guide">
       <meta property="og:description" content="Use this procedure to gather information about your server configuration.">
@@ -47,54 +45,50 @@
     <meta name="dcterms.isVersionOf" content="SSCLI">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="logging-in-to-a-remote-system-using-x-window-system.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="configuring-operating-systems-for-oracle-database-client-on-oracle-solaris.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="logging-in-to-a-remote-system-using-x-window-system.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="configuring-operating-systems-for-oracle-database-client-on-oracle-solaris.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Client Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="checking-and-configuring-server-hardware-for-oracle-database-client.html" property="item" typeof="WebPage"><span property="name">Checking and Configuring Server Hardware for Oracle Database Client</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Checking Server Hardware and Memory Configuration</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Client安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="checking-and-configuring-server-hardware-for-oracle-database-client.html" property="item" typeof="WebPage"><span property="name">检查和配置Oracle Database Client的服务器硬件</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">检查服务器硬件和内存配置</li>
             </ol>
             <a id="GUID-4209D062-67B8-461E-9897-D589DC5601B2" name="GUID-4209D062-67B8-461E-9897-D589DC5601B2"></a>
             
-            <h2 id="SSCLI-GUID-4209D062-67B8-461E-9897-D589DC5601B2" class="sect2">Checking Server Hardware and Memory Configuration</h2>
+            <h2 id="SSCLI-GUID-4209D062-67B8-461E-9897-D589DC5601B2" class="sect2">检查服务器硬件和内存配置</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Use this procedure to gather information about your server configuration.</p>
+               <p>使用此过程可收集有关服务器配置的信息。</p>
                <ol id="GUID-4209D062-67B8-461E-9897-D589DC5601B2__GUID-E9E64757-963F-487C-AFC7-389FE92CAD7C">
-                  <li class="stepexpand"><span>Use the following command to report the number of memory pages and swap-file disk blocks that are currently unused:</span><div><pre class="pre codeblock"><code># sar -r n i</code></pre><p>For example:</p><pre class="pre codeblock"><code># sar -r 2 10</code></pre></div>
-                     <div>If the size of the physical RAM installed in the system is less than the required size, then you must install more memory before continuing.</div>
+                  <li class="stepexpand"><span>使用以下命令报告当前未使用的内存页和交换文件磁盘块的数量：</span><div><pre class="pre codeblock"><code># sar -r n i</code></pre><p>例如：</p><pre class="pre codeblock"><code># sar -r 2 10</code></pre></div>
+                     <div>如果系统中安装的物理RAM的大小小于所需的大小，则必须先安装更多内存，然后再继续。</div>
                   </li>
-                  <li class="stepexpand"><span>Determine the swap space usage and size of the configured swap space:</span><div><pre class="pre codeblock"><code># /usr/sbin/swap -s</code></pre></div>
-                     <div>If necessary, see your operating system documentation for information about how to configure additional swap space.</div>
+                  <li class="stepexpand"><span>确定交换空间的使用情况和配置的交换空间的大小：</span><div><pre class="pre codeblock"><code># /usr/sbin/swap -s</code></pre></div>
+                     <div>如有必要，请参阅操作系统文档以获取有关如何配置其他交换空间的信息。</div>
                   </li>
-                  <li class="stepexpand"><span>Determine the amount of space available in the <code class="codeph">/tmp</code> directory:</span><div><pre class="pre codeblock"><code># df -kh /tmp</code></pre></div>
+                  <li class="stepexpand"><span>确定<code class="codeph">/tmp</code>目录中可用的空间量：</span><div><pre class="pre codeblock"><code># df -kh /tmp</code></pre></div>
                      <div>
-                        <p>If the free space available in the /tmp directory is less than what is required, then complete one of the following steps:</p>
-                        <ul style="list-style-type: disc;">
+                        <p>如果/ tmp目录中的可用空间小于所需的空间，则完成以下步骤之一：</p>
+                        <ul style="list-style-type:disc">
                            <li>
-                              <p>Delete unnecessary files from the /tmp directory to meet the disk space requirement.</p>
+                              <p>从/ tmp目录中删除不必要的文件以满足磁盘空间要求。</p>
                            </li>
                            <li>
-                              <p>When you set the Oracle user's environment, also set the TMP and TMPDIR environment variables to the directory you want to use instead of <code>/tmp</code>. 
+                              <p>设置Oracle用户的环境时，还要将TMP和TMPDIR环境变量设置为要使用的目录而不是<code>/tmp</code> 。
                               </p>
                            </li>
                         </ul>
                      </div>
                   </li>
-                  <li class="stepexpand"><span>Determine the amount of free disk swap space on the system:</span><div><pre class="pre codeblock"><code># df -kh</code></pre></div>
+                  <li class="stepexpand"><span>确定系统上的可用磁盘交换空间量：</span><div><pre class="pre codeblock"><code># df -kh</code></pre></div>
                   </li>
-                  <li class="stepexpand"><span>Determine the RAM size:</span><div><pre class="pre codeblock"><code># /usr/sbin/prtconf | grep "Memory size"</code></pre></div>
+                  <li class="stepexpand"><span>确定RAM大小：</span><div><pre class="pre codeblock"><code># /usr/sbin/prtconf | grep "Memory size"</code></pre></div>
                   </li>
-                  <li class="stepexpand"><span>Determine if the system architecture can run the software:</span><div><pre class="pre codeblock"><code># /bin/isainfo -kv</code></pre></div>
-                     <div>This command displays the processor type. For example:<pre class="pre codeblock"><code>64-bit sparcv9 kernel modules</code></pre><pre class="pre codeblock"><code>64-bit amd64 kernel modules</code></pre><p>If you do not see the expected output, then you cannot install the software on this system.</p>
+                  <li class="stepexpand"><span>确定系统体系结构是否可以运行该软件：</span><div><pre class="pre codeblock"><code># /bin/isainfo -kv</code></pre></div>
+                     <div>此命令显示处理器类型。例如：<pre class="pre codeblock"><code>64-bit sparcv9 kernel modules</code></pre><pre class="pre codeblock"><code>64-bit amd64 kernel modules</code></pre><p>如果您没有看到预期的输出，则无法在此系统上安装该软件。</p>
                      </div>
                   </li>
                </ol>
@@ -102,7 +96,7 @@
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="checking-and-configuring-server-hardware-for-oracle-database-client.html#GUID-7403E263-1939-423E-9CE2-FE45AEF0735A" title="Verify that servers where you install Oracle Database Client meet the minimum requirements for installation.">Checking and Configuring Server Hardware for Oracle Database Client</a></p>
+                     <p><strong>父主题：</strong> <a href="checking-and-configuring-server-hardware-for-oracle-database-client.html#GUID-7403E263-1939-423E-9CE2-FE45AEF0735A" title="验证安装Oracle数据库客户端的服务器是否满足安装的最低要求。">检查和配置Oracle Database Client的服务器硬件</a></p>
                   </div>
                </div>
             </div>

@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="After installing Oracle Grid Infrastructure for a standalone server, you can also use Oracle ASMCA to create and configure disk groups, Oracle ADVM, and Oracle ACFS.">
       <meta name="description" content="After installing Oracle Grid Infrastructure for a standalone server, you can also use Oracle ASMCA to create and configure disk groups, Oracle ADVM, and Oracle ACFS.">
-      <title>Configuring Oracle ASM Disk Groups Manually using Oracle ASMCA</title>
+      <title>使用Oracle ASMCA手动配置Oracle ASM磁盘组</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database Installation Guide">
       <meta property="og:description" content="After installing Oracle Grid Infrastructure for a standalone server, you can also use Oracle ASMCA to create and configure disk groups, Oracle ADVM, and Oracle ACFS.">
@@ -47,45 +45,40 @@
     <meta name="dcterms.isVersionOf" content="SSDBI">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="modifying-oracle-grid-infrastructure-for-a-standalone-server-binaries-after-installation.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="enabling-oracle-acfs-on-oracle-restart-configurations.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="modifying-oracle-grid-infrastructure-for-a-standalone-server-binaries-after-installation.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="enabling-oracle-acfs-on-oracle-restart-configurations.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="installing-and-configuring-oracle-grid-infrastructure-for-a-standalone-server.html" property="item" typeof="WebPage"><span property="name">Installing and Configuring Oracle Grid Infrastructure for a Standalone Server</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Configuring Oracle ASM Disk Groups Manually using Oracle ASMCA</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="installing-and-configuring-oracle-grid-infrastructure-for-a-standalone-server.html" property="item" typeof="WebPage"><span property="name">为独立服务器安装和配置Oracle Grid Infrastructure</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">使用Oracle ASMCA手动配置Oracle ASM磁盘组</li>
             </ol>
             <a id="GUID-F1A4AB04-EB12-49F2-896D-7719F877DFDD" name="GUID-F1A4AB04-EB12-49F2-896D-7719F877DFDD"></a>
             
-            <h2 id="SSDBI-GUID-F1A4AB04-EB12-49F2-896D-7719F877DFDD" class="sect2">Configuring Oracle ASM Disk Groups Manually using Oracle ASMCA</h2>
+            <h2 id="SSDBI-GUID-F1A4AB04-EB12-49F2-896D-7719F877DFDD" class="sect2">使用Oracle ASMCA手动配置Oracle ASM磁盘组</h2>
          </header>
          <div class="ind">
             <div>
-               <p>After installing Oracle Grid Infrastructure for a standalone server, you can also use Oracle ASMCA to create and configure disk groups, Oracle ADVM, and Oracle ACFS.</p>
-               <div class="section">During Oracle Grid Infrastructure for a standalone server installation, Oracle Automatic Storage Management Configuration Assistant (Oracle ASMCA) utility creates a new Oracle Automatic Storage Management instance if there is no Oracle ASM instance currently configured on the computer. After installation, you can create and configure additional disk groups, and you can configure Oracle ADVM and Oracle ACFS.</div>
+               <p>在为独立服务器安装Oracle Grid Infrastructure之后，您还可以使用Oracle ASMCA创建和配置磁盘组，Oracle ADVM和Oracle ACFS。</p>
+               <div class="section">在用于独立服务器安装的Oracle Grid Infrastructure期间，如果计算机上当前未配置Oracle ASM实例，则Oracle自动存储管理配置助手（Oracle ASMCA）实用程序将创建新的Oracle自动存储管理实例。安装后，您可以创建和配置其他磁盘组，还可以配置Oracle ADVM和Oracle ACFS。</div>
                <!-- class="section" -->
                <div class="section">
-                  <p>To create disk groups or manually configure Oracle ASM disks, start Oracle ASMCA, where <span class="variable" translate="no">Grid_home</span> is the path to the Oracle Grid Infrastructure home:
-                  </p><pre class="pre codeblock"><code>$ cd <span class="variable" translate="no">Grid_home</span>/bin 
+                  <p>要创建磁盘组或手动配置Oracle ASM磁盘，请启动Oracle ASMCA，其中<span class="variable" translate="no">Grid_home</span>是Oracle Grid Infrastructure主<span class="variable" translate="no">Grid_home</span>的路径：</p><pre class="pre codeblock"><code>$ cd <span class="variable" translate="no">Grid_home</span>/bin 
 $ ./asmca</code></pre></div>
                <!-- class="section" -->
             </div>
             <div>
                <div class="relinfo">
-                  <p><strong>Related Topics</strong></p>
+                  <p><strong>相关话题</strong></p>
                   <ul>
-                     <li><a href="../ostmg/manage-asm-asmca.html#OSTMG-GUID-C29F444F-C440-450B-A13B-84CC2147826F" target="_blank"><span><cite>Oracle Automatic Storage Management Administrator's Guide</cite></span></a></li>
+                     <li><a href="../ostmg/manage-asm-asmca.html#OSTMG-GUID-C29F444F-C440-450B-A13B-84CC2147826F" target="_blank"><span><cite>Oracle自动存储管理管理员指南</cite></span></a></li>
                   </ul>
                </div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="installing-and-configuring-oracle-grid-infrastructure-for-a-standalone-server.html#GUID-DA3B90BE-EE1F-4347-8A5E-ED1BBFF29D93" title="Oracle Grid Infrastructure for a standalone server includes Oracle Restart and Oracle Automatic Storage Management.">Installing and Configuring Oracle Grid Infrastructure for a Standalone Server</a></p>
+                     <p><strong>父主题：</strong> <a href="installing-and-configuring-oracle-grid-infrastructure-for-a-standalone-server.html#GUID-DA3B90BE-EE1F-4347-8A5E-ED1BBFF29D93" title="用于独立服务器的Oracle Grid Infrastructure包括Oracle Restart和Oracle自动存储管理。">为独立服务器安装和配置Oracle Grid Infrastructure</a></p>
                   </div>
                </div>
             </div>

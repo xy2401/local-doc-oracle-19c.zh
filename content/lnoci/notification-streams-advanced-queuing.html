@@ -1,19 +1,17 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="This chapter describes continuous query notification, publish-subscribe notification, and Database advanced queuing features.">
       <meta name="description" content="This chapter describes continuous query notification, publish-subscribe notification, and Database advanced queuing features.">
-      <title>Notification Methods and Database Advanced Queuing</title>
+      <title>通知方法和数据库高级排队</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="Programmer's Guide">
+      <meta property="og:title" content="Programmer&#39;s Guide">
       <meta property="og:description" content="This chapter describes continuous query notification, publish-subscribe notification, and Database advanced queuing features.">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="Programmer's Guide">
+      <meta name="application-name" content="Programmer&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="oracle-call-interface-programmers-guide.pdf" title="PDF File" type="application/pdf">
@@ -43,370 +41,330 @@
         </script>
       <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"oracle-database","element_name":"Oracle Database","display_in_url":true},"release":{"short_name":"19","element_name":"Release 19","display_in_url":true}}}</script>
       
-    <meta name="dcterms.title" content="Oracle Call Interface Programmer's Guide">
+    <meta name="dcterms.title" content="Oracle Call Interface Programmer&#39;s Guide">
     <meta name="dcterms.isVersionOf" content="LNOCI">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="high-availability-in-oci.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="user-defined-callback-functions.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="high-availability-in-oci.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="user-defined-callback-functions.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Programmer's Guide</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Notification Methods and Database Advanced
-        Queuing</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">程序员指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">通知方法和数据库高级排队</li>
             </ol>
             <a id="GUID-CB527931-3630-4F31-99ED-1D53C3F7FD90" name="GUID-CB527931-3630-4F31-99ED-1D53C3F7FD90"></a>
             
-            <h2 id="LNOCI-GUID-CB527931-3630-4F31-99ED-1D53C3F7FD90" class="sect2"><span class="enumeration_chapter">13 </span>Notification Methods and Database Advanced
-        Queuing
-            </h2>
+            <h2 id="LNOCI-GUID-CB527931-3630-4F31-99ED-1D53C3F7FD90" class="sect2"><span class="enumeration_chapter">13</span>通知方法和数据库高级排队</h2>
          </header>
          <div class="ind">
             <div>
-               <p>This chapter describes continuous query notification, publish-subscribe
-        notification, and Database advanced queuing features.</p>
-               <div class="p">This chapter includes the following topics:
-                  <ul style="list-style-type: disc;">
+               <p>本章介绍连续查询通知，发布 - 订阅通知和数据库高级排队功能。</p>
+               <div class="p">本章包括以下主题：<ul style="list-style-type:disc">
                      <li>
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-0D3F60BF-942A-4F50-BD58-7F719BE10529" title="Continuous Query Notification (CQN) enables client applications to register queries with the database and receive notifications in response to DML or DDL changes on the objects or in response to result set changes associated with the queries.">About Continuous Query Notification</a></p>
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-0D3F60BF-942A-4F50-BD58-7F719BE10529" title="连续查询通知（CQN）使客户端应用程序能够向数据库注册查询，并接收通知以响应对象上的DML或DDL更改或响应与查询关联的结果集更改。">关于连续查询通知</a></p>
                      </li>
                      <li>
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4" title="The publish-subscribe notification feature allows an OCI application to receive client notifications directly, register an email address to which notifications can be sent, register an HTTP URL to which notifications can be posted, or register a PL/SQL procedure to be invoked on a notification.">Publish-Subscribe Notification in OCI</a></p>
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4" title="发布 - 订阅通知功能允许OCI应用程序直接接收客户端通知，注册可以向其发送通知的电子邮件地址，注册可以发布通知的HTTP URL，或者注册要在其上调用的PL / SQL过程。通知。">在OCI中发布 - 订阅通知</a></p>
                      </li>
                      <li>
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8" title="OCI provides an interface to the Database Advanced Queuing (Database AQ) feature. Database Advanced Queuing provides message queuing as an integrated part of Oracle Database.">OCI and Database Advanced Queuing</a></p>
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8" title="OCI提供了数据库高级队列（Database AQ）功能的接口。数据库高级队列将消息队列作为Oracle数据库的集成部分提供。">OCI和数据库高级排队</a></p>
                      </li>
                   </ul>
                </div>
             </div>
-            <div class="sect2"><a id="GUID-0D3F60BF-942A-4F50-BD58-7F719BE10529" name="GUID-0D3F60BF-942A-4F50-BD58-7F719BE10529"></a><h3 id="LNOCI-GUID-0D3F60BF-942A-4F50-BD58-7F719BE10529" class="sect3"><span class="enumeration_section">13.1 </span>About Continuous Query Notification
-               </h3>
+            <div class="sect2"><a id="GUID-0D3F60BF-942A-4F50-BD58-7F719BE10529" name="GUID-0D3F60BF-942A-4F50-BD58-7F719BE10529"></a><h3 id="LNOCI-GUID-0D3F60BF-942A-4F50-BD58-7F719BE10529" class="sect3"><span class="enumeration_section">13.1</span>关于连续查询通知</h3>
                <div>
-                  <p>Continuous Query Notification (CQN) enables client applications to register queries with the database and receive notifications in response to DML or DDL changes on the objects or in response to result set changes associated with the queries.</p>
-                  <p>The notifications are published by the database when the DML or DDL transaction commits.</p>
-                  <p>During registration, the application specifies a notification handler and associates a set of interesting queries with the notification handler. A notification handler can be either a server-side PL/SQL procedure or a client-side C callback. Registrations are created at either the object level or the query level. If registration is at the object level, then whenever a transaction changes any of the registered objects and commits, the notification handler is invoked. If registration is at the query level, then whenever a transaction commits changes such that the result set of the query is modified, the notification handler is invoked, but if the changes do not affect the result set of the query, the notification handler is not invoked.</p>
-                  <p>Query change notification can be registered for the following types of statements: <code class="codeph">OCI_STMT_SELECT</code>, <code class="codeph">OCI_STMT_BEGIN</code>, <code class="codeph">OCI_STMT_DECLARE</code>, and <code class="codeph">OCI_STMT_CALL</code>.
+                  <p>连续查询通知（CQN）使客户端应用程序能够向数据库注册查询，并接收通知以响应对象上的DML或DDL更改或响应与查询关联的结果集更改。</p>
+                  <p>当DML或DDL事务提交时，通知由数据库发布。</p>
+                  <p>在注册期间，应用程序指定通知处理程序并将一组有趣的查询与通知处理程序相关联。通知处理程序可以是服务器端PL / SQL过程，也可以是客户端C回调。在对象级别或查询级别创建注册。如果注册是在对象级别，那么每当事务更改任何已注册的对象和提交时，都会调用通知处理程序。如果注册是在查询级别，那么每当事务提交更改以便修改查询的结果集时，将调用通知处理程序，但如果更改不影响查询的结果集，则通知处理程序不会调用。</p>
+                  <p>可以为以下类型的语句注册查询更改通知： <code class="codeph">OCI_STMT_SELECT</code> ， <code class="codeph">OCI_STMT_BEGIN</code> ， <code class="codeph">OCI_STMT_DECLARE</code>和<code class="codeph">OCI_STMT_CALL</code> 。</p>
+                  <p>查询更改通知假定PLSQL代码仅为每个<code class="codeph">SELECT</code>语句执行<code class="codeph">SELECT</code>语句和寄存器。否则，如果PLSQL代码中存在任何非SELECT语句，则会引发错误。
                   </p>
-                  <p>Query change notification assumes that the PLSQL code performs only <code class="codeph">SELECT</code> statements and registers for every <code class="codeph">SELECT</code> statement. Otherwise, it raises an error if there are any non SELECT statements in the PLSQL code.
-                  </p>
-                  <p>One use of continuous query notification is in middle-tier applications that must have cached data and keep the cache as recent as possible for the back-end database.</p>
-                  <p>The notification includes the following information:</p>
-                  <ul style="list-style-type: disc;">
+                  <p>连续查询通知的一种用途是在中间层应用程序中，这些应用程序必须具有缓存数据并使后端数据库的缓存尽可能新。</p>
+                  <p>通知包括以下信息：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p>Query IDs of queries whose result sets have changed. This is if the registration was at query granularity.</p>
+                        <p>查询结果集已更改的查询的ID。这是因为注册是在查询粒度。</p>
                      </li>
                      <li>
-                        <p>Names of the modified objects or changed rows.</p>
+                        <p>已修改对象或已更改行的名称。</p>
                      </li>
                      <li>
-                        <p>Operation type (<code class="codeph">INSERT</code>, <code class="codeph">UPDATE</code>, <code class="codeph">DELETE</code>, <code class="codeph">ALTER</code> <code class="codeph">TABLE</code>, <code class="codeph">DROP</code> <code class="codeph">TABLE</code>).
+                        <p>操作类型（ <code class="codeph">INSERT</code> ， <code class="codeph">UPDATE</code> ， <code class="codeph">DELETE</code> ， <code class="codeph">ALTER</code> <code class="codeph">TABLE</code> ， <code class="codeph">DROP</code> <code class="codeph">TABLE</code> ）。
                         </p>
                      </li>
                      <li>
-                        <p><code class="codeph">ROWID</code>s of the changed rows and the associated DML operation (<code class="codeph">INSERT</code>, <code class="codeph">UPDATE</code>, <code class="codeph">DELETE</code>).
+                        <p>已更改行的<code class="codeph">ROWID</code>和关联的DML操作（ <code class="codeph">INSERT</code> ， <code class="codeph">UPDATE</code> ， <code class="codeph">DELETE</code> ）。
                         </p>
                      </li>
                      <li>
-                        <p>Global database events (<code class="codeph">STARTUP</code>, <code class="codeph">SHUTDOWN</code>). In Oracle Real Application Cluster (Oracle RAC) the database delivers a notification when the first instance starts or the last instance shuts down.
+                        <p>全局数据库事件（ <code class="codeph">STARTUP</code> ， <code class="codeph">SHUTDOWN</code> ）。在Oracle Real Application Cluster（Oracle RAC）中，数据库在第一个实例启动或最后一个实例关闭时发送通知。
                         </p>
                      </li>
                   </ul>
                   <div class="infoboxnotealso" id="GUID-0D3F60BF-942A-4F50-BD58-7F719BE10529__GUID-D148FB06-37BA-4030-86FA-F7D719B3AC7F">
-                     <p class="notep1">See Also:</p>
-                     <ul style="list-style-type: disc;">
+                     <p class="notep1">也可以看看：</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p><a href="../adfns/cqn.html#ADFNS018" target="_blank"><span><cite>Oracle Database Development Guide</cite></span></a>, the section about using continuous query notification for a complete discussion of the concepts of this feature and using OCI and PL/SQL interfaces to create CQN registrations
-                           </p>
+                           <p><a href="../adfns/cqn.html#ADFNS018" target="_blank"><span><cite>Oracle数据库开发指南</cite></span></a> ，关于使用连续查询通知来完整讨论此功能的概念以及使用OCI和PL / SQL接口创建CQN注册的部分</p>
                         </li>
                         <li>
-                           <p><a href="notification-streams-advanced-queuing.html#GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4" title="The publish-subscribe notification feature allows an OCI application to receive client notifications directly, register an email address to which notifications can be sent, register an HTTP URL to which notifications can be posted, or register a PL/SQL procedure to be invoked on a notification.">Publish-Subscribe Notification in OCI</a></p>
+                           <p><a href="notification-streams-advanced-queuing.html#GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4" title="发布 - 订阅通知功能允许OCI应用程序直接接收客户端通知，注册可以向其发送通知的电子邮件地址，注册可以发布通知的HTTP URL，或者注册要在其上调用的PL / SQL过程。通知。">在OCI中发布 - 订阅通知</a></p>
                         </li>
                      </ul>
                   </div>
                </div>
             </div>
-            <div class="props_rev_3"><a id="GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4" name="GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4"></a><h3 id="LNOCI-GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4" class="sect3"><span class="enumeration_section">13.2 </span>Publish-Subscribe Notification in OCI
-               </h3>
+            <div class="props_rev_3"><a id="GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4" name="GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4"></a><h3 id="LNOCI-GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4" class="sect3"><span class="enumeration_section">13.2</span>在OCI中发布 - 订阅通知</h3>
                <div>
-                  <p>The publish-subscribe notification feature allows an OCI application to receive client notifications directly, register an email address to which notifications can be sent, register an HTTP URL to which notifications can be posted, or register a PL/SQL procedure to be invoked on a notification. </p>
-                  <p><a href="notification-streams-advanced-queuing.html#GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4__I457371">Figure 13-1</a> illustrates the process. 
+                  <p>发布 - 订阅通知功能允许OCI应用程序直接接收客户端通知，注册可以向其发送通知的电子邮件地址，注册可以发布通知的HTTP URL，或者注册要在其上调用的PL / SQL过程。通知。</p>
+                  <p><a href="notification-streams-advanced-queuing.html#GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4__I457371">图13-1</a>说明了该过程。
                   </p>
                   <div class="figure" id="GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4__I457371">
-                     <p class="titleinfigure">Figure 13-1 Publish-Subscribe Model</p><img src="img/lnoci039.gif" alt="Description of Figure 13-1 follows" title="Description of Figure 13-1 follows" longdesc="img_text/lnoci039.html"><br><a href="img_text/lnoci039.html">Description of "Figure 13-1 Publish-Subscribe Model"</a></div>
+                     <p class="titleinfigure">图13-1发布 - 订阅模型</p><img src="img/lnoci039.gif" alt="下面是图13-1的描述" title="下面是图13-1的描述" longdesc="img_text/lnoci039.html"><br><a href="img_text/lnoci039.html">“图13-1发布 - 订阅模型”的描述</a></div>
                   <!-- class="figure" -->
-                  <p>An OCI application can:</p>
-                  <ul style="list-style-type: disc;">
+                  <p>OCI申请可以：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p>Register interest in notifications in the AQ namespace and be notified when an enqueue occurs</p>
+                        <p>在AQ名称空间中注册对通知的兴趣，并在发生入队时通知</p>
                      </li>
                      <li>
-                        <p>Register interest in subscriptions to database events and receive notifications when the events are triggered </p>
+                        <p>注册对数据库事件订阅的兴趣，并在触发事件时接收通知</p>
                      </li>
                      <li>
-                        <p>Manage registrations, such as disabling registrations temporarily or dropping the registrations entirely</p>
+                        <p>管理注册，例如暂时禁用注册或完全删除注册</p>
                      </li>
                      <li>
-                        <p>Post or send notifications to registered clients</p>
+                        <p>向注册客户发布或发送通知</p>
                      </li>
                   </ul>
-                  <p>In all the preceding scenarios the notification can be received directly by the OCI application, or the notification can be sent to a prespecified email address, or it can be sent to a predefined HTTP URL, or a prespecified database PL/SQL procedure can be invoked because of a notification.</p>
-                  <p>Registered clients are notified asynchronously when events are triggered or on an explicit AQ enqueue. Clients do not need to be connected to a database.</p>
-                  <div class="p">This section includes the following topics:
-                     <ul style="list-style-type: disc;">
+                  <p>在所有上述场景中，通知可以由OCI应用程序直接接收，或者通知可以发送到预先指定的电子邮件地址，或者可以发送到预定义的HTTP URL，或者可以调用预先指定的数据库PL / SQL过程因为通知</p>
+                  <p>触发事件时或在显式AQ队列中异步通知已注册的客户端。客户端不需要连接到数据库。</p>
+                  <div class="p">本节包括以下主题：<ul style="list-style-type:disc">
                         <li>
-                           <p><a href="notification-streams-advanced-queuing.html#GUID-1E9445D7-DFD9-4230-BFFD-EF3630691ECE" title="You can register directly to the database or register using Lightweight Directory Access Protocol (LDAP).">Publish-Subscribe Registration Functions in OCI</a></p>
+                           <p><a href="notification-streams-advanced-queuing.html#GUID-1E9445D7-DFD9-4230-BFFD-EF3630691ECE" title="您可以使用轻量级目录访问协议（LDAP）直接注册到数据库或注册。">在OCI中发布 - 订阅注册功能</a></p>
                         </li>
                         <li>
-                           <p><a href="notification-streams-advanced-queuing.html#GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5" title="The client must register a notification callback that gets invoked when there is some activity on the subscription for which interest has been registered.">Notification Callback in OCI</a></p>
+                           <p><a href="notification-streams-advanced-queuing.html#GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5" title="客户端必须注册一个通知回调，当订阅了一些已注册兴趣的活动时，该回调会被调用。">OCI中的通知回调</a></p>
                         </li>
                         <li>
-                           <p><a href="notification-streams-advanced-queuing.html#GUID-078F3FD1-7CAA-45FC-A93F-1CE942D27CA0" title="The PL/SQL notification procedure that is invoked when there is some activity on the subscription for which interest has been registered, must be created in the database.">Notification Procedure</a></p>
+                           <p><a href="notification-streams-advanced-queuing.html#GUID-078F3FD1-7CAA-45FC-A93F-1CE942D27CA0" title="必须在数据库中创建在已注册兴趣的订阅上存在某些活动时调用的PL / SQL通知过程。">通知程序</a></p>
                         </li>
                         <li>
-                           <p><a href="notification-streams-advanced-queuing.html#GUID-909E21A8-A247-4E54-9069-79B3EF219D2F" title="Shows examples implementing publish subscription notification using direct registration.">Publish-Subscribe Direct Registration Example</a></p>
+                           <p><a href="notification-streams-advanced-queuing.html#GUID-909E21A8-A247-4E54-9069-79B3EF219D2F" title="显示使用直接注册实现发布订阅通知的示例。">发布 - 订阅直接注册示例</a></p>
                         </li>
                         <li>
-                           <p><a href="notification-streams-advanced-queuing.html#GUID-9F4EEC78-5CAC-4E86-9F82-1FF9586289CF" title="Shows an example that illustrates how to do LDAP registration.">Publish-Subscribe LDAP Registration Example</a></p>
+                           <p><a href="notification-streams-advanced-queuing.html#GUID-9F4EEC78-5CAC-4E86-9F82-1FF9586289CF" title="显示一个示例，说明如何进行LDAP注册。">发布 - 订阅LDAP注册示例</a></p>
                         </li>
                      </ul>
                   </div>
                   <div class="infoboxnotealso" id="GUID-9CE58707-FC18-492E-8AA9-5314041BCEE4__GUID-642616AE-C0DB-4BAE-B1C3-C044AC88CDDA">
-                     <p class="notep1">See Also:</p>
-                     <ul style="list-style-type: disc;">
+                     <p class="notep1">也可以看看：</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p><a href="notification-streams-advanced-queuing.html#GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8" title="OCI provides an interface to the Database Advanced Queuing (Database AQ) feature. Database Advanced Queuing provides message queuing as an integrated part of Oracle Database.">OCI and Database Advanced Queuing</a> for information about Database Advanced
-                        Queuing
-                           </p>
+                           <p><a href="notification-streams-advanced-queuing.html#GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8" title="OCI提供了数据库高级队列（Database AQ）功能的接口。数据库高级队列将消息队列作为Oracle数据库的集成部分提供。">OCI和数据库高级队列，</a>以获取有关数据库高级队列的信息</p>
                         </li>
                         <li>
-                           <p><a href="../adque/aq-introduction.html#ADQUE0100" target="_blank"><span><cite>Oracle Database Advanced Queuing User's Guide</cite></span></a> for information about creating
-                        queues and about Database AQ, including concepts, features, and examples
-                           </p>
+                           <p><a href="../adque/aq-introduction.html#ADQUE0100" target="_blank"><span><cite>“Oracle数据库高级队列用户指南”</cite></span></a> ，了解有关创建队列和有关数据库AQ的信息，包括概念，功能和示例</p>
                         </li>
                         <li>
-                           <p>The chapter about <code class="codeph">CREATE</code> <code class="codeph">TRIGGER</code> in the <a href="../sqlrf/CREATE-TRIGGER.html#SQLRF01405" target="_blank"><span><cite>Oracle Database SQL Language Reference</cite></span></a> for information about creating triggers
-                           </p>
+                           <p>有关<code class="codeph">CREATE</code> <code class="codeph">TRIGGER</code> ，请参阅<a href="../sqlrf/CREATE-TRIGGER.html#SQLRF01405" target="_blank"><span><cite>Oracle数据库SQL语言参考中</cite></span></a>有关<code class="codeph">CREATE</code> <code class="codeph">TRIGGER</code>的章节</p>
                         </li>
                      </ul>
                   </div>
                </div>
-               <div class="props_rev_3"><a id="GUID-1E9445D7-DFD9-4230-BFFD-EF3630691ECE" name="GUID-1E9445D7-DFD9-4230-BFFD-EF3630691ECE"></a><h4 id="LNOCI-GUID-1E9445D7-DFD9-4230-BFFD-EF3630691ECE" class="sect4"><span class="enumeration_section">13.2.1 </span>Publish-Subscribe Registration Functions in OCI
-                  </h4>
+               <div class="props_rev_3"><a id="GUID-1E9445D7-DFD9-4230-BFFD-EF3630691ECE" name="GUID-1E9445D7-DFD9-4230-BFFD-EF3630691ECE"></a><h4 id="LNOCI-GUID-1E9445D7-DFD9-4230-BFFD-EF3630691ECE" class="sect4"><span class="enumeration_section">13.2.1</span>在OCI中发布 - 订阅注册功能</h4>
                   <div>
-                     <p>You can register directly to the database or register using Lightweight Directory Access Protocol (LDAP).</p>
-                     <p>Registration can be done in two ways:</p>
-                     <ul style="list-style-type: disc;">
+                     <p>您可以使用轻量级目录访问协议（LDAP）直接注册到数据库或注册。</p>
+                     <p>注册可以通过两种方式完成：</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p>Direct registration. You register directly to the database. This way is simple and the registration takes effect immediately.</p>
+                           <p>直接注册。您直接注册到数据库。这种方式很简单，注册立即生效。</p>
                         </li>
                         <li>
-                           <p>Open registration. You register using Lightweight Directory Access Protocol (LDAP), from which the database receives the registration request. This is useful when the client cannot have a database connection (the client wants to register for a database open event while the database is down), or if the client wants to register for the same event or events in multiple databases simultaneously. </p>
+                           <p>公开注册。您使用轻量级目录访问协议（LDAP）注册，数据库从该协议接收注册请求。当客户端无法建立数据库连接时（客户端希望在数据库关闭时注册数据库打开事件），或者客户端想要同时在多个数据库中注册相同的事件或事件时，这非常有用。</p>
                         </li>
                      </ul>
-                     <div class="p">This section includes the following topics:
-                        <ul style="list-style-type: disc;">
+                     <div class="p">本节包括以下主题：<ul style="list-style-type:disc">
                            <li>
-                              <p><a href="notification-streams-advanced-queuing.html#GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4" title="The following steps are required in an OCI application to register directly and receive notifications for events.">Publish-Subscribe Register Directly to the Database</a></p>
+                              <p><a href="notification-streams-advanced-queuing.html#GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4" title="OCI应用程序中需要以下步骤才能直接注册并接收事件通知。">发布 - 订阅直接注册到数据库</a></p>
                            </li>
                            <li>
-                              <p><a href="notification-streams-advanced-queuing.html#GUID-5C733061-A0B7-4852-B0B6-A013CB0D7739" title="Lists the prerequisites for the open registration for publish-subscribe.">Open Registration for Publish-Subscribe</a></p>
+                              <p><a href="notification-streams-advanced-queuing.html#GUID-5C733061-A0B7-4852-B0B6-A013CB0D7739" title="列出了open-subscribe的开放注册的先决条件。">打开发布 - 订阅注册</a></p>
                            </li>
                            <li>
-                              <p><a href="notification-streams-advanced-queuing.html#GUID-C7ED46E0-43C2-41A3-B89E-8F05DF0C4CC8" title="Shows how to open register using LDAP registration.">Using OCI to Open Register with LDAP</a></p>
+                              <p><a href="notification-streams-advanced-queuing.html#GUID-C7ED46E0-43C2-41A3-B89E-8F05DF0C4CC8" title="演示如何使用LDAP注册打开注册。">使用OCI打开LDAP注册</a></p>
                            </li>
                            <li>
-                              <p><a href="notification-streams-advanced-queuing.html#GUID-00B6E34B-201C-4C6E-B188-238FE58836D8" title="Shows how to set QOSFLAGS to QOS levels using OCIAttrSet().">Setting QOS, Timeout Interval, Namespace, Client Address, and Port Number</a></p>
+                              <p><a href="notification-streams-advanced-queuing.html#GUID-00B6E34B-201C-4C6E-B188-238FE58836D8" title="演示如何使用OCIAttrSet（）将QOSFLAGS设置为QOS级别。">设置QOS，超时间隔，命名空间，客户端地址和端口号</a></p>
                            </li>
                            <li>
-                              <p><a href="notification-streams-advanced-queuing.html#GUID-362BE190-510B-4187-A93E-C4538E2C8A24" title="Lists and describes the functions used to manage publish-subscribe notification.">OCI Functions Used to Manage Publish-Subscribe Notification</a></p>
+                              <p><a href="notification-streams-advanced-queuing.html#GUID-362BE190-510B-4187-A93E-C4538E2C8A24" title="列出并描述用于管理发布 - 订阅通知的功能。">用于管理发布 - 订阅通知的OCI函数</a></p>
                            </li>
                         </ul>
                      </div>
                      <div class="infoboxnotealso" id="GUID-1E9445D7-DFD9-4230-BFFD-EF3630691ECE__GUID-812E3D19-0E2E-4109-B196-4E99F51B045C">
-                        <p class="notep1">See Also:</p>
-                        <ul style="list-style-type: disc;">
+                        <p class="notep1">也可以看看：</p>
+                        <ul style="list-style-type:disc">
                            <li>
-                              <p><a href="notification-streams-advanced-queuing.html#GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4" title="The following steps are required in an OCI application to register directly and receive notifications for events.">Publish-Subscribe Register Directly to the Database</a></p>
+                              <p><a href="notification-streams-advanced-queuing.html#GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4" title="OCI应用程序中需要以下步骤才能直接注册并接收事件通知。">发布 - 订阅直接注册到数据库</a></p>
                            </li>
                            <li>
-                              <p><a href="notification-streams-advanced-queuing.html#GUID-5C733061-A0B7-4852-B0B6-A013CB0D7739" title="Lists the prerequisites for the open registration for publish-subscribe.">Open Registration for Publish-Subscribe</a></p>
+                              <p><a href="notification-streams-advanced-queuing.html#GUID-5C733061-A0B7-4852-B0B6-A013CB0D7739" title="列出了open-subscribe的开放注册的先决条件。">打开发布 - 订阅注册</a></p>
                            </li>
                         </ul>
                      </div>
                   </div>
-                  <div class="props_rev_3"><a id="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4" name="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4"></a><h5 id="LNOCI-GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4" class="sect5"><span class="enumeration_section">13.2.1.1 </span>Publish-Subscribe Register Directly to the Database
-                     </h5>
+                  <div class="props_rev_3"><a id="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4" name="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4"></a><h5 id="LNOCI-GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4" class="sect5"><span class="enumeration_section">13.2.1.1</span>发布 - 订阅直接注册到数据库</h5>
                      <div>
-                        <p>The following steps are required in an OCI application to register directly and receive notifications for events.</p>
-                        <p>It is assumed that the appropriate event trigger or AQ queue has been set up. The initialization parameter <code class="codeph">COMPATIBLE</code> must be set to 8.1 or later.<span class="bold"></span> 
+                        <p>OCI应用程序中需要以下步骤才能直接注册并接收事件通知。</p>
+                        <p>假设已设置适当的事件触发器或AQ队列。初始化参数<code class="codeph">COMPATIBLE</code>必须设置为8.1或更高版本。 <span class="bold"></span> 
                         </p>
                         <div class="infoboxnotealso" id="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4__GUID-E124B95D-80B5-4B3D-A8DF-F1FCD904ADBA">
-                           <p class="notep1">See Also:</p>
-                           <ul style="list-style-type: disc;">
+                           <p class="notep1">也可以看看：</p>
+                           <ul style="list-style-type:disc">
                               <li>
-                                 <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-4D7FFF56-38DE-4DBF-80E8-48BF19C2B2D3" title="Lists and describes the Database Advanced Queuing and publish-subscribe functions.">Database Advanced Queuing and Publish-Subscribe Functions</a></p>
+                                 <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-4D7FFF56-38DE-4DBF-80E8-48BF19C2B2D3" title="列出并描述数据库高级队列和发布 - 订阅功能。">数据库高级排队和发布 - 订阅功能</a></p>
                               </li>
                               <li>
-                                 <p><a href="notification-streams-advanced-queuing.html#GUID-909E21A8-A247-4E54-9069-79B3EF219D2F" title="Shows examples implementing publish subscription notification using direct registration.">Publish-Subscribe Direct Registration Example</a> for examples of the use of these functions in an application 
-                                 </p>
+                                 <p><a href="notification-streams-advanced-queuing.html#GUID-909E21A8-A247-4E54-9069-79B3EF219D2F" title="显示使用直接注册实现发布订阅通知的示例。">发布 - 订阅直接注册示例，</a>了解在应用程序中使用这些函数的示例</p>
                               </li>
                            </ul>
                         </div>
                         <div class="infoboxnote" id="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4__GUID-45D4D6C0-A953-4C66-8CA5-EA237EB1A50B">
-                           <p class="notep1">Note:</p>
-                           <p>The publish-subscribe feature is only available on multithreaded operating systems.</p>
+                           <p class="notep1">注意：</p>
+                           <p>发布 - 订阅功能仅适用于多线程操作系统。</p>
                         </div>
                         <ol>
                            <li>
-                              <p>Call <code class="codeph">OCIEnvCreate()</code> or <code class="codeph">OCIEnvNlsCreate()</code> with <code class="codeph">OCI_EVENTS</code> mode to specify that the application is interested in registering for and receiving notifications. This starts a dedicated listening thread for notifications on the client.
+                              <p>使用<code class="codeph">OCI_EVENTS</code>模式调用<code class="codeph">OCIEnvNlsCreate()</code> <code class="codeph">OCIEnvCreate()</code>或<code class="codeph">OCIEnvCreate()</code>以指定应用程序有兴趣注册和接收通知。这将启动一个专用的侦听线程，用于客户端上的通知。
                               </p>
                            </li>
                            <li>
-                              <p>Call <code class="codeph">OCIHandleAlloc()</code> with handle type <code class="codeph">OCI_HTYPE_SUBSCRIPTION</code> to allocate a subscription handle.
+                              <p>使用句柄类型<code class="codeph">OCI_HTYPE_SUBSCRIPTION</code>调用<code class="codeph">OCIHandleAlloc()</code>以分配订阅句柄。
                               </p>
                            </li>
                            <li>
-                              <p>Call <code class="codeph">OCIAttrSet()</code> to set the subscription handle attributes for:
-                              </p>
-                              <ul style="list-style-type: disc;">
+                              <p>调用<code class="codeph">OCIAttrSet()</code>来设置订阅句柄属性：</p>
+                              <ul style="list-style-type:disc">
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NAME</code> - Subscription name
-                                    </p>
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NAME</code> - 订阅名称</p>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NAMESPACE</code> - Subscription namespace
-                                    </p>
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NAMESPACE</code> - 订阅命名空间</p>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_HOSTADDR</code> - Environment handle attribute that sets the client IP (in either IPv4 or IPv6 format) to which notification is sent
-                                    </p>
-                                    <p>Oracle Database components and utilities support Internet Protocol version 6 (IPv6) addresses.</p>
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_HOSTADDR</code> - 环境句柄属性，用于设置向其发送通知的客户端IP（以IPv4或IPv6格式）</p>
+                                    <p>Oracle数据库组件和实用程序支持Internet协议版本6（IPv6）地址。</p>
                                     <div class="infoboxnotealso" id="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4__GUID-BC89470B-7AD1-4462-8D55-38CD92C761E4">
-                                       <p class="notep1">See Also:</p>
-                                       <p><a href="handle-and-descriptor-attributes.html#GUID-A76BBB38-8F77-40B8-B5A6-1F9C9166C71C__BAJDBBIC">OCI_ATTR_SUBSCR_HOSTADDR</a>, <a href="handle-and-descriptor-attributes.html#GUID-A76BBB38-8F77-40B8-B5A6-1F9C9166C71C__BAJHEBIA">OCI_ATTR_SUBSCR_IPADDR</a>, and <a href="../netag/understanding-communication-layers.html#NETAG1453" target="_blank"><span><cite>Oracle Database Net Services Administrator's Guide</cite></span></a> for more information about the IPv6 format for IP addresses
-                                       </p>
+                                       <p class="notep1">也可以看看：</p>
+                                       <p>有关IP地址的IPv6格式的详细信息，请<a href="handle-and-descriptor-attributes.html#GUID-A76BBB38-8F77-40B8-B5A6-1F9C9166C71C__BAJHEBIA">参阅</a> <a href="handle-and-descriptor-attributes.html#GUID-A76BBB38-8F77-40B8-B5A6-1F9C9166C71C__BAJDBBIC">OCI_ATTR_SUBSCR_HOSTADDR</a> ， <a href="handle-and-descriptor-attributes.html#GUID-A76BBB38-8F77-40B8-B5A6-1F9C9166C71C__BAJHEBIA">OCI_ATTR_SUBSCR_IPADDR</a>和<a href="../netag/understanding-communication-layers.html#NETAG1453" target="_blank"><span><cite>Oracle数据库网络服务管理员指南</cite></span></a></p>
                                     </div>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_CALLBACK</code> - Notification callback
-                                    </p>
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_CALLBACK</code> - 通知回调</p>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_CTX</code> - Callback context
-                                    </p>
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_CTX</code> - 回调上下文</p>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_PAYLOAD</code> - Payload buffer for posting
-                                    </p>
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_PAYLOAD</code> - 用于发布的有效负载缓冲区</p>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_RECPT</code> - Recipient name
-                                    </p>
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_RECPT</code> - 收件人姓名</p>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code> - Protocol to receive notification with
-                                    </p>
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code> - 用于接收通知的协议</p>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_RECPTPRES</code> - Presentation to receive notification with
-                                    </p>
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_RECPTPRES</code> - 用于接收通知的演示文稿</p>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_QOSFLAGS</code> - QOS (quality of service) levels with the following values:
-                                    </p>
-                                    <ul style="list-style-type: disc;">
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_QOSFLAGS</code> - 具有以下值的QOS（服务质量）级别：</p>
+                                    <ul style="list-style-type:disc">
                                        <li>
-                                          <p>If <code class="codeph">OCI_SUBSCR_QOS_PURGE_ON_NTFN</code> is set, the registration is purged on the first notification.
+                                          <p>如果设置了<code class="codeph">OCI_SUBSCR_QOS_PURGE_ON_NTFN</code> ，则在第一个通知上清除注册。
                                           </p>
                                        </li>
                                        <li>
-                                          <p>If <code class="codeph">OCI_SUBSCR_QOS_RELIABLE</code> is set, notifications are persistent. You can use surviving instances of an Oracle RAC database to send and retrieve change notification messages even after a node failure, because invalidations associated with this registration are queued persistently into the database. If <code class="codeph">FALSE</code>, then invalidations are enqueued into a fast in-memory queue. Note that this option describes the persistence of notifications and not the persistence of registrations. Registrations are automatically persistent by default.
+                                          <p>如果设置了<code class="codeph">OCI_SUBSCR_QOS_RELIABLE</code> ，则通知是持久的。即使在节点发生故障后，您也可以使用Oracle RAC数据库的幸存实例来发送和检索更改通知消息，因为与此注册相关联的失效会持久排队到数据库中。如果为<code class="codeph">FALSE</code> ，则将失效排入快速内存中队列。请注意，此选项描述了通知的持久性，而不是注册的持久性。默认情况下，注册会自动保留。
                                           </p>
                                        </li>
                                     </ul>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_TIMEOUT</code> - Registration timeout interval in seconds. The default is 0 if a timeout is not set.
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_TIMEOUT</code> - 注册超时间隔（秒）。如果未设置超时，则默认值为0。
                                     </p>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NTFN_GROUPING_CLASS</code> - notification grouping class
-                                    </p>
-                                    <p>Notifications can be spaced out by using the grouping NTFN option with the following constants. A value supported for notification grouping class is:</p><pre class="oac_no_warn" dir="ltr">#define OCI_SUBSCR_NTFN_GROUPING_CLASS_TIME   1 /* time  */
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NTFN_GROUPING_CLASS</code> - 通知分组类</p>
+                                    <p>通过使用具有以下常量的分组NTFN选项，可以间隔通知。通知分组类支持的值为：</p><pre class="oac_no_warn" dir="ltr">#define OCI_SUBSCR_NTFN_GROUPING_CLASS_TIME   1 /* time  */
 </pre></li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NTFN_GROUPING_VALUE</code> - notification grouping value in seconds
-                                    </p>
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NTFN_GROUPING_VALUE</code> - 以秒为单位的通知分组值</p>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NTFN_GROUPING_TYPE</code> - notification grouping type
-                                    </p>
-                                    <p>Supported values for notification grouping type:</p><pre class="oac_no_warn" dir="ltr">#define OCI_SUBSCR_NTFN_GROUPING_TYPE_SUMMARY 1  /* summary */
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NTFN_GROUPING_TYPE</code> - 通知分组类型</p>
+                                    <p>通知分组类型支持的值：</p><pre class="oac_no_warn" dir="ltr">#define OCI_SUBSCR_NTFN_GROUPING_TYPE_SUMMARY 1  /* summary */
 #define OCI_SUBSCR_NTFN_GROUPING_TYPE_LAST    2  /* last */ 
 </pre></li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NTFN_GROUPING_START_TIME</code> - notification grouping start time
-                                    </p>
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NTFN_GROUPING_START_TIME</code> - 通知分组开始时间</p>
                                  </li>
                                  <li>
-                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NTFN_GROUPING_REPEAT_COUNT</code> - notification grouping repeat count
-                                    </p>
+                                    <p><code class="codeph">OCI_ATTR_SUBSCR_NTFN_GROUPING_REPEAT_COUNT</code> - 通知分组重复计数</p>
                                  </li>
                               </ul>
-                              <p><code class="codeph">OCI_ATTR_SUBSCR_NAME</code>, <code class="codeph">OCI_ATTR_SUBSCR_NAMESPACE</code>, and <code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code> must be set before you register a subscription.
+                              <p>在注册订阅之前，必须先设置<code class="codeph">OCI_ATTR_SUBSCR_NAME</code> ， <code class="codeph">OCI_ATTR_SUBSCR_NAMESPACE</code>和<code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code> 。
                               </p>
-                              <p>If <code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code> is set to <code class="codeph">OCI_SUBSCR_PROTO_OCI</code>, then <code class="codeph">OCI_ATTR_SUBSCR_CALLBACK</code> and <code class="codeph">OCI_ATTR_SUBSCR_CTX</code> also must be set.
+                              <p>如果<code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code>设置为<code class="codeph">OCI_SUBSCR_PROTO_OCI</code> ，则还必须设置<code class="codeph">OCI_ATTR_SUBSCR_CALLBACK</code>和<code class="codeph">OCI_ATTR_SUBSCR_CTX</code> 。
                               </p>
-                              <p>If <code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code> is set to <code class="codeph">OCI_SUBSCR_PROTO_MAIL</code>, <code class="codeph">OCI_SUBSCR_PROTO_SERVER</code>, or <code class="codeph">OCI_SUBSCR_PROTO_HTTP</code>, then <code class="codeph">OCI_ATTR_SUBSCR_RECPT</code> also must be set.
+                              <p>如果<code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code>设置为<code class="codeph">OCI_SUBSCR_PROTO_MAIL</code> ， <code class="codeph">OCI_SUBSCR_PROTO_SERVER</code>或<code class="codeph">OCI_SUBSCR_PROTO_HTTP</code> ，则还必须设置<code class="codeph">OCI_ATTR_SUBSCR_RECPT</code> 。
                               </p>
-                              <p>Setting <code class="codeph">OCI_ATTR_SUBSCR_CALLBACK</code> and <code class="codeph">OCI_ATTR_SUBSCR_RECPT</code> at the same time causes an application error.
+                              <p>同时设置<code class="codeph">OCI_ATTR_SUBSCR_CALLBACK</code>和<code class="codeph">OCI_ATTR_SUBSCR_RECPT</code>会导致应用程序错误。
                               </p>
-                              <p><code class="codeph">OCI_ATTR_SUBSCR_PAYLOAD</code> is required before the application can perform a post to a subscription. 
+                              <p>在应用程序可以对订阅执行发布之前，需要<code class="codeph">OCI_ATTR_SUBSCR_PAYLOAD</code> 。
                               </p>
                               <div class="infoboxnotealso" id="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4__GUID-5A5F0DBF-D62E-4D29-A8DB-93647C6DAD07">
-                                 <p class="notep1">See Also:</p>
-                                 <p><a href="handle-and-descriptor-attributes.html#GUID-A76BBB38-8F77-40B8-B5A6-1F9C9166C71C" title="Lists and describes subscription handle attributes.">Subscription Handle Attributes</a> and <a href="oci-programming-basics.html#GUID-083E4689-0B45-4120-9FBD-3E5FE6BB1589" title="Each OCI function call is executed in the context of an environment that is created with the OCIEnvCreate() call.">About Creating the OCI Environment</a> for setting up the environment with <code class="codeph">mode = OCI_EVENTS | OCI_OBJECT</code>. <code class="codeph">OCI_OBJECT</code> is required for grouping notifications.
+                                 <p class="notep1">也可以看看：</p>
+                                 <p><a href="handle-and-descriptor-attributes.html#GUID-A76BBB38-8F77-40B8-B5A6-1F9C9166C71C" title="列出并描述订阅句柄属性。">订阅句柄属性</a>和<a href="oci-programming-basics.html#GUID-083E4689-0B45-4120-9FBD-3E5FE6BB1589" title="每个OCI函数调用都是在使用OCIEnvCreate（）调用创建的环境的上下文中执行的。">关于创建OCI环境</a>以使用<code class="codeph">mode = OCI_EVENTS | OCI_OBJECT</code>设置环境<code class="codeph">mode = OCI_EVENTS | OCI_OBJECT</code> 。分组通知需要<code class="codeph">OCI_OBJECT</code> 。
                                  </p>
                               </div>
                            </li>
                            <li>
-                              <p>Set he values of QOS, timeout interval, namespace, and port (see Example&nbsp;9&#x2013;15).</p>
+                              <p>设置QOS，超时间隔，命名空间和端口的值（请参见例9-15）。</p>
                               <div class="infoboxnotealso" id="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4__GUID-F192A4D3-36E4-4D17-8FCD-64649859E6C5">
-                                 <p class="notep1">See Also:</p>
-                                 <p><a href="notification-streams-advanced-queuing.html#GUID-00B6E34B-201C-4C6E-B188-238FE58836D8" title="Shows how to set QOSFLAGS to QOS levels using OCIAttrSet().">Setting QOS, Timeout Interval, Namespace, Client Address, and Port Number</a></p>
+                                 <p class="notep1">也可以看看：</p>
+                                 <p><a href="notification-streams-advanced-queuing.html#GUID-00B6E34B-201C-4C6E-B188-238FE58836D8" title="演示如何使用OCIAttrSet（）将QOSFLAGS设置为QOS级别。">设置QOS，超时间隔，命名空间，客户端地址和端口号</a></p>
                               </div>
                            </li>
                            <li>
-                              <p>Set <code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code> to <code class="codeph">OCI_SUBSCR_PROTO_OCI</code>, then define the callback routine to be used with the subscription handle. 
+                              <p>将<code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code>设置为<code class="codeph">OCI_SUBSCR_PROTO_OCI</code> ，然后定义要与订阅句柄一起使用的回调例程。
                               </p>
                               <div class="infoboxnotealso" id="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4__GUID-F81E772A-37B5-4E60-A900-824F5D590A14">
-                                 <p class="notep1">See Also:</p>
-                                 <p><a href="notification-streams-advanced-queuing.html#GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5" title="The client must register a notification callback that gets invoked when there is some activity on the subscription for which interest has been registered.">Notification Callback in OCI</a></p>
+                                 <p class="notep1">也可以看看：</p>
+                                 <p><a href="notification-streams-advanced-queuing.html#GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5" title="客户端必须注册一个通知回调，当订阅了一些已注册兴趣的活动时，该回调会被调用。">OCI中的通知回调</a></p>
                               </div>
                            </li>
                            <li>
-                              <p>Set <code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code> to <code class="codeph">OCI_SUBSCR_PROTO_SERVER</code>, then define the PL/SQL procedure, to be invoked on notification, in the database.
+                              <p>将<code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code>设置为<code class="codeph">OCI_SUBSCR_PROTO_SERVER</code> ，然后在数据库中定义要在通知时调用的PL / SQL过程。
                               </p>
                               <div class="infoboxnotealso" id="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4__GUID-FEE7B581-AEAF-4671-A201-67C6ABC65D93">
-                                 <p class="notep1">See Also:</p>
-                                 <p><a href="notification-streams-advanced-queuing.html#GUID-078F3FD1-7CAA-45FC-A93F-1CE942D27CA0" title="The PL/SQL notification procedure that is invoked when there is some activity on the subscription for which interest has been registered, must be created in the database.">Notification Procedure</a></p>
+                                 <p class="notep1">也可以看看：</p>
+                                 <p><a href="notification-streams-advanced-queuing.html#GUID-078F3FD1-7CAA-45FC-A93F-1CE942D27CA0" title="必须在数据库中创建在已注册兴趣的订阅上存在某些活动时调用的PL / SQL通知过程。">通知程序</a></p>
                               </div>
                            </li>
                            <li>
-                              <p>Call <code class="codeph">OCISubscriptionRegister()</code> to register with the subscriptions. This call can register interest in several subscriptions at the same time.
+                              <p>调用<code class="codeph">OCISubscriptionRegister()</code>注册订阅。此调用可以同时注册多个订阅的兴趣。
                               </p>
                            </li>
                         </ol>
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4__CACFFAEH">Example 13-1</a> shows an example of setting QOS levels.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4__CACFFAEH">例13-1</a>显示了设置QOS级别的示例。
                         </p>
                         <div class="example" id="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4__CACFFAEH">
-                           <p class="titleinexample">Example 13-1 Setting QOS Levels, the Notification Grouping Class, Value, and Type, and the Namespace Specific Context</p><pre class="oac_no_warn" dir="ltr">/* Set QOS levels */
+                           <p class="titleinexample">示例13-1设置QOS级别，通知分组类，值和类型以及命名空间特定上下文</p><pre class="oac_no_warn" dir="ltr">/* Set QOS levels */
 ub4 qosflags = OCI_SUBSCR_QOS_PAYLOAD;
  
 /* Set QOS flags in subscription handle */
@@ -443,22 +401,22 @@ ub4 ntfn_grouping_type = OCI_SUBSCR_NTFN_GROUPING_TYPE_SUMMARY;
                         <div class="section">
                            <p class="subhead3" id="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4__GUID-670B69C2-F7D9-4347-9D6E-A532A2292BE7"></p>
                            <div class="infoboxnotealso" id="GUID-4D013BA8-B824-45FB-A54A-21FF42B256F4__GUID-837FCDA2-710B-4A69-8107-A7968A674D14">
-                              <p class="notep1">See Also:</p>
-                              <ul style="list-style-type: disc;">
+                              <p class="notep1">也可以看看：</p>
+                              <ul style="list-style-type:disc">
                                  <li>
-                                    <p><a href="connect-authorize-and-initialize-functions.html#GUID-16BDA1F1-7DAF-41CA-9EE1-C9A4CB467244" title="Creates and initializes an environment handle for OCI functions to work under.">OCIEnvCreate()</a></p>
+                                    <p><a href="connect-authorize-and-initialize-functions.html#GUID-16BDA1F1-7DAF-41CA-9EE1-C9A4CB467244" title="创建并初始化OCI函数的环境句柄。">OCIEnvCreate（）</a></p>
                                  </li>
                                  <li>
-                                    <p><a href="connect-authorize-and-initialize-functions.html#GUID-0B6911A9-4B46-476C-BC5E-B87581666CD9" title="Creates and initializes an environment handle for OCI functions to work under.">OCIEnvNlsCreate()</a></p>
+                                    <p><a href="connect-authorize-and-initialize-functions.html#GUID-0B6911A9-4B46-476C-BC5E-B87581666CD9" title="创建并初始化OCI函数的环境句柄。">OCIEnvNlsCreate（）</a></p>
                                  </li>
                                  <li>
-                                    <p><a href="handle-and-descriptor-functions.html#GUID-C5BF55F7-A110-4CB5-9663-5056590F12B5" title="Returns a pointer to an allocated and initialized handle.">OCIHandleAlloc()</a></p>
+                                    <p><a href="handle-and-descriptor-functions.html#GUID-C5BF55F7-A110-4CB5-9663-5056590F12B5" title="返回指向已分配和初始化句柄的指针。">OCIHandleAlloc（）</a></p>
                                  </li>
                                  <li>
-                                    <p><a href="handle-and-descriptor-functions.html#GUID-3741D7BD-7652-4D7A-8813-AC2AEA8D3B03" title="Sets the value of an attribute of a handle or a descriptor.">OCIAttrSet()</a></p>
+                                    <p><a href="handle-and-descriptor-functions.html#GUID-3741D7BD-7652-4D7A-8813-AC2AEA8D3B03" title="设置句柄或描述符的属性值。">OCIAttrSet（）</a></p>
                                  </li>
                                  <li>
-                                    <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-36729D3E-E920-4FAA-8EAA-6E033F6D8930" title="Registers a callback for message notification.">OCISubscriptionRegister()</a></p>
+                                    <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-36729D3E-E920-4FAA-8EAA-6E033F6D8930" title="注册消息通知的回调。">OCISubscriptionRegister（）</a></p>
                                  </li>
                               </ul>
                            </div>
@@ -466,175 +424,151 @@ ub4 ntfn_grouping_type = OCI_SUBSCR_NTFN_GROUPING_TYPE_SUMMARY;
                         <!-- class="section" -->
                      </div>
                   </div>
-                  <div class="props_rev_3"><a id="GUID-5C733061-A0B7-4852-B0B6-A013CB0D7739" name="GUID-5C733061-A0B7-4852-B0B6-A013CB0D7739"></a><h5 id="LNOCI-GUID-5C733061-A0B7-4852-B0B6-A013CB0D7739" class="sect5"><span class="enumeration_section">13.2.1.2 </span>Open Registration for Publish-Subscribe
-                     </h5>
+                  <div class="props_rev_3"><a id="GUID-5C733061-A0B7-4852-B0B6-A013CB0D7739" name="GUID-5C733061-A0B7-4852-B0B6-A013CB0D7739"></a><h5 id="LNOCI-GUID-5C733061-A0B7-4852-B0B6-A013CB0D7739" class="sect5"><span class="enumeration_section">13.2.1.2</span>发布 - 订阅的开放注册</h5>
                      <div>
-                        <p>Lists the prerequisites for the open registration for publish-subscribe.</p>
+                        <p>列出了open-subscribe的开放注册的先决条件。</p>
                         <div class="section">
-                           <p>Prerequisites for the open registration for publish-subscribe are as follows:</p>
+                           <p>发布 - 订阅的开放注册的先决条件如下：</p>
                         </div>
                         <!-- class="section" -->
                         <div class="section">
-                           <ul style="list-style-type: disc;">
+                           <ul style="list-style-type:disc">
                               <li>
-                                 <p>Registering using LDAP (open registration) requires the client to be an enterprise user.</p>
+                                 <p>使用LDAP注册（开放注册）要求客户端是企业用户。</p>
                                  <div class="infoboxnotealso" id="GUID-5C733061-A0B7-4852-B0B6-A013CB0D7739__GUID-03CE6BDB-B81B-4DA1-ADE4-24A63D764BF0">
-                                    <p class="notep1">See Also:</p>
-                                    <p> <a href="../dbimi/introducing-enterprise-user-security.html#DBIMI152" target="_blank"><span><cite>Oracle Database Enterprise User Security Administrator's Guide</cite></span></a>, sections about managing enterprise user security 
-                                    </p>
+                                    <p class="notep1">也可以看看：</p>
+                                    <p> <a href="../dbimi/introducing-enterprise-user-security.html#DBIMI152" target="_blank"><span><cite>“Oracle数据库企业用户安全管理员指南”</cite></span></a> ，有关管理企业用户安全性的部分</p>
                                  </div>
                               </li>
                            </ul>
-                           <ul style="list-style-type: disc;">
+                           <ul style="list-style-type:disc">
                               <li>
-                                 <p> The compatibility of the database must be 9.0 or later. </p>
+                                 <p>数据库的兼容性必须为9.0或更高版本。</p>
                               </li>
                               <li>
-                                 <p><code class="codeph">LDAP_REGISTRATION_ENABLED</code> must be set to <code class="codeph">TRUE</code>. This can be done this way:
-                                 </p><pre class="oac_no_warn" dir="ltr"> ALTER SYSTEM SET LDAP_REGISTRATION_ENABLED=TRUE
-</pre><p>The default is <code class="codeph">FALSE</code>.
-                                 </p>
+                                 <p><code class="codeph">LDAP_REGISTRATION_ENABLED</code>必须设置为<code class="codeph">TRUE</code> 。这可以这样做：</p><pre class="oac_no_warn" dir="ltr"> ALTER SYSTEM SET LDAP_REGISTRATION_ENABLED=TRUE
+</pre><p>默认值为<code class="codeph">FALSE</code> 。</p>
                               </li>
                               <li>
-                                 <p> <code class="codeph">LDAP_REG_SYNC_INTERVAL</code> must be set to the time interval (in seconds) to refresh registrations from LDAP:
-                                 </p><pre class="oac_no_warn" dir="ltr"> ALTER SYSTEM SET LDAP_REG_SYNC_INTERVAL =  time_interval
-</pre><p> The default is 0, which means do not refresh.</p>
+                                 <p> 必须将<code class="codeph">LDAP_REG_SYNC_INTERVAL</code>设置为从LDAP刷新注册的时间间隔（以秒为单位）：</p><pre class="oac_no_warn" dir="ltr"> ALTER SYSTEM SET LDAP_REG_SYNC_INTERVAL =  time_interval
+</pre><p>默认值为0，表示不刷新。</p>
                               </li>
                               <li>
-                                 <p>To force a database refresh of LDAP registration information immediately:</p><pre class="oac_no_warn" dir="ltr">ALTER SYSTEM REFRESH LDAP_REGISTRATION
+                                 <p>要立即强制数据库刷新LDAP注册信息：</p><pre class="oac_no_warn" dir="ltr">ALTER SYSTEM REFRESH LDAP_REGISTRATION
 </pre></li>
                            </ul>
-                           <p>The steps for open registration using Oracle Enterprise Security Manager (OESM) are:</p>
+                           <p>使用Oracle Enterprise Security Manager（OESM）进行开放式注册的步骤如下：</p>
                         </div>
                         <!-- class="section" -->
                         <ol>
-                           <li><span>In each enterprise domain, create the enterprise role, <code class="codeph">ENTERPRISE_AQ_USER_ROLE</code>.</span></li>
-                           <li><span>For each database in the enterprise domain, add the global role       <code class="codeph">GLOBAL_AQ_USER_ROLE</code> to the enterprise role <code class="codeph">ENTERPRISE_AQ_USER_ROLE</code>.</span></li>
-                           <li><span>For each enterprise domain, add the enterprise role <code class="codeph">ENTERPRISE_AQ_USER_ROLE</code> to the privilege group <code class="codeph">cn=OracleDBAQUsers</code>, under <code class="codeph">cn=oraclecontext</code>, under the administrative context.</span></li>
-                           <li><span>For each enterprise user that is authorized to register for events in the database, grant the enterprise role <code class="codeph">ENTERPRISE_AQ_USER_ROLE</code>.</span></li>
+                           <li><span>在每个企业域中，创建企业角色<code class="codeph">ENTERPRISE_AQ_USER_ROLE</code> 。</span></li>
+                           <li><span>对于企业域中的每个数据库，将全局角色<code class="codeph">GLOBAL_AQ_USER_ROLE</code>添加到企业角色<code class="codeph">ENTERPRISE_AQ_USER_ROLE</code> 。</span></li>
+                           <li><span>对于每个企业域，将企业角色<code class="codeph">ENTERPRISE_AQ_USER_ROLE</code>添加到管理上下文下<code class="codeph">cn=oraclecontext</code>下的权限组<code class="codeph">cn=OracleDBAQUsers</code> 。</span></li>
+                           <li><span>对于有权在数据库中注册事件的每个企业用户，请授予企业角色<code class="codeph">ENTERPRISE_AQ_USER_ROLE</code> 。</span></li>
                         </ol>
                      </div>
                   </div>
-                  <div class="props_rev_3"><a id="GUID-C7ED46E0-43C2-41A3-B89E-8F05DF0C4CC8" name="GUID-C7ED46E0-43C2-41A3-B89E-8F05DF0C4CC8"></a><h5 id="LNOCI-GUID-C7ED46E0-43C2-41A3-B89E-8F05DF0C4CC8" class="sect5"><span class="enumeration_section">13.2.1.3 </span>Using OCI to Open Register with LDAP
-                     </h5>
+                  <div class="props_rev_3"><a id="GUID-C7ED46E0-43C2-41A3-B89E-8F05DF0C4CC8" name="GUID-C7ED46E0-43C2-41A3-B89E-8F05DF0C4CC8"></a><h5 id="LNOCI-GUID-C7ED46E0-43C2-41A3-B89E-8F05DF0C4CC8" class="sect5"><span class="enumeration_section">13.2.1.3</span>使用OCI打开LDAP注册</h5>
                      <div>
-                        <p>Shows how to open register using LDAP registration.</p>
+                        <p>演示如何使用LDAP注册打开注册。</p>
                         <ol>
-                           <li class="stepexpand"><span>Call <code class="codeph">OCIEnvCreate()</code> or <code class="codeph">OCIEnvNlsCreate()</code> with <code class="codeph">mode</code> set to <code class="codeph">OCI_EVENTS</code> | <code class="codeph">OCI_USE_LDAP</code>.</span></li>
-                           <li class="stepexpand"><span>Call <code class="codeph">OCIAttrSet()</code> to set the following environment handle attributes for accessing LDAP:</span><div>
-                                 <ul style="list-style-type: disc;">
+                           <li class="stepexpand"><span><code class="codeph">mode</code>设置为<code class="codeph">OCI_EVENTS</code>调用<code class="codeph">OCIEnvNlsCreate()</code> <code class="codeph">OCIEnvCreate()</code>或<code class="codeph">OCIEnvCreate()</code> <code class="codeph">OCI_USE_LDAP</code> 。</span></li>
+                           <li class="stepexpand"><span>调用<code class="codeph">OCIAttrSet()</code>以设置以下用于访问LDAP的环境句柄属性：</span><div>
+                                 <ul style="list-style-type:disc">
                                     <li>
-                                       <p><code class="codeph">OCI_ATTR_LDAP_HOST</code>: the host name on which the LDAP server resides
-                                       </p>
+                                       <p><code class="codeph">OCI_ATTR_LDAP_HOST</code> ：LDAP服务器所在的主机名</p>
                                     </li>
                                     <li>
-                                       <p><code class="codeph">OCI_ATTR_LDAP_PORT</code>: the port on which the LDAP server is listening
-                                       </p>
+                                       <p><code class="codeph">OCI_ATTR_LDAP_PORT</code> ：LDAP服务器正在侦听的端口</p>
                                     </li>
                                     <li>
-                                       <p><code class="codeph">OCI_ATTR_BIND_DN</code>: the distinguished name to log in to the LDAP server,        usually the DN of the enterprise user
-                                       </p>
+                                       <p><code class="codeph">OCI_ATTR_BIND_DN</code> ：登录LDAP服务器的可分辨名称，通常是企业用户的DN</p>
                                     </li>
                                     <li>
-                                       <p><code class="codeph">OCI_ATTR_LDAP_CRED</code>: the credential used to authenticate the client, for example, the password for simple authentication (user name and password)
-                                       </p>
+                                       <p><code class="codeph">OCI_ATTR_LDAP_CRED</code> ：用于验证客户端的凭据，例如，简单验证的密码（用户名和密码）</p>
                                     </li>
                                     <li>
-                                       <p><code class="codeph">OCI_ATTR_WALL_LOC</code>: for SSL authentication, the location of the client wallet
-                                       </p>
+                                       <p><code class="codeph">OCI_ATTR_WALL_LOC</code> ：用于SSL身份验证，客户端钱包的位置</p>
                                     </li>
                                     <li>
-                                       <p><code class="codeph">OCI_ATTR_LDAP_AUTH</code>: the authentication method code
-                                       </p>
+                                       <p><code class="codeph">OCI_ATTR_LDAP_AUTH</code> ：身份验证方法代码</p>
                                        <div class="infoboxnotealso" id="GUID-C7ED46E0-43C2-41A3-B89E-8F05DF0C4CC8__GUID-8CC7F3BA-DA0A-46D7-AECD-3BF1ABCD839B">
-                                          <p class="notep1">See Also:</p>
-                                          <p><a href="handle-and-descriptor-attributes.html#GUID-9CA5026C-B6A0-4233-8B22-F1DD94ACE9F8" title="Lists and describes environment handle attributes.">Environment Handle Attributes</a> for a complete list of authentication modes
-                                          </p>
+                                          <p class="notep1">也可以看看：</p>
+                                          <p><a href="handle-and-descriptor-attributes.html#GUID-9CA5026C-B6A0-4233-8B22-F1DD94ACE9F8" title="列出并描述环境句柄属性。">环境处理属性</a>以获取完整的身份验证模式列表</p>
                                        </div>
                                     </li>
                                     <li>
-                                       <p><code class="codeph">OCI_ATTR_LDAP_CTX</code>: the administrative context for Oracle Database in the LDAP server
-                                       </p>
+                                       <p><code class="codeph">OCI_ATTR_LDAP_CTX</code> ：LDAP服务器中Oracle数据库的管理上下文</p>
                                     </li>
                                  </ul>
                               </div>
                            </li>
-                           <li class="stepexpand"><span>Call <code class="codeph">OCIHandleAlloc()</code> with handle type <code class="codeph">OCI_HTYPE_SUBSCRIPTION</code>, to allocate a subscription handle.</span></li>
-                           <li class="stepexpand"><span>Call <code class="codeph">OCIArrayDescriptorAlloc()</code> with descriptor type <code class="codeph">OCI_DTYPE_SRVDN</code>, to allocate a server DN descriptor.</span></li>
-                           <li class="stepexpand"><span>Call <code class="codeph">OCIAttrSet()</code>to set the server DN descriptor attributes for <code class="codeph">OCI_ATTR_SERVER_DN</code>, the distinguished name of the database in which the       client wants to receive notifications. <code class="codeph">OCIAttrSet()</code> can be called multiple       times for this attribute so that more than one database server is included in the registration.</span></li>
-                           <li class="stepexpand"><span>Call <code class="codeph">OCIAttrSet()</code> to set the subscription handle attributes for:</span><div>
-                                 <ul style="list-style-type: disc;">
+                           <li class="stepexpand"><span>使用句柄类型<code class="codeph">OCI_HTYPE_SUBSCRIPTION</code>调用<code class="codeph">OCIHandleAlloc()</code>以分配订阅句柄。</span></li>
+                           <li class="stepexpand"><span>呼叫<code class="codeph">OCIArrayDescriptorAlloc()</code>与描述符类型<code class="codeph">OCI_DTYPE_SRVDN</code> ，分配服务器DN描述。</span></li>
+                           <li class="stepexpand"><span>调用<code class="codeph">OCIAttrSet()</code>为<code class="codeph">OCIAttrSet()</code>设置服务器DN描述符属性， <code class="codeph">OCI_ATTR_SERVER_DN</code>是客户端想要接收通知的数据库的可分辨名称。可以多次为此属性调用<code class="codeph">OCIAttrSet()</code> ，以便在注册中包含多个数据库服务器。</span></li>
+                           <li class="stepexpand"><span>调用<code class="codeph">OCIAttrSet()</code>来设置订阅句柄属性：</span><div>
+                                 <ul style="list-style-type:disc">
                                     <li>
-                                       <p><code class="codeph">OCI_ATTR_SUBSCR_NAME</code> - Subscription name
+                                       <p><code class="codeph">OCI_ATTR_SUBSCR_NAME</code> - 订阅名称</p>
+                                    </li>
+                                    <li>
+                                       <p><code class="codeph">OCI_ATTR_SUBSCR_NAMESPACE</code> - 订阅命名空间</p>
+                                    </li>
+                                    <li>
+                                       <p><code class="codeph">OCI_ATTR_SUBSCR_CALLBACK</code> - 通知回调</p>
+                                    </li>
+                                    <li>
+                                       <p><code class="codeph">OCI_ATTR_SUBSCR_CTX</code> - 回调上下文</p>
+                                    </li>
+                                    <li>
+                                       <p><code class="codeph">OCI_ATTR_SUBSCR_PAYLOAD</code> - 用于发布的有效负载缓冲区</p>
+                                    </li>
+                                    <li>
+                                       <p><code class="codeph">OCI_ATTR_SUBSCR_RECPT</code> - 收件人姓名</p>
+                                    </li>
+                                    <li>
+                                       <p><code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code> - 用于接收通知的协议</p>
+                                    </li>
+                                    <li>
+                                       <p><code class="codeph">OCI_ATTR_SUBSCR_RECPTRES</code> - 用于接收通知的演示文稿</p>
+                                    </li>
+                                    <li>
+                                       <p><code class="codeph">OCI_ATTR_SUBSCR_QOSFLAGS</code> -  QOS（服务质量）级别</p>
+                                    </li>
+                                    <li>
+                                       <p><code class="codeph">OCI_ATTR_SUBSCR_TIMEOUT</code> - 注册超时间隔（秒）。如果未设置超时，则默认值为0。
                                        </p>
                                     </li>
                                     <li>
-                                       <p><code class="codeph">OCI_ATTR_SUBSCR_NAMESPACE</code> - Subscription namespace
-                                       </p>
-                                    </li>
-                                    <li>
-                                       <p><code class="codeph">OCI_ATTR_SUBSCR_CALLBACK</code>- Notification callback
-                                       </p>
-                                    </li>
-                                    <li>
-                                       <p><code class="codeph">OCI_ATTR_SUBSCR_CTX</code> - Callback context
-                                       </p>
-                                    </li>
-                                    <li>
-                                       <p><code class="codeph">OCI_ATTR_SUBSCR_PAYLOAD</code> - Payload buffer for posting
-                                       </p>
-                                    </li>
-                                    <li>
-                                       <p><code class="codeph">OCI_ATTR_SUBSCR_RECPT</code> - Recipient name
-                                       </p>
-                                    </li>
-                                    <li>
-                                       <p><code class="codeph">OCI_ATTR_SUBSCR_RECPTPROTO</code> - Protocol to receive notification with
-                                       </p>
-                                    </li>
-                                    <li>
-                                       <p><code class="codeph">OCI_ATTR_SUBSCR_RECPTRES</code> - Presentation to receive notification with
-                                       </p>
-                                    </li>
-                                    <li>
-                                       <p><code class="codeph">OCI_ATTR_SUBSCR_QOSFLAGS</code> - QOS (quality of service) levels
-                                       </p>
-                                    </li>
-                                    <li>
-                                       <p><code class="codeph">OCI_ATTR_SUBSCR_TIMEOUT</code> - Registration timeout interval in seconds. The default is 0 if a timeout is not set.
-                                       </p>
-                                    </li>
-                                    <li>
-                                       <p><code class="codeph">OCI_ATTR_SUBSCR_SERVER_DN</code> - The descriptor handles you populated in Step 5
-                                       </p>
+                                       <p><code class="codeph">OCI_ATTR_SUBSCR_SERVER_DN</code> - 您在步骤5中填充的描述符句柄</p>
                                     </li>
                                  </ul>
                               </div>
                            </li>
-                           <li class="stepexpand"><span>The values of QOS, timeout interval, namespace, and port are set. See <a href="notification-streams-advanced-queuing.html#GUID-00B6E34B-201C-4C6E-B188-238FE58836D8" title="Shows how to set QOSFLAGS to QOS levels using OCIAttrSet().">Setting QOS, Timeout Interval, Namespace, Client Address, and Port Number</a>.</span></li>
-                           <li class="stepexpand"><span>Call <code class="codeph">OCISubscriptionRegister()</code> to register the subscriptions. The registration takes effect when the database accesses LDAP to pick up new registrations. The frequency of pickups is determined by the value of <code class="codeph">LDAP_REG_SYNC_INTERVAL</code>.</span></li>
+                           <li class="stepexpand"><span>设置QOS，超时间隔，命名空间和端口的值。请参阅<a href="notification-streams-advanced-queuing.html#GUID-00B6E34B-201C-4C6E-B188-238FE58836D8" title="演示如何使用OCIAttrSet（）将QOSFLAGS设置为QOS级别。">设置QOS，超时间隔，命名空间，客户端地址和端口号</a> 。</span></li>
+                           <li class="stepexpand"><span>调用<code class="codeph">OCISubscriptionRegister()</code>来注册订阅。当数据库访问LDAP以获取新注册时，注册将生效。拾取频率由<code class="codeph">LDAP_REG_SYNC_INTERVAL</code>的值<code class="codeph">LDAP_REG_SYNC_INTERVAL</code> 。</span></li>
                         </ol>
                         <div class="section">
                            <div class="infoboxnotealso" id="GUID-C7ED46E0-43C2-41A3-B89E-8F05DF0C4CC8__GUID-8B491AC7-B5A8-4E63-B8C7-FFAAF266A59C">
-                              <p class="notep1">See Also:</p>
-                              <ul style="list-style-type: disc;">
+                              <p class="notep1">也可以看看：</p>
+                              <ul style="list-style-type:disc">
                                  <li>
-                                    <p><a href="connect-authorize-and-initialize-functions.html#GUID-16BDA1F1-7DAF-41CA-9EE1-C9A4CB467244" title="Creates and initializes an environment handle for OCI functions to work under.">OCIEnvCreate()</a></p>
+                                    <p><a href="connect-authorize-and-initialize-functions.html#GUID-16BDA1F1-7DAF-41CA-9EE1-C9A4CB467244" title="创建并初始化OCI函数的环境句柄。">OCIEnvCreate（）</a></p>
                                  </li>
                                  <li>
-                                    <p><a href="connect-authorize-and-initialize-functions.html#GUID-0B6911A9-4B46-476C-BC5E-B87581666CD9" title="Creates and initializes an environment handle for OCI functions to work under.">OCIEnvNlsCreate()</a></p>
+                                    <p><a href="connect-authorize-and-initialize-functions.html#GUID-0B6911A9-4B46-476C-BC5E-B87581666CD9" title="创建并初始化OCI函数的环境句柄。">OCIEnvNlsCreate（）</a></p>
                                  </li>
                                  <li>
-                                    <p><a href="handle-and-descriptor-functions.html#GUID-3741D7BD-7652-4D7A-8813-AC2AEA8D3B03" title="Sets the value of an attribute of a handle or a descriptor.">OCIAttrSet()</a></p>
+                                    <p><a href="handle-and-descriptor-functions.html#GUID-3741D7BD-7652-4D7A-8813-AC2AEA8D3B03" title="设置句柄或描述符的属性值。">OCIAttrSet（）</a></p>
                                  </li>
                                  <li>
-                                    <p><a href="handle-and-descriptor-functions.html#GUID-C5BF55F7-A110-4CB5-9663-5056590F12B5" title="Returns a pointer to an allocated and initialized handle.">OCIHandleAlloc()</a></p>
+                                    <p><a href="handle-and-descriptor-functions.html#GUID-C5BF55F7-A110-4CB5-9663-5056590F12B5" title="返回指向已分配和初始化句柄的指针。">OCIHandleAlloc（）</a></p>
                                  </li>
                                  <li>
-                                    <p><a href="handle-and-descriptor-functions.html#GUID-8218D5F2-139B-4FA9-BA4A-ED0126687C0F" title="Allocates an array of descriptors.">OCIArrayDescriptorAlloc()</a></p>
+                                    <p><a href="handle-and-descriptor-functions.html#GUID-8218D5F2-139B-4FA9-BA4A-ED0126687C0F" title="分配一组描述符。">OCIArrayDescriptorAlloc（）</a></p>
                                  </li>
                                  <li>
-                                    <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-36729D3E-E920-4FAA-8EAA-6E033F6D8930" title="Registers a callback for message notification.">OCISubscriptionRegister()</a></p>
+                                    <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-36729D3E-E920-4FAA-8EAA-6E033F6D8930" title="注册消息通知的回调。">OCISubscriptionRegister（）</a></p>
                                  </li>
                               </ul>
                            </div>
@@ -642,24 +576,22 @@ ub4 ntfn_grouping_type = OCI_SUBSCR_NTFN_GROUPING_TYPE_SUMMARY;
                         <!-- class="section" -->
                      </div>
                   </div>
-                  <div class="props_rev_3"><a id="GUID-00B6E34B-201C-4C6E-B188-238FE58836D8" name="GUID-00B6E34B-201C-4C6E-B188-238FE58836D8"></a><h5 id="LNOCI-GUID-00B6E34B-201C-4C6E-B188-238FE58836D8" class="sect5"><span class="enumeration_section">13.2.1.4 </span>Setting QOS, Timeout Interval, Namespace, Client Address, and Port Number
-                     </h5>
+                  <div class="props_rev_3"><a id="GUID-00B6E34B-201C-4C6E-B188-238FE58836D8" name="GUID-00B6E34B-201C-4C6E-B188-238FE58836D8"></a><h5 id="LNOCI-GUID-00B6E34B-201C-4C6E-B188-238FE58836D8" class="sect5"><span class="enumeration_section">13.2.1.4</span>设置QOS，超时时间，命名空间，客户端地址和端口号</h5>
                      <div>
-                        <p>Shows how to set QOSFLAGS to QOS levels using <code class="codeph">OCIAttrSet()</code>.
+                        <p>演示如何使用<code class="codeph">OCIAttrSet()</code>将QOSFLAGS设置为QOS级别。
                         </p>
                         <div class="section">
-                           <p>You can set QOSFLAGS to the following QOS levels using <code class="codeph">OCIAttrSet()</code>:
-                           </p>
+                           <p>您可以使用<code class="codeph">OCIAttrSet()</code>将QOSFLAGS设置为以下QOS级别：</p>
                         </div>
                         <!-- class="section" -->
                         <div class="section">
-                           <ul style="list-style-type: disc;">
+                           <ul style="list-style-type:disc">
                               <li>
-                                 <p><code class="codeph">OCI_SUBSCR_QOS_RELIABLE</code> - Reliable notification persists across instance and database restarts. Reliability is of the server only and is only for persistent queues or buffered messages. This option describes the persistence of the notifications. Registrations are persistent by default.
+                                 <p><code class="codeph">OCI_SUBSCR_QOS_RELIABLE</code> - 在实例和数据库重新启动<code class="codeph">OCI_SUBSCR_QOS_RELIABLE</code> ，可靠通知仍然存在。可靠性仅适用于服务器，仅适用于持久性队列或缓冲消息。此选项描述通知的持久性。默认情况下注册是持久的。
                                  </p>
                               </li>
                               <li>
-                                 <p><code class="codeph">OCI_SUBSCR_QOS_PURGE_ON_NTFN</code> - Once notification is received, purge registration on first notification. (Subscription is unregistered.)
+                                 <p><code class="codeph">OCI_SUBSCR_QOS_PURGE_ON_NTFN</code> - 收到通知后，在第一次通知时清除注册。（订阅未注册。）
                                  </p>
                               </li>
                            </ul><pre class="oac_no_warn" dir="ltr">/* Set QOS levels */
@@ -673,80 +605,79 @@ ub4 qosflags = OCI_SUBSCR_QOS_RELIABLE | OCI_SUBSCR_QOS_PURGE_ON_NTFN;
 ub4 timeout = 30;
 (void)OCIAttrSet((void *)subscrhp, (ub4)OCI_HTYPE_SUBSCRIPTION,
                  (void *)&amp;timeout, (ub4)0, (ub4)OCI_ATTR_SUBSCR_TIMEOUT, errhp);
-</pre><p>The registration is purged when the timeout is exceeded, and a notification is sent to the client, so that the client can invoke its callback and take any necessary action. For client failure before the timeout, the registration is purged.</p>
-                           <p>You can set the port number on the environment handle, which is important if the client is on a system behind a firewall that can receive notifications only on certain ports. Clients can specify the port for the listener thread before the first registration, using an attribute in the environment handle. The thread is started the first time OCISubscriptionRegister() is called. If available, this specified port number is used. An error is returned if the client tries to start another thread on a different port using a different environment handle.</p><pre class="oac_no_warn" dir="ltr">ub4 port = 1581;
+</pre><p>超过超时时将清除注册，并向客户端发送通知，以便客户端可以调用其回调并执行任何必要的操作。对于超时前的客户端故障，将清除注册。</p>
+                           <p>您可以在环境句柄上设置端口号，如果客户端位于可以仅在某些端口上接收通知的防火墙后面的系统上，这一点非常重要。客户端可以使用环境句柄中的属性在第一次注册之前为侦听器线程指定端口。线程在第一次调用OCISubscriptionRegister（）时启动。如果可用，则使用此指定的端口号。如果客户端尝试使用不同的环境句柄在另一个端口上启动另一个线程，则会返回错误。</p><pre class="oac_no_warn" dir="ltr">ub4 port = 1581;
 (void)OCIAttrSet((void *)envhp, (ub4)OCI_HTYPE_ENV, (void *)&amp;port, (ub4)0,
                  (ub4)OCI_ATTR_SUBSCR_PORTNO, errhp);
-</pre><p>If instead, the port is determined automatically, you can get the port number at which the client thread is listening for notification by obtaining the attribute from the environment handle.</p><pre class="oac_no_warn" dir="ltr">(void)OCIAttrGet((void *)subhp, (ub4)OCI_HTYPE_ENV, (void *)&amp;port, (ub4)0, 
+</pre><p>相反，如果自动确定端口，则可以通过从环境句柄获取属性来获取客户端线程正在侦听通知的端口号。</p><pre class="oac_no_warn" dir="ltr">(void)OCIAttrGet((void *)subhp, (ub4)OCI_HTYPE_ENV, (void *)&amp;port, (ub4)0, 
                  (ub4)OCI_ATTR_SUBSCR_PORTNO, errhp);
-</pre><p>Example to set client address: </p><pre class="oac_no_warn" dir="ltr">text ipaddr[16] = "10.177.246.40";
+</pre><p>设置客户端地址的示例：</p><pre class="oac_no_warn" dir="ltr">text ipaddr[16] = "10.177.246.40";
 (void)(OCIAttrSet((dvoid *) envhp, (ub4) OCI_HTYPE_ENV,
        (dvoid *) ipaddr, (ub4) strlen((const char *)ipaddr),
        (ub4) OCI_ATTR_SUBSCR_IPADDR, errhp));</pre><div class="infoboxnotealso" id="GUID-00B6E34B-201C-4C6E-B188-238FE58836D8__GUID-7E360654-C212-4562-8C40-B35C38BF3EF3">
-                              <p class="notep1">See Also:</p>
+                              <p class="notep1">也可以看看：</p>
                               <p><a href="handle-and-descriptor-attributes.html#GUID-A76BBB38-8F77-40B8-B5A6-1F9C9166C71C__BAJHEBIA">OCI_ATTR_SUBSCR_IPADDR</a></p>
                            </div>
                         </div>
                         <!-- class="section" -->
                      </div>
                   </div>
-                  <div class="props_rev_3"><a id="GUID-362BE190-510B-4187-A93E-C4538E2C8A24" name="GUID-362BE190-510B-4187-A93E-C4538E2C8A24"></a><h5 id="LNOCI-GUID-362BE190-510B-4187-A93E-C4538E2C8A24" class="sect5"><span class="enumeration_section">13.2.1.5 </span>OCI Functions Used to Manage Publish-Subscribe Notification
-                     </h5>
+                  <div class="props_rev_3"><a id="GUID-362BE190-510B-4187-A93E-C4538E2C8A24" name="GUID-362BE190-510B-4187-A93E-C4538E2C8A24"></a><h5 id="LNOCI-GUID-362BE190-510B-4187-A93E-C4538E2C8A24" class="sect5"><span class="enumeration_section">13.2.1.5</span>用于管理发布 - 订阅通知的OCI函数</h5>
                      <div>
-                        <p>Lists and describes the functions used to manage publish-subscribe notification.</p>
+                        <p>列出并描述用于管理发布 - 订阅通知的功能。</p>
                         <div class="section">
-                           <p><a href="notification-streams-advanced-queuing.html#GUID-362BE190-510B-4187-A93E-C4538E2C8A24__CACBABFH" title="This table is described by two columns. Column 1 is Function and column 2 is Purpose. It lists about five functions and describes the purpose of each one.">Table 13-1</a> lists the functions that are used to manage publish-subscribe notification. 
+                           <p><a href="notification-streams-advanced-queuing.html#GUID-362BE190-510B-4187-A93E-C4538E2C8A24__CACBABFH" title="该表由两列描述。第1列是功能，第2列是目的。它列出了大约五个功能并描述了每个功能的用途。">表13-1</a>列出了用于管理发布 - 订阅通知的功能。
                            </p>
                         </div>
                         <!-- class="section" -->
                         <div class="tblformal" id="GUID-362BE190-510B-4187-A93E-C4538E2C8A24__CACBABFH">
-                           <p class="titleintable">Table 13-1 Publish-Subscribe Functions </p>
-                           <table cellpadding="4" cellspacing="0" class="Formal" title="Publish-Subscribe Functions " summary="This table is described by two columns. Column 1 is Function and column 2 is Purpose. It lists about five functions and describes the purpose of each one." width="100%" frame="hsides" border="1" rules="rows">
+                           <p class="titleintable">表13-1发布 - 订阅功能</p>
+                           <table cellpadding="4" cellspacing="0" class="Formal" title="发布 - 订阅功能" width="100%" border="1" summary="This table is described by two columns. Column 1 is Function and column 2 is Purpose. It lists about five functions and describes the purpose of each one." frame="hsides" rules="rows">
                               <thead>
                                  <tr align="left" valign="top">
-                                    <th align="left" valign="bottom" width="42%" id="d123500e2738">Function</th>
-                                    <th align="left" valign="bottom" width="58%" id="d123500e2741">Purpose</th>
+                                    <th align="left" valign="bottom" width="42%" id="d123500e2738">功能</th>
+                                    <th align="left" valign="bottom" width="58%" id="d123500e2741">目的</th>
                                  </tr>
                               </thead>
                               <tbody>
                                  <tr align="left" valign="top">
                                     <td align="left" valign="top" width="42%" id="d123500e2746" headers="d123500e2738 ">
-                                       <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-72C51789-C48C-4F36-800B-EECC1AD98E00" title="Disables a subscription registration that turns off all notifications.">OCISubscriptionDisable()</a></p>
+                                       <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-72C51789-C48C-4F36-800B-EECC1AD98E00" title="禁用订阅注册以关闭所有通知。">OCISubscriptionDisable（）</a></p>
                                     </td>
                                     <td align="left" valign="top" width="58%" headers="d123500e2746 d123500e2741 ">
-                                       <p>Disables a subscription</p>
+                                       <p>禁用订阅</p>
                                     </td>
                                  </tr>
                                  <tr align="left" valign="top">
                                     <td align="left" valign="top" width="42%" id="d123500e2758" headers="d123500e2738 ">
-                                       <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-5C04A301-8564-46AF-A758-9DE7246F0F53" title="Enables a subscription registration that has been disabled.">OCISubscriptionEnable()</a></p>
+                                       <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-5C04A301-8564-46AF-A758-9DE7246F0F53" title="启用已禁用的订阅注册。">OCISubscriptionEnable（）</a></p>
                                     </td>
                                     <td align="left" valign="top" width="58%" headers="d123500e2758 d123500e2741 ">
-                                       <p>Enables a subscription</p>
+                                       <p>启用订阅</p>
                                     </td>
                                  </tr>
                                  <tr align="left" valign="top">
                                     <td align="left" valign="top" width="42%" id="d123500e2770" headers="d123500e2738 ">
-                                       <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-EFD815F0-D669-4E01-AA54-E1499E302430" title="Posts to a subscription that allows all clients who are registered for the subscription to get notifications.">OCISubscriptionPost()</a></p>
+                                       <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-EFD815F0-D669-4E01-AA54-E1499E302430" title="发布到订阅，允许所有注册订阅的客户端收到通知。">OCISubscriptionPost（）</a></p>
                                     </td>
                                     <td align="left" valign="top" width="58%" headers="d123500e2770 d123500e2741 ">
-                                       <p>Posts a subscription</p>
+                                       <p>发布订阅</p>
                                     </td>
                                  </tr>
                                  <tr align="left" valign="top">
                                     <td align="left" valign="top" width="42%" id="d123500e2782" headers="d123500e2738 ">
-                                       <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-36729D3E-E920-4FAA-8EAA-6E033F6D8930" title="Registers a callback for message notification.">OCISubscriptionRegister()</a></p>
+                                       <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-36729D3E-E920-4FAA-8EAA-6E033F6D8930" title="注册消息通知的回调。">OCISubscriptionRegister（）</a></p>
                                     </td>
                                     <td align="left" valign="top" width="58%" headers="d123500e2782 d123500e2741 ">
-                                       <p>Registers a subscription</p>
+                                       <p>注册订阅</p>
                                     </td>
                                  </tr>
                                  <tr align="left" valign="top">
                                     <td align="left" valign="top" width="42%" id="d123500e2794" headers="d123500e2738 ">
-                                       <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-C55B6743-4BB4-4E18-931C-5FBED94592D0" title="Unregisters a subscription that turns off notifications.">OCISubscriptionUnRegister()</a></p>
+                                       <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-C55B6743-4BB4-4E18-931C-5FBED94592D0" title="取消注册关闭通知的订阅。">OCISubscriptionUnRegister（）</a></p>
                                     </td>
                                     <td align="left" valign="top" width="58%" headers="d123500e2794 d123500e2741 ">
-                                       <p>Unregisters a subscription</p>
+                                       <p>取消注册订阅</p>
                                     </td>
                                  </tr>
                               </tbody>
@@ -756,108 +687,93 @@ ub4 timeout = 30;
                      </div>
                   </div>
                </div>
-               <div class="props_rev_3"><a id="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5" name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5"></a><h4 id="LNOCI-GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5" class="sect4"><span class="enumeration_section">13.2.2 </span>Notification Callback in OCI
-                  </h4>
+               <div class="props_rev_3"><a id="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5" name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5"></a><h4 id="LNOCI-GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5" class="sect4"><span class="enumeration_section">13.2.2</span> OCI中的通知回调</h4>
                   <div>
-                     <p>The client must register a notification callback that gets invoked when there is some activity on the subscription for which interest has been registered.</p>
-                     <p>In the AQ namespace, for instance, this occurs when a message of interest is enqueued. </p>
-                     <p>This callback is typically set through the <code class="codeph">OCI_ATTR_SUBSCR_CALLBACK</code> attribute of the subscription handle. 
+                     <p>客户端必须注册一个通知回调，当订阅了一些已注册兴趣的活动时，该回调会被调用。</p>
+                     <p>例如，在AQ命名空间中，当感兴趣的消息入队时会发生这种情况。</p>
+                     <p>此回调通常通过订阅句柄的<code class="codeph">OCI_ATTR_SUBSCR_CALLBACK</code>属性设置。
                      </p>
                      <div class="infoboxnotealso" id="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-5BCA9BCF-64F0-4AE6-8EBF-3D3DA42B857C">
-                        <p class="notep1">See Also:</p>
-                        <p><a href="handle-and-descriptor-attributes.html#GUID-A76BBB38-8F77-40B8-B5A6-1F9C9166C71C" title="Lists and describes subscription handle attributes.">Subscription Handle Attributes</a> 
+                        <p class="notep1">也可以看看：</p>
+                        <p><a href="handle-and-descriptor-attributes.html#GUID-A76BBB38-8F77-40B8-B5A6-1F9C9166C71C" title="列出并描述订阅句柄属性。">订阅句柄属性</a> 
                         </p>
                      </div>
-                     <p>The callback must return a value of <code class="codeph">OCI_CONTINUE</code> and adhere to the following specification:
-                     </p><pre class="oac_no_warn" dir="ltr">typedef ub4 (*OCISubscriptionNotify) ( void            *pCtx,
+                     <p>回调必须返回值<code class="codeph">OCI_CONTINUE</code>并遵守以下规范：</p><pre class="oac_no_warn" dir="ltr">typedef ub4 (*OCISubscriptionNotify) ( void            *pCtx,
                                        OCISubscription *pSubscrHp,
                                        void            *pPayload,
                                        ub4             iPayloadLen,
                                        void            *pDescriptor,
                                        ub4             iMode);
-</pre><p>The parameters are described as follows:</p>
+</pre><p>参数描述如下：</p>
                      <dl>
-                        <dt class="dlterm"><a name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-4B25411D-CB92-483B-A091-CF00C4128419">
-                              <!-- --></a>pCtx (IN)
-                        </dt>
+                        <dt class="dlterm"><a name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-4B25411D-CB92-483B-A091-CF00C4128419"><!-- --></a> pCtx（IN）</dt>
                         <dd>
-                           <p>A user-defined context specified when the callback was registered.</p>
+                           <p>注册回调时指定的用户定义上下文。</p>
                         </dd>
-                        <dt class="dlterm"><a name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-D16EC5EB-632F-4B6C-A416-F100727DB181">
-                              <!-- --></a>pSubscrHp (IN)
-                        </dt>
+                        <dt class="dlterm"><a name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-D16EC5EB-632F-4B6C-A416-F100727DB181"><!-- --></a> pSubscrHp（IN）</dt>
                         <dd>
-                           <p>The subscription handle specified when the callback was registered.</p>
+                           <p>注册回调时指定的订阅句柄。</p>
                         </dd>
-                        <dt class="dlterm"><a name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-D831F250-90FD-4E1B-ADF3-230BEBB29329">
-                              <!-- --></a>pPayload (IN)
-                        </dt>
+                        <dt class="dlterm"><a name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-D831F250-90FD-4E1B-ADF3-230BEBB29329"><!-- --></a> pPayload（IN）</dt>
                         <dd>
-                           <p>The payload for this notification. Currently, only ub1 * (a sequence of bytes) for the payload is supported.</p>
+                           <p>此通知的有效负载。目前，仅支持有效载荷的ub1 *（字节序列）。</p>
                         </dd>
-                        <dt class="dlterm"><a name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-29FAE291-172D-4417-88BE-AAD36DAECC1E">
-                              <!-- --></a>iPayloadLen (IN)
-                        </dt>
+                        <dt class="dlterm"><a name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-29FAE291-172D-4417-88BE-AAD36DAECC1E"><!-- --></a> iPayloadLen（IN）</dt>
                         <dd>
-                           <p>The length of the payload for this notification.</p>
+                           <p>此通知的有效负载长度。</p>
                         </dd>
-                        <dt class="dlterm"><a name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-37DE5942-26F6-4F15-B388-6EA8DB87907E">
-                              <!-- --></a>pDescriptor (IN)
-                        </dt>
+                        <dt class="dlterm"><a name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-37DE5942-26F6-4F15-B388-6EA8DB87907E"><!-- --></a> pDescriptor（IN）</dt>
                         <dd>
-                           <p>The namespace-specific descriptor. Namespace-specific parameters can be extracted from this descriptor. The structure of this descriptor is opaque to the user and its type is dependent on the namespace. </p>
-                           <p>The attributes of the descriptor are namespace-specific. For Advanced Queuing (AQ), the descriptor is <code class="codeph">OCI_DTYPE_AQNFY</code>. For the AQ namespace, the count of notifications received in the group is provided in the notification descriptor. The attributes of <code class="codeph">pDescriptor</code> are: 
-                           </p>
+                           <p>特定于命名空间的描述符。可以从此描述符中提取特定于命名空间的参数。此描述符的结构对用户是不透明的，其类型取决于命名空间。</p>
+                           <p>描述符的属性是特定于命名空间的。对于高级队列（AQ），描述符为<code class="codeph">OCI_DTYPE_AQNFY</code> 。对于AQ名称空间，通知描述符中提供了组中接收的通知计数。<code class="codeph">pDescriptor</code>的属性是：</p>
                         </dd>
                      </dl>
-                     <ul style="list-style-type: disc;">
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p>Notification flag (regular = 0, timeout = 1, or grouping notification = 2) - <code class="codeph">OCI_ATTR_NFY_FLAGS</code></p>
+                           <p>通知标志（常规= 0，超时= 1或分组通知= 2） - <code class="codeph">OCI_ATTR_NFY_FLAGS</code></p>
                         </li>
                         <li>
-                           <p>Queue name - <code class="codeph">OCI_ATTR_QUEUE_NAME</code></p>
+                           <p>队列名称 - <code class="codeph">OCI_ATTR_QUEUE_NAME</code></p>
                         </li>
                         <li>
-                           <p>Consumer name - <code class="codeph">OCI_ATTR_CONSUMER_NAME</code></p>
+                           <p>消费者名称 - <code class="codeph">OCI_ATTR_CONSUMER_NAME</code></p>
                         </li>
                         <li>
-                           <p>Message ID - <code class="codeph">OCI_ATTR_NFY_MSGID</code></p>
+                           <p>消息ID  - <code class="codeph">OCI_ATTR_NFY_MSGID</code></p>
                         </li>
                         <li>
-                           <p>Message properties - <code class="codeph">OCI_ATTR_MSG_PROP</code></p>
+                           <p>消息属性 - <code class="codeph">OCI_ATTR_MSG_PROP</code></p>
                         </li>
                         <li>
-                           <p>Count of notifications received in the group - <code class="codeph">OCI_ATTR_AQ_NTFN_GROUPING_COUNT</code></p>
+                           <p>在组中收到的通知计数 - <code class="codeph">OCI_ATTR_AQ_NTFN_GROUPING_COUNT</code></p>
                         </li>
                         <li>
-                           <p>The group, an OCI collection - <code class="codeph">OCI_ATTR_AQ_NTFN_GROUPING_MSGID_ARRAY</code></p>
+                           <p>该组，一个OCI集合 - <code class="codeph">OCI_ATTR_AQ_NTFN_GROUPING_MSGID_ARRAY</code></p>
                         </li>
                      </ul>
                      <div class="infoboxnotealso" id="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-436A02DC-59DE-4E18-8CA6-C12718417184">
-                        <p class="notep1">See Also:</p>
-                        <ul style="list-style-type: disc;">
+                        <p class="notep1">也可以看看：</p>
+                        <ul style="list-style-type:disc">
                            <li>
-                              <p><a href="notification-streams-advanced-queuing.html#GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8" title="OCI provides an interface to the Database Advanced Queuing (Database AQ) feature. Database Advanced Queuing provides message queuing as an integrated part of Oracle Database.">OCI and Database Advanced Queuing</a> 
+                              <p><a href="notification-streams-advanced-queuing.html#GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8" title="OCI提供了数据库高级队列（Database AQ）功能的接口。数据库高级队列将消息队列作为Oracle数据库的集成部分提供。">OCI和数据库高级排队</a> 
                               </p>
                            </li>
                            <li>
-                              <p><a href="handle-and-descriptor-attributes.html#GUID-8C3206B2-1774-4847-B71F-C48869E0BE86" title="Lists and describes notification descriptor attributes.">Notification Descriptor Attributes</a></p>
+                              <p><a href="handle-and-descriptor-attributes.html#GUID-8C3206B2-1774-4847-B71F-C48869E0BE86" title="列出并描述通知描述符属性。">通知描述符属性</a></p>
                            </li>
                         </ul>
                      </div>
                      <dl>
-                        <dt class="dlterm"><a name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-139550CE-01B1-48C1-939E-6C65BEBE03BF">
-                              <!-- --></a>iMode (IN)
-                        </dt>
+                        <dt class="dlterm"><a name="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__GUID-139550CE-01B1-48C1-939E-6C65BEBE03BF"><!-- --></a> iMode（IN）</dt>
                         <dd>
-                           <p>Call-specific mode. The only valid value is <code class="codeph">OCI_DEFAULT</code>. This value executes the default call.
+                           <p>呼叫专用模式。唯一有效的值是<code class="codeph">OCI_DEFAULT</code> 。该值执行默认调用。
                            </p>
                         </dd>
                      </dl>
-                     <p><a href="notification-streams-advanced-queuing.html#GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__CACGEABA">Example 13-2</a> shows how to use AQ grouping notification attributes in a notification callback.
+                     <p><a href="notification-streams-advanced-queuing.html#GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__CACGEABA">例13-2</a>显示了如何在通知回调中使用AQ分组通知属性。
                      </p>
                      <div class="example" id="GUID-6A21E98D-4921-4087-A79A-7B7C8C22ABD5__CACGEABA">
-                        <p class="titleinexample">Example 13-2 Using AQ Grouping Notification Attributes in an OCI Notification Callback</p><pre class="oac_no_warn" dir="ltr">ub4 notifyCB1(void *ctx, OCISubscription *subscrhp, void *pay, ub4 payl,
+                        <p class="titleinexample">示例13-2在OCI通知回调中使用AQ分组通知属性</p><pre class="oac_no_warn" dir="ltr">ub4 notifyCB1(void *ctx, OCISubscription *subscrhp, void *pay, ub4 payl,
               void *desc, ub4 mode)
 {
  oratext            *subname;
@@ -946,45 +862,41 @@ ub4 timeout = 30;
                      <!-- class="example" -->
                   </div>
                </div>
-               <div class="props_rev_3"><a id="GUID-078F3FD1-7CAA-45FC-A93F-1CE942D27CA0" name="GUID-078F3FD1-7CAA-45FC-A93F-1CE942D27CA0"></a><h4 id="LNOCI-GUID-078F3FD1-7CAA-45FC-A93F-1CE942D27CA0" class="sect4"><span class="enumeration_section">13.2.3 </span>Notification Procedure
-                  </h4>
+               <div class="props_rev_3"><a id="GUID-078F3FD1-7CAA-45FC-A93F-1CE942D27CA0" name="GUID-078F3FD1-7CAA-45FC-A93F-1CE942D27CA0"></a><h4 id="LNOCI-GUID-078F3FD1-7CAA-45FC-A93F-1CE942D27CA0" class="sect4"><span class="enumeration_section">13.2.3</span>通知程序</h4>
                   <div>
-                     <p>The PL/SQL notification procedure that is invoked when there is some activity on the subscription for which interest has been registered, must be created in the database.</p>
-                     <p>This procedure is typically set through the <code class="codeph">OCI_ATTR_SUBSCR_RECPT</code> attribute of the subscription handle.
+                     <p>必须在数据库中创建在已注册兴趣的订阅上存在某些活动时调用的PL / SQL通知过程。</p>
+                     <p>此过程通常通过订阅句柄的<code class="codeph">OCI_ATTR_SUBSCR_RECPT</code>属性设置。
                      </p>
                      <div class="infoboxnotealso" id="GUID-078F3FD1-7CAA-45FC-A93F-1CE942D27CA0__GUID-C77CDBAB-58A4-45B3-9737-9890BD2222D8">
-                        <p class="notep1">See Also:</p>
-                        <ul style="list-style-type: disc;">
+                        <p class="notep1">也可以看看：</p>
+                        <ul style="list-style-type:disc">
                            <li>
-                              <p><a href="handle-and-descriptor-attributes.html#GUID-A76BBB38-8F77-40B8-B5A6-1F9C9166C71C" title="Lists and describes subscription handle attributes.">Subscription Handle Attributes</a> 
+                              <p><a href="handle-and-descriptor-attributes.html#GUID-A76BBB38-8F77-40B8-B5A6-1F9C9166C71C" title="列出并描述订阅句柄属性。">订阅句柄属性</a> 
                               </p>
                            </li>
                            <li>
-                              <p>"Oracle Database AQ PL/SQL Callback" in <a href="../arpls/index.html" target="_blank"><span><cite>Oracle Database PL/SQL Packages and Types Reference</cite></span></a> for the PL/SQL procedure
-                        specification
-                              </p>
+                              <p>“Oracle数据库<a href="../arpls/index.html" target="_blank"><span><cite>PL / SQL包和类型参考</cite></span></a> ”中的“Oracle数据库AQ PL / SQL回调”，用于PL / SQL过程规范</p>
                            </li>
                         </ul>
                      </div>
                   </div>
                </div>
-               <div class="props_rev_3"><a id="GUID-909E21A8-A247-4E54-9069-79B3EF219D2F" name="GUID-909E21A8-A247-4E54-9069-79B3EF219D2F"></a><h4 id="LNOCI-GUID-909E21A8-A247-4E54-9069-79B3EF219D2F" class="sect4"><span class="enumeration_section">13.2.4 </span>Publish-Subscribe Direct Registration Example
-                  </h4>
+               <div class="props_rev_3"><a id="GUID-909E21A8-A247-4E54-9069-79B3EF219D2F" name="GUID-909E21A8-A247-4E54-9069-79B3EF219D2F"></a><h4 id="LNOCI-GUID-909E21A8-A247-4E54-9069-79B3EF219D2F" class="sect4"><span class="enumeration_section">13.2.4</span>发布 - 订阅直接注册示例</h4>
                   <div>
-                     <p>Shows examples implementing publish subscription notification using direct registration.</p>
+                     <p>显示使用直接注册实现发布订阅通知的示例。</p>
                      <div class="section">
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-909E21A8-A247-4E54-9069-79B3EF219D2F__CACHDEAE">Example 13-3</a> shows how system events, client notification, and Advanced Queuing work together to implement publish subscription notification.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-909E21A8-A247-4E54-9069-79B3EF219D2F__CACHDEAE">示例13-3</a>显示了系统事件，客户端通知和高级队列如何协同工作以实现发布订阅通知。
                         </p>
-                        <p>The PL/SQL code in <a href="notification-streams-advanced-queuing.html#GUID-909E21A8-A247-4E54-9069-79B3EF219D2F__CACHDEAE">Example 13-3</a> creates all objects necessary to support a publish-subscribe mechanism under the user schema <code class="codeph">pubsub</code>. In this code, the Agent <code class="codeph">snoop</code> subscribes to messages that are published at logon events. Note that the user <code class="codeph">pubsub</code> needs <code class="codeph">AQ_ADMINISTRATOR_ROLE</code> and <code class="codeph">AQ_USER_ROLE</code> privileges to use Advance Queuing functionality. The initialization parameter <code class="codeph">_SYSTEM_TRIG_ENABLED</code> must be set to <code class="codeph">TRUE</code> (the default) to enable triggers for system events.<span class="bold"></span> Connect as <code class="codeph">pubsub</code> before running <a href="notification-streams-advanced-queuing.html#GUID-909E21A8-A247-4E54-9069-79B3EF219D2F__CACHDEAE">Example 13-3</a>.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-909E21A8-A247-4E54-9069-79B3EF219D2F__CACHDEAE">例13-3中</a>的PL / SQL代码创建了支持用户模式<code class="codeph">pubsub</code>下的发布 - 订阅机制所需的所有对象。在此代码中，代理<code class="codeph">snoop</code>订阅在登录事件中发布的消息。请注意，用户<code class="codeph">pubsub</code>需要<code class="codeph">AQ_ADMINISTRATOR_ROLE</code>和<code class="codeph">AQ_USER_ROLE</code>权限才能使用高级队列功能。必须将初始化参数<code class="codeph">_SYSTEM_TRIG_ENABLED</code>设置为<code class="codeph">TRUE</code> （默认值）才能启用系统事件的触发器。 <span class="bold"></span> 在运行<a href="notification-streams-advanced-queuing.html#GUID-909E21A8-A247-4E54-9069-79B3EF219D2F__CACHDEAE">Example 13-3</a>之前以<code class="codeph">pubsub</code>身份连接。
                         </p>
-                        <p>After the subscriptions are created, the client must register for notification using callback functions. <a href="notification-streams-advanced-queuing.html#GUID-909E21A8-A247-4E54-9069-79B3EF219D2F__CACBBGGJ">Example 13-4</a> shows sample code that performs the necessary steps for registration. The initial steps of allocating and initializing session handles are omitted here for clarity.
+                        <p>创建订阅后，客户端必须使用回调函数注册通知。<a href="notification-streams-advanced-queuing.html#GUID-909E21A8-A247-4E54-9069-79B3EF219D2F__CACBBGGJ">示例13-4</a>显示了执行注册所需步骤的示例代码。为清楚起见，这里省略了分配和初始化会话句柄的初始步骤。
                         </p>
-                        <p>If user <code class="codeph">IX</code> logs on to the database, the client is notified by email, and the callback function <code class="codeph">notifySnoop</code> is called. An email notification is sent to the address xyz@company.com and the PL/SQL procedure <code class="codeph">plsqlnotifySnoop</code> is also called in the database.
+                        <p>如果用户<code class="codeph">IX</code>登录到数据库，则通过电子邮件通知客户端，并调用回调函数<code class="codeph">notifySnoop</code> 。电子邮件通知发送到地址xyz@company.com，PL / SQL过程<code class="codeph">plsqlnotifySnoop</code>也在数据库中调用。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="example" id="GUID-909E21A8-A247-4E54-9069-79B3EF219D2F__CACHDEAE">
-                        <p class="titleinexample">Example 13-3 Implementing a Publish Subscription Notification</p><pre class="oac_no_warn" dir="ltr">----------------------------------------------------------
+                        <p class="titleinexample">示例13-3实现发布订阅通知</p><pre class="oac_no_warn" dir="ltr">----------------------------------------------------------
 ----create queue table for persistent multiple consumers
 ----------------------------------------------------------
 ---- Create or replace a queue table
@@ -1073,7 +985,7 @@ end;
 </pre></div>
                      <!-- class="example" -->
                      <div class="example" id="GUID-909E21A8-A247-4E54-9069-79B3EF219D2F__CACBBGGJ">
-                        <p class="titleinexample">Example 13-4 Registering for Notification Using Callback Functions</p><pre class="oac_no_warn" dir="ltr">...
+                        <p class="titleinexample">示例13-4使用回调函数注册通知</p><pre class="oac_no_warn" dir="ltr">...
 static ub4 namespace = OCI_SUBSCR_NAMESPACE_AQ;
 
 static OCISubscription *subscrhpSnoop = (OCISubscription *)0;
@@ -1264,17 +1176,16 @@ End Session and Detach from Server.
                      <!-- class="example" -->
                   </div>
                </div>
-               <div class="props_rev_3"><a id="GUID-9F4EEC78-5CAC-4E86-9F82-1FF9586289CF" name="GUID-9F4EEC78-5CAC-4E86-9F82-1FF9586289CF"></a><h4 id="LNOCI-GUID-9F4EEC78-5CAC-4E86-9F82-1FF9586289CF" class="sect4"><span class="enumeration_section">13.2.5 </span>Publish-Subscribe LDAP Registration Example
-                  </h4>
+               <div class="props_rev_3"><a id="GUID-9F4EEC78-5CAC-4E86-9F82-1FF9586289CF" name="GUID-9F4EEC78-5CAC-4E86-9F82-1FF9586289CF"></a><h4 id="LNOCI-GUID-9F4EEC78-5CAC-4E86-9F82-1FF9586289CF" class="sect4"><span class="enumeration_section">13.2.5</span>发布 - 订阅LDAP注册示例</h4>
                   <div>
-                     <p>Shows an example that illustrates how to do LDAP registration.</p>
+                     <p>显示一个示例，说明如何进行LDAP注册。</p>
                      <div class="section">
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-9F4EEC78-5CAC-4E86-9F82-1FF9586289CF__CACBFFEB">Example 13-5</a> shows a code fragment that illustrates how to do LDAP registration. Please read all the program comments.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-9F4EEC78-5CAC-4E86-9F82-1FF9586289CF__CACBFFEB">例13-5</a>显示了一个代码片段，说明了如何进行LDAP注册。请阅读所有计划评论。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="example" id="GUID-9F4EEC78-5CAC-4E86-9F82-1FF9586289CF__CACBFFEB">
-                        <p class="titleinexample">Example 13-5 LDAP Registration</p><pre class="oac_no_warn" dir="ltr">...
+                        <p class="titleinexample">示例13-5 LDAP注册</p><pre class="oac_no_warn" dir="ltr">...
 
   /* To use the LDAP registration feature, OCI_EVENTS | OCI_EVENTS |OCI_USE_LDAP*/
   /*   must be set in OCIEnvCreate or OCIEnvNlsCreate */
@@ -1414,119 +1325,104 @@ End Session and Detach from Server.
                   </div>
                </div>
             </div>
-            <div class="props_rev_3"><a id="GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8" name="GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8"></a><h3 id="LNOCI-GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8" class="sect3"><span class="enumeration_section">13.3 </span>OCI and Database Advanced Queuing
-               </h3>
+            <div class="props_rev_3"><a id="GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8" name="GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8"></a><h3 id="LNOCI-GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8" class="sect3"><span class="enumeration_section">13.3</span> OCI和数据库高级排队</h3>
                <div>
-                  <p>OCI provides an interface to the Database Advanced Queuing (Database AQ)
-        feature. Database Advanced Queuing provides message queuing as an integrated part of Oracle
-        Database.</p>
-                  <p>Database AQ provides this functionality by integrating the queuing system with the
-            database, thereby creating a <span class="italic">message-enabled database.</span> By providing an integrated
-            solution, Database AQ frees application developers to devote their efforts to their
-            specific business logic rather than having to construct a messaging infrastructure. 
+                  <p>OCI提供了数据库高级队列（Database AQ）功能的接口。数据库高级队列将消息队列作为Oracle数据库的集成部分提供。</p>
+                  <p>Database AQ通过将排队系统与数据库集成来提供此功能，从而创建<span class="italic">启用消息的数据库。</span> 通过提供集成解决方案，Database AQ使应用程序开发人员可以将他们的工作投入到他们的特定业务逻辑中，而不必构建消息传递基础结构。
                   </p>
                   <div class="infoboxnote" id="GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8__GUID-338E254E-D679-4142-B350-4D50B42971DF">
-                     <p class="notep1">Note:</p>
-                     <p>To use Database Advanced Queuing, you must be using the Enterprise Edition of Oracle
-                Database.</p>
+                     <p class="notep1">注意：</p>
+                     <p>要使用数据库高级队列，您必须使用Oracle数据库企业版。</p>
                   </div>
-                  <div class="p">This section includes the following topics:
-                     <ul style="list-style-type: disc;">
+                  <div class="p">本节包括以下主题：<ul style="list-style-type:disc">
                         <li>
-                           <p><a href="notification-streams-advanced-queuing.html#GUID-C7DB04D8-81D1-4253-851E-1C7C389CD7F4" title="Lists the OCI Database Advanced Queuing functions.">OCI Database Advanced Queuing Functions</a></p>
+                           <p><a href="notification-streams-advanced-queuing.html#GUID-C7DB04D8-81D1-4253-851E-1C7C389CD7F4" title="列出OCI数据库高级排队功能。">OCI数据库高级排队功能</a></p>
                         </li>
                         <li>
-                           <p><a href="notification-streams-advanced-queuing.html#GUID-D4ED0510-8B6F-40F3-A142-F1DD89C49F02" title="Lists the OCI Database Advanced Queuing descriptors and shows their usage.">OCI Database Advanced Queuing Descriptors</a></p>
+                           <p><a href="notification-streams-advanced-queuing.html#GUID-D4ED0510-8B6F-40F3-A142-F1DD89C49F02" title="列出OCI数据库高级队列描述符并显示其用法。">OCI数据库高级排队描述符</a></p>
                         </li>
                         <li>
-                           <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3" title="Shows a comparison between functions, parameters, and options for OCI Database Advanced Queuing functions and descriptors, and PL/SQL AQ functions in the DBMS_AQ package.">Database Advanced Queuing in OCI Versus PL/SQL</a></p>
+                           <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3" title="显示OMS数据库高级排队功能和描述符的功能，参数和选项与DBMS_AQ包中的PL / SQL AQ功能之间的比较。">OCI与PL / SQL中的数据库高级排队</a></p>
                         </li>
                         <li>
-                           <p><a href="notification-streams-advanced-queuing.html#GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD" title="Buffered messaging is a nonpersistent messaging capability within Database AQ that was first available in Oracle Database 10g Release 2.">Using Buffered Messaging</a></p>
+                           <p><a href="notification-streams-advanced-queuing.html#GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD" title="缓冲消息传递是数据库AQ中的非持久消息传递功能，它首先在Oracle数据库10g第2版中提供。">使用缓冲消息传递</a></p>
                         </li>
                      </ul>
                   </div>
                   <div class="infoboxnotealso" id="GUID-FF4165B2-A44C-4F76-AC26-DA860F340CA8__GUID-21E3AAFE-0383-4731-9008-76A115228B7F">
-                     <p class="notep1">See Also:</p>
-                     <ul style="list-style-type: disc;">
+                     <p class="notep1">也可以看看：</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p><a href="../adque/aq-introduction.html#ADQUE0100" target="_blank"><span><cite>Oracle Database Advanced Queuing User's Guide</cite></span></a></p>
+                           <p><a href="../adque/aq-introduction.html#ADQUE0100" target="_blank"><span><cite>Oracle数据库高级队列用户指南</cite></span></a></p>
                         </li>
                         <li>
-                           <p><a href="../adxdk/getting-started-with-XDK-for-C.html#ADXDK1300" target="_blank"><span><cite>Oracle XML Developer's Kit Programmer's Guide</cite></span></a></p>
+                           <p><a href="../adxdk/getting-started-with-XDK-for-C.html#ADXDK1300" target="_blank"><span><cite>Oracle XML Developer's Kit程序员指南</cite></span></a></p>
                         </li>
                         <li>
-                           <p>The description of <a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-AE3DB345-0A77-4922-ABBD-FBBFB6E1A9B4" title="Performs an enqueue operation using Database Advanced Queuing.">OCIAQEnq()</a> for example code demonstrating the use of OCI with AQ 
-                           </p>
+                           <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-AE3DB345-0A77-4922-ABBD-FBBFB6E1A9B4" title="使用数据库高级队列执行入队操作。">OCIAQEnq（）</a>的描述，例如代码，用于演示OCI与AQ的使用</p>
                         </li>
                      </ul>
                   </div>
                </div>
-               <div class="props_rev_3"><a id="GUID-C7DB04D8-81D1-4253-851E-1C7C389CD7F4" name="GUID-C7DB04D8-81D1-4253-851E-1C7C389CD7F4"></a><h4 id="LNOCI-GUID-C7DB04D8-81D1-4253-851E-1C7C389CD7F4" class="sect4"><span class="enumeration_section">13.3.1 </span>OCI Database Advanced Queuing
-        Functions
-                  </h4>
+               <div class="props_rev_3"><a id="GUID-C7DB04D8-81D1-4253-851E-1C7C389CD7F4" name="GUID-C7DB04D8-81D1-4253-851E-1C7C389CD7F4"></a><h4 id="LNOCI-GUID-C7DB04D8-81D1-4253-851E-1C7C389CD7F4" class="sect4"><span class="enumeration_section">13.3.1</span> OCI数据库高级排队功能</h4>
                   <div>
-                     <p>Lists the OCI Database Advanced Queuing functions.</p>
-                     <p>The OCI library includes several functions related to Database Advanced Queuing:</p>
-                     <ul style="list-style-type: disc;">
+                     <p>列出OCI数据库高级排队功能。</p>
+                     <p>OCI库包括与数据库高级队列相关的几个功能：</p>
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p><code class="codeph">OCIAQEnq()</code></p>
+                           <p><code class="codeph">OCIAQEnq（）</code></p>
                         </li>
                         <li>
-                           <p><code class="codeph">OCIAQDeq()</code></p>
+                           <p><code class="codeph">OCIAQDeq（）</code></p>
                         </li>
                         <li>
-                           <p><code class="codeph">OCIAQListen()</code> (Deprecated)
-                           </p>
+                           <p><code class="codeph">OCIAQListen()</code> （已弃用）</p>
                         </li>
                         <li>
-                           <p><code class="codeph">OCIAQListen2()</code></p>
+                           <p><code class="codeph">OCIAQListen2（）</code></p>
                         </li>
                         <li>
-                           <p><code class="codeph">OCIAQEnqArray()</code></p>
+                           <p><code class="codeph">OCIAQEnqArray（）</code></p>
                         </li>
                         <li>
-                           <p><code class="codeph">OCIAQDeqArray()</code></p>
+                           <p><code class="codeph">OCIAQDeqArray（）</code></p>
                         </li>
                      </ul>
-                     <p>You can enqueue an array of messages to a single queue. The messages all share the same enqueue options, but each message in the array can have different message properties. You can also dequeue an array of messages from a single queue. For transaction group queues, you can dequeue all messages for a single transaction group using one call.</p>
+                     <p>您可以将一组消息排入单个队列。消息都共享相同的排队选项，但阵列中的每条消息都可以具有不同的消息属性。您还可以从单个队列中出列一组消息。对于事务组队列，您可以使用一个调用将单个事务组的所有消息出列。</p>
                      <div class="infoboxnotealso" id="GUID-C7DB04D8-81D1-4253-851E-1C7C389CD7F4__GUID-322AC3F2-FDB3-44D6-943B-8B8EA241FCBE">
-                        <p class="notep1">See Also:</p>
-                        <ul style="list-style-type: disc;">
+                        <p class="notep1">也可以看看：</p>
+                        <ul style="list-style-type:disc">
                            <li>
-                              <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-4D7FFF56-38DE-4DBF-80E8-48BF19C2B2D3" title="Lists and describes the Database Advanced Queuing and publish-subscribe functions.">Database Advanced Queuing and Publish-Subscribe Functions</a></p>
+                              <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-4D7FFF56-38DE-4DBF-80E8-48BF19C2B2D3" title="列出并描述数据库高级队列和发布 - 订阅功能。">数据库高级排队和发布 - 订阅功能</a></p>
                            </li>
                            <li>
-                              <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-AE3DB345-0A77-4922-ABBD-FBBFB6E1A9B4" title="Performs an enqueue operation using Database Advanced Queuing.">OCIAQEnq()</a></p>
+                              <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-AE3DB345-0A77-4922-ABBD-FBBFB6E1A9B4" title="使用数据库高级队列执行入队操作。">OCIAQEnq（）</a></p>
                            </li>
                            <li>
-                              <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-982A4127-C23A-43E6-94CE-D3F76EC4553C">OCIAQDeq()</a></p>
+                              <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-982A4127-C23A-43E6-94CE-D3F76EC4553C">OCIAQDeq（）</a></p>
                            </li>
                            <li>
-                              <p><a href="deprecated-oci-functions.html#GUID-D8F0FF2D-F9D7-470A-BD5A-54E88C971777" title="This function was deprecated in a release previous to Oracle Database 11g Release 2 (11.2).">OCIAQListen()</a></p>
+                              <p><a href="deprecated-oci-functions.html#GUID-D8F0FF2D-F9D7-470A-BD5A-54E88C971777" title="在Oracle Database 11g第2版（11.2）之前的版本中不推荐使用此功能。">OCIAQListen（）</a></p>
                            </li>
                            <li>
-                              <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-499ECEF6-F447-46C5-8F3F-48DE66839BD1" title="Listens on one or more queues on behalf of a list of agents.">OCIAQListen2()</a></p>
+                              <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-499ECEF6-F447-46C5-8F3F-48DE66839BD1" title="代表代理列表侦听一个或多个队列。">OCIAQListen2（）</a></p>
                            </li>
                            <li>
-                              <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-632ED6BA-017A-40C9-BC51-C9A547B7567C" title="Enqueues an array of messages to a queue.">OCIAQEnqArray()</a></p>
+                              <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-632ED6BA-017A-40C9-BC51-C9A547B7567C" title="将一组消息排入队列。">OCIAQEnqArray（）</a></p>
                            </li>
                            <li>
-                              <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-F0E6A45A-AFAD-4B8F-994B-D5625D1F435A" title="Dequeues an array of messages from a queue.">OCIAQDeqArray()</a></p>
+                              <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-F0E6A45A-AFAD-4B8F-994B-D5625D1F435A" title="从队列中取消一组消息。">OCIAQDeqArray（）</a></p>
                            </li>
                         </ul>
                         <p></p>
                      </div>
                   </div>
                </div>
-               <div class="props_rev_3"><a id="GUID-D4ED0510-8B6F-40F3-A142-F1DD89C49F02" name="GUID-D4ED0510-8B6F-40F3-A142-F1DD89C49F02"></a><h4 id="LNOCI-GUID-D4ED0510-8B6F-40F3-A142-F1DD89C49F02" class="sect4"><span class="enumeration_section">13.3.2 </span>OCI Database Advanced Queuing
-        Descriptors
-                  </h4>
+               <div class="props_rev_3"><a id="GUID-D4ED0510-8B6F-40F3-A142-F1DD89C49F02" name="GUID-D4ED0510-8B6F-40F3-A142-F1DD89C49F02"></a><h4 id="LNOCI-GUID-D4ED0510-8B6F-40F3-A142-F1DD89C49F02" class="sect4"><span class="enumeration_section">13.3.2</span> OCI数据库高级排队描述符</h4>
                   <div>
-                     <p>Lists the OCI Database Advanced Queuing descriptors and shows their
-        usage.</p>
-                     <p>The following descriptors are used by OCI Database Advanced Queuing operations:</p>
-                     <ul style="list-style-type: disc;">
+                     <p>列出OCI数据库高级队列描述符并显示其用法。</p>
+                     <p>OCI数据库高级排队操作使用以下描述符：</p>
+                     <ul style="list-style-type:disc">
                         <li>
                            <p><code class="codeph">OCIAQEnqOptions</code></p>
                         </li>
@@ -1540,47 +1436,40 @@ End Session and Detach from Server.
                            <p><code class="codeph">OCIAQAgent</code></p>
                         </li>
                      </ul>
-                     <p>You can allocate these descriptors with the service handle using the standard <code class="codeph">OCIDescriptorAlloc()</code> call. The following code shows examples of this:
-                     </p><pre class="oac_no_warn" dir="ltr">OCIDescriptorAlloc(svch, &amp;enqueue_options, OCI_DTYPE_AQENQ_OPTIONS, 0, 0 ); 
+                     <p>您可以使用标准<code class="codeph">OCIDescriptorAlloc()</code>调用将这些描述符与服务句柄一起分配。以下代码显示了以下示例：</p><pre class="oac_no_warn" dir="ltr">OCIDescriptorAlloc(svch, &amp;enqueue_options, OCI_DTYPE_AQENQ_OPTIONS, 0, 0 ); 
 OCIDescriptorAlloc(svch, &amp;dequeue_options, OCI_DTYPE_AQDEQ_OPTIONS, 0, 0 ); 
 OCIDescriptorAlloc(svch, &amp;message_properties, OCI_DTYPE_AQMSG_PROPERTIES, 0, 0);
 OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 ); 
-</pre><p>Each descriptor has a variety of attributes that can be set or read. </p>
+</pre><p>每个描述符都有各种可以设置或读取的属性。</p>
                      <div class="infoboxnotealso" id="GUID-D4ED0510-8B6F-40F3-A142-F1DD89C49F02__GUID-EA903651-B715-40A1-829D-FE2FCC0A3A77">
-                        <p class="notep1">See Also:</p>
-                        <ul style="list-style-type: disc;">
+                        <p class="notep1">也可以看看：</p>
+                        <ul style="list-style-type:disc">
                            <li>
-                              <p><a href="handle-and-descriptor-attributes.html#GUID-011A5B7A-7F24-469A-841A-2FCAF48444CB" title="Lists and describes Database Advanced Queuing descriptor attributes">Database Advanced Queuing Descriptor Attributes</a></p>
+                              <p><a href="handle-and-descriptor-attributes.html#GUID-011A5B7A-7F24-469A-841A-2FCAF48444CB" title="列出并描述数据库高级队列描述符属性">数据库高级队列描述符属性</a></p>
                            </li>
                            <li>
-                              <p><a href="handle-and-descriptor-functions.html#GUID-E9EF2766-E078-49A7-B1D1-738E4BA4814F" title="Allocates storage to hold descriptors or LOB locators.">OCIDescriptorAlloc()</a></p>
+                              <p><a href="handle-and-descriptor-functions.html#GUID-E9EF2766-E078-49A7-B1D1-738E4BA4814F" title="分配存储以保存描述符或LOB定位符。">OCIDescriptorAlloc（）</a></p>
                            </li>
                         </ul>
                         <p></p>
                      </div>
                   </div>
                </div>
-               <div class="props_rev_3"><a id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3" name="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3"></a><h4 id="LNOCI-GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3" class="sect4"><span class="enumeration_section">13.3.3 </span>Database Advanced Queuing in OCI Versus
-        PL/SQL
-                  </h4>
+               <div class="props_rev_3"><a id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3" name="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3"></a><h4 id="LNOCI-GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3" class="sect4"><span class="enumeration_section">13.3.3</span> OCI与PL / SQL中的数据库高级排队</h4>
                   <div>
-                     <p>Shows a comparison between functions, parameters, and options for OCI
-        Database Advanced Queuing functions and descriptors, and PL/SQL AQ functions in the DBMS_AQ
-        package.</p>
+                     <p>显示OMS数据库高级排队功能和描述符的功能，参数和选项与DBMS_AQ包中的PL / SQL AQ功能之间的比较。</p>
                      <div class="section">
-                        <p>The following tables compare functions, parameters, and options for OCI Database
-                Advanced Queuing functions and descriptors, and PL/SQL AQ functions in the DBMS_AQ
-                package. <a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACIAFCB" title="This table is described by 2 columns. Column 1 is the PL/SQL function and column 2 is its equivalent OCI function.">Table 13-2</a> compares AQ functions.
+                        <p>下表比较了DBMS_AQ包中OCI数据库高级排队功能和描述符以及PL / SQL AQ功能的功能，参数和选项。<a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACIAFCB" title="该表由2列描述。第1列是PL / SQL函数，第2列是它的等效OCI函数。">表13-2</a>比较了AQ功能。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="tblformal" id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACIAFCB">
-                        <p class="titleintable">Table 13-2 AQ Functions </p>
-                        <table cellpadding="4" cellspacing="0" class="Formal" title="AQ Functions " summary="This table is described by 2 columns. Column 1 is the PL/SQL function and column 2 is its equivalent OCI function. " width="100%" frame="hsides" border="1" rules="rows">
+                        <p class="titleintable">表13-2 AQ功能</p>
+                        <table cellpadding="4" cellspacing="0" class="Formal" title="AQ功能" width="100%" border="1" summary="This table is described by 2 columns. Column 1 is the PL/SQL function and column 2 is its equivalent OCI function. " frame="hsides" rules="rows">
                            <thead>
                               <tr align="left" valign="top">
-                                 <th align="left" valign="bottom" width="45%" id="d123500e4782">PL/SQL Function</th>
-                                 <th align="left" valign="bottom" width="55%" id="d123500e4785">OCI Function</th>
+                                 <th align="left" valign="bottom" width="45%" id="d123500e4782">PL / SQL函数</th>
+                                 <th align="left" valign="bottom" width="55%" id="d123500e4785">OCI功能</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -1589,7 +1478,7 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                                     <p>DBMS_AQ.ENQUEUE</p>
                                  </td>
                                  <td align="left" valign="top" width="55%" headers="d123500e4790 d123500e4785 ">
-                                    <p><code class="codeph">OCIAQEnq()</code></p>
+                                    <p><code class="codeph">OCIAQEnq（）</code></p>
                                  </td>
                               </tr>
                               <tr align="left" valign="top">
@@ -1597,7 +1486,7 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                                     <p>DBMS_AQ.DEQUEUE</p>
                                  </td>
                                  <td align="left" valign="top" width="55%" headers="d123500e4798 d123500e4785 ">
-                                    <p><code class="codeph">OCIAQDeq()</code></p>
+                                    <p><code class="codeph">OCIAQDeq（）</code></p>
                                  </td>
                               </tr>
                               <tr align="left" valign="top">
@@ -1605,7 +1494,7 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                                     <p>DBMS_AQ.LISTEN</p>
                                  </td>
                                  <td align="left" valign="top" width="55%" headers="d123500e4806 d123500e4785 ">
-                                    <p><code class="codeph">OCIAQListen(), OCIAQListen2()</code></p>
+                                    <p><code class="codeph">OCIAQListen（），OCIAQListen2（）</code></p>
                                  </td>
                               </tr>
                               <tr align="left" valign="top">
@@ -1613,7 +1502,7 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                                     <p>DBMS_AQ.ENQUEUE_ARRAY</p>
                                  </td>
                                  <td align="left" valign="top" width="55%" headers="d123500e4814 d123500e4785 ">
-                                    <p><code class="codeph">OCIAQEnqArray()</code></p>
+                                    <p><code class="codeph">OCIAQEnqArray（）</code></p>
                                  </td>
                               </tr>
                               <tr align="left" valign="top">
@@ -1621,7 +1510,7 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                                     <p>DBMS_AQ.DEQUEUE_ARRAY</p>
                                  </td>
                                  <td align="left" valign="top" width="55%" headers="d123500e4822 d123500e4785 ">
-                                    <p><code class="codeph">OCIAQDeqArray()</code></p>
+                                    <p><code class="codeph">OCIAQDeqArray（）</code></p>
                                  </td>
                               </tr>
                            </tbody>
@@ -1629,17 +1518,17 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                      </div>
                      <!-- class="inftblhruleinformal" -->
                      <div class="section">
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACBJFAJ" title="This table is described by 2 columns. Column 1 is the DBMS_AQ.ENQUEUE parameter and column 2 is its equivalent OCIAQEnq() parameter.">Table 13-3</a> compares the parameters for the enqueue functions.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACBJFAJ" title="该表由2列描述。第1列是DBMS_AQ.ENQUEUE参数，第2列是其等效的OCIAQEnq（）参数。">表13-3</a>比较了入队函数的参数。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="tblformal" id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACBJFAJ">
-                        <p class="titleintable">Table 13-3 Enqueue Parameters </p>
-                        <table cellpadding="4" cellspacing="0" class="Formal" title="Enqueue Parameters " summary="This table is described by 2 columns. Column 1 is the DBMS_AQ.ENQUEUE parameter and column 2 is its equivalent OCIAQEnq() parameter. " width="100%" frame="hsides" border="1" rules="rows">
+                        <p class="titleintable">表13-3排队参数</p>
+                        <table cellpadding="4" cellspacing="0" class="Formal" title="入队参数" width="100%" border="1" summary="This table is described by 2 columns. Column 1 is the DBMS_AQ.ENQUEUE parameter and column 2 is its equivalent OCIAQEnq() parameter. " frame="hsides" rules="rows">
                            <thead>
                               <tr align="left" valign="top">
-                                 <th align="left" valign="bottom" width="39%" id="d123500e4846">DBMS_AQ.ENQUEUE Parameter</th>
-                                 <th align="left" valign="bottom" width="61%" id="d123500e4849">OCIAQEnq() Parameter</th>
+                                 <th align="left" valign="bottom" width="39%" id="d123500e4846">DBMS_AQ.ENQUEUE参数</th>
+                                 <th align="left" valign="bottom" width="61%" id="d123500e4849">OCIAQEnq（）参数</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -1668,7 +1557,7 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                                     <p>-</p>
                                  </td>
                                  <td align="left" valign="top" width="61%" headers="d123500e4889 d123500e4849 ">
-                                    <p>Note: <code class="codeph">OCIAQEnq()</code> requires the following additional parameters: <code class="codeph">svch</code><code class="codeph">, </code><code class="codeph">errh, payload_tdo, payload_ind</code><code class="codeph">, and </code><code class="codeph">flags</code>.
+                                    <p>注意： <code class="codeph">OCIAQEnq()</code>需要以下附加参数： <code class="codeph">svch</code> <code class="codeph">,</code> <code class="codeph">errh, payload_tdo, payload_ind</code> <code class="codeph">, and</code> <code class="codeph">flags</code> 。
                                     </p>
                                  </td>
                               </tr>
@@ -1677,17 +1566,17 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                      </div>
                      <!-- class="inftblhruleinformal" -->
                      <div class="section">
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACIEGEG" title="This table is described by 2 columns. Column 1 is the DBMS_AQ.DEQUEUE parameter and column 2 is its equivalent OCIAQDeq() parameter.">Table 13-4</a> compares the parameters for the dequeue functions.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACIEGEG" title="该表由2列描述。第1列是DBMS_AQ.DEQUEUE参数，第2列是其等效的OCIAQDeq（）参数。">表13-4</a>比较了出队功能的参数。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="tblformal" id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACIEGEG">
-                        <p class="titleintable">Table 13-4 Dequeue Parameters </p>
-                        <table cellpadding="4" cellspacing="0" class="Formal" title="Dequeue Parameters " summary="This table is described by 2 columns. Column 1 is the DBMS_AQ.DEQUEUE parameter and column 2 is its equivalent OCIAQDeq() parameter. " width="100%" frame="hsides" border="1" rules="rows">
+                        <p class="titleintable">表13-4出列参数</p>
+                        <table cellpadding="4" cellspacing="0" class="Formal" title="出列参数" width="100%" border="1" summary="This table is described by 2 columns. Column 1 is the DBMS_AQ.DEQUEUE parameter and column 2 is its equivalent OCIAQDeq() parameter. " frame="hsides" rules="rows">
                            <thead>
                               <tr align="left" valign="top">
-                                 <th align="left" valign="bottom" width="39%" id="d123500e4926">DBMS_AQ.DEQUEUE Parameter</th>
-                                 <th align="left" valign="bottom" width="61%" id="d123500e4929">OCIAQDeq() Parameter</th>
+                                 <th align="left" valign="bottom" width="39%" id="d123500e4926">DBMS_AQ.DEQUEUE参数</th>
+                                 <th align="left" valign="bottom" width="61%" id="d123500e4929">OCIAQDeq（）参数</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -1716,7 +1605,7 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                                     <p>-</p>
                                  </td>
                                  <td align="left" valign="top" width="61%" headers="d123500e4969 d123500e4929 ">
-                                    <p>Note: <code class="codeph">OCIAQDeq()</code> requires the following additional parameters: <code class="codeph">svch</code><code class="codeph">, </code><code class="codeph">errh, dequeue_options, message_properties, payload_tdo, payload, payload_ind</code><code class="codeph">, and </code><code class="codeph">flags</code>.
+                                    <p>注意： <code class="codeph">OCIAQDeq()</code>需要以下附加参数： <code class="codeph">svch</code> <code class="codeph">,</code> <code class="codeph">errh, dequeue_options, message_properties, payload_tdo, payload, payload_ind</code> <code class="codeph">, and</code> <code class="codeph">flags</code> 。
                                     </p>
                                  </td>
                               </tr>
@@ -1725,17 +1614,17 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                      </div>
                      <!-- class="inftblhruleinformal" -->
                      <div class="section">
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACCCDID" title="This table is described by 2 columns. Column 1 is the DBMS_AQ.LISTEN parameter and column 2 is its equivalent OCIAQListen2() parameter.">Table 13-5</a> compares parameters for the listen functions.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACCCDID" title="该表由2列描述。第1列是DBMS_AQ.LISTEN参数，第2列是其等效的OCIAQListen2（）参数。">表13-5</a>比较了listen功能的参数。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="tblformal" id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACCCDID">
-                        <p class="titleintable">Table 13-5 Listen Parameters </p>
-                        <table cellpadding="4" cellspacing="0" class="Formal" title="Listen Parameters " summary="This table is described by 2 columns. Column 1 is the DBMS_AQ.LISTEN parameter and column 2 is its equivalent OCIAQListen2() parameter. " width="100%" frame="hsides" border="1" rules="rows">
+                        <p class="titleintable">表13-5监听参数</p>
+                        <table cellpadding="4" cellspacing="0" class="Formal" title="听取参数" width="100%" border="1" summary="This table is described by 2 columns. Column 1 is the DBMS_AQ.LISTEN parameter and column 2 is its equivalent OCIAQListen2() parameter. " frame="hsides" rules="rows">
                            <thead>
                               <tr align="left" valign="top">
-                                 <th align="left" valign="bottom" width="39%" id="d123500e5006">DBMS_AQ.LISTEN Parameter</th>
-                                 <th align="left" valign="bottom" width="61%" id="d123500e5009">OCIAQListen2() Parameter</th>
+                                 <th align="left" valign="bottom" width="39%" id="d123500e5006">DBMS_AQ.LISTEN参数</th>
+                                 <th align="left" valign="bottom" width="61%" id="d123500e5009">OCIAQListen2（）参数</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -1762,7 +1651,7 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                                     <p>-</p>
                                  </td>
                                  <td align="left" valign="top" width="61%" headers="d123500e5043 d123500e5009 ">
-                                    <p>Note: <code class="codeph">OCIAQListen2()</code> requires the following additional parameters: <code class="codeph">svchp, errhp, agent_list, num_agents, agent</code><code class="codeph">, lmops, and </code><code class="codeph">flags</code>.
+                                    <p>注意： <code class="codeph">OCIAQListen2()</code>需要以下附加参数： <code class="codeph">svchp, errhp, agent_list, num_agents, agent</code> <code class="codeph">, lmops, and</code> <code class="codeph">flags</code> 。
                                     </p>
                                  </td>
                               </tr>
@@ -1771,17 +1660,17 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                      </div>
                      <!-- class="inftblhruleinformal" -->
                      <div class="section">
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACGGDAF" title="This table is described by 2 columns. Column 1 is the DBMS_AQ.ENQUEUE_ARRAY parameter and column 2 is its equivalent OCIAQEnqArray() parameter.">Table 13-6</a> compares parameters for the array enqueue functions.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACGGDAF" title="该表由2列描述。第1列是DBMS_AQ.ENQUEUE_ARRAY参数，第2列是其等效的OCIAQEnqArray（）参数。">表13-6</a>比较了数组排队函数的参数。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="tblformal" id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACGGDAF">
-                        <p class="titleintable">Table 13-6 Array Enqueue Parameters </p>
-                        <table cellpadding="4" cellspacing="0" class="Formal" title="Array Enqueue Parameters " summary="This table is described by 2 columns. Column 1 is the DBMS_AQ.ENQUEUE_ARRAY parameter and column 2 is its equivalent OCIAQEnqArray() parameter. " width="100%" frame="hsides" border="1" rules="rows">
+                        <p class="titleintable">表13-6阵列入队参数</p>
+                        <table cellpadding="4" cellspacing="0" class="Formal" title="数组入队参数" width="100%" border="1" summary="This table is described by 2 columns. Column 1 is the DBMS_AQ.ENQUEUE_ARRAY parameter and column 2 is its equivalent OCIAQEnqArray() parameter. " frame="hsides" rules="rows">
                            <thead>
                               <tr align="left" valign="top">
-                                 <th align="left" valign="bottom" width="47%" id="d123500e5076">DBMS_AQ.ENQUEUE_ARRAY Parameter</th>
-                                 <th align="left" valign="bottom" width="53%" id="d123500e5079">OCIAQEnqArray() Parameter</th>
+                                 <th align="left" valign="bottom" width="47%" id="d123500e5076">DBMS_AQ.ENQUEUE_ARRAY参数</th>
+                                 <th align="left" valign="bottom" width="53%" id="d123500e5079">OCIAQEnqArray（）参数</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -1814,7 +1703,7 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                                     <p>-</p>
                                  </td>
                                  <td align="left" valign="top" width="53%" headers="d123500e5126 d123500e5079 ">
-                                    <p>Note: <code class="codeph">OCIAQEnqArray()</code> requires the following additional parameters: <code class="codeph">svch</code><code class="codeph">, </code><code class="codeph">errh, payload_tdo, payload_ind, ctxp, enqcbfp,</code> <code class="codeph">and </code><code class="codeph">flags</code>.
+                                    <p>注意： <code class="codeph">OCIAQEnqArray()</code>需要以下附加参数： <code class="codeph">svch</code> <code class="codeph">,</code> <code class="codeph">errh, payload_tdo, payload_ind, ctxp, enqcbfp,</code> <code class="codeph">and</code> <code class="codeph">flags</code> 。
                                     </p>
                                  </td>
                               </tr>
@@ -1823,17 +1712,17 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                      </div>
                      <!-- class="inftblhruleinformal" -->
                      <div class="section">
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACFHBEI" title="This table is described by 2 columns. Column 1 is the DBMS_AQ.DEQUEUE_ARRAY parameter and column 2 is its equivalent OCIAQDeqArray() parameter.">Table 13-7</a> compares parameters for the array dequeue functions.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACFHBEI" title="该表由2列描述。第1列是DBMS_AQ.DEQUEUE_ARRAY参数，第2列是其等效的OCIAQDeqArray（）参数。">表13-7</a>比较了数组出列函数的参数。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="tblformal" id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACFHBEI">
-                        <p class="titleintable">Table 13-7 Array Dequeue Parameters </p>
-                        <table cellpadding="4" cellspacing="0" class="Formal" title="Array Dequeue Parameters " summary="This table is described by 2 columns. Column 1 is the DBMS_AQ.DEQUEUE_ARRAY parameter and column 2 is its equivalent OCIAQDeqArray() parameter. " width="100%" frame="hsides" border="1" rules="rows">
+                        <p class="titleintable">表13-7阵列出队参数</p>
+                        <table cellpadding="4" cellspacing="0" class="Formal" title="数组出列参数" width="100%" border="1" summary="This table is described by 2 columns. Column 1 is the DBMS_AQ.DEQUEUE_ARRAY parameter and column 2 is its equivalent OCIAQDeqArray() parameter. " frame="hsides" rules="rows">
                            <thead>
                               <tr align="left" valign="top">
-                                 <th align="left" valign="bottom" width="47%" id="d123500e5165">DBMS_AQ.DEQUEUE_ARRAY Parameter</th>
-                                 <th align="left" valign="bottom" width="53%" id="d123500e5168">OCIAQDeqArray() Parameter</th>
+                                 <th align="left" valign="bottom" width="47%" id="d123500e5165">DBMS_AQ.DEQUEUE_ARRAY参数</th>
+                                 <th align="left" valign="bottom" width="53%" id="d123500e5168">OCIAQDeqArray（）参数</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -1866,7 +1755,7 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                                     <p>-</p>
                                  </td>
                                  <td align="left" valign="top" width="53%" headers="d123500e5215 d123500e5168 ">
-                                    <p>Note: <code class="codeph">OCIAQDeqArray()</code> requires the following additional parameters: <code class="codeph">svch</code><code class="codeph">, </code><code class="codeph">errh,</code><code class="codeph"> </code><code class="codeph">msgprop, payload_tdo, payload_ind, ctxp, deqcbfp,</code><code class="codeph"> and </code><code class="codeph">flags</code>.
+                                    <p>注意： <code class="codeph">OCIAQDeqArray()</code>需要以下附加参数： <code class="codeph">svch</code> <code class="codeph">,</code> <code class="codeph">errh,</code> <code class="codeph"> </code> <code class="codeph">msgprop, payload_tdo, payload_ind, ctxp, deqcbfp,</code> <code class="codeph">and</code> <code class="codeph">flags</code> 。
                                     </p>
                                  </td>
                               </tr>
@@ -1875,17 +1764,17 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                      </div>
                      <!-- class="inftblhruleinformal" -->
                      <div class="section">
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACJHHDB" title="This table is described by 2 columns. Column 1 is the PL/SQL Agent property and column 2 is its equivalent OCIAQAgent attribute.">Table 13-8</a> compares parameters for the agent attributes.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACJHHDB" title="该表由2列描述。第1列是PL / SQL代理属性，第2列是其等效的OCIAQAgent属性。">表13-8</a>比较了代理属性的参数。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="tblformal" id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACJHHDB">
-                        <p class="titleintable">Table 13-8 Agent Parameters </p>
-                        <table cellpadding="4" cellspacing="0" class="Formal" title="Agent Parameters " summary="This table is described by 2 columns. Column 1 is the PL/SQL Agent property and column 2 is its equivalent OCIAQAgent attribute." width="100%" frame="hsides" border="1" rules="rows">
+                        <p class="titleintable">表13-8代理参数</p>
+                        <table cellpadding="4" cellspacing="0" class="Formal" title="代理参数" width="100%" border="1" summary="This table is described by 2 columns. Column 1 is the PL/SQL Agent property and column 2 is its equivalent OCIAQAgent attribute." frame="hsides" rules="rows">
                            <thead>
                               <tr align="left" valign="top">
-                                 <th align="left" valign="bottom" width="48%" id="d123500e5256">PL/SQL Agent Parameter</th>
-                                 <th align="left" valign="bottom" width="52%" id="d123500e5259">OCIAQAgent Attribute</th>
+                                 <th align="left" valign="bottom" width="48%" id="d123500e5256">PL / SQL代理参数</th>
+                                 <th align="left" valign="bottom" width="52%" id="d123500e5259">OCIAQAgent属性</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -1912,17 +1801,17 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                      </div>
                      <!-- class="inftblhruleinformal" -->
                      <div class="section">
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACJGGBC" title="This table is described by 2 columns. Column 1 is the PL/SQL Message property and column 2 is its equivalent OCIAQMsgProperties attribute.">Table 13-9</a> compares parameters for the message properties.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACJGGBC" title="该表由2列描述。第1列是PL / SQL Message属性，第2列是其等效的OCIAQMsgProperties属性。">表13-9</a>比较了消息属性的参数。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="tblformal" id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACJGGBC">
-                        <p class="titleintable">Table 13-9 Message Properties </p>
-                        <table cellpadding="4" cellspacing="0" class="Formal" title="Message Properties " summary="This table is described by 2 columns. Column 1 is the PL/SQL Message property and column 2 is its equivalent OCIAQMsgProperties attribute." width="100%" frame="hsides" border="1" rules="rows">
+                        <p class="titleintable">表13-9消息属性</p>
+                        <table cellpadding="4" cellspacing="0" class="Formal" title="消息属性" width="100%" border="1" summary="This table is described by 2 columns. Column 1 is the PL/SQL Message property and column 2 is its equivalent OCIAQMsgProperties attribute." frame="hsides" rules="rows">
                            <thead>
                               <tr align="left" valign="top">
-                                 <th align="left" valign="bottom" width="47%" id="d123500e5304">PL/SQL Message Property</th>
-                                 <th align="left" valign="bottom" width="53%" id="d123500e5307">OCIAQMsgProperties Attribute</th>
+                                 <th align="left" valign="bottom" width="47%" id="d123500e5304">PL / SQL消息属性</th>
+                                 <th align="left" valign="bottom" width="53%" id="d123500e5307">OCIAQMsgProperties属性</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -2009,17 +1898,17 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                      </div>
                      <!-- class="inftblhruleinformal" -->
                      <div class="section">
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACFFHAH" title="This table is described by 2 columns. Column 1 is the PL/SQL Enqueue option and column 2 is its equivalent OCIAQEnqOptions attribute.">Table 13-10</a> compares enqueue option attributes.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACFFHAH" title="该表由2列描述。第1列是PL / SQL Enqueue选项，第2列是其等效的OCIAQEnqOptions属性。">表13-10</a>比较了enqueue选项属性。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="tblformal" id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACFFHAH">
-                        <p class="titleintable">Table 13-10 Enqueue Option Attributes </p>
-                        <table cellpadding="4" cellspacing="0" class="Formal" title="Enqueue Option Attributes " summary="This table is described by 2 columns. Column 1 is the PL/SQL Enqueue option and column 2 is its equivalent OCIAQEnqOptions attribute." width="100%" frame="hsides" border="1" rules="rows">
+                        <p class="titleintable">表13-10排队选项属性</p>
+                        <table cellpadding="4" cellspacing="0" class="Formal" title="入队选项属性" width="100%" border="1" summary="This table is described by 2 columns. Column 1 is the PL/SQL Enqueue option and column 2 is its equivalent OCIAQEnqOptions attribute." frame="hsides" rules="rows">
                            <thead>
                               <tr align="left" valign="top">
-                                 <th align="left" valign="bottom" width="46%" id="d123500e5433">PL/SQL Enqueue Option</th>
-                                 <th align="left" valign="bottom" width="54%" id="d123500e5436">OCIAQEnqOptions Attribute</th>
+                                 <th align="left" valign="bottom" width="46%" id="d123500e5433">PL / SQL入队选项</th>
+                                 <th align="left" valign="bottom" width="54%" id="d123500e5436">OCIAQEnqOptions属性</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -2039,12 +1928,12 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                                  <td align="left" valign="top" width="46%" id="d123500e5457" headers="d123500e5433 "><pre class="oac_no_warn" dir="ltr">sequence_deviation</pre></td>
                                  <td align="left" valign="top" width="54%" headers="d123500e5457 d123500e5436 ">
                                     <p><code class="codeph">OCI_ATTR_SEQUENCE_DEVIATION</code></p>
-                                    <p>(deprecated)</p>
+                                    <p>（废弃）</p>
                                  </td>
                               </tr>
                               <tr align="left" valign="top">
                                  <td align="left" valign="top" width="46%" id="d123500e5467" headers="d123500e5433 ">
-                                    <p><code class="codeph">transformation</code></p>
+                                    <p><code class="codeph">转型</code></p>
                                  </td>
                                  <td align="left" valign="top" width="54%" headers="d123500e5467 d123500e5436 ">
                                     <p><code class="codeph">OCI_ATTR_TRANSFORMATION</code></p>
@@ -2061,17 +1950,17 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                      </div>
                      <!-- class="inftblhruleinformal" -->
                      <div class="section">
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACEAIFB" title="This table is described by 2 columns. Column 1 is the PL/SQL Dequeue option and column 2 is its equivalent OCIAQDeqOptions attribute.">Table 13-11</a> compares dequeue option attributes.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACEAIFB" title="该表由2列描述。第1列是PL / SQL Dequeue选项，第2列是其等效的OCIAQDeqOptions属性。">表13-11</a>比较了dequeue选项属性。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="tblformal" id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__CACEAIFB">
-                        <p class="titleintable">Table 13-11 Dequeue Option Attributes </p>
-                        <table cellpadding="4" cellspacing="0" class="Formal" title="Dequeue Option Attributes " summary="This table is described by 2 columns. Column 1 is the PL/SQL Dequeue option and column 2 is its equivalent OCIAQDeqOptions attribute." width="100%" frame="hsides" border="1" rules="rows">
+                        <p class="titleintable">表13-11出列选项属性</p>
+                        <table cellpadding="4" cellspacing="0" class="Formal" title="出列选项属性" width="100%" border="1" summary="This table is described by 2 columns. Column 1 is the PL/SQL Dequeue option and column 2 is its equivalent OCIAQDeqOptions attribute." frame="hsides" rules="rows">
                            <thead>
                               <tr align="left" valign="top">
-                                 <th align="left" valign="bottom" width="47%" id="d123500e5500">PL/SQL Dequeue Option</th>
-                                 <th align="left" valign="bottom" width="53%" id="d123500e5503">OCIAQDeqOptions Attribute</th>
+                                 <th align="left" valign="bottom" width="47%" id="d123500e5500">PL / SQL出列选项</th>
+                                 <th align="left" valign="bottom" width="53%" id="d123500e5503">OCIAQDeqOptions属性</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -2127,7 +2016,7 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                               </tr>
                               <tr align="left" valign="top">
                                  <td align="left" valign="top" width="47%" id="d123500e5573" headers="d123500e5500 ">
-                                    <p><code class="codeph">transformation</code></p>
+                                    <p><code class="codeph">转型</code></p>
                                  </td>
                                  <td align="left" valign="top" width="53%" headers="d123500e5573 d123500e5503 ">
                                     <p><code class="codeph">OCI_ATTR_TRANSFORMATION</code></p>
@@ -2145,55 +2034,52 @@ OCIDescriptorAlloc(svch, &amp;agent, OCI_DTYPE_AQAGENT, 0, 0 );
                      <!-- class="inftblhruleinformal" -->
                      <div class="section">
                         <div class="infoboxnote" id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__GUID-B3E7CE42-2DE9-4687-B921-2A9C8A18F6B8">
-                           <p class="notep1">Note:</p>
-                           <p><code class="codeph">OCIAQEnq()</code> returns the error <code class="codeph">ORA-25219</code> while specifying the enqueue option <code class="codeph">OCI_ATTR_SEQUENCE</code> along with <code class="codeph">OCI_ATTR_RELATIVE_MSGID.</code> This happens when enqueuing two messages. For the second message, enqueue options <code class="codeph">OCI_ATTR_SEQUENCE</code> and <code class="codeph">OCI_ATTR_RELATIVE_MSGID</code> are set to dequeue this message before the first one. An error is not returned if you do not specify the sequence but, of course, the message is not dequeued before the relative message.
+                           <p class="notep1">注意：</p>
+                           <p><code class="codeph">OCIAQEnq()</code>在指定入队选项<code class="codeph">OCI_ATTR_SEQUENCE</code>以及<code class="codeph">OCI_ATTR_RELATIVE_MSGID.</code>返回错误<code class="codeph">ORA-25219</code> <code class="codeph">OCI_ATTR_RELATIVE_MSGID.</code>排队两条消息时会发生这种情况。对于第二条消息，将排队选项<code class="codeph">OCI_ATTR_SEQUENCE</code>和<code class="codeph">OCI_ATTR_RELATIVE_MSGID</code>设置为在第一条消息之前将此消息出列。如果未指定序列，则不会返回错误，但当然，消息不会在相关消息之前出列。
                            </p>
-                           <p><code class="codeph">OCIAQEnq()</code> does not return an error if the <code class="codeph">OCI_ATTR_SEQUENCE</code> attribute is not set, but the message is not dequeued before the message with relative message ID.
-                           </p>
+                           <p>如果未设置<code class="codeph">OCI_ATTR_SEQUENCE</code>属性，则<code class="codeph">OCIAQEnq()</code>不会返回错误，但消息在具有相对消息ID的消息之前未出列。</p>
                         </div>
                         <div class="infoboxnotealso" id="GUID-BB00AF24-95F4-4BE5-A4BE-DA9C6004F1A3__GUID-A127E45B-016A-47D0-A48C-9F580595B45F">
-                           <p class="notep1">See Also:</p>
-                           <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-AE3DB345-0A77-4922-ABBD-FBBFB6E1A9B4" title="Performs an enqueue operation using Database Advanced Queuing.">OCIAQEnq()</a></p>
+                           <p class="notep1">也可以看看：</p>
+                           <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-AE3DB345-0A77-4922-ABBD-FBBFB6E1A9B4" title="使用数据库高级队列执行入队操作。">OCIAQEnq（）</a></p>
                         </div>
                      </div>
                      <!-- class="section" -->
                   </div>
                </div>
-               <div class="props_rev_2"><a id="GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD" name="GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD"></a><h4 id="LNOCI-GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD" class="sect4"><span class="enumeration_section">13.3.4 </span>Using Buffered Messaging
-                  </h4>
+               <div class="props_rev_2"><a id="GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD" name="GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD"></a><h4 id="LNOCI-GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD" class="sect4"><span class="enumeration_section">13.3.4</span>使用缓冲消息传递</h4>
                   <div>
-                     <p>Buffered messaging is a nonpersistent messaging capability within Database
-      AQ that was first available in Oracle Database 10<span class="italic">g</span> Release 2.
+                     <p>缓冲消息传递是数据库AQ中的非持久消息传递功能，它首先在Oracle数据库<span class="italic">10g</span>第2版中提供。
                      </p>
                      <div class="section">
-                        <p> Buffered messages reside in shared memory and can be lost if there is an instance failure. Unlike persistent messages, redo does not get written to disk. Buffered message enqueue and dequeue is much faster than persistent message operations. Because shared memory is limited, buffered messages may have to be spilled to disk. Flow control can be enabled to prevent applications from flooding the shared memory when the message consumers are slow or have stopped for some reason. The following functions are used for buffered messaging:</p>
+                        <p>缓冲消息驻留在共享内存中，如果出现实例故障，可能会丢失。与持久性消息不同，重做不会写入磁盘。缓冲消息入队和出队比持久消息操作快得多。由于共享内存有限，缓冲的消息可能必须溢出到磁盘。可以启用流控制，以防止应用程序在消息使用缓慢或由于某种原因而停止时泛滥共享内存。以下函数用于缓冲消息传递：</p>
                      </div>
                      <!-- class="section" -->
                      <div class="section">
-                        <ul style="list-style-type: disc;">
+                        <ul style="list-style-type:disc">
                            <li>
-                              <p><code class="codeph">OCIAQEnq()</code></p>
+                              <p><code class="codeph">OCIAQEnq（）</code></p>
                            </li>
                            <li>
-                              <p><code class="codeph">OCIAQDeq()</code></p>
+                              <p><code class="codeph">OCIAQDeq（）</code></p>
                            </li>
                            <li>
-                              <p><code class="codeph">OCIAQListen2()</code></p>
+                              <p><code class="codeph">OCIAQListen2（）</code></p>
                            </li>
                         </ul>
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD__CACBCHCE">Example 13-6</a> shows an example of enqueue buffered messaging. 
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD__CACBCHCE">例13-6</a>显示了入队缓冲消息传递的示例。
                         </p>
-                        <p><a href="notification-streams-advanced-queuing.html#GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD__CACJHBEE">Example 13-7</a> shows an example of dequeue buffered messaging.
+                        <p><a href="notification-streams-advanced-queuing.html#GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD__CACJHBEE">例13-7</a>显示了出列缓冲消息传递的示例。
                         </p>
                         <div class="infoboxnote" id="GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD__GUID-104265C9-6D47-46B1-BE21-F757E931B5B3">
-                           <p class="notep1">Note:</p>
-                           <p>Array operations are not supported for buffered messaging. Applications can use the <code class="codeph">OCIAQEnqArray()</code> and <code class="codeph">OCIAQDeqArray()</code> functions with the array size set to 1.
+                           <p class="notep1">注意：</p>
+                           <p>缓冲消息传递不支持阵列操作。应用程序可以使用<code class="codeph">OCIAQEnqArray()</code>和<code class="codeph">OCIAQDeqArray()</code>函数，并将数组大小设置为1。
                            </p>
                         </div>
                      </div>
                      <!-- class="section" -->
                      <div class="example" id="GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD__CACBCHCE">
-                        <p class="titleinexample">Example 13-6 Enqueue Buffered Messaging</p><pre class="oac_no_warn" dir="ltr">...
+                        <p class="titleinexample">例13-6 Enqueue Buffered Messaging</p><pre class="oac_no_warn" dir="ltr">...
 OCIAQMsgProperties  *msgprop;
 OCIAQEnqueueOptions *enqopt;
 message              msg;    /* message is an object type */
@@ -2225,7 +2111,7 @@ OCIAQEnq(svchp, errhp, "Test_Queue", enqopt, msgprop, msg_tdo, (void **)&amp;mes
 </pre></div>
                      <!-- class="example" -->
                      <div class="example" id="GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD__CACJHBEE">
-                        <p class="titleinexample">Example 13-7 Dequeue Buffered Messaging</p><pre class="oac_no_warn" dir="ltr">...
+                        <p class="titleinexample">例13-7 Dequeue Buffered Messaging</p><pre class="oac_no_warn" dir="ltr">...
 OCIAQMsgProperties  *msgprop;
 OCIAQDequeueOptions *deqopt;
 ...
@@ -2258,16 +2144,16 @@ OCIAQDeq(svchp, errhp,  "test_queue", deqopt, msgprop, msg_tdo, (void **)0,
                      <!-- class="example" -->
                      <div class="section">
                         <div class="infoboxnotealso" id="GUID-145D489F-52D8-4D41-8319-EF1ACA19B7AD__GUID-E5BA0F0C-AD8B-486E-8A15-EABEACB71509">
-                           <p class="notep1">See Also:</p>
-                           <ul style="list-style-type: disc;">
+                           <p class="notep1">也可以看看：</p>
+                           <ul style="list-style-type:disc">
                               <li>
-                                 <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-AE3DB345-0A77-4922-ABBD-FBBFB6E1A9B4" title="Performs an enqueue operation using Database Advanced Queuing.">OCIAQEnq()</a></p>
+                                 <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-AE3DB345-0A77-4922-ABBD-FBBFB6E1A9B4" title="使用数据库高级队列执行入队操作。">OCIAQEnq（）</a></p>
                               </li>
                               <li>
-                                 <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-982A4127-C23A-43E6-94CE-D3F76EC4553C">OCIAQDeq()</a></p>
+                                 <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-982A4127-C23A-43E6-94CE-D3F76EC4553C">OCIAQDeq（）</a></p>
                               </li>
                               <li>
-                                 <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-499ECEF6-F447-46C5-8F3F-48DE66839BD1" title="Listens on one or more queues on behalf of a list of agents.">OCIAQListen2()</a></p>
+                                 <p><a href="streams-advanced-queueing-and-publish-subscribe-functions.html#GUID-499ECEF6-F447-46C5-8F3F-48DE66839BD1" title="代表代理列表侦听一个或多个队列。">OCIAQListen2（）</a></p>
                               </li>
                            </ul>
                         </div>

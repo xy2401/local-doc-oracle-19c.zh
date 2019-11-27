@@ -1,14 +1,12 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Dynamic Scoring</title>
+      <title>动态评分</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="API Guide">
-      <meta property="og:description" content>
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
       <meta name="application-name" content="API Guide">
@@ -45,34 +43,29 @@
     <meta name="dcterms.isVersionOf" content="DMAPI">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="real-time-scoring.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="cost-sensitive-decision-making.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="real-time-scoring.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="cost-sensitive-decision-making.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">API Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="using-data-mining-API.html" property="item" typeof="WebPage"><span property="name">Using the Data Mining API</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="scoring-deployment.html" property="item" typeof="WebPage"><span property="name"> Scoring and Deployment </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Dynamic Scoring</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">API指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-data-mining-API.html" property="item" typeof="WebPage"><span property="name">使用Data Mining API</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="scoring-deployment.html" property="item" typeof="WebPage"><span property="name">评分和部署</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">动态评分</li>
             </ol>
             <a id="GUID-AB32A94A-2D8C-4BBC-89B9-FD432F3A464B" name="GUID-AB32A94A-2D8C-4BBC-89B9-FD432F3A464B"></a><a id="DMPRG775"></a><a id="DMPRG774"></a>
             
-            <h2 id="DMAPI-GUID-AB32A94A-2D8C-4BBC-89B9-FD432F3A464B" class="sect2"><span class="enumeration_section">32.5 </span>Dynamic Scoring
-            </h2>
+            <h2 id="DMAPI-GUID-AB32A94A-2D8C-4BBC-89B9-FD432F3A464B" class="sect2"><span class="enumeration_section">32.5</span>动态评分</h2>
          </header>
          <div class="ind">
             <div>
-               <p><a id="d67817e18" class="indexterm-anchor"></a>The Data Mining SQL functions operate in two modes: by applying a pre-defined model, or by executing an analytic clause. If you supply an analytic clause instead of a model name, the function builds one or more transient models and uses them to score the data.
+               <p><a id="d67817e18" class="indexterm-anchor"></a>数据挖掘SQL函数以两种模式运行：应用预定义模型或执行分析子句。如果您提供分析子句而不是模型名称，则该函数会构建一个或多个瞬态模型并使用它们对数据进行评分。
                </p>
-               <p>The ability to score data dynamically without a pre-defined model extends the application of basic embedded data mining techniques into environments where models are not available. Dynamic scoring, however, has limitations. The transient models created during dynamic scoring are not available for inspection or fine tuning. Applications that require model inspection, the correlation of scoring results with the model, special algorithm settings, or multiple scoring queries that use the same model, require a predefined model.</p>
-               <p>The following example shows a dynamic scoring query. The example identifies the rows in the input data that contain unusual customer age values. </p>
+               <p>在没有预定义模型的情况下动态评分数据的能力将基本嵌入式数据挖掘技术的应用扩展到模型不可用的环境中。然而，动态评分有局限性。在动态评分期间创建的瞬态模型不可用于检查或微调。需要模型检查的应用程序，评分结果与模型的相关性，特殊算法设置或使用相同模型的多个评分查询需要预定义模型。</p>
+               <p>以下示例显示了动态评分查询。该示例标识输入数据中包含异常客户年龄值的行。</p>
                <div class="example" id="GUID-AB32A94A-2D8C-4BBC-89B9-FD432F3A464B__BABGGIGF">
-                  <p class="titleinexample">Example 32-13 Dynamic Prediction</p><pre class="oac_no_warn" dir="ltr">SELECT cust_id, age, pred_age, age-pred_age age_diff, pred_det FROM
+                  <p class="titleinexample">例32-13动态预测</p><pre class="oac_no_warn" dir="ltr">SELECT cust_id, age, pred_age, age-pred_age age_diff, pred_det FROM
  (SELECT cust_id, age, pred_age, pred_det,
     RANK() OVER (ORDER BY ABS(age-pred_age) DESC) rnk FROM
     (SELECT cust_id, age,

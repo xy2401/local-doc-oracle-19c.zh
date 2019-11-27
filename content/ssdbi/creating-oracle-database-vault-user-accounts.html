@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="If you intend to use Oracle Database Vault by default, then you must create an Oracle Database Vault user account, and configure that user.">
       <meta name="description" content="If you intend to use Oracle Database Vault by default, then you must create an Oracle Database Vault user account, and configure that user.">
-      <title>Creating Oracle Database Vault User Accounts</title>
+      <title>创建Oracle Database Vault用户帐户</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database Installation Guide">
       <meta property="og:description" content="If you intend to use Oracle Database Vault by default, then you must create an Oracle Database Vault user account, and configure that user.">
@@ -47,45 +45,39 @@
     <meta name="dcterms.isVersionOf" content="SSDBI">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="preventing-installation-errors-caused-by-terminal-output-commands.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="unsetting-oracle-installation-owner-environment-variables.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="preventing-installation-errors-caused-by-terminal-output-commands.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="unsetting-oracle-installation-owner-environment-variables.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="configuring-users-groups-and-environments-for-oracle-grid-infrastructure-and-oracle-database.html" property="item" typeof="WebPage"><span property="name">Configuring
-Users, Groups and Environments for Oracle Grid Infrastructure and
-Oracle Database</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Creating Oracle Database Vault User Accounts</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="configuring-users-groups-and-environments-for-oracle-grid-infrastructure-and-oracle-database.html" property="item" typeof="WebPage"><span property="name">为Oracle Grid Infrastructure和Oracle数据库配置用户，组和环境</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">创建Oracle Database Vault用户帐户</li>
             </ol>
             <a id="GUID-4FDAAD6D-4C2E-4991-98EC-79EA13759A6E" name="GUID-4FDAAD6D-4C2E-4991-98EC-79EA13759A6E"></a>
             
-            <h2 id="SSDBI-GUID-4FDAAD6D-4C2E-4991-98EC-79EA13759A6E" class="sect2">Creating Oracle Database Vault User Accounts</h2>
+            <h2 id="SSDBI-GUID-4FDAAD6D-4C2E-4991-98EC-79EA13759A6E" class="sect2">创建Oracle Database Vault用户帐户</h2>
          </header>
          <div class="ind">
             <div>
-               <p>If you intend to use Oracle Database Vault by default, then you must create an Oracle Database Vault user account, and configure that user. </p>
+               <p>如果您打算默认使用Oracle Database Vault，则必须创建Oracle Database Vault用户帐户并配置该用户。</p>
                <div class="section">
-                  <p>You must create the Database Vault Owner account before you can use Oracle Database Vault. You can also create a Database Vault Account Manager administrative account.</p>
-                  <p>Oracle Database Vault installs a baseline database auditing policy. This policy covers the access control configuration information stored in Oracle Database Vault database tables, information stored in Oracle Catalog (rollback segments, tablespaces, and so on), the use of system privileges, and Oracle Label Security configuration. When you install Oracle Database Vault, the security specific database initialization parameters are initialized with default values.</p>
+                  <p>您必须先创建Database Vault Owner帐户，然后才能使用Oracle Database Vault。您还可以创建Database Vault Account Manager管理帐户。</p>
+                  <p>Oracle Database Vault安装基准数据库审计策略。此策略涵盖存储在Oracle Database Vault数据库表中的访问控制配置信息，存储在Oracle Catalog中的信息（回滚段，表空间等），系统权限的使用以及Oracle Label Security配置。安装Oracle Database Vault时，将使用默认值初始化特定于安全性的数据库初始化参数。</p>
                </div>
                <!-- class="section" -->
             </div>
             <div>
                <div class="relinfo">
-                  <p><strong>Related Topics</strong></p>
+                  <p><strong>相关话题</strong></p>
                   <ul>
-                     <li><a href="../dvadm/getting-started-with-oracle-database-vault.html#DVADM-GUID-D3F37B71-0935-462C-A459-557D28F8CF20" target="_blank"><span><cite>Oracle Database Vault Administrator’s Guide</cite></span></a></li>
+                     <li><a href="../dvadm/getting-started-with-oracle-database-vault.html#DVADM-GUID-D3F37B71-0935-462C-A459-557D28F8CF20" target="_blank"><span><cite>Oracle Database Vault管理员指南</cite></span></a></li>
                   </ul>
                </div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="configuring-users-groups-and-environments-for-oracle-grid-infrastructure-and-oracle-database.html#GUID-B65E6113-D056-4DD9-940F-DFF493E413D5" title="Before installation, create operating system groups and users, and configure user environments.">Configuring Users, Groups and Environments for Oracle Grid Infrastructure and Oracle Database</a></p>
+                     <p><strong>父主题：</strong> <a href="configuring-users-groups-and-environments-for-oracle-grid-infrastructure-and-oracle-database.html#GUID-B65E6113-D056-4DD9-940F-DFF493E413D5" title="在安装之前，请创建操作系统组和用户，以及配置用户环境。">为Oracle Grid Infrastructure和Oracle数据库配置用户，组和环境</a></p>
                   </div>
                </div>
             </div>

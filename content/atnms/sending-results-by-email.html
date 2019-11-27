@@ -1,16 +1,14 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="abstract" content="Optionally email the HTML report to one or more recipients using the &#x2013;sendemail option.">
-      <meta name="description" content="Optionally email the HTML report to one or more recipients using the &#x2013;sendemail option.">
-      <title>Sending Results by Email</title>
+      <meta name="abstract" content="Optionally email the HTML report to one or more recipients using the –sendemail option.">
+      <meta name="description" content="Optionally email the HTML report to one or more recipients using the –sendemail option.">
+      <title>通过电子邮件发送结果</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="User’s Guide">
-      <meta property="og:description" content="Optionally email the HTML report to one or more recipients using the &#x2013;sendemail option.">
+      <meta property="og:description" content="Optionally email the HTML report to one or more recipients using the –sendemail option.">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
       <meta name="application-name" content="User’s Guide">
@@ -47,49 +45,44 @@
     <meta name="dcterms.isVersionOf" content="ATNMS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="generating-diff-report.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="managing-daemons.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="generating-diff-report.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="managing-daemons.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">User’s Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="analyzing-risks-and-complying-best-practices.html" property="item" typeof="WebPage"><span property="name">Analyzing the Cluster Configuration</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="purpose-oracle-orachk-and-oracle-exachk.html" property="item" typeof="WebPage"><span property="name">Analyzing Risks and Complying with Best Practices</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="manually-generate-health-check-reports.html" property="item" typeof="WebPage"><span property="name">Using Oracle ORAchk and Oracle EXAchk to Manually Generate Health Check Reports</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Sending Results by Email</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">用户指导</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="analyzing-risks-and-complying-best-practices.html" property="item" typeof="WebPage"><span property="name">分析群集配置</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="purpose-oracle-orachk-and-oracle-exachk.html" property="item" typeof="WebPage"><span property="name">分析风险并遵守最佳实践</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="manually-generate-health-check-reports.html" property="item" typeof="WebPage"><span property="name">使用Oracle ORAchk和Oracle EXAchk手动生成运行状况检查报告</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">通过电子邮件发送结果</li>
             </ol>
             <a id="GUID-B9608CFC-B5E1-45C0-846C-458837BFA648" name="GUID-B9608CFC-B5E1-45C0-846C-458837BFA648"></a>
             
-            <h2 id="ATNMS-GUID-B9608CFC-B5E1-45C0-846C-458837BFA648" class="sect2"><span class="enumeration_section">2.4.5 </span>Sending Results by Email
-            </h2>
+            <h2 id="ATNMS-GUID-B9608CFC-B5E1-45C0-846C-458837BFA648" class="sect2"><span class="enumeration_section">2.4.5</span>通过电子邮件发送结果</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Optionally email the HTML report to one or more recipients using the <code class="codeph">&#x2013;sendemail</code> option.
+               <p>（可选）使用<code class="codeph">–sendemail</code>选项通过电子邮件将HTML报告发送给一个或多个收件人。
                </p>
                <div class="section">
-                  <p class="subhead1" id="GUID-B9608CFC-B5E1-45C0-846C-458837BFA648__GUID-ED4BCD3C-E62E-4CBA-8FB3-5562C4D62684">To send health check run results by email:</p>
+                  <p class="subhead1" id="GUID-B9608CFC-B5E1-45C0-846C-458837BFA648__GUID-ED4BCD3C-E62E-4CBA-8FB3-5562C4D62684">通过电子邮件发送健康检查运行结果：</p>
                </div>
                <!-- class="section" -->
                <ol>
-                  <li class="stepexpand"><span>Specify the recipients in the <code class="codeph">NOTIFICATION_EMAIL</code> environment variable.</span><div>
+                  <li class="stepexpand"><span>在<code class="codeph">NOTIFICATION_EMAIL</code>环境变量中指定收件人。</span><div>
                         <div class="p"><pre class="pre codeblock"><code>$ ./orachk &#x2013;sendemail “NOTIFICATION_EMAIL=email_recipients"</code></pre><pre class="pre codeblock"><code>$ ./exachk &#x2013;sendemail “NOTIFICATION_EMAIL=email_recipients"</code></pre></div>
-                        <p>Where <span class="variable" translate="no">email_recipients</span> is a comma-delimited list of email addresses.
+                        <p>其中<span class="variable" translate="no">email_recipients</span>是以逗号分隔的电子邮件地址列表。
                         </p>
                      </div>
                   </li>
-                  <li class="stepexpand"><span>Verify the email configuration settings using the <code class="codeph">&#x2013;testemail</code> option.</span></li>
+                  <li class="stepexpand"><span>使用<code class="codeph">–testemail</code>选项验证电子邮件配置设置。</span></li>
                </ol>
             </div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="manually-generate-health-check-reports.html#GUID-F70634F5-89EA-484E-AA56-EBD129D8B218" title="This section explains the procedures to manually generate health check reports.">Using Oracle ORAchk and Oracle EXAchk to Manually Generate Health Check Reports</a></p>
+                     <p><strong>父主题：</strong> <a href="manually-generate-health-check-reports.html#GUID-F70634F5-89EA-484E-AA56-EBD129D8B218" title="本节介绍手动生成运行状况检查报告的过程。">使用Oracle ORAchk和Oracle EXAchk手动生成运行状况检查报告</a></p>
                   </div>
                </div>
             </div>

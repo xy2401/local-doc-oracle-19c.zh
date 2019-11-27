@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans" >
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>REST APIs for Oracle Database - Performance REST Endpoints</title>
+        <title>适用于Oracle数据库的REST API  - 性能REST端点</title>
 		<link rel="schema.dcterms" href="http://purl.org/dc/terms/">
 		<meta name="dcterms.dateCopyrighted" content="2018, 2019">
 		<meta name="dcterms.category" content="database">
@@ -44,17 +43,14 @@
     <meta name="dcterms.title" content="REST APIs for Oracle Database">
     <meta name="dcterms.release" content="Release 19">
   </head>
-    <body>
+    <body >
         <div class="noscript alert alert-danger text-center" role="alert">
-            <a class="pull-left" href="op-database-monitoring-waits_recent-get.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-            <a class="pull-right" href="op-database-performance-active_sessions_history-sample_id-get.html">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-            <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        </div>
+            <a class="pull-left" href="op-database-monitoring-waits_recent-get.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a class="pull-right" href="op-database-performance-active_sessions_history-sample_id-get.html">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
         <article>
             <header>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">REST APIs for Oracle Database</a></li>
-                    <li>Tasks</li>
+                    <li><a href="index.html">适用于Oracle数据库的REST API</a></li>
+                    <li>任务</li>
                     
                       
                     
@@ -63,23 +59,18 @@
                 
 				   <p class="draftsubtitle"></p>
 				
-                <h2>Performance REST Endpoints</h2>
+                <h2>性能REST端点</h2>
             </header>
 
             <div class="clearfix">
                 <form class="form-inline endpoints pull-left">
-                    <label for="sortby" class="control-label">Sort by</label>
+                    <label class="control-label" for="sortby">排序方式</label>
 
                     <div id="sortby" class="btn-group" data-toggle="buttons">
                         <label class="btn btn-primary active">
-                            <input type="radio" name="sort-radio" value="summary" autocomplete="off" checked> Task
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="sort-radio" value="path" autocomplete="off"> Path
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="sort-radio" value="method" autocomplete="off"> Method
-                        </label>
+                            <input type="radio" name="sort-radio" value="summary" autocomplete="off" checked="">任务</label> <label class="btn btn-primary">
+                            <input type="radio" name="sort-radio" value="path" autocomplete="off">路径</label> <label class="btn btn-primary">
+                            <input type="radio" name="sort-radio" value="method" autocomplete="off">方法</label>
                     </div>
                 </form>
             </div>
@@ -87,34 +78,34 @@
             <section>
 
 <div class="tab-content">
-<div role="tabpanel" class="tab-pane fade in active" id="summary-sort">
+<div class="tab-pane fade in active" id="summary-sort" role="tabpanel">
 <div class="panel panel-default">
-<div class="panel-heading">Performance</div>
+<div class="panel-heading">性能</div>
 <div class="panel-body">
-<div>The operations from the Performance category.</div>
+<div>Performance类别中的操作。</div>
 <dl class="list-group schema-properties">
-<dt><a href="op-database-performance-active_sessions_history-sample_id-get.html">Get a specified sampled session activity in the database</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/active_sessions_history/{sample_id}</code></div></dd>
-<dt><a href="op-database-performance-active_sessions_history-get.html">Get all sampled session activity in the database</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/active_sessions_history/</code></div></dd>
-<dt><a href="op-database-performance-top_sql_statements-get.html">Get all SQL statements ordered by CPU time descending</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/top_sql_statements/</code></div></dd>
-<dt><a href="op-database-performance-sql_statements-sql_id-plan-get.html">Get execution plan for an SQL Statement</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/sql_statements/{sql_id}/plan</code></div></dd>
-<dt><a href="op-database-performance-sql_statements-sql_id-history-get.html">Get historical statistics for an SQL statement</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/sql_statements/{sql_id}/history</code></div></dd>
-<dt><a href="op-database-performance-sql_statements-sql_id-monitor-sql_exec_id-sql_exec_start-get.html">Get information on a monitored statement</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/sql_statements/{sql_id}/monitor/{sql_exec_id},{sql_exec_start}/</code></div></dd>
-<dt><a href="op-database-performance-sql_statements-sql_id-monitor-get.html">Get monitoring statistics for an SQL Statement</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/sql_statements/{sql_id}/monitor/</code></div></dd>
-<dt><a href="op-database-performance-sql_statements-sql_id-monitor-sql_exec_id-sql_exec_start-parallelism-get.html">Get parallel execution information for specific statement execution</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/sql_statements/{sql_id}/monitor/{sql_exec_id},{sql_exec_start}/parallelism</code></div></dd>
-<dt><a href="op-database-performance-sql_statements-sql_id-text-get.html">Get SQL statement</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/sql_statements/{sql_id}/text</code></div></dd>
-<dt><a href="op-database-performance-active_sessions_history_waits-sid-seq_number-active_sql-get.html">Get SQL statistics for a specific session</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/active_sessions_history_waits/{sid},{seq_number}/active_sql</code></div></dd>
-<dt><a href="op-database-performance-top_sql_statements-maximums-get.html">Get SQL statistics maximum values</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/top_sql_statements/maximums</code></div></dd>
-<dt><a href="op-database-performance-sql_statements-get.html">Get statistics for all SQL statements</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/sql_statements/</code></div></dd>
-<dt><a href="op-database-performance-sql_statements-sql_id-get.html">Get statistics for an SQL statement</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/sql_statements/{sql_id}/</code></div></dd>
-<dt><a href="op-database-performance-active_sessions_history_waits-get.html">Get the last 10 wait events for each active session</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/active_sessions_history_waits/</code></div></dd>
-<dt><a href="op-database-performance-active_sessions_history_waits-sid-seq_number-get.html">Get the specified wait event for specific active session</a></dt><dd><div>Method: <span class="l-get">get</span></div><div>Path: <code>/database/performance/active_sessions_history_waits/{sid},{seq_number}/</code></div></dd>
+<dt><a href="op-database-performance-active_sessions_history-sample_id-get.html">在数据库中获取指定的采样会话活动</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/active_sessions_history/{sample_id}</code></div></dd>
+<dt><a href="op-database-performance-active_sessions_history-get.html">获取数据库中的所有采样会话活动</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/active_sessions_history/</code></div></dd>
+<dt><a href="op-database-performance-top_sql_statements-get.html">获取按CPU时间降序排序的所有SQL语句</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/top_sql_statements/</code></div></dd>
+<dt><a href="op-database-performance-sql_statements-sql_id-plan-get.html">获取SQL语句的执行计划</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/sql_statements/{sql_id}/plan</code></div></dd>
+<dt><a href="op-database-performance-sql_statements-sql_id-history-get.html">获取SQL语句的历史统计信息</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/sql_statements/{sql_id}/history</code></div></dd>
+<dt><a href="op-database-performance-sql_statements-sql_id-monitor-sql_exec_id-sql_exec_start-get.html">获取有关受监控语句的信息</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/sql_statements/{sql_id}/monitor/{sql_exec_id},{sql_exec_start}/</code></div></dd>
+<dt><a href="op-database-performance-sql_statements-sql_id-monitor-get.html">获取SQL语句的监视统计信息</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/sql_statements/{sql_id}/monitor/</code></div></dd>
+<dt><a href="op-database-performance-sql_statements-sql_id-monitor-sql_exec_id-sql_exec_start-parallelism-get.html">获取特定语句执行的并行执行信息</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/sql_statements/{sql_id}/monitor/{sql_exec_id},{sql_exec_start}/parallelism</code></div></dd>
+<dt><a href="op-database-performance-sql_statements-sql_id-text-get.html">获取SQL语句</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/sql_statements/{sql_id}/text</code></div></dd>
+<dt><a href="op-database-performance-active_sessions_history_waits-sid-seq_number-active_sql-get.html">获取特定会话的SQL统计信息</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/active_sessions_history_waits/{sid},{seq_number}/active_sql</code></div></dd>
+<dt><a href="op-database-performance-top_sql_statements-maximums-get.html">获取SQL统计信息的最大值</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/top_sql_statements/maximums</code></div></dd>
+<dt><a href="op-database-performance-sql_statements-get.html">获取所有SQL语句的统计信息</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/sql_statements/</code></div></dd>
+<dt><a href="op-database-performance-sql_statements-sql_id-get.html">获取SQL语句的统计信息</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/sql_statements/{sql_id}/</code></div></dd>
+<dt><a href="op-database-performance-active_sessions_history_waits-get.html">获取每个活动会话的最后10个等待事件</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/active_sessions_history_waits/</code></div></dd>
+<dt><a href="op-database-performance-active_sessions_history_waits-sid-seq_number-get.html">获取特定活动会话的指定等待事件</a></dt><dd><div>方法： <span class="l-get">得到</span></div><div>路径： <code>/database/performance/active_sessions_history_waits/{sid},{seq_number}/</code></div></dd>
 
 </dl>
 </div>
 </div>
 </div>
-<div role="tabpanel" class="tab-pane fade" id="path-sort"></div>
-<div role="tabpanel" class="tab-pane fade" id="method-sort"></div>
+<div class="tab-pane fade" id="path-sort" role="tabpanel"></div>
+<div class="tab-pane fade" id="method-sort" role="tabpanel"></div>
 </div>
             </section>
         </article>

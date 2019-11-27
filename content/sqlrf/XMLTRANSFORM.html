@@ -1,6 +1,4 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,57 +43,51 @@
     <meta name="dcterms.isVersionOf" content="SQLRF">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="XMLTABLE.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="ROUND-and-TRUNC-Date-Functions.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="XMLTABLE.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="ROUND-and-TRUNC-Date-Functions.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Language Reference </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">Functions</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">XMLTRANSFORM </li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL语言参考</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">功能</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">XMLTRANSFORM</li>
             </ol>
             <a id="GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA" name="GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA"></a><a id="SQLRF52055"></a><a id="SQLRF52056"></a><a id="SQLRF52057"></a><a id="SQLRF06171"></a>
             
-            <h2 id="SQLRF-GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA" class="sect2">XMLTRANSFORM </h2>
+            <h2 id="SQLRF-GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA" class="sect2">XMLTRANSFORM</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p class="subhead1" id="GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA__GUID-F7734C60-829B-4EB3-BC59-FE88DE4D1D0C">Syntax</p>
+                  <p class="subhead1" id="GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA__GUID-F7734C60-829B-4EB3-BC59-FE88DE4D1D0C">句法</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <div class="figure" id="GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA__GUID-542B475A-3854-4352-A4FC-A279059723DE"><img src="img/xmltransform.gif" alt="Description of xmltransform.eps follows" title="Description of xmltransform.eps follows" longdesc="img_text/xmltransform.html"><br><a href="img_text/xmltransform.html">Description of the illustration xmltransform.eps</a></div>
+                  <div class="figure" id="GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA__GUID-542B475A-3854-4352-A4FC-A279059723DE"><img src="img/xmltransform.gif" alt="下面是xmltransform.eps的描述" title="下面是xmltransform.eps的描述" longdesc="img_text/xmltransform.html"><br><a href="img_text/xmltransform.html">说明xmltransform.eps的描述</a></div>
                   <!-- class="figure" -->
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA__GUID-B7F8702C-061A-4F31-A8C9-8B23FFD6261D">Purpose</p>
+                  <p class="subhead1" id="GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA__GUID-B7F8702C-061A-4F31-A8C9-8B23FFD6261D">目的</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p><code class="codeph">XMLTransform</code> takes as arguments an <code class="codeph">XMLType</code> instance and an XSL style sheet, which is itself a form of <code class="codeph">XMLType</code> instance. It applies the style sheet to the instance and returns an <code class="codeph">XMLType</code>. 
+                  <p><code class="codeph">XMLTransform</code>将<code class="codeph">XMLType</code>实例和XSL样式表作为参数，它本身就是<code class="codeph">XMLType</code>实例的一种形式。它将样式表应用于实例并返回<code class="codeph">XMLType</code> 。
                   </p>
-                  <p>This function is useful for organizing data according to a style sheet as you are retrieving it from the database.</p>
+                  <p>当您从数据库中检索数据时，此功能对于根据样式表组织数据非常有用。</p>
                   <div class="infoboxnotealso" id="GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA__GUID-25846CD1-F610-48E7-8B1C-9A3293DAF5B6">
-                     <p class="notep1">See Also:</p>
-                     <p><a href="../adxdb/transformation-and-validation-of-XMLType-data.html#ADXDB0900" target="_blank"><span class="italic">Oracle XML DB Developer's Guide</span></a> for more information on this function
-                     </p>
+                     <p class="notep1">也可以看看：</p>
+                     <p>有关此功能的更多信息，请<a href="../adxdb/transformation-and-validation-of-XMLType-data.html#ADXDB0900" target="_blank"><span class="italic">参见Oracle XML DB Developer's Guide</span></a></p>
                   </div>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA__GUID-6000DF96-A0C8-45C2-8AC8-60BBA381654D">Examples</p>
+                  <p class="subhead1" id="GUID-3B74EED2-E79F-4333-8C0B-02989DF5EEAA__GUID-6000DF96-A0C8-45C2-8AC8-60BBA381654D">例子</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p>The <code class="codeph">XMLTransform</code> function requires the existence of an XSL style sheet. Here is an example of a very simple style sheet that alphabetizes elements within a node:
-                  </p><pre class="oac_no_warn" dir="ltr">CREATE TABLE xsl_tab (col1 XMLTYPE);
+                  <p><code class="codeph">XMLTransform</code>函数需要存在XSL样式表。下面是一个非常简单的样式表示例，该样式表按字母顺序排列节点中的元素：</p><pre class="oac_no_warn" dir="ltr">CREATE TABLE xsl_tab (col1 XMLTYPE);
 
 INSERT INTO xsl_tab VALUES (
    XMLTYPE.createxml(
@@ -116,8 +108,7 @@ INSERT INTO xsl_tab VALUES (
     &lt;/xsl:stylesheet&gt;  '));
 
 1 row created.
-</pre><p>The next example uses the <code class="codeph">xsl_tab</code> XSL style sheet to alphabetize the elements in one <code class="codeph">warehouse_spec</code> of the sample table <code class="codeph">oe.warehouses</code>:
-                  </p><pre class="oac_no_warn" dir="ltr">SELECT XMLTRANSFORM(w.warehouse_spec, x.col1).GetClobVal()
+</pre><p>下一个示例使用<code class="codeph">xsl_tab</code> XSL样式表来对示例表<code class="codeph">oe.warehouses</code>一个<code class="codeph">warehouse_spec</code>中的元素进行字母顺序排列：</p><pre class="oac_no_warn" dir="ltr">SELECT XMLTRANSFORM(w.warehouse_spec, x.col1).GetClobVal()
    FROM warehouses w, xsl_tab x
    WHERE w.warehouse_name = 'San Francisco';
 

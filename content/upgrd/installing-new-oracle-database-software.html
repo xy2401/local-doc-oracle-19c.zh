@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Use this procedure overview to assist you to install the software for the new Oracle Database release for an Oracle RAC .deployment.">
       <meta name="description" content="Use this procedure overview to assist you to install the software for the new Oracle Database release for an Oracle RAC .deployment.">
-      <title>Installing the New Oracle Database Software for Oracle RAC</title>
+      <title>安装适用于Oracle RAC的新Oracle数据库软件</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database Upgrade Guide">
       <meta property="og:description" content="Use this procedure overview to assist you to install the software for the new Oracle Database release for an Oracle RAC .deployment.">
@@ -46,86 +44,82 @@
     <meta name="dcterms.isVersionOf" content="UPGRD">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="installing-software-only-oracle-database-single-instance.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="database-preparation-tasks-to-complete-before-upgrades.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="installing-software-only-oracle-database-single-instance.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="database-preparation-tasks-to-complete-before-upgrades.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="tasks-prepare-upgrade-oracle-database.html" property="item" typeof="WebPage"><span property="name"> Preparing to Upgrade Oracle Database </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Installing the New Oracle Database Software for Oracle RAC</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="tasks-prepare-upgrade-oracle-database.html" property="item" typeof="WebPage"><span property="name">准备升级Oracle数据库</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">安装适用于Oracle RAC的新Oracle数据库软件</li>
             </ol>
             <a id="GUID-8C58EB98-BCB6-43DB-A3F4-31F6D17F7266" name="GUID-8C58EB98-BCB6-43DB-A3F4-31F6D17F7266"></a><a id="UPGRD52781"></a>
             
-            <h2 id="UPGRD-GUID-8C58EB98-BCB6-43DB-A3F4-31F6D17F7266" class="sect2">Installing the New Oracle Database Software for Oracle RAC</h2>
+            <h2 id="UPGRD-GUID-8C58EB98-BCB6-43DB-A3F4-31F6D17F7266" class="sect2">安装适用于Oracle RAC的新Oracle数据库软件</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Use this procedure overview to assist you to install the software for the new Oracle Database release for an Oracle RAC .deployment. </p>
+               <p>使用此过程概述可帮助您为Oracle RAC .deployment安装新Oracle Database版本的软件。</p>
                <div class="infoboxnote" id="GUID-8C58EB98-BCB6-43DB-A3F4-31F6D17F7266__GUID-2709AD67-73C5-4106-B56C-93786F22970B">
-                  <p class="notep1">Note:</p>
-                  <p>You cannot upgrade a database using Database Upgrade Assistant (DBUA) when the source and target Oracle homes are owned by different users. Attempting to do so returns error PRKH-1014. Either ensure that the source and target databases have the same owner, or perform a manual upgrade.</p>
+                  <p class="notep1">注意：</p>
+                  <p>当源和目标Oracle主目录由不同用户拥有时，无法使用数据库升级助手（DBUA）升级数据库。试图这样做会返回错误PRKH-1014。确保源数据库和目标数据库具有相同的所有者，或执行手动升级。</p>
                </div>
-               <p>If you are upgrading an Oracle RAC database, then you must perform the following steps in the order shown:</p>
+               <p>如果要升级Oracle RAC数据库，则必须按所示顺序执行以下步骤：</p>
                <ol>
                   <li>
-                     <p>Upgrade Oracle Clusterware:</p>
+                     <p>升级Oracle Clusterware：</p>
                      <ol type="a">
                         <li>
-                           <p>Upgrade Oracle Clusterware first as described in the Oracle Grid Infrastructure installation guide for your operating system. </p>
+                           <p>首先按照适用于您的操作系统的Oracle Grid Infrastructure安装指南中的说明升级Oracle Clusterware。</p>
                         </li>
                         <li>
-                           <p>Mount the Oracle Grid Infrastructure installation media.</p>
+                           <p>挂载Oracle Grid Infrastructure安装介质。</p>
                         </li>
                         <li>
-                           <p>Perform operating system prerequisite checks on each of the nodes that you intend to upgrade, to ensure that they meet the system prerequisites for Oracle Grid Infrastructure (Oracle Clusterware and Oracle ASM).</p>
+                           <p>对要升级的每个节点执行操作系统先决条件检查，以确保它们满足Oracle Grid Infrastructure（Oracle Clusterware和Oracle ASM）的系统先决条件。</p>
                         </li>
                         <li>
-                           <p>If necessary, perform patch upgrades of the earlier release of Oracle Clusterware software to the most recent patch version.</p>
+                           <p>如有必要，请将早期版本的Oracle Clusterware软件的修补程序升级到最新的修补程序版本。</p>
                         </li>
                         <li>
-                           <p>Ensure that you are logged in as the user that owns the Oracle Grid Infrastructure installation, and run the Oracle Grid Infrastructure installation. Provide information as prompted by the installer.</p>
+                           <p>确保以拥有Oracle Grid Infrastructure安装的用户身份登录，并运行Oracle Grid Infrastructure安装。根据安装程序的提示提供信息。</p>
                         </li>
                         <li>
-                           <p>When prompted, open a separate terminal session, log in as <code class="codeph">root</code>, and run <code>root.sh</code>.
+                           <p>出现提示时，打开一个单独的终端会话，以<code class="codeph">root</code>身份登录，然后运行<code>root.sh</code>
                            </p>
                         </li>
                      </ol>
                   </li>
                   <li>
-                     <p>After upgrading Oracle Clusterware, follow the instructions in your Oracle operating system-specific documentation to prepare for Oracle Database software installation.</p>
+                     <p>升级Oracle Clusterware后，请按照Oracle操作系统特定文档中的说明准备Oracle Database软件安装。</p>
                   </li>
                   <li>
-                     <p>Run the Pre-Upgrade Information Tool. You can preview the types of items DBUA checks, and identify issues. The Pre-Upgrade Information Tool can help you fix some of the prerequisite issues that it finds. </p>
+                     <p>运行升级前信息工具。您可以预览DBUA检查的项目类型，并识别问题。升级前信息工具可以帮助您解决它找到的一些先决条件问题。</p>
                   </li>
                   <li>
-                     <p>Start Oracle Universal Installer, and install the software.</p>
-                     <p>When installation of Oracle Database software has completed successfully, click <span class="uicontrol bold">Exit</span> to close Oracle Universal Installer.
+                     <p>启动Oracle Universal Installer，然后安装该软件。</p>
+                     <p>成功完成Oracle数据库软件的安装后，单击“ <span class="uicontrol bold">退出”</span>以关闭Oracle Universal Installer。
                      </p>
                   </li>
                   <li>
-                     <p>Run DBUA.</p>
-                     <p>If you use Oracle Label Security, Oracle Database Vault, or both, then select <span class="uicontrol bold">Enterprise Edition</span> on the <span class="wintitle">Select Database Edition</span> page, click <span class="uicontrol bold">Select Options</span>, and enable one or both components from the components list. 
+                     <p>运行DBUA。</p>
+                     <p>如果使用Oracle Label Security，Oracle Database Vault或两者，则在“ <span class="wintitle">选择数据库版本”</span>页面上选择<span class="uicontrol bold">Enterprise Edition</span> ，单击“ <span class="uicontrol bold">选择选项”</span> ，然后从组件列表中启用一个或两个组件。
                      </p>
                   </li>
                </ol>
             </div>
             <div>
                <div class="relinfo">
-                  <p><strong>Related Topics</strong></p>
+                  <p><strong>相关话题</strong></p>
                   <ul>
-                     <li><a href="../install-and-upgrade.html" target="_blank"><span class="italic">Oracle Clusterware Installation Guide</span> for your platform</a></li>
-                     <li><a href="../install-and-upgrade.html" target="_blank"><span class="italic">Oracle Real Application Clusters Installation Guide</span> for your platform</a></li>
+                     <li><a href="../install-and-upgrade.html" target="_blank">适用于您的平台的<span class="italic">Oracle Clusterware安装指南</span></a></li>
+                     <li><a href="../install-and-upgrade.html" target="_blank"><span class="italic">适用</span>于您的平台的<span class="italic">Oracle Real Application Clusters安装指南</span></a></li>
                   </ul>
                </div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="tasks-prepare-upgrade-oracle-database.html#GUID-733D2563-A42D-4366-9FCD-DABD25D0E2DF" title="Complete preupgrade tasks and checks to assist you with completing a successful upgrade.">Preparing to Upgrade Oracle Database</a></p>
+                     <p><strong>父主题：</strong> <a href="tasks-prepare-upgrade-oracle-database.html#GUID-733D2563-A42D-4366-9FCD-DABD25D0E2DF" title="完成预升级任务和检查以帮助您完成成功升级。">准备升级Oracle数据库</a></p>
                   </div>
                </div>
             </div>

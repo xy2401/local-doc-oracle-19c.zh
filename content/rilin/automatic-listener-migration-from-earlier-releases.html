@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Review this information for listener migration from earlier database releases.">
       <meta name="description" content="Review this information for listener migration from earlier database releases.">
-      <title>Automatic Listener Migration from Earlier Releases</title>
+      <title>早期版本的自动侦听器迁移</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Real Application Clusters Installation Guide">
       <meta property="og:description" content="Review this information for listener migration from earlier database releases.">
@@ -47,39 +45,35 @@
     <meta name="dcterms.isVersionOf" content="RILIN">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="managing-db-services-after-install.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="verifying-requirements-for-dbca.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="managing-db-services-after-install.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="verifying-requirements-for-dbca.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="selecting-dbca-options-to-create-oracle-rac-or-oracle-rac-one-node-databases-with-dbca.html" property="item" typeof="WebPage"><span property="name">Creating Oracle RAC or Oracle RAC One Node Databases with DBCA </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Automatic Listener Migration from Earlier Releases</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="selecting-dbca-options-to-create-oracle-rac-or-oracle-rac-one-node-databases-with-dbca.html" property="item" typeof="WebPage"><span property="name">使用DBCA创建Oracle RAC或Oracle RAC One节点数据库</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">早期版本的自动侦听器迁移</li>
             </ol>
             <a id="GUID-380865BC-FEBB-41F7-A040-68A952AE9D0E" name="GUID-380865BC-FEBB-41F7-A040-68A952AE9D0E"></a><a id="RILIN1035"></a>
             
-            <h2 id="RILIN-GUID-380865BC-FEBB-41F7-A040-68A952AE9D0E" class="sect2">Automatic Listener Migration from Earlier Releases</h2>
+            <h2 id="RILIN-GUID-380865BC-FEBB-41F7-A040-68A952AE9D0E" class="sect2">早期版本的自动侦听器迁移</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Review this information for listener migration from earlier database releases.</p>
-               <p>If your system has an Oracle Grid Infrastructure 11g Release 2 (11.2), 12c Release 1 (12.1), 12c Release 2 (12.2), or 18c installation, and you install Oracle Grid Infrastructure 19c either to coexist with or to upgrade the Oracle Grid Infrastructure 11.2, 12.1, 12.2, or 18c installation, then most installation types automatically migrate the existing listener to the 19c Oracle home. During migration, the upgrade process configures and starts a default Oracle Net Listener using the same TCP/IP port as the existing listener, with the IPC key value.</p>
-               <p>During the Oracle Clusterware upgrade, the default listener (<code class="codeph">LISTENER_<span class="codeinlineitalic">nodename</span></code>) is migrated to the Oracle Grid Infrastructure home (Grid home). Oracle Database Configuration Assistant always uses the default listener. 
+               <p>查看此信息，以便从早期数据库版本迁移侦听器。</p>
+               <p>如果您的系统具有Oracle Grid Infrastructure 11g第2版（11.2），12c第1版（12.1），12c第2版（12.2）或18c安装，并且您安装Oracle Grid Infrastructure 19c以与Oracle Grid共存或升级Oracle Grid基础架构11.2,12.1,12.2或18c安装，然后大多数安装类型自动将现有侦听器迁移到19c Oracle主目录。在迁移期间，升级过程使用与现有侦听器相同的TCP / IP端口配置并启动默认Oracle Net Listener，并使用IPC密钥值。</p>
+               <p>在Oracle Clusterware升级期间，默认侦听器（ <code class="codeph">LISTENER_ <span class="codeinlineitalic">nodename</span></code> ）将迁移到Oracle Grid Infrastructure主目录（Grid home）。Oracle Database Configuration Assistant始终使用默认侦听器。
                </p>
                <div class="infoboxnote" id="GUID-380865BC-FEBB-41F7-A040-68A952AE9D0E__GUID-6AC22558-E5EA-474B-8AC2-B09EF637D65C">
-                  <p class="notep1">Note:</p>
-                  <p>During migration, client applications may not be able to connect to any databases that are registered to the listener that is being migrated.</p>
+                  <p class="notep1">注意：</p>
+                  <p>在迁移期间，客户端应用程序可能无法连接到已注册到正在迁移的侦听器的任何数据库。</p>
                </div>
             </div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="selecting-dbca-options-to-create-oracle-rac-or-oracle-rac-one-node-databases-with-dbca.html#GUID-46C46315-9ADD-48D1-BB98-39ACE50D1E83" title="Use Oracle Database Configuration Assistant (DBCA) in standalone mode to create and delete Oracle Real Application Clusters (Oracle RAC) databases.">Creating Oracle RAC or Oracle RAC One Node Databases with DBCA</a></p>
+                     <p><strong>父主题：</strong> <a href="selecting-dbca-options-to-create-oracle-rac-or-oracle-rac-one-node-databases-with-dbca.html#GUID-46C46315-9ADD-48D1-BB98-39ACE50D1E83" title="在独立模式下使用Oracle数据库配置助手（DBCA）来创建和删除Oracle Real Application Clusters（Oracle RAC）数据库。">使用DBCA创建Oracle RAC或Oracle RAC One节点数据库</a></p>
                   </div>
                </div>
             </div>

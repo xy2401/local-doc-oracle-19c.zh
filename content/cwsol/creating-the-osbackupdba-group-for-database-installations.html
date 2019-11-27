@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="You must designate a group as the OSBACKUPDBA group during installation. Members of this group are granted the SYSBACKUP privileges to perform backup and recovery operations using RMAN or SQL*Plus.">
       <meta name="description" content="You must designate a group as the OSBACKUPDBA group during installation. Members of this group are granted the SYSBACKUP privileges to perform backup and recovery operations using RMAN or SQL*Plus.">
-      <title>Creating the OSBACKUPDBA Group for Database Installations</title>
+      <title>为数据库安装创建OSBACKUPDBA组</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Grid Infrastructure Installation and Upgrade Guide">
       <meta property="og:description" content="You must designate a group as the OSBACKUPDBA group during installation. Members of this group are granted the SYSBACKUP privileges to perform backup and recovery operations using RMAN or SQL*Plus.">
@@ -47,39 +45,33 @@
     <meta name="dcterms.isVersionOf" content="CWSOL">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="creating-an-osoper-group-for-database-installations.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="creating-the-osdgdba-group-for-database-installations.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="creating-an-osoper-group-for-database-installations.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="creating-the-osdgdba-group-for-database-installations.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure Installation and Upgrade Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="configuring-users-groups-and-environments-for-oracle-grid-infrastructure-and-oracle-database.html" property="item" typeof="WebPage"><span property="name">Configuring Users, Groups and Environments for Oracle Grid Infrastructure and Oracle Database</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="creating-operating-system-privileges-groups.html" property="item" typeof="WebPage"><span property="name">Creating Operating
-System Privileges Groups</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Creating the OSBACKUPDBA Group for Database Installations</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Grid Infrastructure安装和升级指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="configuring-users-groups-and-environments-for-oracle-grid-infrastructure-and-oracle-database.html" property="item" typeof="WebPage"><span property="name">为Oracle Grid Infrastructure和Oracle数据库配置用户，组和环境</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="creating-operating-system-privileges-groups.html" property="item" typeof="WebPage"><span property="name">创建操作系统权限组</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">为数据库安装创建OSBACKUPDBA组</li>
             </ol>
             <a id="GUID-427709CA-F169-4357-9992-75A19826DDAF" name="GUID-427709CA-F169-4357-9992-75A19826DDAF"></a>
             
-            <h2 id="CWSOL-GUID-427709CA-F169-4357-9992-75A19826DDAF" class="sect2">Creating the OSBACKUPDBA Group for Database Installations</h2>
+            <h2 id="CWSOL-GUID-427709CA-F169-4357-9992-75A19826DDAF" class="sect2">为数据库安装创建OSBACKUPDBA组</h2>
          </header>
          <div class="ind">
             <div>
-               <p>You must designate a group as the OSBACKUPDBA group during installation. Members of this group are granted the SYSBACKUP privileges to perform backup and recovery operations using RMAN or SQL*Plus.</p>
+               <p>您必须在安装期间将组指定为OSBACKUPDBA组。该组的成员被授予SYSBACKUP权限，以使用RMAN或SQL * Plus执行备份和恢复操作。</p>
                <div class="section">
-                  <p>Create the OSBACKUPDBA group using the group name <code class="codeph">backupdba</code>, unless a group with that name already exists:
-                  </p><pre class="pre codeblock"><code># /usr/sbin/groupadd -g 54324 backupdba
+                  <p>使用组名<code class="codeph">backupdba</code>创建OSBACKUPDBA组，除非已存在具有该名称的组：</p><pre class="pre codeblock"><code># /usr/sbin/groupadd -g 54324 backupdba
 </code></pre></div>
                <!-- class="section" -->
             </div>
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="creating-operating-system-privileges-groups.html#GUID-164A7218-166D-4B58-9A86-88149E8FCB83" title="The following sections describe how to create operating system groups for Oracle Grid Infrastructure and Oracle Database:">Creating Operating System Privileges Groups</a></p>
+                     <p><strong>父主题：</strong> <a href="creating-operating-system-privileges-groups.html#GUID-164A7218-166D-4B58-9A86-88149E8FCB83" title="以下部分介绍如何为Oracle Grid Infrastructure和Oracle数据库创建操作系统组：">创建操作系统权限组</a></p>
                   </div>
                </div>
             </div>

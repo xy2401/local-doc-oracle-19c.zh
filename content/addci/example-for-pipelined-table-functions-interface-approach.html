@@ -1,24 +1,22 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Pipelined Table Functions: Interface Approach Example</title>
+      <title>流水线表功能：接口方法示例</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="Data Cartridge Developer's Guide">
-      <meta property="og:description" content>
+      <meta property="og:title" content="Data Cartridge Developer&#39;s Guide">
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="Data Cartridge Developer's Guide">
+      <meta name="application-name" content="Data Cartridge Developer&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="data-cartridge-developers-guide.pdf" title="PDF File" type="application/pdf">
       <meta name="robots" content="all">
       <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
       <meta name="dcterms.created" content="2019-01-10T07:34:53-08:00">
-      <meta name="dcterms.title" content="Data Cartridge Developer's Guide">
+      <meta name="dcterms.title" content="Data Cartridge Developer&#39;s Guide">
       <meta name="dcterms.dateCopyrighted" content="1996, 2019">
       <meta name="dcterms.category" content="database">
       <meta name="dcterms.identifier" content="E96431-01">
@@ -44,51 +42,42 @@
     <meta name="dcterms.isVersionOf" content="ADDCI">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="example-for-PSBTREE-extensible-indexing.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="reference.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="example-for-PSBTREE-extensible-indexing.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="reference.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Data Cartridge Developer's Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="scenarios-and-examples.html" property="item" typeof="WebPage"><span property="name">Scenarios and Examples</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Pipelined Table Functions: Interface Approach Example</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据盒式开发人员指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="scenarios-and-examples.html" property="item" typeof="WebPage"><span property="name">场景和示例</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">流水线表功能：接口方法示例</li>
             </ol>
             <a id="GUID-B4BE4F35-B893-45D6-B8B4-235E23F80C6B" name="GUID-B4BE4F35-B893-45D6-B8B4-235E23F80C6B"></a><a id="ADDCI3170"></a>
             
-            <h2 id="ADDCI-GUID-B4BE4F35-B893-45D6-B8B4-235E23F80C6B" class="sect2"><span class="enumeration_chapter">17 </span>Pipelined Table Functions: Interface Approach Example
-            </h2>
+            <h2 id="ADDCI-GUID-B4BE4F35-B893-45D6-B8B4-235E23F80C6B" class="sect2"><span class="enumeration_chapter">17</span>流水线表功能：接口方法示例</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Two complete implementations of the <code class="codeph">StockPivot</code> pipelined table function using the interface approach are described. One implementation is in C, and the other is in Java.
+               <p>描述了使用接口方法的<code class="codeph">StockPivot</code>流水线表函数的两个完整实现。一个实现在C中，另一个在Java中。
                </p>
-               <p>The function <code class="codeph">StockPivot</code> converts a row of the type <code class="codeph">(Ticker, OpenPrice, ClosePrice)</code> into two rows of the form <code class="codeph">(Ticker, PriceType, Price)</code>. For example, from an input row<code class="codeph"> ("ORCL", 41, 42)</code>, the table function returns the two rows <code class="codeph">("ORCL", "O", 41)</code> and <code class="codeph">("ORCL", "C", 42)</code>. 
+               <p>函数<code class="codeph">StockPivot</code>将类型的行<code class="codeph">(Ticker, OpenPrice, ClosePrice)</code>转换为表格的两行<code class="codeph">(Ticker, PriceType, Price)</code> 。例如，从输入行<code class="codeph">("ORCL", 41, 42)</code> ，表函数返回两行<code class="codeph">("ORCL", "O", 41)</code>和<code class="codeph">("ORCL", "C", 42)</code> 。
                </p>
                <div class="infobox-tip" id="GUID-B4BE4F35-B893-45D6-B8B4-235E23F80C6B__GUID-7584B193-CAF9-42B7-9A2F-1AADEE1BE9FC">
-                  <p class="notep1">Tip:</p>
-                  <p>Consider the table functions described in <a href="using-pipelined-and-parallel-table-functions.html#GUID-EFB94CFB-3E44-4236-B490-ADBB480C94D4">    Using Pipelined and Parallel Table Functions </a>.
+                  <p class="notep1">小费：</p>
+                  <p>考虑<a href="using-pipelined-and-parallel-table-functions.html#GUID-EFB94CFB-3E44-4236-B490-ADBB480C94D4">使用流水线和并行表</a>函数中描述的<a href="using-pipelined-and-parallel-table-functions.html#GUID-EFB94CFB-3E44-4236-B490-ADBB480C94D4">表函数</a> 。
                   </p>
                </div>
-            </div><a id="ADDCI4924"></a><div class="props_rev_3"><a id="GUID-EA77162D-9087-49EC-908B-8BBE2D236614" name="GUID-EA77162D-9087-49EC-908B-8BBE2D236614"></a><h3 id="ADDCI-GUID-EA77162D-9087-49EC-908B-8BBE2D236614" class="sect3"><span class="enumeration_section">17.1 </span>Pipelined Table Functions Example: C Implementation
-               </h3>
+            </div><a id="ADDCI4924"></a><div class="props_rev_3"><a id="GUID-EA77162D-9087-49EC-908B-8BBE2D236614" name="GUID-EA77162D-9087-49EC-908B-8BBE2D236614"></a><h3 id="ADDCI-GUID-EA77162D-9087-49EC-908B-8BBE2D236614" class="sect3"><span class="enumeration_section">17.1</span>流水线表函数示例：C实现</h3>
                <div>
-                  <p>In this example, the three <code class="codeph">ODCITable</code> interface methods of the implementation type are implemented as external functions in C. These methods must first be declared in SQL. 
-                  </p>
-               </div><a id="ADDCI4926"></a><a id="ADDCI4925"></a><div class="props_rev_3"><a id="GUID-B8EFE14B-EBAC-43B2-8507-EEFB7C1F90F1" name="GUID-B8EFE14B-EBAC-43B2-8507-EEFB7C1F90F1"></a><h4 id="ADDCI-GUID-B8EFE14B-EBAC-43B2-8507-EEFB7C1F90F1" class="sect4"><span class="enumeration_section">17.1.1 </span>Making SQL Declarations for C Implementation
-                  </h4>
+                  <p>在此示例中，实现类型的三个<code class="codeph">ODCITable</code>接口方法在C中实现为外部函数。这些方法必须首先在SQL中声明。</p>
+               </div><a id="ADDCI4926"></a><a id="ADDCI4925"></a><div class="props_rev_3"><a id="GUID-B8EFE14B-EBAC-43B2-8507-EEFB7C1F90F1" name="GUID-B8EFE14B-EBAC-43B2-8507-EEFB7C1F90F1"></a><h4 id="ADDCI-GUID-B8EFE14B-EBAC-43B2-8507-EEFB7C1F90F1" class="sect4"><span class="enumeration_section">17.1.1</span>为C实现制作SQL声明</h4>
                   <div>
                      <div class="section">
-                        <p><a href="example-for-pipelined-table-functions-interface-approach.html#GUID-B8EFE14B-EBAC-43B2-8507-EEFB7C1F90F1__CHDJJDFC">Example 17-1</a> shows how to make SQL declarations for the methods implemented in C language in <a href="example-for-pipelined-table-functions-interface-approach.html#GUID-18A4428B-127E-456A-AEF8-BF26E04DF0FB">Implementation ODCITable Methods in C</a>.
-                        </p>
+                        <p><a href="example-for-pipelined-table-functions-interface-approach.html#GUID-B8EFE14B-EBAC-43B2-8507-EEFB7C1F90F1__CHDJJDFC">例17-1</a>显示了如何在C语言的<a href="example-for-pipelined-table-functions-interface-approach.html#GUID-18A4428B-127E-456A-AEF8-BF26E04DF0FB">Implementation ODCITable Methods中用</a> C语言<a href="example-for-pipelined-table-functions-interface-approach.html#GUID-18A4428B-127E-456A-AEF8-BF26E04DF0FB">实现</a>的方法的SQL声明。</p>
                      </div>
                      <!-- class="section" -->
                      <div class="example" id="GUID-B8EFE14B-EBAC-43B2-8507-EEFB7C1F90F1__CHDJJDFC">
-                        <p class="titleinexample">Example 17-1 Making SQL Declarations for Implementing ODCITableXXX() in C</p><pre class="oac_no_warn" dir="ltr">-- Create the input stock table
+                        <p class="titleinexample">例17-1为在C中实现ODCITableXXX（）做出SQL声明</p><pre class="oac_no_warn" dir="ltr">-- Create the input stock table
 CREATE TABLE StockTable (
 &nbsp;&nbsp;ticker VARCHAR(4),
 &nbsp;&nbsp;openprice NUMBER,
@@ -163,16 +152,14 @@ CREATE TYPE StockPivotImpl AS OBJECT
 /</pre></div>
                      <!-- class="example" -->
                   </div>
-               </div><a id="ADDCI4928"></a><a id="ADDCI4927"></a><div class="props_rev_3"><a id="GUID-18A4428B-127E-456A-AEF8-BF26E04DF0FB" name="GUID-18A4428B-127E-456A-AEF8-BF26E04DF0FB"></a><h4 id="ADDCI-GUID-18A4428B-127E-456A-AEF8-BF26E04DF0FB" class="sect4"><span class="enumeration_section">17.1.2 </span>Implementation ODCITable Methods in C
-                  </h4>
+               </div><a id="ADDCI4928"></a><a id="ADDCI4927"></a><div class="props_rev_3"><a id="GUID-18A4428B-127E-456A-AEF8-BF26E04DF0FB" name="GUID-18A4428B-127E-456A-AEF8-BF26E04DF0FB"></a><h4 id="ADDCI-GUID-18A4428B-127E-456A-AEF8-BF26E04DF0FB" class="sect4"><span class="enumeration_section">17.1.2</span> C中的实现ODCITable方法</h4>
                   <div>
                      <div class="section">
-                        <p><a href="example-for-pipelined-table-functions-interface-approach.html#GUID-18A4428B-127E-456A-AEF8-BF26E04DF0FB__CHDCFBFC">Example 17-2</a> implements the three <code class="codeph">ODCITable</code> methods as external functions in C.
-                        </p>
+                        <p><a href="example-for-pipelined-table-functions-interface-approach.html#GUID-18A4428B-127E-456A-AEF8-BF26E04DF0FB__CHDCFBFC">例17-2</a>将三个<code class="codeph">ODCITable</code>方法实现为C中的外部函数。</p>
                      </div>
                      <!-- class="section" -->
                      <div class="example" id="GUID-18A4428B-127E-456A-AEF8-BF26E04DF0FB__CHDCFBFC">
-                        <p class="titleinexample">Example 17-2 Implementing ODCTableXXX() Methods in C</p><pre class="oac_no_warn" dir="ltr">#ifndef OCI_ORACLE
+                        <p class="titleinexample">例17-2在C中实现ODCTableXXX（）方法</p><pre class="oac_no_warn" dir="ltr">#ifndef OCI_ORACLE
 # include &lt;oci.h&gt;
 #endif
 #ifndef ODCI_ORACLE
@@ -566,21 +553,18 @@ static int checkerr(Handles_t* handles, sword status)
                      <!-- class="example" -->
                   </div>
                </div>
-            </div><a id="ADDCI4929"></a><div class="props_rev_3"><a id="GUID-CBDE48C7-0770-4325-857A-F1CE75F13BB7" name="GUID-CBDE48C7-0770-4325-857A-F1CE75F13BB7"></a><h3 id="ADDCI-GUID-CBDE48C7-0770-4325-857A-F1CE75F13BB7" class="sect3"><span class="enumeration_section">17.2 </span>Pipelined Table Functions Example: Java Implementation
-               </h3>
+            </div><a id="ADDCI4929"></a><div class="props_rev_3"><a id="GUID-CBDE48C7-0770-4325-857A-F1CE75F13BB7" name="GUID-CBDE48C7-0770-4325-857A-F1CE75F13BB7"></a><h3 id="ADDCI-GUID-CBDE48C7-0770-4325-857A-F1CE75F13BB7" class="sect3"><span class="enumeration_section">17.2</span>流水线表函数示例：Java实现</h3>
                <div>
-                  <p>In this example, the declaration of the implementation type references Java methods instead of C functions. This is the only change from the preceding, C example: all the other objects (<code class="codeph">TickerType</code>, <code class="codeph">TickerTypeSet</code>, <code class="codeph">refcur_pkg</code>, <code class="codeph">StockTable</code>, and <code class="codeph">StockPivot</code>) are the same. These methods must first be declared in SQL.
-                  </p>
-               </div><a id="ADDCI4931"></a><a id="ADDCI4930"></a><div class="props_rev_3"><a id="GUID-12A0A2DB-021C-4521-8133-FFCF5FF44521" name="GUID-12A0A2DB-021C-4521-8133-FFCF5FF44521"></a><h4 id="ADDCI-GUID-12A0A2DB-021C-4521-8133-FFCF5FF44521" class="sect4"><span class="enumeration_section">17.2.1 </span>Making SQL Declarations for Java Implementation
-                  </h4>
+                  <p>在此示例中，实现类型的声明引用Java方法而不是C函数。这是前面的C示例中唯一的变化：所有其他对象（ <code class="codeph">TickerType</code> ， <code class="codeph">TickerTypeSet</code> ， <code class="codeph">refcur_pkg</code> ， <code class="codeph">StockTable</code>和<code class="codeph">StockPivot</code> ）都是相同的。必须首先在SQL中声明这些方法。</p>
+               </div><a id="ADDCI4931"></a><a id="ADDCI4930"></a><div class="props_rev_3"><a id="GUID-12A0A2DB-021C-4521-8133-FFCF5FF44521" name="GUID-12A0A2DB-021C-4521-8133-FFCF5FF44521"></a><h4 id="ADDCI-GUID-12A0A2DB-021C-4521-8133-FFCF5FF44521" class="sect4"><span class="enumeration_section">17.2.1</span>为Java实现制作SQL声明</h4>
                   <div>
                      <div class="section">
-                        <p><a href="example-for-pipelined-table-functions-interface-approach.html#GUID-12A0A2DB-021C-4521-8133-FFCF5FF44521__CHDIEJJD">Example 17-3</a> shows how to make SQL declarations for the methods implemented in C language in <a href="example-for-pipelined-table-functions-interface-approach.html#GUID-097FA7CA-3E73-4C96-8349-5CF6FC6C1DB1">Implementing the ODCITable Methods in Java</a>.
+                        <p><a href="example-for-pipelined-table-functions-interface-approach.html#GUID-12A0A2DB-021C-4521-8133-FFCF5FF44521__CHDIEJJD">例17-3</a>显示了如何在<a href="example-for-pipelined-table-functions-interface-approach.html#GUID-097FA7CA-3E73-4C96-8349-5CF6FC6C1DB1">实现Java中的ODCITable方法中</a>为C语言<a href="example-for-pipelined-table-functions-interface-approach.html#GUID-097FA7CA-3E73-4C96-8349-5CF6FC6C1DB1">实现的方法</a>创建SQL声明。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="example" id="GUID-12A0A2DB-021C-4521-8133-FFCF5FF44521__CHDIEJJD">
-                        <p class="titleinexample">Example 17-3 Making SQL Declarations for Implementing OCITableXXX() in Java</p><pre class="oac_no_warn" dir="ltr">// create the directory object
+                        <p class="titleinexample">示例17-3使用Java实现OCITableXXX（）的SQL声明</p><pre class="oac_no_warn" dir="ltr">// create the directory object
 
 CREATE OR REPLACE DIRECTORY JavaDir AS '/home/bill/Java';
 
@@ -616,16 +600,15 @@ CREATE TYPE StockPivotImpl AS OBJECT
 show errors</pre></div>
                      <!-- class="example" -->
                   </div>
-               </div><a id="ADDCI4933"></a><a id="ADDCI4932"></a><div class="props_rev_3"><a id="GUID-097FA7CA-3E73-4C96-8349-5CF6FC6C1DB1" name="GUID-097FA7CA-3E73-4C96-8349-5CF6FC6C1DB1"></a><h4 id="ADDCI-GUID-097FA7CA-3E73-4C96-8349-5CF6FC6C1DB1" class="sect4"><span class="enumeration_section">17.2.2 </span>Implementing the ODCITable Methods in Java
-                  </h4>
+               </div><a id="ADDCI4933"></a><a id="ADDCI4932"></a><div class="props_rev_3"><a id="GUID-097FA7CA-3E73-4C96-8349-5CF6FC6C1DB1" name="GUID-097FA7CA-3E73-4C96-8349-5CF6FC6C1DB1"></a><h4 id="ADDCI-GUID-097FA7CA-3E73-4C96-8349-5CF6FC6C1DB1" class="sect4"><span class="enumeration_section">17.2.2</span>在Java中实现ODCITable方法</h4>
                   <div>
                      <div class="section">
-                        <p><a href="example-for-pipelined-table-functions-interface-approach.html#GUID-097FA7CA-3E73-4C96-8349-5CF6FC6C1DB1__CHDDGDDG">Example 17-4</a> implements the three <code class="codeph">ODCITable</code> methods as external functions in Java.
+                        <p><a href="example-for-pipelined-table-functions-interface-approach.html#GUID-097FA7CA-3E73-4C96-8349-5CF6FC6C1DB1__CHDDGDDG">例17-4</a>将三个<code class="codeph">ODCITable</code>方法实现为Java中的外部函数。
                         </p>
                      </div>
                      <!-- class="section" -->
                      <div class="example" id="GUID-097FA7CA-3E73-4C96-8349-5CF6FC6C1DB1__CHDDGDDG">
-                        <p class="titleinexample">Example 17-4 Implementing ODCITableXXX() Methods in Java</p><pre class="oac_no_warn" dir="ltr">import java.io.*;
+                        <p class="titleinexample">示例17-4在Java中实现ODCITableXXX（）方法</p><pre class="oac_no_warn" dir="ltr">import java.io.*;
 import java.util.*;
 import oracle.sql.*;
 import java.sql.*;

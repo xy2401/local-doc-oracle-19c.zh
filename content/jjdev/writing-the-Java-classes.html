@@ -1,17 +1,15 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Writing the Java Classes</title>
+      <title>编写Java类</title>
       <meta property="og:site_name" content="Oracle Help Center">
-      <meta property="og:title" content="Java Developer's Guide ">
-      <meta property="og:description" content>
+      <meta property="og:title" content="Java Developer&#39;s Guide ">
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
-      <meta name="application-name" content="Java Developer's Guide">
+      <meta name="application-name" content="Java Developer&#39;s Guide">
       <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
       <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
       <link rel="alternate" href="java-developers-guide.pdf" title="PDF File" type="application/pdf">
@@ -41,34 +39,28 @@
         </script>
       <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"oracle-database","element_name":"Oracle Database","display_in_url":true},"release":{"short_name":"19","element_name":"Release 19","display_in_url":true}}}</script>
       
-    <meta name="dcterms.title" content="Java Developer's Guide">
+    <meta name="dcterms.title" content="Java Developer&#39;s Guide">
     <meta name="dcterms.isVersionOf" content="JJDEV">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="creating-database-tables.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="loading-the-Java-classes.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="creating-database-tables.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="loading-the-Java-classes.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Java Developer's Guide </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="Java-stored-procedure-application-example.html" property="item" typeof="WebPage"><span property="name"> Java Stored Procedures Application Example </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Writing the Java Classes</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Java开发人员指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="Java-stored-procedure-application-example.html" property="item" typeof="WebPage"><span property="name">Java存储过程应用程序示例</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">编写Java类</li>
             </ol>
             <a id="GUID-9863F339-7175-4698-B33C-87DC52210A13" name="GUID-9863F339-7175-4698-B33C-87DC52210A13"></a><a id="JJDEV13302"></a>
             
-            <h2 id="JJDEV-GUID-9863F339-7175-4698-B33C-87DC52210A13" class="sect2"><span class="enumeration_section">9.3 </span>Writing the Java Classes
-            </h2>
+            <h2 id="JJDEV-GUID-9863F339-7175-4698-B33C-87DC52210A13" class="sect2"><span class="enumeration_section">9.3</span>编写Java类</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p>After creating the database tables, you consider the operations required in a purchase order system and write the appropriate Java methods. In a simple system based on the tables defined in the preceding examples, you need methods for registering customers, stocking parts, entering orders, and so on. You can implement these methods in a Java class, <code class="codeph">POManager</code>, as follows:
-                  </p><pre class="oac_no_warn" dir="ltr">import java.sql.*;
+                  <p>创建数据库表后，您将考虑采购订单系统中所需的操作并编写相应的Java方法。在基于前面示例中定义的表的简单系统中，您需要注册客户，库存零件，输入订单等的方法。您可以在Java类<code class="codeph">POManager</code>实现这些方法，如下所示：</p><pre class="oac_no_warn" dir="ltr">import java.sql.*;
 import java.io.*;
 import oracle.jdbc.*;
 

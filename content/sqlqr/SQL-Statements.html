@@ -1,11 +1,9 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>SQL Statements</title>
+      <title>SQL语句</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="SQL Language Quick Reference ">
       <meta property="og:description" content="">
@@ -45,48 +43,42 @@
     <meta name="dcterms.isVersionOf" content="SQLQR">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="preface.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="SQL-Functions.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="preface.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="SQL-Functions.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Language Quick Reference </span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem"> SQL Statements </li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL语言快速参考</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">SQL语句</li>
             </ol>
             <a id="GUID-1FA35EAD-AED2-4619-BFEE-348FF05D1F4A" name="GUID-1FA35EAD-AED2-4619-BFEE-348FF05D1F4A"></a><a id="SQLQR109"></a>
             
-            <h2 id="SQLQR-GUID-1FA35EAD-AED2-4619-BFEE-348FF05D1F4A" class="sect2"><span class="enumeration_chapter">1 </span> SQL Statements 
-            </h2>
+            <h2 id="SQLQR-GUID-1FA35EAD-AED2-4619-BFEE-348FF05D1F4A" class="sect2"><span class="enumeration_chapter">1个</span> SQL语句</h2>
          </header>
          <div class="ind">
             <div>
-               <p>This chapter presents the syntax for Oracle SQL statements.</p>
-               <p>This chapter includes the following section:</p>
-               <ul style="list-style-type: disc;">
+               <p>本章介绍Oracle SQL语句的语法。</p>
+               <p>本章包括以下部分：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p><a href="SQL-Statements.html#GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3">Syntax for SQL Statements</a></p>
+                     <p><a href="SQL-Statements.html#GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3">SQL语句的语法</a></p>
                   </li>
                </ul>
-            </div><a id="SQLQR989"></a><a id="SQLQR990"></a><a id="SQLQR111"></a><a id="SQLQR112"></a><a id="SQLQR113"></a><a id="SQLQR114"></a><a id="SQLQR115"></a><a id="SQLQR116"></a><a id="SQLQR117"></a><a id="SQLQR118"></a><a id="SQLQR119"></a><a id="SQLQR120"></a><a id="SQLQR121"></a><a id="SQLQR122"></a><a id="SQLQR123"></a><a id="SQLQR1165"></a><a id="SQLQR124"></a><a id="SQLQR125"></a><a id="SQLQR126"></a><a id="SQLQR991"></a><a id="SQLQR127"></a><a id="SQLQR128"></a><a id="SQLQR129"></a><a id="SQLQR130"></a><a id="SQLQR131"></a><a id="SQLQR132"></a><a id="SQLQR133"></a><a id="SQLQR992"></a><a id="SQLQR134"></a><a id="SQLQR135"></a><a id="SQLQR136"></a><a id="SQLQR137"></a><a id="SQLQR138"></a><a id="SQLQR139"></a><a id="SQLQR140"></a><a id="SQLQR141"></a><a id="SQLQR142"></a><a id="SQLQR143"></a><a id="SQLQR993"></a><a id="SQLQR144"></a><a id="SQLQR145"></a><a id="SQLQR146"></a><a id="SQLQR994"></a><a id="SQLQR147"></a><a id="SQLQR148"></a><a id="SQLQR149"></a><a id="SQLQR150"></a><a id="SQLQR151"></a><a id="SQLQR152"></a><a id="SQLQR153"></a><a id="SQLQR154"></a><a id="SQLQR155"></a><a id="SQLQR156"></a><a id="SQLQR157"></a><a id="SQLQR158"></a><a id="SQLQR159"></a><a id="SQLQR160"></a><a id="SQLQR161"></a><a id="SQLQR162"></a><a id="SQLQR163"></a><a id="SQLQR1166"></a><a id="SQLQR164"></a><a id="SQLQR165"></a><a id="SQLQR166"></a><a id="SQLQR167"></a><a id="SQLQR168"></a><a id="SQLQR995"></a><a id="SQLQR169"></a><a id="SQLQR170"></a><a id="SQLQR171"></a><a id="SQLQR172"></a><a id="SQLQR173"></a><a id="SQLQR174"></a><a id="SQLQR175"></a><a id="SQLQR176"></a><a id="SQLQR177"></a><a id="SQLQR178"></a><a id="SQLQR179"></a><a id="SQLQR180"></a><a id="SQLQR181"></a><a id="SQLQR182"></a><a id="SQLQR183"></a><a id="SQLQR184"></a><a id="SQLQR185"></a><a id="SQLQR186"></a><a id="SQLQR996"></a><a id="SQLQR187"></a><a id="SQLQR188"></a><a id="SQLQR189"></a><a id="SQLQR190"></a><a id="SQLQR191"></a><a id="SQLQR192"></a><a id="SQLQR193"></a><a id="SQLQR194"></a><a id="SQLQR195"></a><a id="SQLQR196"></a><a id="SQLQR197"></a><a id="SQLQR198"></a><a id="SQLQR199"></a><a id="SQLQR200"></a><a id="SQLQR201"></a><a id="SQLQR202"></a><a id="SQLQR1167"></a><a id="SQLQR203"></a><a id="SQLQR204"></a><a id="SQLQR205"></a><a id="SQLQR997"></a><a id="SQLQR206"></a><a id="SQLQR207"></a><a id="SQLQR208"></a><a id="SQLQR209"></a><a id="SQLQR210"></a><a id="SQLQR211"></a><a id="SQLQR212"></a><a id="SQLQR213"></a><a id="SQLQR214"></a><a id="SQLQR215"></a><a id="SQLQR216"></a><a id="SQLQR217"></a><a id="SQLQR218"></a><a id="SQLQR219"></a><a id="SQLQR220"></a><a id="SQLQR221"></a><a id="SQLQR222"></a><a id="SQLQR223"></a><a id="SQLQR224"></a><a id="SQLQR225"></a><a id="SQLQR226"></a><a id="SQLQR227"></a><a id="SQLQR998"></a><a id="SQLQR228"></a><a id="SQLQR229"></a><a id="SQLQR230"></a><a id="SQLQR231"></a><a id="SQLQR232"></a><a id="SQLQR233"></a><a id="SQLQR234"></a><a id="SQLQR235"></a><a id="SQLQR236"></a><a id="SQLQR237"></a><a id="SQLQR238"></a><a id="SQLQR239"></a><a id="SQLQR110"></a><div class="props_rev_3"><a id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3" name="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3"></a><h3 id="SQLQR-GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3" class="sect3">Syntax for SQL Statements</h3>
+            </div><a id="SQLQR989"></a><a id="SQLQR990"></a><a id="SQLQR111"></a><a id="SQLQR112"></a><a id="SQLQR113"></a><a id="SQLQR114"></a><a id="SQLQR115"></a><a id="SQLQR116"></a><a id="SQLQR117"></a><a id="SQLQR118"></a><a id="SQLQR119"></a><a id="SQLQR120"></a><a id="SQLQR121"></a><a id="SQLQR122"></a><a id="SQLQR123"></a><a id="SQLQR1165"></a><a id="SQLQR124"></a><a id="SQLQR125"></a><a id="SQLQR126"></a><a id="SQLQR991"></a><a id="SQLQR127"></a><a id="SQLQR128"></a><a id="SQLQR129"></a><a id="SQLQR130"></a><a id="SQLQR131"></a><a id="SQLQR132"></a><a id="SQLQR133"></a><a id="SQLQR992"></a><a id="SQLQR134"></a><a id="SQLQR135"></a><a id="SQLQR136"></a><a id="SQLQR137"></a><a id="SQLQR138"></a><a id="SQLQR139"></a><a id="SQLQR140"></a><a id="SQLQR141"></a><a id="SQLQR142"></a><a id="SQLQR143"></a><a id="SQLQR993"></a><a id="SQLQR144"></a><a id="SQLQR145"></a><a id="SQLQR146"></a><a id="SQLQR994"></a><a id="SQLQR147"></a><a id="SQLQR148"></a><a id="SQLQR149"></a><a id="SQLQR150"></a><a id="SQLQR151"></a><a id="SQLQR152"></a><a id="SQLQR153"></a><a id="SQLQR154"></a><a id="SQLQR155"></a><a id="SQLQR156"></a><a id="SQLQR157"></a><a id="SQLQR158"></a><a id="SQLQR159"></a><a id="SQLQR160"></a><a id="SQLQR161"></a><a id="SQLQR162"></a><a id="SQLQR163"></a><a id="SQLQR1166"></a><a id="SQLQR164"></a><a id="SQLQR165"></a><a id="SQLQR166"></a><a id="SQLQR167"></a><a id="SQLQR168"></a><a id="SQLQR995"></a><a id="SQLQR169"></a><a id="SQLQR170"></a><a id="SQLQR171"></a><a id="SQLQR172"></a><a id="SQLQR173"></a><a id="SQLQR174"></a><a id="SQLQR175"></a><a id="SQLQR176"></a><a id="SQLQR177"></a><a id="SQLQR178"></a><a id="SQLQR179"></a><a id="SQLQR180"></a><a id="SQLQR181"></a><a id="SQLQR182"></a><a id="SQLQR183"></a><a id="SQLQR184"></a><a id="SQLQR185"></a><a id="SQLQR186"></a><a id="SQLQR996"></a><a id="SQLQR187"></a><a id="SQLQR188"></a><a id="SQLQR189"></a><a id="SQLQR190"></a><a id="SQLQR191"></a><a id="SQLQR192"></a><a id="SQLQR193"></a><a id="SQLQR194"></a><a id="SQLQR195"></a><a id="SQLQR196"></a><a id="SQLQR197"></a><a id="SQLQR198"></a><a id="SQLQR199"></a><a id="SQLQR200"></a><a id="SQLQR201"></a><a id="SQLQR202"></a><a id="SQLQR1167"></a><a id="SQLQR203"></a><a id="SQLQR204"></a><a id="SQLQR205"></a><a id="SQLQR997"></a><a id="SQLQR206"></a><a id="SQLQR207"></a><a id="SQLQR208"></a><a id="SQLQR209"></a><a id="SQLQR210"></a><a id="SQLQR211"></a><a id="SQLQR212"></a><a id="SQLQR213"></a><a id="SQLQR214"></a><a id="SQLQR215"></a><a id="SQLQR216"></a><a id="SQLQR217"></a><a id="SQLQR218"></a><a id="SQLQR219"></a><a id="SQLQR220"></a><a id="SQLQR221"></a><a id="SQLQR222"></a><a id="SQLQR223"></a><a id="SQLQR224"></a><a id="SQLQR225"></a><a id="SQLQR226"></a><a id="SQLQR227"></a><a id="SQLQR998"></a><a id="SQLQR228"></a><a id="SQLQR229"></a><a id="SQLQR230"></a><a id="SQLQR231"></a><a id="SQLQR232"></a><a id="SQLQR233"></a><a id="SQLQR234"></a><a id="SQLQR235"></a><a id="SQLQR236"></a><a id="SQLQR237"></a><a id="SQLQR238"></a><a id="SQLQR239"></a><a id="SQLQR110"></a><div class="props_rev_3"><a id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3" name="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3"></a><h3 id="SQLQR-GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3" class="sect3">SQL语句的语法</h3>
                <div>
                   <div class="section">
-                     <p>SQL statements are the means by which programs and users access data in an Oracle database.</p>
-                     <p>The sections that follow show each SQL statement and its related syntax. Refer to <a href="Subclauses.html#GUID-F9BCFAE4-B322-422E-A70B-0E6B6C682634"> Subclauses </a> for the syntax of the subclauses listed in the syntax for the statements.
+                     <p>SQL语句是程序和用户访问Oracle数据库中数据的方法。</p>
+                     <p>以下部分显示了每个SQL语句及其相关语法。有关语句语法中列出的<a href="Subclauses.html#GUID-F9BCFAE4-B322-422E-A70B-0E6B6C682634">子条款</a>的语法，请参阅<a href="Subclauses.html#GUID-F9BCFAE4-B322-422E-A70B-0E6B6C682634">子条款</a> 。
                      </p>
                      <div class="infoboxnotealso" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-F566FB50-41DF-4824-9D52-A52E7F55FBE4">
-                        <p class="notep1">See Also:</p>
-                        <p><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF008" target="_blank"><span class="italic">Oracle Database SQL Language Reference</span></a> for detailed information about SQL statements
-                        </p>
+                        <p class="notep1">也可以看看：</p>
+                        <p>有关SQL语句的详细信息，请<a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF008" target="_blank"><span class="italic">参见Oracle数据库SQL语言参考</span></a></p>
                      </div>
                   </div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-FB43C41C-BCA3-4A8B-B4F8-11CF66248DCE"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF55976" target="_blank">ADMINISTER KEY MANAGEMENT</a></span></p><pre class="oac_no_warn" dir="ltr">ADMINISTER KEY MANAGEMENT
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-FB43C41C-BCA3-4A8B-B4F8-11CF66248DCE"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF55976" target="_blank">管理员密钥管理</a></span></p><pre class="oac_no_warn" dir="ltr">ADMINISTER KEY MANAGEMENT
   { keystore_management_clauses
   | key_management_clauses
   | secret_management_clauses
@@ -97,11 +89,11 @@
   { RENAME TO new_av_name | COMPILE };</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-B78DDAD8-D1A5-4808-A113-D131EB304C42"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF-GUID-F345D0F9-8133-4257-9A07-EDCE558A1332" target="_blank">ALTER ATTRIBUTE DIMENSION</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER ATTRIBUTE DIMENSION [ schema. ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-B78DDAD8-D1A5-4808-A113-D131EB304C42"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF-GUID-F345D0F9-8133-4257-9A07-EDCE558A1332" target="_blank">改变属性维度</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER ATTRIBUTE DIMENSION [ schema. ]
   attr_dim_name { RENAME TO new_attr_dim_name | COMPILE };</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-C1CB763C-B07E-4F23-B171-9D44B42F8B27"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF56045" target="_blank">ALTER AUDIT POLICY</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER AUDIT POLICY policy
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-C1CB763C-B07E-4F23-B171-9D44B42F8B27"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF56045" target="_blank">改变审计政策</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER AUDIT POLICY policy
   [ ADD [ privilege_audit_clause ] [ action_audit_clause ] [ role_audit_clause ] ]
   [ DROP [ privilege_audit_clause ] [ action_audit_clause ] [ role_audit_clause ] ]
   [ CONDITION { DROP | 'audit_condition' 
@@ -138,7 +130,7 @@
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-21253C0F-3211-4EE2-91D1-49FF319F0012"><span class="bold">ALTER DATABASE DICTIONARY </span></p><pre class="oac_no_warn" dir="ltr"><span class="bold">ALTER DATABASE DICTIONARY </span>
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-21253C0F-3211-4EE2-91D1-49FF319F0012"><span class="bold">ALTER DATABASE DICTIONARY</span></p><pre class="oac_no_warn" dir="ltr"><span class="bold">ALTER DATABASE DICTIONARY </span>
 {   <span class="bold">ENCRYPT CREDENTIALS</span>
   | <span class="bold">REKEY CREDENTIALS</span>
   | <span class="bold">DELETE CREDENTIALS KEY</span> 
@@ -151,7 +143,7 @@
   };</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-DFD44462-A0C3-4364-86CC-12CDA8569021"><span class="bold"><a href="../sqlrf/ALTER-DIMENSION.html#SQLRF00803" target="_blank">ALTER DIMENSION</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER DIMENSION [ schema. ] dimension
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-DFD44462-A0C3-4364-86CC-12CDA8569021"><span class="bold"><a href="../sqlrf/ALTER-DIMENSION.html#SQLRF00803" target="_blank">更改尺寸</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER DIMENSION [ schema. ] dimension
   { ADD { level_clause
         | hierarchy_clause
         | attribute_clause
@@ -216,7 +208,7 @@
   };</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-166BA60E-6D0F-4D46-9437-6637CBAC094C"><span class="bold"><a href="../sqlrf/ALTER-FUNCTION.html#SQLRF00804" target="_blank">ALTER FUNCTION</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER FUNCTION [ schema. ] function_name
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-166BA60E-6D0F-4D46-9437-6637CBAC094C"><span class="bold"><a href="../sqlrf/ALTER-FUNCTION.html#SQLRF00804" target="_blank">更改功能</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER FUNCTION [ schema. ] function_name
 { function_compile_clause | { EDITIONABLE | NONEDITIONABLE } }</pre></div>
                   <!-- class="section" -->
                   <div class="section">
@@ -224,7 +216,7 @@
   { RENAME TO new_hier_name | COMPILE };</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-8FED8B5E-53C4-4B27-B3BA-86A4BFEB6E1D"><span class="bold"><a href="../sqlrf/ALTER-INDEX.html#SQLRF00805" target="_blank">ALTER INDEX</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER INDEX [ schema. ]index
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-8FED8B5E-53C4-4B27-B3BA-86A4BFEB6E1D"><span class="bold"><a href="../sqlrf/ALTER-INDEX.html#SQLRF00805" target="_blank">改变指数</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER INDEX [ schema. ]index
   { { deallocate_unused_clause
     | allocate_extent_clause
     | shrink_clause
@@ -282,7 +274,7 @@
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-D5815655-D2CD-48BB-BBEC-1AFC26CB129D"><span class="bold"><a href="../sqlrf/ALTER-MATERIALIZED-VIEW.html#SQLRF00808" target="_blank">ALTER MATERIALIZED VIEW</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER MATERIALIZED VIEW
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-D5815655-D2CD-48BB-BBEC-1AFC26CB129D"><span class="bold"><a href="../sqlrf/ALTER-MATERIALIZED-VIEW.html#SQLRF00808" target="_blank">改变物质化的视图</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER MATERIALIZED VIEW
   [ schema. ] materialized_view
   [ physical_attributes_clause
   | modify_mv_column_clause
@@ -336,14 +328,14 @@
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-3DDB3B5B-C858-43F1-99C2-3AE1329F2924"><span class="bold"><a href="../sqlrf/ALTER-OPERATOR.html#SQLRF01112" target="_blank">ALTER OPERATOR</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER OPERATOR [ schema. ] operator
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-3DDB3B5B-C858-43F1-99C2-3AE1329F2924"><span class="bold"><a href="../sqlrf/ALTER-OPERATOR.html#SQLRF01112" target="_blank">更改操作员</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER OPERATOR [ schema. ] operator
   { add_binding_clause
   | drop_binding_clause
   | COMPILE
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-6FCECDDD-F8A5-4FD4-A015-287FFD86B35D"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF00810" target="_blank">ALTER OUTLINE</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER OUTLINE [ PUBLIC | PRIVATE ] outline
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-6FCECDDD-F8A5-4FD4-A015-287FFD86B35D"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF00810" target="_blank">改变大纲</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER OUTLINE [ PUBLIC | PRIVATE ] outline
   { REBUILD
   | RENAME TO new_outline_name
   | CHANGE CATEGORY TO new_category_name
@@ -352,11 +344,11 @@
   ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-F672EB5C-5E29-4FF0-BEF8-0EA68BB94CAA"><span class="bold"><a href="../sqlrf/ALTER-PACKAGE.html#SQLRF00811" target="_blank">ALTER PACKAGE</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER PACKAGE [ schema. ] package_name
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-F672EB5C-5E29-4FF0-BEF8-0EA68BB94CAA"><span class="bold"><a href="../sqlrf/ALTER-PACKAGE.html#SQLRF00811" target="_blank">改变包装</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER PACKAGE [ schema. ] package_name
 { package_compile_clause | { EDITIONABLE | NONEDITIONABLE } }</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-8E9A5A0F-9E06-462B-B40F-0F402E25D376"><span class="bold"><a href="../sqlrf/ALTER-PLUGGABLE-DATABASE.html#SQLRF55667" target="_blank">ALTER PLUGGABLE DATABASE</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER PLUGGABLE DATABASE
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-8E9A5A0F-9E06-462B-B40F-0F402E25D376"><span class="bold"><a href="../sqlrf/ALTER-PLUGGABLE-DATABASE.html#SQLRF55667" target="_blank">ALTER PLOGGABLE DATABASE</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER PLUGGABLE DATABASE
   { pdb_unplug_clause
   | pdb_settings_clauses
   | pdb_datafile_clause
@@ -371,7 +363,7 @@
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-A6FF3B55-882E-48FB-B892-EA3997224044"><span class="bold"><a href="../sqlrf/ALTER-PROCEDURE.html#SQLRF00812" target="_blank">ALTER PROCEDURE</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER PROCEDURE [ schema. ] procedure_name
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-A6FF3B55-882E-48FB-B892-EA3997224044"><span class="bold"><a href="../sqlrf/ALTER-PROCEDURE.html#SQLRF00812" target="_blank">更改程序</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER PROCEDURE [ schema. ] procedure_name
 { procedure_compile_clause | { EDITIONABLE | NONEDITIONABLE } }</pre></div>
                   <!-- class="section" -->
                   <div class="section">
@@ -380,7 +372,7 @@
   [ CONTAINER = { CURRENT | ALL } ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-6BE2448B-7444-4AB6-9160-A21180A03D7A"><span class="bold"><a href="../sqlrf/ALTER-RESOURCE-COST.html#SQLRF00814" target="_blank">ALTER RESOURCE COST</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER RESOURCE COST
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-6BE2448B-7444-4AB6-9160-A21180A03D7A"><span class="bold"><a href="../sqlrf/ALTER-RESOURCE-COST.html#SQLRF00814" target="_blank">更改资源成本</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER RESOURCE COST
   { { CPU_PER_SESSION
     | CONNECT_TIME
     | LOGICAL_READS_PER_SESSION
@@ -390,7 +382,7 @@
   ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-FE1949AF-6133-40B1-B5F2-2C44C7A4EF5E"><span class="bold"><a href="../sqlrf/ALTER-ROLE.html#SQLRF00815" target="_blank">ALTER ROLE</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER ROLE role
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-FE1949AF-6133-40B1-B5F2-2C44C7A4EF5E"><span class="bold"><a href="../sqlrf/ALTER-ROLE.html#SQLRF00815" target="_blank">改变角色</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER ROLE role
   { NOT IDENTIFIED
   | IDENTIFIED
       { BY password
@@ -410,7 +402,7 @@
   };</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-5C3BBE53-3562-4F40-AD27-F8B67C1F0F50"><span class="bold"><a href="../sqlrf/ALTER-SEQUENCE.html#SQLRF00817" target="_blank">ALTER SEQUENCE</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER SEQUENCE [ schema. ] sequence
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-5C3BBE53-3562-4F40-AD27-F8B67C1F0F50"><span class="bold"><a href="../sqlrf/ALTER-SEQUENCE.html#SQLRF00817" target="_blank">更改顺序</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER SEQUENCE [ schema. ] sequence
   { INCREMENT BY integer
   | { MAXVALUE integer | NOMAXVALUE }
   | { MINVALUE integer | NOMINVALUE }
@@ -425,7 +417,7 @@
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-8355CD56-8653-402E-8EAF-9D933A71D08F"><span class="bold"><a href="../sqlrf/ALTER-SESSION.html#SQLRF00901" target="_blank">ALTER SESSION</a></span></p><pre class="oac_no_warn" dir="ltr"> ALTER SESSION
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-8355CD56-8653-402E-8EAF-9D933A71D08F"><span class="bold"><a href="../sqlrf/ALTER-SESSION.html#SQLRF00901" target="_blank">改变会话</a></span></p><pre class="oac_no_warn" dir="ltr"> ALTER SESSION
   { ADVISE { COMMIT | ROLLBACK | NOTHING }
   | CLOSE DATABASE LINK dblink
   | { ENABLE | DISABLE } COMMIT IN PROCEDURE
@@ -445,7 +437,7 @@
   { EDITIONABLE | NONEDITIONABLE | COMPILE } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E49316C1-E768-4D46-808D-41F7725BD128"><span class="bold"><a href="../sqlrf/ALTER-SYSTEM.html#SQLRF00902" target="_blank">ALTER SYSTEM</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER SYSTEM
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E49316C1-E768-4D46-808D-41F7725BD128"><span class="bold"><a href="../sqlrf/ALTER-SYSTEM.html#SQLRF00902" target="_blank">改变系统</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER SYSTEM
   { archive_log_clause
   | checkpoint_clause
   | check_datafiles_clause
@@ -472,7 +464,7 @@
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-FEE5EB40-9B7D-4C65-8FD7-146241220561"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01001" target="_blank">ALTER TABLE</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER TABLE [ schema. ] table
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-FEE5EB40-9B7D-4C65-8FD7-146241220561"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01001" target="_blank">更改表</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER TABLE [ schema. ] table
   [ memoptimize_read_clause ] [ memoptimize_write_clause ]
   [ alter_table_properties
   | column_clauses
@@ -505,11 +497,11 @@
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-6A87D273-BAF1-4297-BB68-763AEF2F70C0"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01102" target="_blank">ALTER TYPE</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER TYPE [ schema. ] type_name
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-6A87D273-BAF1-4297-BB68-763AEF2F70C0"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01102" target="_blank">更改类型</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER TYPE [ schema. ] type_name
 { alter_type_clause | { EDITIONABLE | NONEDITIONABLE } }</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-64C63197-9651-43CE-956E-190EF2A85EF1"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01103" target="_blank">ALTER USER</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER USER
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-64C63197-9651-43CE-956E-190EF2A85EF1"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01103" target="_blank">更改用户</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER USER
   { user
     { IDENTIFIED
       { BY password [ REPLACE old_password ]
@@ -540,7 +532,7 @@
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-3596CE0C-8B1F-4CC8-A6F2-097F1E4DDA4A"><span class="bold"><a href="../sqlrf/ALTER-VIEW.html#SQLRF01104" target="_blank">ALTER VIEW</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER VIEW [ schema. ] view
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-3596CE0C-8B1F-4CC8-A6F2-097F1E4DDA4A"><span class="bold"><a href="../sqlrf/ALTER-VIEW.html#SQLRF01104" target="_blank">更改视图</a></span></p><pre class="oac_no_warn" dir="ltr">ALTER VIEW [ schema. ] view
   { ADD out_of_line_constraint
   | MODIFY CONSTRAINT constraint
       { RELY | NORELY }
@@ -554,7 +546,7 @@
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-A9567628-71B1-47E4-829B-8C688A4AA2B8"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01105" target="_blank">ANALYZE</a></span></p><pre class="oac_no_warn" dir="ltr">ANALYZE
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-A9567628-71B1-47E4-829B-8C688A4AA2B8"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01105" target="_blank">分析</a></span></p><pre class="oac_no_warn" dir="ltr">ANALYZE
   { { TABLE [ schema. ] table
     | INDEX [ schema. ] index
     } [ partition_extension_clause ]
@@ -566,12 +558,12 @@
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-BEB30E68-921B-4B0A-98D7-1A1E751CFCCD"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01106" target="_blank">ASSOCIATE STATISTICS</a></span></p><pre class="oac_no_warn" dir="ltr">ASSOCIATE STATISTICS WITH
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-BEB30E68-921B-4B0A-98D7-1A1E751CFCCD"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01106" target="_blank">协会统计</a></span></p><pre class="oac_no_warn" dir="ltr">ASSOCIATE STATISTICS WITH
   { column_association | function_association }
   [ storage_table_clause ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-5B540079-DB92-4264-BE82-59F0EF8BCC8F"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01107" target="_blank">AUDIT (Traditional Auditing)</a></span></p><pre class="oac_no_warn" dir="ltr">AUDIT
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-5B540079-DB92-4264-BE82-59F0EF8BCC8F"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01107" target="_blank">审计（传统审计）</a></span></p><pre class="oac_no_warn" dir="ltr">AUDIT
   { audit_operation_clause [ auditing_by_clause | IN SESSION CURRENT ]
   | audit_schema_object_clause
   | NETWORK
@@ -582,7 +574,7 @@
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-EAF01492-893C-4CC0-816C-518D027324DC"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF56110" target="_blank">AUDIT (Unified Auditing)</a></span></p><pre class="oac_no_warn" dir="ltr">AUDIT
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-EAF01492-893C-4CC0-816C-518D027324DC"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF56110" target="_blank">审计（统一审计）</a></span></p><pre class="oac_no_warn" dir="ltr">AUDIT
   { POLICY policy
     [ { BY user [, user]... }
     | { EXCEPT user [, user]... }
@@ -596,7 +588,7 @@
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-51DA72B2-B372-4074-9DB5-968EFA394691"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01108" target="_blank">CALL</a></span></p><pre class="oac_no_warn" dir="ltr">CALL
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-51DA72B2-B372-4074-9DB5-968EFA394691"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01108" target="_blank">呼叫</a></span></p><pre class="oac_no_warn" dir="ltr">CALL
   { routine_clause
   | object_access_expression
   }
@@ -604,7 +596,7 @@
     [ [ INDICATOR ] :indicator_variable ] ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-884EDCA3-8A59-47D9-B9FA-B390B9173580"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01109" target="_blank">COMMENT</a></span></p><pre class="oac_no_warn" dir="ltr">COMMENT ON
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-884EDCA3-8A59-47D9-B9FA-B390B9173580"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01109" target="_blank">评论</a></span></p><pre class="oac_no_warn" dir="ltr">COMMENT ON
   { AUDIT POLICY policy
   | COLUMN [ schema. ]
       { table. | view. | materialized_view. } column
@@ -618,7 +610,7 @@
   IS string ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-CEF2CB81-3BE0-4A67-9680-4B6090D570F6"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01110" target="_blank">COMMIT</a></span></p><pre class="oac_no_warn" dir="ltr">COMMIT [ WORK ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-CEF2CB81-3BE0-4A67-9680-4B6090D570F6"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01110" target="_blank">承诺</a></span></p><pre class="oac_no_warn" dir="ltr">COMMIT [ WORK ]
   [ [ COMMENT string ]
     | [ WRITE [ WAIT | NOWAIT ] [ IMMEDIATE | BATCH ]
     ]
@@ -626,7 +618,7 @@
   ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E6213E00-6862-4EBE-B670-CA5ECF18658F"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF-GUID-EBA7E9BC-3F49-4AA7-9EF6-9255FE7AE466" target="_blank">CREATE ANALYTIC VIEW</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] [ { FORCE | NOFORCE } ] 
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E6213E00-6862-4EBE-B670-CA5ECF18658F"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF-GUID-EBA7E9BC-3F49-4AA7-9EF6-9255FE7AE466" target="_blank">创建分析视图</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] [ { FORCE | NOFORCE } ] 
    ANALYTIC VIEW [ schema. ] analytic_view 
     [ sharing clause ] 
     [ classification_clause ]...
@@ -639,7 +631,7 @@
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E1AAC68F-C7C4-4AA2-B148-0AD172159634"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF-GUID-62722AB0-2136-4BC9-8E76-CBEA13C15196" target="_blank">CREATE ATTRIBUTE DIMENSION</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] [ FORCE | NOFORCE ] ATTRIBUTE DIMENSION
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E1AAC68F-C7C4-4AA2-B148-0AD172159634"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF-GUID-62722AB0-2136-4BC9-8E76-CBEA13C15196" target="_blank">创建属性维度</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] [ FORCE | NOFORCE ] ATTRIBUTE DIMENSION
   [ schema. ] attr_dimension [ sharing_clause ] [ classification_clause ]... ]
   [ DIMENSION TYPE { STANDARD | TIME } ]
   attr_dim_using_clause
@@ -649,14 +641,14 @@
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-997366A6-2390-4AB3-9892-759DA2D54FDC"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF56055" target="_blank">CREATE AUDIT POLICY</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE AUDIT POLICY policy
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-997366A6-2390-4AB3-9892-759DA2D54FDC"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF56055" target="_blank">创建审计政策</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE AUDIT POLICY policy
   [ privilege_audit_clause ] [ action_audit_clause ] [ role_audit_clause ]
   [ WHEN 'audit_condition' EVALUATE PER { STATEMENT | SESSION | INSTANCE } ]
   [ ONLY TOPLEVEL ]
   [ CONTAINER = { ALL | CURRENT } ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-FFB424FE-4832-47C4-90F9-A9A9C27B31DA"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01201" target="_blank">CREATE CLUSTER</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE CLUSTER [ schema. ] cluster
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-FFB424FE-4832-47C4-90F9-A9A9C27B31DA"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01201" target="_blank">创建集群</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE CLUSTER [ schema. ] cluster
   (column datatype [ COLLATE column_collation_name ] [ SORT ]
     [, column datatype [ COLLATE column_collation_name ] [ SORT ] ]...
   )
@@ -674,14 +666,14 @@
   [ CACHE | NOCACHE ] [ cluster_range_partitions ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-353A13FF-ECCE-403A-B63E-A4170E98E648"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01202" target="_blank">CREATE CONTEXT</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] CONTEXT namespace
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-353A13FF-ECCE-403A-B63E-A4170E98E648"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01202" target="_blank">创建背景</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] CONTEXT namespace
   USING [ schema. ] package
   [ INITIALIZED { EXTERNALLY | GLOBALLY }
   | ACCESSED GLOBALLY
   ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-7B3C097E-4B64-4BD9-B55B-901FC8F502D1"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01203" target="_blank">CREATE CONTROLFILE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE CONTROLFILE
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-7B3C097E-4B64-4BD9-B55B-901FC8F502D1"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01203" target="_blank">创建CONTROLFILE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE CONTROLFILE
   [ REUSE ] [ SET ] DATABASE database
   [ logfile_clause ]
   { RESETLOGS | NORESETLOGS }
@@ -699,7 +691,7 @@
   [ character_set_clause ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-2B732214-A6E9-4B95-9B8B-571D1B2AB7FF"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01204" target="_blank">CREATE DATABASE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE DATABASE [ database ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-2B732214-A6E9-4B95-9B8B-571D1B2AB7FF"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01204" target="_blank">创建数据库</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE DATABASE [ database ]
   { USER SYS IDENTIFIED BY password
   | USER SYSTEM IDENTIFIED BY password
   | CONTROLFILE REUSE
@@ -718,7 +710,7 @@
   }... ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-1A2740AA-BB88-4090-AC32-73B472756A6D"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01205" target="_blank">CREATE DATABASE LINK</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ SHARED ] [ PUBLIC ] DATABASE LINK dblink
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-1A2740AA-BB88-4090-AC32-73B472756A6D"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01205" target="_blank">创建数据库链接</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ SHARED ] [ PUBLIC ] DATABASE LINK dblink
   [ CONNECT TO
     { CURRENT_USER
     | user IDENTIFIED BY password [ dblink_authentication ]
@@ -728,7 +720,7 @@
   [ USING connect_string ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-3A6CEA11-58CE-439A-8254-F3C5A89DBB9A"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01206" target="_blank">CREATE DIMENSION</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE DIMENSION [ schema. ] dimension
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-3A6CEA11-58CE-439A-8254-F3C5A89DBB9A"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01206" target="_blank">创建尺寸</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE DIMENSION [ schema. ] dimension
   level_clause ...
   { hierarchy_clause
   | attribute_clause
@@ -737,12 +729,12 @@
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-D2B1E804-1596-4885-9A7E-1624C93656DD"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01207" target="_blank">CREATE DIRECTORY</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] DIRECTORY directory
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-D2B1E804-1596-4885-9A7E-1624C93656DD"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01207" target="_blank">创建目录</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] DIRECTORY directory
   [ SHARING = { METADATA | NONE } ]
   AS 'path_name' ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-252C08EB-FF49-41AB-BF05-76C9017DFCEA"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01114" target="_blank">CREATE DISKGROUP</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE DISKGROUP diskgroup_name
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-252C08EB-FF49-41AB-BF05-76C9017DFCEA"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01114" target="_blank">创建DISKGROUP</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE DISKGROUP diskgroup_name
   [ { HIGH | NORMAL | FLEX | EXTERNAL } REDUNDANCY ]
   { [ QUORUM | REGULAR ] [ FAILGROUP failgroup_name ]
     DISK qualified_disk_clause [, qualified_disk_clause ]...
@@ -752,12 +744,12 @@
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-AF6FA5FF-CC90-422E-86B9-C31698D6B165"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF20017" target="_blank">CREATE EDITION</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE EDITION edition
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-AF6FA5FF-CC90-422E-86B9-C31698D6B165"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF20017" target="_blank">创造版</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE EDITION edition
   [ AS CHILD OF parent_edition ]
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-D47D715B-4B75-4C07-B3A0-E3B9CEEB48CE"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF20008" target="_blank">CREATE FLASHBACK ARCHIVE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE FLASHBACK ARCHIVE [DEFAULT] flashback_archive
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-D47D715B-4B75-4C07-B3A0-E3B9CEEB48CE"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF20008" target="_blank">创建FLASHBACK存档</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE FLASHBACK ARCHIVE [DEFAULT] flashback_archive
   TABLESPACE tablespace
   [flashback_archive_quota]
   [ [NO] OPTIMIZE DATA ]
@@ -765,12 +757,12 @@
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-73DBDA22-B154-4D3B-95E2-0D2809ECF83A"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01208" target="_blank">CREATE FUNCTION</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-73DBDA22-B154-4D3B-95E2-0D2809ECF83A"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01208" target="_blank">创造功能</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
 [ EDITIONABLE | NONEDITIONABLE ]
 FUNCTION plsql_function_source</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E8B98957-8FC9-4A53-BF20-AEEE84336169"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF-GUID-73925877-992B-4624-AA28-8F565E9C3F0D" target="_blank">CREATE HIERARCHY</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] [ FORCE | NOFORCE ] 
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E8B98957-8FC9-4A53-BF20-AEEE84336169"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF-GUID-73925877-992B-4624-AA28-8F565E9C3F0D" target="_blank">创造层次</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] [ FORCE | NOFORCE ] 
   HIERARCHY [ schema. ] hierarchy 
   [ sharing_clause ]
   [ classification_clause ]... ]
@@ -780,7 +772,7 @@ FUNCTION plsql_function_source</pre></div>
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-15FEB7C8-E2BE-498B-84BF-9275A5B966DC"><span class="bold"><a href="../sqlrf/CREATE-INDEX.html#SQLRF01209" target="_blank">CREATE INDEX</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ UNIQUE | BITMAP ] INDEX [ schema. ] index
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-15FEB7C8-E2BE-498B-84BF-9275A5B966DC"><span class="bold"><a href="../sqlrf/CREATE-INDEX.html#SQLRF01209" target="_blank">创建指数</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ UNIQUE | BITMAP ] INDEX [ schema. ] index
   ON { cluster_index_clause
      | table_index_clause
      | bitmap_join_index_clause
@@ -800,12 +792,12 @@ FUNCTION plsql_function_source</pre></div>
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-AA7E3914-0381-4EEE-BD63-FB8FB565D60D"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF57240" target="_blank">CREATE INMEMORY JOIN GROUP</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE INMEMORY JOIN GROUP [ schema. ] join_group
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-AA7E3914-0381-4EEE-BD63-FB8FB565D60D"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF57240" target="_blank">创建INMEMORY JOIN GROUP</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE INMEMORY JOIN GROUP [ schema. ] join_group
   ( [ schema. ] table ( column ) , [ schema. ] table ( column )
     [, [ schema. ] table ( column ) ]... ) ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-4DB9C4DA-E282-4EFC-82FA-0B8F0D7843F3"><span class="bold"><a href="../sqlrf/CREATE-JAVA.html#SQLRF01211" target="_blank">CREATE JAVA</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] [ AND { RESOLVE | COMPILE } ] [ NOFORCE ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-4DB9C4DA-E282-4EFC-82FA-0B8F0D7843F3"><span class="bold"><a href="../sqlrf/CREATE-JAVA.html#SQLRF01211" target="_blank">创造JAVA</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] [ AND { RESOLVE | COMPILE } ] [ NOFORCE ]
   JAVA { { SOURCE | RESOURCE } NAMED [ schema. ] primary_name
        | CLASS [ SCHEMA schema ]
        }
@@ -820,15 +812,15 @@ FUNCTION plsql_function_source</pre></div>
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-0EC2DD73-E00E-4835-8D5E-08596689596F"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01301" target="_blank">CREATE LIBRARY</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-0EC2DD73-E00E-4835-8D5E-08596689596F"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01301" target="_blank">创建图书馆</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
 [ EDITIONABLE | NONEDITIONABLE ]
 LIBRARY plsql_library_source</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-8FA393FB-AD1C-4F5E-AA44-C8F5A0816894"><span class="bold"><a href="../sqlrf/index.html" target="_blank">CREATE LOCKDOWN PROFILE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE LOCKDOWN PROFILE profile_name ;</pre></div>
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-8FA393FB-AD1C-4F5E-AA44-C8F5A0816894"><span class="bold"><a href="../sqlrf/index.html" target="_blank">创建锁定概况</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE LOCKDOWN PROFILE profile_name ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-1B56DB22-46FF-482D-ACD5-1BC3199D372F"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01302" target="_blank">CREATE MATERIALIZED VIEW</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE MATERIALIZED VIEW [ schema. ] materialized_view
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-1B56DB22-46FF-482D-ACD5-1BC3199D372F"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01302" target="_blank">创建物质化视图</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE MATERIALIZED VIEW [ schema. ] materialized_view
   [ OF [ schema. ] object_type ]
   [ ( { scoped_table_ref_constraint
       | column_alias [ENCRYPT [encryption_spec]]
@@ -857,7 +849,7 @@ LIBRARY plsql_library_source</pre></div>
 AS subquery ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-F2A8A0DA-21A0-49DC-AE27-4800F698D704"><span class="bold"><a href="../sqlrf/CREATE-MATERIALIZED-VIEW-LOG.html#SQLRF01303" target="_blank">CREATE MATERIALIZED VIEW LOG</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE MATERIALIZED VIEW LOG ON [ schema. ] table
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-F2A8A0DA-21A0-49DC-AE27-4800F698D704"><span class="bold"><a href="../sqlrf/CREATE-MATERIALIZED-VIEW-LOG.html#SQLRF01303" target="_blank">创建物化视图日志</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE MATERIALIZED VIEW LOG ON [ schema. ] table
   [ physical_attributes_clause
   | TABLESPACE tablespace
   | logging_clause
@@ -884,55 +876,55 @@ AS subquery ;</pre></div>
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-86224E6C-93C2-4E35-BB64-5390B3CA0FAF"><span class="bold"><a href="../sqlrf/CREATE-MATERIALIZED-ZONEMAP.html#SQLRF56867" target="_blank">CREATE MATERIALIZED ZONEMAP</a></span></p><pre class="oac_no_warn" dir="ltr">{ create_zonemap_on_table | create_zonemap_as_subquery } ;</pre></div>
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-86224E6C-93C2-4E35-BB64-5390B3CA0FAF"><span class="bold"><a href="../sqlrf/CREATE-MATERIALIZED-ZONEMAP.html#SQLRF56867" target="_blank">创建物质化的ZONEMAP</a></span></p><pre class="oac_no_warn" dir="ltr">{ create_zonemap_on_table | create_zonemap_as_subquery } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E27EFB3C-3551-473C-81EA-F8642D2CA98A"><span class="bold"><a href="../sqlrf/CREATE-OPERATOR.html#SQLRF01304" target="_blank">CREATE OPERATOR</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] OPERATOR
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E27EFB3C-3551-473C-81EA-F8642D2CA98A"><span class="bold"><a href="../sqlrf/CREATE-OPERATOR.html#SQLRF01304" target="_blank">创建运营商</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] OPERATOR
    [ schema. ] operator binding_clause ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-53BCFFED-9A5A-44D7-8E4B-8FCDD51249A0"><span class="bold"><a href="../sqlrf/CREATE-OUTLINE.html#SQLRF01305" target="_blank">CREATE OUTLINE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-53BCFFED-9A5A-44D7-8E4B-8FCDD51249A0"><span class="bold"><a href="../sqlrf/CREATE-OUTLINE.html#SQLRF01305" target="_blank">创建大纲</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
    [ PUBLIC | PRIVATE ] OUTLINE [ outline ]
    [ FROM [ PUBLIC | PRIVATE ] source_outline ]
    [ FOR CATEGORY category ]
    [ ON statement ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-734125D5-C8B1-474A-84B1-CA20F51CB983"><span class="bold"><a href="../sqlrf/CREATE-PACKAGE.html#SQLRF01306" target="_blank">CREATE PACKAGE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-734125D5-C8B1-474A-84B1-CA20F51CB983"><span class="bold"><a href="../sqlrf/CREATE-PACKAGE.html#SQLRF01306" target="_blank">创建包</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
 [ EDITIONABLE | NONEDITIONABLE ]
 PACKAGE plsql_package_source</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-0A83ABCC-63C1-4187-9D2E-917BB67ABED3"><span class="bold"><a href="../sqlrf/CREATE-PACKAGE-BODY.html#SQLRF01307" target="_blank">CREATE PACKAGE BODY</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-0A83ABCC-63C1-4187-9D2E-917BB67ABED3"><span class="bold"><a href="../sqlrf/CREATE-PACKAGE-BODY.html#SQLRF01307" target="_blank">创造包装身体</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
 [ EDITIONABLE | NONEDITIONABLE ]
 PACKAGE BODY plsql_package_body_source</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-39D92DF3-3026-40FF-ACE3-66385DF5ABB7"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01308" target="_blank">CREATE PFILE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE PFILE [= 'pfile_name' ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-39D92DF3-3026-40FF-ACE3-66385DF5ABB7"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01308" target="_blank">创建PFILE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE PFILE [= 'pfile_name' ]
    FROM { SPFILE [= 'spfile_name']
         | MEMORY
         } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-725D68FA-55D1-4590-B9C9-68CC229DA63C"><span class="bold"><a href="../sqlrf/CREATE-PLUGGABLE-DATABASE.html#SQLRF55686" target="_blank">CREATE PLUGGABLE DATABASE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE PLUGGABLE DATABASE
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-725D68FA-55D1-4590-B9C9-68CC229DA63C"><span class="bold"><a href="../sqlrf/CREATE-PLUGGABLE-DATABASE.html#SQLRF55686" target="_blank">创建可插入的数据库</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE PLUGGABLE DATABASE
   { { pdb_name [ AS APPLICATION CONTAINER ] } | { AS SEED } }
   {  create_pdb_from_seed | create_pdb_clone | create_pdb_from_xml | create_pdb_from_mirror_copy 
     | using_snapshot_clause | container_map_clause } pdb_snapshot_clause;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-F0F46374-DE0D-44DB-8DFE-586BEBE522DB"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01309" target="_blank">CREATE PROCEDURE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-F0F46374-DE0D-44DB-8DFE-586BEBE522DB"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01309" target="_blank">创建程序</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
 [ EDITIONABLE | NONEDITIONABLE ]
 PROCEDURE plsql_procedure_source</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-728987C3-A2F0-4757-B48F-9AD40931E97C"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01310" target="_blank">CREATE PROFILE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE PROFILE profile
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-728987C3-A2F0-4757-B48F-9AD40931E97C"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01310" target="_blank">创建个人资料</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE PROFILE profile
   LIMIT { resource_parameters
         | password_parameters
         }...
   [ CONTAINER = { CURRENT | ALL } ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-81233CEF-0EC7-4C82-8200-32C905ABF6ED"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF20001" target="_blank">CREATE RESTORE POINT</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ CLEAN ] RESTORE POINT restore_point
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-81233CEF-0EC7-4C82-8200-32C905ABF6ED"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF20001" target="_blank">创建恢复点</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ CLEAN ] RESTORE POINT restore_point
    [ FOR PLUGGABLE DATABASE pdb_name ]
    [ AS OF {TIMESTAMP | SCN} expr ]
    [ PRESERVE
@@ -940,7 +932,7 @@ PROCEDURE plsql_procedure_source</pre></div>
    ];</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-DCCE3336-DE21-45F9-8DA9-D73E10AB87A6"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01311" target="_blank">CREATE ROLE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE ROLE role
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-DCCE3336-DE21-45F9-8DA9-D73E10AB87A6"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01311" target="_blank">创造角色</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE ROLE role
    [ NOT IDENTIFIED
    | IDENTIFIED { BY password
                 | USING [ schema. ] package
@@ -949,11 +941,11 @@ PROCEDURE plsql_procedure_source</pre></div>
    ] [ CONTAINER = { CURRENT | ALL } ];</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-5E1C7D02-C1DB-42A0-A425-767C81EE791F"><span class="bold"><a href="../sqlrf/CREATE-ROLLBACK-SEGMENT.html#SQLRF01312" target="_blank">CREATE ROLLBACK SEGMENT</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ PUBLIC ] ROLLBACK SEGMENT rollback_segment
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-5E1C7D02-C1DB-42A0-A425-767C81EE791F"><span class="bold"><a href="../sqlrf/CREATE-ROLLBACK-SEGMENT.html#SQLRF01312" target="_blank">创建ROLLBACK SEGMENT</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ PUBLIC ] ROLLBACK SEGMENT rollback_segment
   [ TABLESPACE tablespace | storage_clause ]...];</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-F10F89F3-460B-4956-9525-F77FA7B091BD"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01313" target="_blank">CREATE SCHEMA</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE SCHEMA AUTHORIZATION schema
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-F10F89F3-460B-4956-9525-F77FA7B091BD"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01313" target="_blank">创建模式</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE SCHEMA AUTHORIZATION schema
    { create_table_statement
    | create_view_statement
    | grant_statement
@@ -961,7 +953,7 @@ PROCEDURE plsql_procedure_source</pre></div>
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-31380D5B-BB62-412F-8C85-DEDC1E9234D4"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01314" target="_blank">CREATE SEQUENCE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE SEQUENCE [ schema. ] sequence
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-31380D5B-BB62-412F-8C85-DEDC1E9234D4"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01314" target="_blank">创建序列</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE SEQUENCE [ schema. ] sequence
    [ SHARING = { METADATA | DATA | NONE } ]
    [ { INCREMENT BY | START WITH } integer
    | { MAXVALUE integer | NOMAXVALUE }
@@ -977,20 +969,20 @@ PROCEDURE plsql_procedure_source</pre></div>
 ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-6C5654C0-B6FB-4FE8-AB4A-33EB0CFA7CE7"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01315" target="_blank">CREATE SPFILE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE SPFILE [= 'spfile_name' ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-6C5654C0-B6FB-4FE8-AB4A-33EB0CFA7CE7"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01315" target="_blank">创建SPFILE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE SPFILE [= 'spfile_name' ]
   FROM { PFILE [= 'pfile_name' ] [ AS COPY ]
        | MEMORY
        } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-A0B85898-AF4D-449C-97D1-8D1E4D291748"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01401" target="_blank">CREATE SYNONYM</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] [ EDITIONABLE | NONEDITIONABLE ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-A0B85898-AF4D-449C-97D1-8D1E4D291748"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01401" target="_blank">创建SYNONYM</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ] [ EDITIONABLE | NONEDITIONABLE ]
   [ PUBLIC ] SYNONYM
   [ schema. ] synonym
   [ SHARING = { METADATA | NONE } ]
   FOR [ schema. ] object [ @ dblink ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-32F53F4A-0046-4E0B-B11E-D9EA7278E271"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01402" target="_blank">CREATE TABLE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ { GLOBAL | PRIVATE } TEMPORARY | SHARDED | DUPLICATED ] TABLE
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-32F53F4A-0046-4E0B-B11E-D9EA7278E271"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01402" target="_blank">创建表</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ { GLOBAL | PRIVATE } TEMPORARY | SHARDED | DUPLICATED ] TABLE
   [ schema. ] table
     [ SHARING = { METADATA | DATA | EXTENDED DATA | NONE } ]
   { relational_table | object_table | XMLType_table }
@@ -1000,7 +992,7 @@ PROCEDURE plsql_procedure_source</pre></div>
 </pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-C6B28DA2-E40A-4CF2-8D1A-4CF6E226D8F9"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01403" target="_blank">CREATE TABLESPACE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-C6B28DA2-E40A-4CF2-8D1A-4CF6E226D8F9"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01403" target="_blank">创建TABLESPACE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE
    [ BIGFILE | SMALLFILE ]
    { permanent_tablespace_clause
    | temporary_tablespace_clause
@@ -1008,29 +1000,29 @@ PROCEDURE plsql_procedure_source</pre></div>
    } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-3821654B-186A-4433-BD2B-45EDE6507F03"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF-GUID-877951F1-B2A5-4907-9F0F-EF4F1884E8C4" target="_blank">CREATE TABLESPACE SET</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE TABLESPACE SET tablespace_set
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-3821654B-186A-4433-BD2B-45EDE6507F03"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF-GUID-877951F1-B2A5-4907-9F0F-EF4F1884E8C4" target="_blank">创建TABLESPACE SET</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE TABLESPACE SET tablespace_set
   [ IN SHARDSPACE shardspace ]
   [ USING TEMPLATE 
     ( { DATAFILE [, file_specification ]... ] permanent_tablespace_attrs )
   ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-7EAD3FDA-D4CA-4A5E-A8A6-865EB1C18A96"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01405" target="_blank">CREATE TRIGGER</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-7EAD3FDA-D4CA-4A5E-A8A6-865EB1C18A96"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01405" target="_blank">创造触发器</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
 [ EDITIONABLE | NONEDITIONABLE ]
 TRIGGER plsql_trigger_source</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-CA841077-3098-4ED2-BD98-5A8E1DE2185F"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01506" target="_blank">CREATE TYPE</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [OR REPLACE]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-CA841077-3098-4ED2-BD98-5A8E1DE2185F"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01506" target="_blank">创建类型</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [OR REPLACE]
 [ EDITIONABLE | NONEDITIONABLE ]
 TYPE plsql_type_source</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-4AF48AAC-6541-4D50-B014-6CCAD59EEBF5"><span class="bold"><a href="../sqlrf/CREATE-TYPE-BODY.html#SQLRF01502" target="_blank">CREATE TYPE BODY</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-4AF48AAC-6541-4D50-B014-6CCAD59EEBF5"><span class="bold"><a href="../sqlrf/CREATE-TYPE-BODY.html#SQLRF01502" target="_blank">创建类型身体</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [ OR REPLACE ]
 [ EDITIONABLE | NONEDITIONABLE ]
 TYPE BODY plsql_type_body_source</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-8BBA9015-6AA2-4F83-9211-170A1E3F4CE3"><span class="bold"><a href="../sqlrf/CREATE-USER.html#SQLRF01503" target="_blank">CREATE USER</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE USER user
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-8BBA9015-6AA2-4F83-9211-170A1E3F4CE3"><span class="bold"><a href="../sqlrf/CREATE-USER.html#SQLRF01503" target="_blank">创建用户</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE USER user
    IDENTIFIED
         { BY password [ [HTTP] DIGEST { ENABLE | DISABLE } ]
         | EXTERNALLY [ AS 'certificate_DN' | AS 'kerberos_principal_name' ]
@@ -1057,7 +1049,7 @@ TYPE BODY plsql_type_body_source</pre></div>
   ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-993ED960-91D3-46D7-AB5E-64CD62181885"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01504" target="_blank">CREATE VIEW</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [OR REPLACE]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-993ED960-91D3-46D7-AB5E-64CD62181885"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01504" target="_blank">创建视图</a></span></p><pre class="oac_no_warn" dir="ltr">CREATE [OR REPLACE]
   [[NO] FORCE]
   [ EDITIONING | EDITIONABLE [ EDITIONING ] | NONEDITIONABLE ]
   VIEW [schema.] view
@@ -1079,7 +1071,7 @@ TYPE BODY plsql_type_body_source</pre></div>
   [ CONTAINER_MAP | CONTAINERS_DEFAULT ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-76D11506-8FEB-47E6-AC75-E5CE18FBFD42"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01505" target="_blank">DELETE</a></span></p><pre class="oac_no_warn" dir="ltr">DELETE [ hint ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-76D11506-8FEB-47E6-AC75-E5CE18FBFD42"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01505" target="_blank">删除</a></span></p><pre class="oac_no_warn" dir="ltr">DELETE [ hint ]
    [ FROM ]
    { dml_table_expression_clause
    | ONLY (dml_table_expression_clause)
@@ -1089,7 +1081,7 @@ TYPE BODY plsql_type_body_source</pre></div>
      [error_logging_clause];</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-283B7A44-0E87-47E6-AF67-C53D5FE22E43"><span class="bold"><a href="../sqlrf/DISASSOCIATE-STATISTICS.html#SQLRF01507" target="_blank">DISASSOCIATE STATISTICS</a></span></p><pre class="oac_no_warn" dir="ltr">DISASSOCIATE STATISTICS FROM
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-283B7A44-0E87-47E6-AF67-C53D5FE22E43"><span class="bold"><a href="../sqlrf/DISASSOCIATE-STATISTICS.html#SQLRF01507" target="_blank">消除统计数据</a></span></p><pre class="oac_no_warn" dir="ltr">DISASSOCIATE STATISTICS FROM
    { COLUMNS [ schema. ]table.column
                [, [ schema. ]table.column ]...
    | FUNCTIONS [ schema. ]function
@@ -1113,7 +1105,7 @@ TYPE BODY plsql_type_body_source</pre></div>
                      <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-DEB3BC67-C044-446B-8FBD-1ED85E19903A"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF-GUID-98D6273D-5F83-4AEC-85AF-7540A710F59D" target="_blank">DROP ATTRIBUTE DIMENSION</a></span></p><pre class="oac_no_warn" dir="ltr">DROP ATTRIBUTE DIMENSION [ schema. ] attr_dimension_name;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-7C685E36-B05D-41EC-9F7C-CF55A236C53E"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF56067" target="_blank">DROP AUDIT POLICY</a></span></p><pre class="oac_no_warn" dir="ltr">DROP AUDIT POLICY policy ;</pre></div>
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-7C685E36-B05D-41EC-9F7C-CF55A236C53E"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF56067" target="_blank">DROP审计政策</a></span></p><pre class="oac_no_warn" dir="ltr">DROP AUDIT POLICY policy ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
                      <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-EF1031C2-9129-4E6A-8C92-166E7BDB8003"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01511" target="_blank">DROP CLUSTER</a></span></p><pre class="oac_no_warn" dir="ltr">DROP CLUSTER [ schema. ] cluster
@@ -1147,7 +1139,7 @@ TYPE BODY plsql_type_body_source</pre></div>
                      <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-3FFBFFC2-DC3C-4667-9519-E76BCA148341"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF20010" target="_blank">DROP FLASHBACK ARCHIVE</a></span></p><pre class="oac_no_warn" dir="ltr">DROP FLASHBACK ARCHIVE flashback_archive;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-AAF7384D-957D-460B-93BC-11C1992E3A3E"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01518" target="_blank">DROP FUNCTION</a></span></p><pre class="oac_no_warn" dir="ltr">DROP FUNCTION [ schema. ] function_name ;</pre></div>
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-AAF7384D-957D-460B-93BC-11C1992E3A3E"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01518" target="_blank">降功能</a></span></p><pre class="oac_no_warn" dir="ltr">DROP FUNCTION [ schema. ] function_name ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
                      <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-FB210D28-0DDD-4356-884C-D6503BE21EEE"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF-GUID-03DD165D-EDCC-484F-B79B-D56447587669" target="_blank">DROP HIERARCHY</a></span></p><pre class="oac_no_warn" dir="ltr">DROP HIERARCHY [ schema. ] hierarchy_name;</pre></div>
@@ -1195,7 +1187,7 @@ TYPE BODY plsql_type_body_source</pre></div>
   [ { KEEP | INCLUDING } DATAFILES ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-71D5B52B-B49D-471D-988E-2FEF91E22AFE"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01528" target="_blank">DROP PROCEDURE</a></span></p><pre class="oac_no_warn" dir="ltr">DROP PROCEDURE [ schema. ] procedure ;</pre></div>
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-71D5B52B-B49D-471D-988E-2FEF91E22AFE"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01528" target="_blank">DROP程序</a></span></p><pre class="oac_no_warn" dir="ltr">DROP PROCEDURE [ schema. ] procedure ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
                      <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-1FA8794D-8C25-4AB1-9966-FACA9EED3568"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01529" target="_blank">DROP PROFILE</a></span></p><pre class="oac_no_warn" dir="ltr">DROP PROFILE profile [ CASCADE ] ;</pre></div>
@@ -1247,13 +1239,13 @@ TYPE BODY plsql_type_body_source</pre></div>
                      <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E8B01C96-3992-460C-94E6-6FD5E1870B4C"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01812" target="_blank">DROP VIEW</a></span></p><pre class="oac_no_warn" dir="ltr">DROP VIEW [ schema. ] view [ CASCADE CONSTRAINTS ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E09BAB2E-0BCC-420D-9E41-E776738CD9A5"><span class="bold"><a href="../sqlrf/EXPLAIN-PLAN.html#SQLRF01601" target="_blank">EXPLAIN PLAN</a></span></p><pre class="oac_no_warn" dir="ltr">EXPLAIN PLAN
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-E09BAB2E-0BCC-420D-9E41-E776738CD9A5"><span class="bold"><a href="../sqlrf/EXPLAIN-PLAN.html#SQLRF01601" target="_blank">解释计划</a></span></p><pre class="oac_no_warn" dir="ltr">EXPLAIN PLAN
    [ SET STATEMENT_ID = string ]
    [ INTO [ schema. ] table [ @ dblink ] ]
 FOR statement ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-C959843A-9DE4-4B99-8C62-D4014CEC323C"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01801" target="_blank">FLASHBACK DATABASE</a></span></p><pre class="oac_no_warn" dir="ltr">FLASHBACK [ STANDBY ] [ PLUGGABLE ] DATABASE [ database ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-C959843A-9DE4-4B99-8C62-D4014CEC323C"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01801" target="_blank">FLASHBACK数据库</a></span></p><pre class="oac_no_warn" dir="ltr">FLASHBACK [ STANDBY ] [ PLUGGABLE ] DATABASE [ database ]
    { TO { { SCN | TIMESTAMP } expr
         | RESTORE POINT restore_point
         }
@@ -1264,7 +1256,7 @@ FOR statement ;</pre></div>
    } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-D2E2DCE9-FC26-4915-B036-B7DA20F2B6A9"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01802" target="_blank">FLASHBACK TABLE</a></span></p><pre class="oac_no_warn" dir="ltr">FLASHBACK TABLE
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-D2E2DCE9-FC26-4915-B036-B7DA20F2B6A9"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01802" target="_blank">闪回表</a></span></p><pre class="oac_no_warn" dir="ltr">FLASHBACK TABLE
    [ schema. ] table
      [, [ schema. ] table ]...
    TO { { { SCN | TIMESTAMP } expr
@@ -1281,11 +1273,11 @@ FOR statement ;</pre></div>
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-F8C1914C-D416-4FBA-9721-CAE276F04EC7"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01604" target="_blank">INSERT</a></span></p><pre class="oac_no_warn" dir="ltr">INSERT [ hint ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-F8C1914C-D416-4FBA-9721-CAE276F04EC7"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01604" target="_blank">插入</a></span></p><pre class="oac_no_warn" dir="ltr">INSERT [ hint ]
    { single_table_insert | multi_table_insert } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-0CACAC3C-4797-443B-BECC-39065FBB63A4"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01605" target="_blank">LOCK TABLE</a></span></p><pre class="oac_no_warn" dir="ltr">LOCK TABLE [ schema. ] { table | view }
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-0CACAC3C-4797-443B-BECC-39065FBB63A4"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01605" target="_blank">锁表</a></span></p><pre class="oac_no_warn" dir="ltr">LOCK TABLE [ schema. ] { table | view }
    [ partition_extension_clause
    | @ dblink
    ] [, [ schema. ] { table | view }
@@ -1299,7 +1291,7 @@ FOR statement ;</pre></div>
    ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-9767915C-ED89-4DFD-8951-9D8C8DABC767"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01606" target="_blank">MERGE</a></span></p><pre class="oac_no_warn" dir="ltr">MERGE [ hint ]
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-9767915C-ED89-4DFD-8951-9D8C8DABC767"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01606" target="_blank">合并</a></span></p><pre class="oac_no_warn" dir="ltr">MERGE [ hint ]
    INTO [ schema. ] { table | view } [ t_alias ]
    USING { [ schema. ] { table | view }
          | subquery 
@@ -1310,7 +1302,7 @@ FOR statement ;</pre></div>
    [ error_logging_clause ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-A21A6C82-30AB-45C4-BA64-D4616CD01179"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01607" target="_blank">NOAUDIT (Traditional Auditing)</a></span></p><pre class="oac_no_warn" dir="ltr">NOAUDIT 
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-A21A6C82-30AB-45C4-BA64-D4616CD01179"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01607" target="_blank">NOAUDIT（传统审计）</a></span></p><pre class="oac_no_warn" dir="ltr">NOAUDIT 
    { audit_operation_clause [ auditing_by_clause ]
    | audit_schema_object_clause
    | NETWORK
@@ -1320,7 +1312,7 @@ FOR statement ;</pre></div>
    [ CONTAINER = { CURRENT | ALL } ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-1B5B547E-4B0A-47A5-B1CA-AE6A3F7B7081"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF56112" target="_blank">NOAUDIT (Unified Auditing)</a></span></p><pre class="oac_no_warn" dir="ltr">NOAUDIT
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-1B5B547E-4B0A-47A5-B1CA-AE6A3F7B7081"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF56112" target="_blank">NOAUDIT（统一审计）</a></span></p><pre class="oac_no_warn" dir="ltr">NOAUDIT
   { POLICY policy [ { BY user [, user]... } | by_users_with_roles ] }
   |
   { CONTEXT NAMESPACE namespace ATTRIBUTES attribute [, attribute ]...
@@ -1329,7 +1321,7 @@ FOR statement ;</pre></div>
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-4B440027-D462-4B84-A9EE-68FEC35A3DF2"><span class="bold"><a href="../sqlrf/PURGE.html#SQLRF01803" target="_blank">PURGE</a></span></p><pre class="oac_no_warn" dir="ltr">PURGE
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-4B440027-D462-4B84-A9EE-68FEC35A3DF2"><span class="bold"><a href="../sqlrf/PURGE.html#SQLRF01803" target="_blank">清除</a></span></p><pre class="oac_no_warn" dir="ltr">PURGE
   { TABLE table
   | INDEX index
   | TABLESPACE tablespace [ USER username ]
@@ -1339,10 +1331,10 @@ FOR statement ;</pre></div>
   } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-71D20B96-4E10-46AA-82FD-5E04FA9BBFB7"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01608" target="_blank">RENAME</a></span></p><pre class="oac_no_warn" dir="ltr">RENAME old_name TO new_name ;</pre></div>
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-71D20B96-4E10-46AA-82FD-5E04FA9BBFB7"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01608" target="_blank">改名</a></span></p><pre class="oac_no_warn" dir="ltr">RENAME old_name TO new_name ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-0ED82CAC-6875-4A4B-A244-FA705B60397D"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01609" target="_blank">REVOKE</a></span></p><pre class="oac_no_warn" dir="ltr">REVOKE
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-0ED82CAC-6875-4A4B-A244-FA705B60397D"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01609" target="_blank">撤消</a></span></p><pre class="oac_no_warn" dir="ltr">REVOKE
   { { revoke_system_privileges | revoke_object_privileges }
     [ CONTAINER = { CURRENT | ALL } ] }
   | revoke_roles_from_programs ;</pre></div>
@@ -1357,17 +1349,17 @@ FOR statement ;</pre></div>
                      <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-02BE91D6-7B46-4044-A0B4-1F60EA1E417C"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01701" target="_blank">SAVEPOINT</a></span></p><pre class="oac_no_warn" dir="ltr">SAVEPOINT savepoint ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-5065F75E-C715-4C33-A001-B6A4C85149F4"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01702" target="_blank">SELECT</a></span></p><pre class="oac_no_warn" dir="ltr">subquery [ for_update_clause ] ;</pre></div>
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-5065F75E-C715-4C33-A001-B6A4C85149F4"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01702" target="_blank">选择</a></span></p><pre class="oac_no_warn" dir="ltr">subquery [ for_update_clause ] ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-0A452FFF-CAAF-4ECD-8572-84F51F7CB8D7"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01703" target="_blank">SET CONSTRAINT[S]</a></span></p><pre class="oac_no_warn" dir="ltr">SET { CONSTRAINT | CONSTRAINTS }
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-0A452FFF-CAAF-4ECD-8572-84F51F7CB8D7"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01703" target="_blank">SET CONSTRAINT [S]</a></span></p><pre class="oac_no_warn" dir="ltr">SET { CONSTRAINT | CONSTRAINTS }
     { constraint [, constraint ]...
     | ALL
     }
     { IMMEDIATE | DEFERRED } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-C9EEF20B-6023-49E9-BC2B-5748FEA37719"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01704" target="_blank">SET ROLE</a></span></p><pre class="oac_no_warn" dir="ltr">SET ROLE
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-C9EEF20B-6023-49E9-BC2B-5748FEA37719"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01704" target="_blank">设置角色</a></span></p><pre class="oac_no_warn" dir="ltr">SET ROLE
    { role [ IDENTIFIED BY password ]
      [, role [ IDENTIFIED BY password ] ]...
    | ALL [ EXCEPT role [, role ]... ]
@@ -1375,7 +1367,7 @@ FOR statement ;</pre></div>
    } ;</pre></div>
                   <!-- class="section" -->
                   <div class="section">
-                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-A931B21E-4843-4D9C-BC6F-C4D25B5359F4"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01705" target="_blank">SET TRANSACTION</a></span></p><pre class="oac_no_warn" dir="ltr">SET TRANSACTION
+                     <p class="subhead2" id="GUID-CE009C87-4AA6-45BF-9A0D-2B2C5FFB47B3__GUID-A931B21E-4843-4D9C-BC6F-C4D25B5359F4"><span class="bold"><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/19/sqlqr&amp;id=SQLRF01705" target="_blank">设置交易</a></span></p><pre class="oac_no_warn" dir="ltr">SET TRANSACTION
    { { READ { ONLY | WRITE }
      | ISOLATION LEVEL
        { SERIALIZABLE | READ COMMITTED }

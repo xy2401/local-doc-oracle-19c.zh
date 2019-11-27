@@ -1,14 +1,12 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Diagnosing and Tuning Database Performance</title>
+      <title>诊断和调整数据库性能</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database Performance Tuning Guide">
-      <meta property="og:description" content>
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
       <meta name="application-name" content="Database Performance Tuning Guide">
@@ -44,45 +42,40 @@
     <meta name="dcterms.isVersionOf" content="TGDBA">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="configuring-database-for-performance.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="measuring-database-performance.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="configuring-database-for-performance.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="measuring-database-performance.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Performance Tuning Guide</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Diagnosing and Tuning Database Performance </li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库性能调优指南</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">诊断和调整数据库性能</li>
             </ol>
             <a id="GUID-E0EEBB00-000C-48EA-9F81-6BD867B78405" name="GUID-E0EEBB00-000C-48EA-9F81-6BD867B78405"></a><a id="TGDBA144"></a>
             
-            <h2 id="TGDBA-GUID-E0EEBB00-000C-48EA-9F81-6BD867B78405" class="sect2"><span class="enumeration_part">Part II </span>Diagnosing and Tuning Database Performance 
-            </h2>
+            <h2 id="TGDBA-GUID-E0EEBB00-000C-48EA-9F81-6BD867B78405" class="sect2"><span class="enumeration_part">第二部分</span>诊断和调整数据库性能</h2>
          </header>
          <div class="ind">
             <div>
-               <p>This part contains the following chapters:</p>
-               <ul style="list-style-type: disc;">
+               <p>本部分包含以下章节：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p><a href="measuring-database-performance.html#GUID-811E9E65-C64A-4028-A90E-102BBFF6E68F">Measuring Database Performance </a></p>
+                     <p><a href="measuring-database-performance.html#GUID-811E9E65-C64A-4028-A90E-102BBFF6E68F">衡量数据库性能</a></p>
                   </li>
                   <li>
-                     <p><a href="gathering-database-statistics.html#GUID-CBB1716F-2B20-4575-ADCE-94E33BEA53EF" title="You can adjust the interval, retention period, and number of top SQL to flush for snapshot generation, but note that this can affect the precision of the Oracle Database diagnostic tools.Oracle Database enables you to transport AWR data between systems. This is useful in cases where you want to use a separate system to perform analysis of AWR data, so as to reduce the overhead caused by performance analysis on a production system.A centralized Automatic Workload Repository (AWR) stores the performance data related to CDB and PDBs in a multitenant environment.In a multitenant environment, AWR data falls into different categories.">Gathering Database Statistics </a></p>
+                     <p><a href="gathering-database-statistics.html#GUID-CBB1716F-2B20-4575-ADCE-94E33BEA53EF" title="您可以调整间隔，保留期和顶级SQL的数量以刷新快照生成，但请注意，这会影响Oracle数据库诊断工具的精度。Oracle数据库使您可以在系统之间传输AWR数据。这在您希望使用单独的系统执行AWR数据分析的情况下非常有用，以便减少生产系统上性能分析所导致的开销。集中式自动工作负载存储库（AWR）在多租户环境中存储与CDB和PDB相关的性能数据。在多租户环境中，AWR数据分为不同的类别。">收集数据库统计信息</a></p>
                   </li>
                   <li>
-                     <p><a href="automatic-performance-diagnostics.html#GUID-843A596D-2D8B-422D-9C8D-73C0EF52739D" title="Starting with Oracle Database 12c, ADDM is enabled by default in the root container of a multitenant container database (CDB). Starting with Oracle Database 19c, you can also use ADDM in a pluggable database (PDB).ADDM does not work in a pluggable database (PDB) by default, because automatic AWR snapshots are disabled by default in a PDB. To use ADDM in a PDB, you must enable automatic AWR snapshots in the PDB by setting the AWR_PDB_AUTOFLUSH_ENABLED initialization parameter to TRUE and AWR snapshot interval greater than 0.">Automatic Performance Diagnostics </a></p>
+                     <p><a href="automatic-performance-diagnostics.html#GUID-843A596D-2D8B-422D-9C8D-73C0EF52739D" title="从Oracle Database 12c开始，默认情况下在多租户容器数据库（CDB）的根容器中启用ADDM。从Oracle Database 19c开始，您还可以在可插拔数据库（PDB）中使用ADDM。默认情况下，ADDM在可插拔数据库（PDB）中不起作用，因为默认情况下在PDB中禁用自动AWR快照。要在PDB中使用ADDM，必须通过将AWR_PDB_AUTOFLUSH_ENABLED初始化参数设置为TRUE且AWR快照间隔大于0来在PDB中启用自动AWR快照。">自动性能诊断</a></p>
                   </li>
                   <li>
-                     <p><a href="comparing-database-performance-over-time.html#GUID-BEDBF986-1A69-459A-90F5-350B8A407516">Comparing Database Performance Over Time </a></p>
+                     <p><a href="comparing-database-performance-over-time.html#GUID-BEDBF986-1A69-459A-90F5-350B8A407516">比较数据库性能随时间的变化</a></p>
                   </li>
                   <li>
-                     <p><a href="analyzing-sampled-data.html#GUID-E40F4358-E73D-45CB-B271-E7C3C65FA220">Analyzing Sampled Data </a></p>
+                     <p><a href="analyzing-sampled-data.html#GUID-E40F4358-E73D-45CB-B271-E7C3C65FA220">分析采样数据</a></p>
                   </li>
                   <li>
-                     <p><a href="instance-tuning-using-performance-views.html#GUID-07982549-507F-4465-8843-7F753BCF8F99"> Instance Tuning Using Performance Views</a></p>
+                     <p><a href="instance-tuning-using-performance-views.html#GUID-07982549-507F-4465-8843-7F753BCF8F99">使用性能视图进行实例调整</a></p>
                   </li>
                </ul>
             </div>

@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="The database is configured with two control files that must be stored on shared storage.">
       <meta name="description" content="The database is configured with two control files that must be stored on shared storage.">
-      <title>About Control Files</title>
+      <title>关于控制文件</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Real Application Clusters Installation Guide">
       <meta property="og:description" content="The database is configured with two control files that must be stored on shared storage.">
@@ -47,45 +45,41 @@
     <meta name="dcterms.isVersionOf" content="RILIN">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="about-tablespaces-and-data-files.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="about-online-redo-log-files.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="about-tablespaces-and-data-files.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="about-online-redo-log-files.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="understanding-the-oracle-rac-installed-configuration.html" property="item" typeof="WebPage"><span property="name"> Understanding the Oracle RAC Installed Configuration </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="database-components-created-using-database-configuration-assistant.html" property="item" typeof="WebPage"><span property="name">Database Components Created Using Database Configuration Assistant</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">About Control Files</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="understanding-the-oracle-rac-installed-configuration.html" property="item" typeof="WebPage"><span property="name">了解Oracle RAC安装配置</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="database-components-created-using-database-configuration-assistant.html" property="item" typeof="WebPage"><span property="name">使用Database Configuration Assistant创建的数据库组件</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">关于控制文件</li>
             </ol>
             <a id="GUID-C1E7CE07-AF58-4B8A-A192-ABC14CB5634F" name="GUID-C1E7CE07-AF58-4B8A-A192-ABC14CB5634F"></a><a id="RILIN1086"></a>
             
-            <h2 id="RILIN-GUID-C1E7CE07-AF58-4B8A-A192-ABC14CB5634F" class="sect2">About Control Files</h2>
+            <h2 id="RILIN-GUID-C1E7CE07-AF58-4B8A-A192-ABC14CB5634F" class="sect2">关于控制文件</h2>
          </header>
          <div class="ind">
             <div>
-               <p>The database is configured with two control files that must be stored on shared storage. </p>
-               <p>Every database must have one unique control file. Any additional control files configured for the database are identical copies of the original control file. If a control file becomes unusable, then the database instance fails when it attempts to access the damaged control file. By multiplexing (creating multiple copies of) a control file on different disks, the database can achieve redundancy and thereby avoid a single point of failure.</p>
+               <p>数据库配置有两个必须存储在共享存储上的控制文件。</p>
+               <p>每个数据库必须有一个唯一的控制文件。为数据库配置的任何其他控制文件都是原始控制文件的相同副本。如果控制文件变得不可用，则数据库实例在尝试访问损坏的控制文件时会失败。通过在不同磁盘上复用（创建多个副本）控制文件，数据库可以实现冗余，从而避免单点故障。</p>
             </div>
             <div>
                <div class="infoboxnotealso" id="GUID-C1E7CE07-AF58-4B8A-A192-ABC14CB5634F__GUID-A45803A7-A365-4529-9922-24A505FB56BC">
-                  <p class="notep1">See Also:</p>
-                  <ul style="list-style-type: disc;">
+                  <p class="notep1">也可以看看：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><a href="../cncpt/physical-storage-structures.html#CNCPT404" target="_blank"><span class="italic">Oracle Database Concepts</span></a></p>
+                        <p><a href="../cncpt/physical-storage-structures.html#CNCPT404" target="_blank"><span class="italic">Oracle数据库概念</span></a></p>
                      </li>
                      <li>
-                        <p><a href="../admin/managing-control-files.html#ADMIN006" target="_blank"><span class="italic">Oracle Database Administrator's Guide</span></a></p>
+                        <p><a href="../admin/managing-control-files.html#ADMIN006" target="_blank"><span class="italic">Oracle数据库管理员指南</span></a></p>
                      </li>
                   </ul>
                </div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="database-components-created-using-database-configuration-assistant.html#GUID-7BEFD304-1FA6-4F94-8245-5D42B6CB78C8" title="Understand the database components that DBCA creates.">Database Components Created Using Database Configuration Assistant</a></p>
+                     <p><strong>父主题：</strong> <a href="database-components-created-using-database-configuration-assistant.html#GUID-7BEFD304-1FA6-4F94-8245-5D42B6CB78C8" title="了解DBCA创建的数据库组件。">使用Database Configuration Assistant创建的数据库组件</a></p>
                   </div>
                </div>
             </div>

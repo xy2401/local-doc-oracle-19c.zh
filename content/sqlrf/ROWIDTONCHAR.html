@@ -1,6 +1,4 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,55 +43,50 @@
     <meta name="dcterms.isVersionOf" content="SQLRF">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="ROWIDTOCHAR.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="RPAD.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="ROWIDTOCHAR.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="RPAD.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Language Reference </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">Functions</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">ROWIDTONCHAR </li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL语言参考</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">功能</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">ROWIDTONCHAR</li>
             </ol>
             <a id="GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5" name="GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5"></a><a id="SQLRF51724"></a><a id="SQLRF51725"></a><a id="SQLRF51726"></a><a id="SQLRF06102"></a>
             
-            <h2 id="SQLRF-GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5" class="sect2">ROWIDTONCHAR </h2>
+            <h2 id="SQLRF-GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5" class="sect2">ROWIDTONCHAR</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p class="subhead1" id="GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5__GUID-40948549-E828-4438-A91C-467008C2F95F">Syntax</p>
+                  <p class="subhead1" id="GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5__GUID-40948549-E828-4438-A91C-467008C2F95F">句法</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <div class="figure" id="GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5__GUID-F69A7CF1-04D1-4705-8454-E7D26C97902F"><img src="img/rowidtonchar.gif" alt="Description of rowidtonchar.eps follows" title="Description of rowidtonchar.eps follows" longdesc="img_text/rowidtonchar.html"><br><a href="img_text/rowidtonchar.html">Description of the illustration rowidtonchar.eps</a></div>
+                  <div class="figure" id="GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5__GUID-F69A7CF1-04D1-4705-8454-E7D26C97902F"><img src="img/rowidtonchar.gif" alt="下面是rowidtonchar.eps的描述" title="下面是rowidtonchar.eps的描述" longdesc="img_text/rowidtonchar.html"><br><a href="img_text/rowidtonchar.html">插图描述rowidtonchar.eps</a></div>
                   <!-- class="figure" -->
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5__GUID-B09836B7-4AFF-46FC-B949-7FF3100CEF68">Purpose</p>
+                  <p class="subhead1" id="GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5__GUID-B09836B7-4AFF-46FC-B949-7FF3100CEF68">目的</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p><code class="codeph">ROWIDTONCHAR</code> converts a rowid value to <code class="codeph">NVARCHAR2</code> data type. The result of this conversion is always in the national character set and is 18 characters long.
+                  <p><code class="codeph">ROWIDTONCHAR</code>将rowid值转换为<code class="codeph">NVARCHAR2</code>数据类型。此转换的结果始终为国家字符集，长度为18个字符。
                   </p>
                   <div class="infoboxnotealso" id="GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5__GUID-D7FD49F4-A804-4300-A631-949185DA6EEB">
-                     <p class="notep1">See Also:</p>
-                     <p>Appendix C in <a href="../nlspg/appendix-C-collation-derivation-and-determination-rules-for-SQL-operations.html#NLSPG-GUID-AFCE41ED-775B-4A00-AF38-C436776AE0C5" target="_blank"><span class="italic">Oracle Database Globalization Support Guide</span></a> for the collation derivation rules, which define the collation assigned to the character return value of <code class="codeph">ROWIDTONCHAR</code></p>
+                     <p class="notep1">也可以看看：</p>
+                     <p>“ <a href="../nlspg/appendix-C-collation-derivation-and-determination-rules-for-SQL-operations.html#NLSPG-GUID-AFCE41ED-775B-4A00-AF38-C436776AE0C5" target="_blank"><span class="italic">数据库全球化支持指南”</span></a>中的附录C，用于排序规则派生规则，用于定义分配给<code class="codeph">ROWIDTONCHAR</code>的字符返回值的<code class="codeph">ROWIDTONCHAR</code></p>
                   </div>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5__GUID-E9A2CF78-C00F-4941-B2DD-75D855B9DAA9">Examples </p>
+                  <p class="subhead1" id="GUID-3178A4DA-2534-4A93-A819-7C14208AE9B5__GUID-E9A2CF78-C00F-4941-B2DD-75D855B9DAA9">例子</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p>The following example converts a rowid value to an <code class="codeph">NVARCHAR2</code> string:
-                  </p><pre class="oac_no_warn" dir="ltr">SELECT LENGTHB( ROWIDTONCHAR(ROWID) ) Length, ROWIDTONCHAR(ROWID) 
+                  <p>以下示例将rowid值转换为<code class="codeph">NVARCHAR2</code>字符串：</p><pre class="oac_no_warn" dir="ltr">SELECT LENGTHB( ROWIDTONCHAR(ROWID) ) Length, ROWIDTONCHAR(ROWID) 
    FROM employees
    ORDER BY length; 
 

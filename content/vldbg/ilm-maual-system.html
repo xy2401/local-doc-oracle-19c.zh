@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="You can manually implement an Information Lifecycle Management (ILM) system using partitioning.">
       <meta name="description" content="You can manually implement an Information Lifecycle Management (ILM) system using partitioning.">
-      <title>Implementing an ILM System Manually Using Partitioning</title>
+      <title>手动使用分区实现ILM系统</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="VLDB and Partitioning Guide">
       <meta property="og:description" content="You can manually implement an Information Lifecycle Management (ILM) system using partitioning.">
@@ -46,48 +44,42 @@
     <meta name="dcterms.isVersionOf" content="VLDBG">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="control-validity-visibility-data.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="heatmap-ado-em.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="control-validity-visibility-data.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="heatmap-ado-em.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">VLDB and Partitioning Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="time-based-info.html" property="item" typeof="WebPage"><span property="name">Managing and Maintaining Time-Based Information</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Implementing an ILM System Manually Using Partitioning</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">VLDB和分区指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="time-based-info.html" property="item" typeof="WebPage"><span property="name">管理和维护基于时间的信息</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">手动使用分区实现ILM系统</li>
             </ol>
             <a id="GUID-E342DA80-8699-43FB-85FB-7A68A862280A" name="GUID-E342DA80-8699-43FB-85FB-7A68A862280A"></a><a id="VLDBG14077"></a><a id="VLDBG1338"></a>
             
-            <h2 id="VLDBG-GUID-E342DA80-8699-43FB-85FB-7A68A862280A" class="sect2">Implementing an ILM System Manually Using Partitioning</h2>
+            <h2 id="VLDBG-GUID-E342DA80-8699-43FB-85FB-7A68A862280A" class="sect2">手动使用分区实现ILM系统</h2>
          </header>
          <div class="ind">
             <div>
-               <p>You can manually implement an Information Lifecycle Management (ILM) system using partitioning.</p>
+               <p>您可以使用分区手动实施信息生命周期管理（ILM）系统。</p>
                <div class="section">
-                  <p><a href="ilm-maual-system.html#GUID-E342DA80-8699-43FB-85FB-7A68A862280A__CHDEIJFG">Example 5-12</a> illustrates how to manually create storage tiers and partition a table across those storage tiers and then setup a virtual private database (VPD) policy on that database to restrict access to the online archive tier data.
+                  <p><a href="ilm-maual-system.html#GUID-E342DA80-8699-43FB-85FB-7A68A862280A__CHDEIJFG">示例5-12</a>说明了如何手动创建存储层并跨这些存储层对表进行分区，然后在该数据库上设置虚拟专用数据库（VPD）策略以限制对在线存档层数据的访问。
                   </p>
                   <div class="infoboxnotealso" id="GUID-E342DA80-8699-43FB-85FB-7A68A862280A__GUID-A850C854-1DD7-4C8A-A121-43DD6CA63C62">
-                     <p class="notep1">See Also:</p>
+                     <p class="notep1">也可以看看：</p>
                      <p></p>
-                     <ul style="list-style-type: disc;">
+                     <ul style="list-style-type:disc">
                         <li>
-                           <p><a href="../sqlrf/CREATE-TABLE.html#SQLRF01402" target="_blank"><span><cite>Oracle Database SQL Language Reference</cite></span></a> for information about the <code class="codeph">CREATE</code> <code class="codeph">TABLE</code> SQL statement
-                           </p>
+                           <p>有关<code class="codeph">CREATE</code> <code class="codeph">TABLE</code> SQL语句的信息，请<a href="../sqlrf/CREATE-TABLE.html#SQLRF01402" target="_blank"><span><cite>参见Oracle数据库SQL语言参考</cite></span></a></p>
                         </li>
                         <li>
-                           <p><a href="../arpls/DBMS_RLS.html#ARPLS052" target="_blank"><span><cite>Oracle Database PL/SQL Packages and Types Reference</cite></span></a> for information about the <code class="codeph">DBMS_RLS</code> package
-                           </p>
+                           <p>有关<code class="codeph">DBMS_RLS</code>包的信息，请参阅<a href="../arpls/DBMS_RLS.html#ARPLS052" target="_blank"><span><cite>Oracle Database PL / SQL包和类型参考</cite></span></a></p>
                         </li>
                      </ul>
                   </div>
                </div>
                <!-- class="section" -->
                <div class="example" id="GUID-E342DA80-8699-43FB-85FB-7A68A862280A__CHDEIJFG">
-                  <p class="titleinexample">Example 5-12 Manually implementing an ILM system</p><pre class="oac_no_warn" dir="ltr">REM Setup the tablespaces for the data 
+                  <p class="titleinexample">示例5-12手动实现ILM系统</p><pre class="oac_no_warn" dir="ltr">REM Setup the tablespaces for the data 
 
 REM These tablespaces would be placed on a High Performance Tier 
 CREATE SMALLFILE TABLESPACE q1_orders DATAFILE 'q1_orders'

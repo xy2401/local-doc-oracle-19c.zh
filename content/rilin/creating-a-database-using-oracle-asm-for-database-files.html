@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="Before you create a database that uses Oracle Automatic Storage Management (Oracle ASM), you must run the root.sh script.">
       <meta name="description" content="Before you create a database that uses Oracle Automatic Storage Management (Oracle ASM), you must run the root.sh script.">
-      <title>Creating a Database Using Oracle ASM for Database Files</title>
+      <title>使用Oracle ASM为数据库文件创建数据库</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Real Application Clusters Installation Guide">
       <meta property="og:description" content="Before you create a database that uses Oracle Automatic Storage Management (Oracle ASM), you must run the root.sh script.">
@@ -47,35 +45,31 @@
     <meta name="dcterms.isVersionOf" content="RILIN">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="reasons-for-using-silent-mode-or-response-file-mode.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="using-response-files.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="reasons-for-using-silent-mode-or-response-file-mode.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="using-response-files.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters Installation Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="using-scripts-or-response-files-to-create-oracle-rac-databases.html" property="item" typeof="WebPage"><span property="name">Using Scripts or Response Files to Create Oracle RAC Databases </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="how-response-files-work.html" property="item" typeof="WebPage"><span property="name">How Response Files Work</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Creating a Database Using Oracle ASM for Database Files</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Real Application Clusters安装指南</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-scripts-or-response-files-to-create-oracle-rac-databases.html" property="item" typeof="WebPage"><span property="name">使用脚本或响应文件创建Oracle RAC数据库</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="how-response-files-work.html" property="item" typeof="WebPage"><span property="name">响应文件的工作原理</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">使用Oracle ASM为数据库文件创建数据库</li>
             </ol>
             <a id="GUID-294A9A4E-DD18-46F2-AAB9-E42924E0FA31" name="GUID-294A9A4E-DD18-46F2-AAB9-E42924E0FA31"></a><a id="RILIN1122"></a>
             
-            <h2 id="RILIN-GUID-294A9A4E-DD18-46F2-AAB9-E42924E0FA31" class="sect2">Creating a Database Using Oracle ASM for Database Files</h2>
+            <h2 id="RILIN-GUID-294A9A4E-DD18-46F2-AAB9-E42924E0FA31" class="sect2">使用Oracle ASM为数据库文件创建数据库</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Before you create a database that uses Oracle Automatic Storage Management (Oracle ASM), you must run the <code class="codeph">root.sh</code> script. 
+               <p>在创建使用Oracle自动存储管理（Oracle ASM）的数据库之前，必须运行<code class="codeph">root.sh</code>脚本。
                </p>
                <div class="section">
-                  <p>For this reason, you cannot create a database using Oracle ASM as the storage option for database files during a silent mode installation. Instead, you can complete a software-only installation using silent-mode, and then run the Oracle Net Configuration Assistant and DBCA in silent mode after you have completed the software-only installation and you have run the <code class="codeph">root.sh</code> script.
+                  <p>因此，在静默模式安装期间，无法使用Oracle ASM创建数据库作为数据库文件的存储选项。相反，您可以使用静默模式完成纯软件安装，然后在完成纯软件安装并运行<code class="codeph">root.sh</code>脚本后以静默方式运行Oracle Net Configuration Assistant和DBCA。
                   </p>
                   <div class="infoboxnote" id="GUID-294A9A4E-DD18-46F2-AAB9-E42924E0FA31__GUID-1A1A68CB-88B5-46F7-95DD-3509F59CD561">
-                     <p class="notep1">Note:</p>
-                     <p>This limitation applies only to databases that use Oracle Automatic Storage Management as the storage option for database files. You can create a database that uses the file system option during a silent-mode installation.</p>
+                     <p class="notep1">注意：</p>
+                     <p>此限制仅适用于使用Oracle自动存储管理作为数据库文件的存储选项的数据库。您可以在静默模式安装期间创建使用文件系统选项的数据库。</p>
                   </div>
                </div>
                <!-- class="section" -->
@@ -83,7 +77,7 @@
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="how-response-files-work.html#GUID-22719BEB-97CB-4134-A84D-629A7109C7A5" title="Response files can assist you with installing an Oracle product multiple times on multiple computers.">How Response Files Work</a></p>
+                     <p><strong>父主题：</strong> <a href="how-response-files-work.html#GUID-22719BEB-97CB-4134-A84D-629A7109C7A5" title="响应文件可以帮助您在多台计算机上多次安装Oracle产品。">响应文件的工作方式</a></p>
                   </div>
                </div>
             </div>

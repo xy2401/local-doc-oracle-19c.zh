@@ -1,13 +1,11 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us"  xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="abstract" content="SRVCTL commands are the tools that offer total control on managing the life cycle of Oracle Cluster Health Advisor as a highly available service.">
       <meta name="description" content="SRVCTL commands are the tools that offer total control on managing the life cycle of Oracle Cluster Health Advisor as a highly available service.">
-      <title>Viewing the Status of Cluster Health Advisor</title>
+      <title>查看群集运行状况顾问的状态</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="User’s Guide">
       <meta property="og:description" content="SRVCTL commands are the tools that offer total control on managing the life cycle of Oracle Cluster Health Advisor as a highly available service.">
@@ -47,46 +45,41 @@
     <meta name="dcterms.isVersionOf" content="ATNMS">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body >
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="managing-cha-repository.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="automatically-monitoring-cluster.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="managing-cha-repository.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="automatically-monitoring-cluster.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">User’s Guide</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="analyzing-risks-and-complying-best-practices.html" property="item" typeof="WebPage"><span property="name">Analyzing the Cluster Configuration</span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="purpose-cluster-health-advisor.html" property="item" typeof="WebPage"><span property="name">Proactively Detecting and Diagnosing Performance Issues for Oracle RAC</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Viewing the Status of Cluster Health Advisor</li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">用户指导</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="analyzing-risks-and-complying-best-practices.html" property="item" typeof="WebPage"><span property="name">分析群集配置</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="purpose-cluster-health-advisor.html" property="item" typeof="WebPage"><span property="name">主动检测和诊断Oracle RAC的性能问题</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">查看群集运行状况顾问的状态</li>
             </ol>
             <a id="GUID-BD790DCD-4FC5-41D6-9E83-0F6A5AD73179" name="GUID-BD790DCD-4FC5-41D6-9E83-0F6A5AD73179"></a>
             
-            <h2 id="ATNMS-GUID-BD790DCD-4FC5-41D6-9E83-0F6A5AD73179" class="sect2"><span class="enumeration_section">3.7 </span>Viewing the Status of Cluster Health Advisor
-            </h2>
+            <h2 id="ATNMS-GUID-BD790DCD-4FC5-41D6-9E83-0F6A5AD73179" class="sect2"><span class="enumeration_section">3.7</span>查看Cluster Health Advisor的状态</h2>
          </header>
          <div class="ind">
             <div>
-               <p>SRVCTL commands are the tools that offer total control on managing the life cycle of Oracle Cluster Health Advisor as a highly available service.</p>
-               <p>Use SRVCTL commands to the check the status and configuration of Oracle Cluster Health Advisor service on any active hub or leaf nodes of the Oracle RAC cluster.</p>
+               <p>SRVCTL命令是提供对作为高可用性服务管理Oracle Cluster Health Advisor生命周期的完全控制的工具。</p>
+               <p>使用SRVCTL命令检查Oracle RAC集群的任何活动集线器或叶节点上的Oracle Cluster Health Advisor服务的状态和配置。</p>
                <div class="p">
                   <div class="infoboxnote" id="GUID-BD790DCD-4FC5-41D6-9E83-0F6A5AD73179__GUID-C40F4CBE-E071-4CFC-9826-EC7655FDAED9">
-                     <p class="notep1">Note:</p>
-                     <p>A target is monitored only if it is running and the Oracle Cluster Health Advisor service is also running on the host node where the target exists.</p>
+                     <p class="notep1">注意：</p>
+                     <p>仅当目标正在运行且Oracle Cluster Health Advisor服务也在目标所在的主机节点上运行时，才会监视目标。</p>
                   </div>
                </div>
                <ol>
                   <li>
-                     <div class="p">To check the status of Oracle Cluster Health Advisor service on all nodes in the Oracle RAC cluster:<pre class="pre codeblock"><code>srvctl status cha [-help]</code></pre></div>
-                     <div class="p">For example:<pre class="pre codeblock"><code># srvctl status cha
+                     <div class="p">要检查Oracle RAC集群中所有节点上的Oracle Cluster Health Advisor服务的状态，请执行以下操作：<pre class="pre codeblock"><code>srvctl status cha [-help]</code></pre></div>
+                     <div class="p">例如：<pre class="pre codeblock"><code># srvctl status cha
 Cluster Health Advisor is running on nodes racNode1, racNode2.
 Cluster Health Advisor is not running on nodes racNode3, racNode4.</code></pre></div>
                   </li>
                   <li>
-                     <div class="p">To check if Oracle Cluster Health Advisor service is enabled or disabled on all nodes in the Oracle RAC cluster:<pre class="pre codeblock"><code>srvctl config cha [-help]</code></pre></div>
-                     <div class="p">For example:<pre class="pre codeblock"><code># srvctl config cha
+                     <div class="p">要检查Oracle RAC集群中的所有节点上是否启用或禁用了Oracle Cluster Health Advisor服务，请执行以下操作：<pre class="pre codeblock"><code>srvctl config cha [-help]</code></pre></div>
+                     <div class="p">例如：<pre class="pre codeblock"><code># srvctl config cha
 Cluster Health Advisor is enabled on nodes racNode1, racNode2.
 Cluster Health Advisor is not enabled on nodes racNode3, racNode4.</code></pre></div>
                   </li>
@@ -95,7 +88,7 @@ Cluster Health Advisor is not enabled on nodes racNode3, racNode4.</code></pre><
             <div>
                <div class="familylinks">
                   <div class="parentlink">
-                     <p><strong>Parent topic:</strong> <a href="purpose-cluster-health-advisor.html#GUID-78F409B6-7CB2-4103-9460-4E87F48DCEC2" title="Oracle Cluster Health Advisor provides system and database administrators with early warning of pending performance issues, and root causes and corrective actions for Oracle RAC databases and cluster nodes.">Proactively Detecting and Diagnosing Performance Issues for Oracle RAC</a></p>
+                     <p><strong>父主题：</strong> <a href="purpose-cluster-health-advisor.html#GUID-78F409B6-7CB2-4103-9460-4E87F48DCEC2" title="Oracle Cluster Health Advisor为系统和数据库管理员提供待处理性能问题的早期警告，以及Oracle RAC数据库和集群节点的根本原因和纠正措施。">主动检测和诊断Oracle RAC的性能问题</a></p>
                   </div>
                </div>
             </div>

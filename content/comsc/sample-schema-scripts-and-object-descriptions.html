@@ -1,14 +1,12 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Sample Schema Scripts and Object Descriptions</title>
+      <title>示例模式脚本和对象描述</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="Database Sample Schemas">
-      <meta property="og:description" content>
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
       <meta name="application-name" content="Database Sample Schemas">
@@ -44,50 +42,42 @@
     <meta name="dcterms.isVersionOf" content="COMSC">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="schema-diagrams.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="HR-sample-schema-scripts-and-objects.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="schema-diagrams.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="HR-sample-schema-scripts-and-objects.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">Database Sample Schemas</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">Sample Schema Scripts and Object Descriptions </li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">数据库示例模式</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">示例模式脚本和对象描述</li>
             </ol>
             <a id="GUID-35C4F53F-2DB6-4B74-888E-08B0C701F26E" name="GUID-35C4F53F-2DB6-4B74-888E-08B0C701F26E"></a><a id="COMSC004"></a>
             
-            <h2 id="COMSC-GUID-35C4F53F-2DB6-4B74-888E-08B0C701F26E" class="sect2"><span class="enumeration_chapter">4 </span>Sample Schema Scripts and Object Descriptions 
-            </h2>
+            <h2 id="COMSC-GUID-35C4F53F-2DB6-4B74-888E-08B0C701F26E" class="sect2"><span class="enumeration_chapter">4</span>示例架构脚本和对象描述</h2>
          </header>
          <div class="ind">
             <div>
-               <p>Consider the scripts used to generate the Oracle Database Sample Schemas. Each schema has two primary scripts:</p>
-               <ul style="list-style-type: disc;">
+               <p>考虑用于生成Oracle数据库示例模式的脚本。每个模式都有两个主要脚本：</p>
+               <ul style="list-style-type:disc">
                   <li>
-                     <p>The <span class="italic"><code class="codeph">xx</code></span><code class="codeph">_main.sql</code> script, where <span class="italic"><code class="codeph">xx</code></span> is the schema abbreviation, resets and creates all objects and data for a particular schema. This main script calls all other scripts necessary to build and load the schema.
+                     <p><span class="italic"><code class="codeph">xx</code></span> <code class="codeph">_main.sql</code>脚本（其中<span class="italic"><code class="codeph">xx</code></span>是架构缩写）重置并创建特定架构的所有对象和数据。此主脚本调用构建和加载架构所需的所有其他脚本。
                      </p>
                   </li>
                   <li>
-                     <p>Script <span class="italic"><code class="codeph">xx</code></span><code class="codeph">_drop.sql</code>, where <span class="italic"><code class="codeph">xx</code></span> is the schema name, removes all objects from a particular schema.
+                     <p>脚本<span class="italic"><code class="codeph">xx</code></span> <code class="codeph">_drop.sql</code> ，其中<span class="italic"><code class="codeph">xx</code></span>是模式名称，从特定模式中删除所有对象。
                      </p>
                   </li>
                </ul>
-            </div><a id="COMSC00018"></a><div class="props_rev_3"><a id="GUID-C4CD5121-A94A-4CFB-99B4-885002C4D75E" name="GUID-C4CD5121-A94A-4CFB-99B4-885002C4D75E"></a><h3 id="COMSC-GUID-C4CD5121-A94A-4CFB-99B4-885002C4D75E" class="sect3"><span class="enumeration_section">4.1 </span>Master Script for Sample Schemas
-               </h3>
+            </div><a id="COMSC00018"></a><div class="props_rev_3"><a id="GUID-C4CD5121-A94A-4CFB-99B4-885002C4D75E" name="GUID-C4CD5121-A94A-4CFB-99B4-885002C4D75E"></a><h3 id="COMSC-GUID-C4CD5121-A94A-4CFB-99B4-885002C4D75E" class="sect3"><span class="enumeration_section">4.1</span>示例模式的主脚本</h3>
                <div>
-                  <p>The master script, <code class="codeph">mksample.sql</code>, sets up the overall Sample Schema environment and creates all the schemas.
+                  <p>主脚本<code class="codeph">mksample.sql</code>设置整个示例模式环境并创建所有模式。
                   </p>
-                  <p>In the master script (<code class="codeph">mksample.sql</code>), you will notice variables such as <code class="codeph">%s_pmPath%</code>, <code class="codeph">%s_logPath%</code>, and <code class="codeph">%s_shPath%</code>. These variables are instantiated on installation.
+                  <p>在主脚本（ <code class="codeph">mksample.sql</code> ）中，您将注意到<code class="codeph">%s_pmPath%</code> ， <code class="codeph">%s_logPath%</code>和<code class="codeph">%s_shPath%</code>等<code class="codeph">%s_shPath%</code> 。这些变量在安装时实例化。
                   </p>
-               </div><a id="COMSC00019"></a><div class="props_rev_3"><a id="GUID-8050CB76-88B4-4BB0-9AFD-C84C0E7647A4" name="GUID-8050CB76-88B4-4BB0-9AFD-C84C0E7647A4"></a><h4 id="COMSC-GUID-8050CB76-88B4-4BB0-9AFD-C84C0E7647A4" class="sect4"><span class="enumeration_section">4.1.1 </span>mksample.sql
-                  </h4>
+               </div><a id="COMSC00019"></a><div class="props_rev_3"><a id="GUID-8050CB76-88B4-4BB0-9AFD-C84C0E7647A4" name="GUID-8050CB76-88B4-4BB0-9AFD-C84C0E7647A4"></a><h4 id="COMSC-GUID-8050CB76-88B4-4BB0-9AFD-C84C0E7647A4" class="sect4"><span class="enumeration_section">4.1.1</span> mksample.sql</h4>
                   <div>
                      <div class="section">
-                        <p>The text of the <code class="codeph">mksample.sql</code> script follows:
-                        </p><pre class="oac_no_warn" dir="ltr">Rem
+                        <p><code class="codeph">mksample.sql</code>脚本的文本如下：</p><pre class="oac_no_warn" dir="ltr">Rem
 Rem $Header: mksample.sql.sbs 02-apr-2003.14:55:17 $
 Rem
 Rem mksample.sql

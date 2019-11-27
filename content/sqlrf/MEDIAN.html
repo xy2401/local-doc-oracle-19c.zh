@@ -1,6 +1,4 @@
-<!DOCTYPE html
-  SYSTEM "about:legacy-compat">
-<html xml:lang="en-us" lang="en-us">
+<html lang="en-us" dir="ltr" xml:lang="en-us">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +6,7 @@
       <title>MEDIAN</title>
       <meta property="og:site_name" content="Oracle Help Center">
       <meta property="og:title" content="SQL Language Reference ">
-      <meta property="og:description" content>
+      <meta property="og:description" content="">
       <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
       <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
       <meta name="application-name" content="SQL Language Reference">
@@ -45,83 +43,76 @@
     <meta name="dcterms.isVersionOf" content="SQLRF">
     <meta name="dcterms.release" content="Release 19">
   </head>
-   <body>
+   <body dir="ltr">
       <div class="noscript alert alert-danger text-center" role="alert">
-         <a href="MAX.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
-         <a href="MIN.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
-        
-      </div>
+         <a href="MAX.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</a> <a href="MIN.html" class="pull-right">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>必须启用JavaScript才能正确显示此内容</div>
       <article>
          <header>
             <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Language Reference </span></a></li>
-               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">Functions</span></a></li>
-               <li class="active" property="itemListElement" typeof="ListItem">MEDIAN </li>
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL语言参考</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="Functions.html" property="item" typeof="WebPage"><span property="name">功能</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">MEDIAN</li>
             </ol>
             <a id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A" name="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A"></a><a id="SQLRF51516"></a><a id="SQLRF51517"></a><a id="SQLRF51518"></a><a id="SQLRF51519"></a><a id="SQLRF06315"></a>
             
-            <h2 id="SQLRF-GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A" class="sect2">MEDIAN </h2>
+            <h2 id="SQLRF-GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A" class="sect2">MEDIAN</h2>
          </header>
          <div class="ind">
             <div>
                <div class="section">
-                  <p class="subhead1" id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A__GUID-1DA93E92-3172-438C-8649-8924204785F8">Syntax</p>
+                  <p class="subhead1" id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A__GUID-1DA93E92-3172-438C-8649-8924204785F8">句法</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <div class="figure" id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A__GUID-F258545A-578A-4521-B15C-65E5117834AC"><img src="img/median.gif" alt="Description of median.eps follows" title="Description of median.eps follows" longdesc="img_text/median.html"><br><a href="img_text/median.html">Description of the illustration median.eps</a></div>
+                  <div class="figure" id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A__GUID-F258545A-578A-4521-B15C-65E5117834AC"><img src="img/median.gif" alt="中位数说明如下" title="中位数说明如下" longdesc="img_text/median.html"><br><a href="img_text/median.html">说明median.eps的说明</a></div>
                   <!-- class="figure" -->
                   <div class="infoboxnotealso" id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A__GUID-6688FDA0-8CC5-416E-A164-AE47F678340B">
-                     <p class="notep1">See Also:</p>
-                     <p><span class="q">"<a href="Analytic-Functions.html#GUID-527832F7-63C0-4445-8C16-307FA5084056">Analytic Functions</a>"</span> for information on syntax, semantics, and restrictions
-                     </p>
+                     <p class="notep1">也可以看看：</p>
+                     <p><span class="q">“ <a href="Analytic-Functions.html#GUID-527832F7-63C0-4445-8C16-307FA5084056">分析函数</a> ”，</span>用于获取有关语法，语义和限制的信息</p>
                   </div>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A__GUID-ADAF5607-F1EF-40AD-A4DE-C0B5B742C177">Purpose</p>
+                  <p class="subhead1" id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A__GUID-ADAF5607-F1EF-40AD-A4DE-C0B5B742C177">目的</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p><code class="codeph">MEDIAN</code> is an inverse distribution function that assumes a continuous distribution model. It takes a numeric or datetime value and returns the middle value or an interpolated value that would be the middle value once the values are sorted. Nulls are ignored in the calculation. 
+                  <p><code class="codeph">MEDIAN</code>是一个逆分布函数，它假设一个连续的分布模型。它采用数字或日期时间值，并返回中间值或内插值，一旦值被排序，它将是中间值。在计算中忽略空值。
                   </p>
-                  <p>This function takes as arguments any numeric data type or any nonnumeric data type that can be implicitly converted to a numeric data type. If you specify only <span class="italic"><code class="codeph">expr</code></span>, then the function returns the same data type as the numeric data type of the argument. If you specify the <code class="codeph">OVER</code> clause, then Oracle Database determines the argument with the highest numeric precedence, implicitly converts the remaining arguments to that data type, and returns that data type.
+                  <p>此函数将任何数值数据类型或任何可以隐式转换为数字数据类型的非数字数据类型作为参数。如果仅指定<span class="italic"><code class="codeph">expr</code></span> ，则该函数返回与参数的数值数据类型相同的数据类型。如果指定<code class="codeph">OVER</code>子句，则Oracle数据库确定具有最高数字优先级的参数，将其余参数隐式转换为该数据类型，并返回该数据类型。
                   </p>
                   <div class="infoboxnotealso" id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A__GUID-1393BA89-0664-4E8E-A167-90B4B8BCA040">
-                     <p class="notep1">See Also:</p>
-                     <p><a href="Data-Type-Comparison-Rules.html#GUID-98BE3A78-6E33-4181-B5CB-D96FD9DC1694__G195937" title="This matrix lists the data types in the first column and in the header cell for each subsequent column. An X in a cell indicates implicit conversion of the data types named in the header of that column and column 1 of that row.">Table 2-8</a> for more information on implicit conversion and <span class="q">"<a href="Data-Types.html#GUID-4C0B65DB-E751-4957-A1ED-5044BAFA7812">Numeric Precedence</a>"</span> for information on numeric precedence
-                     </p>
+                     <p class="notep1">也可以看看：</p>
+                     <p><a href="Data-Type-Comparison-Rules.html#GUID-98BE3A78-6E33-4181-B5CB-D96FD9DC1694__G195937" title="此矩阵列出了每个后续列的第一列和标题单元格中的数据类型。单元格中的X表示在该列的标题和该行的第1列中指定的数据类型的隐式转换。">表2-8</a>了解有关隐式转换的更多信息，有关<span class="q"><a href="Data-Types.html#GUID-4C0B65DB-E751-4957-A1ED-5044BAFA7812">数值优先级</a></span>的信息，请参见<span class="q">“ <a href="Data-Types.html#GUID-4C0B65DB-E751-4957-A1ED-5044BAFA7812">数值优先级</a> ”</span></p>
                   </div>
-                  <p>The result of <code class="codeph">MEDIAN</code> is computed by first ordering the rows. Using <code class="codeph">N</code> as the number of rows in the group, Oracle calculates the row number (<code class="codeph">RN</code>) of interest with the formula <code class="codeph">RN</code> = (<code class="codeph">1</code> + (0.<code class="codeph">5</code>*(<code class="codeph">N</code>-<code class="codeph">1</code>)). The final result of the aggregate function is computed by linear interpolation between the values from rows at row numbers <code class="codeph">CRN</code> = <code class="codeph">CEILING</code>(<code class="codeph">RN</code>) and <code class="codeph">FRN</code> = <code class="codeph">FLOOR</code>(<code class="codeph">RN</code>).
+                  <p><code class="codeph">MEDIAN</code>的结果是通过首先排序行来计算的。使用<code class="codeph">N</code>作为组中的行的数目，甲骨文计算行数（ <code class="codeph">RN</code>的利息）与式<code class="codeph">RN</code> =（ <code class="codeph">1</code> +（0. <code class="codeph">5</code> *（ <code class="codeph">N</code> - <code class="codeph">1</code> ））。通过行号<code class="codeph">CRN</code> = <code class="codeph">CEILING</code> （ <code class="codeph">RN</code> ）和<code class="codeph">FRN</code> = <code class="codeph">FLOOR</code> （ <code class="codeph">RN</code> ）的行之间的线性插值来计算聚合函数的最终结果。
                   </p>
-                  <p>The final result will be:</p><pre class="oac_no_warn" dir="ltr">   if (CRN = FRN = RN) then
+                  <p>最终结果将是：</p><pre class="oac_no_warn" dir="ltr">   if (CRN = FRN = RN) then
       (value of expression from row at RN)
    else
       (CRN - RN) * (value of expression for row at FRN) +
       (RN - FRN) * (value of expression for row at CRN)
-</pre><p>You can use <code class="codeph">MEDIAN</code> as an analytic function. You can specify only the <span class="italic"><code class="codeph">query_partition_clause</code></span> in its <code class="codeph">OVER</code> clause. It returns, for each row, the value that would fall in the middle among a set of values within each partition.
+</pre><p>您可以使用<code class="codeph">MEDIAN</code>作为分析函数。您只能在其<code class="codeph">OVER</code>子句中指定<span class="italic"><code class="codeph">query_partition_clause</code></span> 。对于每一行，它返回在每个分区中的一组值中间的值。
                   </p>
-                  <p>Compare this function with these functions:</p>
-                  <ul style="list-style-type: disc;">
+                  <p>将此功能与以下功能进行比较：</p>
+                  <ul style="list-style-type:disc">
                      <li>
-                        <p><a href="PERCENTILE_CONT.html#GUID-CA259452-A565-41B3-A4F4-DD74B66CEDE0">PERCENTILE_CONT</a>, which returns, for a given percentile, the value that corresponds to that percentile by way of interpolation. <code class="codeph">MEDIAN</code> is the specific case of <code class="codeph">PERCENTILE_CONT</code> where the percentile value defaults to 0.5.
+                        <p><a href="PERCENTILE_CONT.html#GUID-CA259452-A565-41B3-A4F4-DD74B66CEDE0">PERCENTILE_CONT</a> ，对于给定的百分位数，返回通过插值对应于该百分位数的值。<code class="codeph">MEDIAN</code>是<code class="codeph">PERCENTILE_CONT</code>的特定情况，百分位数值默认为0.5。
                         </p>
                      </li>
                      <li>
-                        <p><a href="PERCENTILE_DISC.html#GUID-7C34FDDA-C241-474F-8C5C-50CC0182E005">PERCENTILE_DISC</a>, which is useful for finding values for a given percentile without interpolation.
+                        <p><a href="PERCENTILE_DISC.html#GUID-7C34FDDA-C241-474F-8C5C-50CC0182E005">PERCENTILE_DISC</a> ，用于在没有插值的情况下查找给定百分位数的值。
                         </p>
                      </li>
                   </ul>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A__GUID-1ABF7CF2-31B5-4A39-840D-3E664EF67F5E">Aggregate Example</p>
+                  <p class="subhead1" id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A__GUID-1ABF7CF2-31B5-4A39-840D-3E664EF67F5E">聚合示例</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p>The following query returns the median salary for each department in the <code class="codeph">hr.employees</code> table:
-                  </p><pre class="oac_no_warn" dir="ltr">SELECT department_id, MEDIAN(salary)
+                  <p>以下查询返回<code class="codeph">hr.employees</code>表中每个部门的工资中位数：</p><pre class="oac_no_warn" dir="ltr">SELECT department_id, MEDIAN(salary)
   FROM employees
   GROUP BY department_id
   ORDER BY department_id;
@@ -142,12 +133,11 @@ DEPARTMENT_ID MEDIAN(SALARY)
                         7000</pre></div>
                <!-- class="section" -->
                <div class="section">
-                  <p class="subhead1" id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A__GUID-6B15D4FE-D323-4F17-8F1B-52742A423ACC">Analytic Example</p>
+                  <p class="subhead1" id="GUID-DE15705A-AC18-4416-8487-B9E1D70CE01A__GUID-6B15D4FE-D323-4F17-8F1B-52742A423ACC">分析实例</p>
                </div>
                <!-- class="section" -->
                <div class="section">
-                  <p>The following query returns the median salary for each manager in a subset of departments in the <code class="codeph">hr.employees</code> table:
-                  </p><pre class="oac_no_warn" dir="ltr">SELECT manager_id, employee_id, salary,
+                  <p>以下查询返回<code class="codeph">hr.employees</code>表中部门子集中每个经理的工资中位数：</p><pre class="oac_no_warn" dir="ltr">SELECT manager_id, employee_id, salary,
        MEDIAN(salary) OVER (PARTITION BY manager_id) "Median by Mgr"
   FROM employees
   WHERE department_id &gt; 60
